@@ -1,0 +1,146 @@
+{
+  "cases": [
+    {
+      "id": "cap-cuu-dau-nguc",
+      "title": "Đau ngực cấp cứu",
+      "law": "Luật Khám bệnh, chữa bệnh 2023 và Luật Bảo hiểm y tế (sửa đổi 2024)",
+      "steps": 4,
+      "summary": "Cấp cứu là ưu tiên số một: không được từ chối hoặc cố ý chậm cấp cứu người bệnh, thủ tục giấy tờ làm sau. Với BHYT, cấp cứu ở bất kỳ cơ sở nào vẫn được hưởng 100%.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "sign": "CẤP CỨU",
+          "arch": "Cụ ông",
+          "text": "Một cụ ông 68 tuổi được người nhà dìu vào, ôm ngực, vã mồ hôi lạnh, khó thở. Cụ không mang theo thẻ BHYT và nhà ở tỉnh khác. Bạn xử lý thế nào?",
+          "e": "Luật Khám bệnh, chữa bệnh nghiêm cấm từ chối hoặc cố ý chậm cấp cứu người bệnh. Thủ tục giấy tờ và thẻ BHYT được hoàn tất sau khi đã xử trí cấp cứu.",
+          "options": [
+            { "t": "Yêu cầu xuất trình thẻ BHYT và hoàn tất giấy tờ rồi mới khám", "ok": false, "fb": "Cụ lả đi, huyết áp tụt. Bạn đã chậm cấp cứu, đây là hành vi bị nghiêm cấm.", "next": "n2" },
+            { "t": "Tiếp nhận cấp cứu ngay, làm thủ tục sau", "ok": true, "fb": "Cụ được đo điện tim, thở oxy và xử trí kịp thời. Đúng nguyên tắc cấp cứu trước, thủ tục sau.", "next": "n3" },
+            { "t": "Bảo người nhà đưa cụ sang bệnh viện khác vì cụ ở tỉnh khác", "ok": false, "fb": "Đẩy bệnh nhân đi khi đang nguy kịch là từ chối cấp cứu. Người nhà phản ứng gay gắt và cụ xấu đi.", "next": "n2" }
+          ]
+        },
+        "n2": {
+          "sign": "CẤP CỨU",
+          "arch": "Cụ ông",
+          "text": "Tình trạng của cụ nặng hơn, người nhà lớn tiếng. Đồng nghiệp nhắc bạn phải xử trí ngay. Bạn làm gì tiếp theo?",
+          "e": "Khi đã chậm, việc cần làm lúc này vẫn là cấp cứu ngay lập tức, báo cáo trưởng ca và hoàn tất thủ tục sau.",
+          "options": [
+            { "t": "Cấp cứu ngay, báo trưởng ca, bổ sung thủ tục sau", "ok": true, "fb": "Cụ được ổn định, nhưng việc chậm trễ lúc đầu sẽ phải rút kinh nghiệm.", "next": "n3" },
+            { "t": "Tiếp tục tranh luận với người nhà về thủ tục", "ok": false, "fb": "Mất thêm thời gian quý giá; cụ nguy cơ biến chứng cao hơn.", "next": "n3" }
+          ]
+        },
+        "n3": {
+          "sign": "BHYT",
+          "arch": "Cụ ông",
+          "text": "Cụ đã ổn định. Người nhà hỏi: vì cụ khám cấp cứu ở cơ sở trái tuyến, BHYT thanh toán thế nào?",
+          "e": "Theo Luật BHYT (sửa đổi 2024), cấp cứu ở bất kỳ cơ sở nào vẫn được hưởng 100%. Tỷ lệ thấp hơn áp dụng cho khám trái tuyến thông thường, không phải cấp cứu.",
+          "options": [
+            { "t": "Cấp cứu ở bất kỳ cơ sở nào vẫn được hưởng 100%", "ok": true, "fb": "Người nhà yên tâm vì chi phí cấp cứu được bảo hiểm chi trả đúng quy định.", "next": "n4" },
+            { "t": "Trái tuyến nên chỉ được thanh toán 40%", "ok": false, "fb": "Sai: 40% là mức thường gặp với nội trú tuyến chuyên sâu trái tuyến, không áp dụng cho cấp cứu.", "next": "n4" },
+            { "t": "Trái tuyến thì không được thanh toán", "ok": false, "fb": "Sai: cấp cứu luôn được hưởng 100%, người nhà lo lắng không đáng có.", "next": "n4" }
+          ]
+        },
+        "n4": {
+          "sign": "BHYT",
+          "arch": "Cụ ông",
+          "text": "Hồ sơ đã hoàn tất, cụ được chuyển lên cấp chuyên sâu để theo dõi. Ca bệnh kết thúc.",
+          "e": "Ghi nhớ: cấp cứu trước, thủ tục sau; cấp cứu luôn hưởng 100% BHYT.",
+          "options": [
+            { "t": "Hoàn tất hồ sơ và bàn giao ca", "ok": true, "fb": "Ca được bàn giao an toàn.", "next": null }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ke-don-ngoai-tru",
+      "title": "Kê đơn thuốc ngoại trú",
+      "law": "Thông tư 26/2025/TT-BYT về đơn thuốc và kê đơn thuốc ngoại trú",
+      "steps": 4,
+      "summary": "Chỉ bác sĩ hoặc y sĩ có chứng chỉ hành nghề được kê đơn. Đơn phải ghi đủ thông tin; trẻ dưới 72 tháng ghi tuổi theo tháng và cân nặng; tối đa 30 ngày cho mỗi thuốc, đơn điện tử phải ký số đúng quy định.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "sign": "KHOA NHI",
+          "arch": "Bé",
+          "text": "Mẹ bế bé 18 tháng tuổi bị sốt đến khám. Bạn kê đơn ngoại trú cho bé. Phần thông tin về tuổi của bé trên đơn phải ghi thế nào?",
+          "e": "Theo Thông tư 26/2025/TT-BYT, trẻ dưới 72 tháng tuổi phải ghi tuổi theo tháng và cân nặng.",
+          "options": [
+            { "t": "Chỉ cần ghi \"bé trai\", không cần tuổi và cân nặng", "ok": false, "fb": "Đơn thiếu thông tin bắt buộc nên liều thuốc không kiểm tra được.", "next": "n2" },
+            { "t": "Ghi tuổi theo tháng (18 tháng) và cân nặng", "ok": true, "fb": "Đơn đầy đủ, dược sĩ dễ kiểm tra liều dùng cho bé.", "next": "n2" },
+            { "t": "Ghi \"1,5 tuổi\", không cần cân nặng", "ok": false, "fb": "Chưa đúng: dưới 72 tháng phải ghi tuổi theo tháng và có cân nặng.", "next": "n2" }
+          ]
+        },
+        "n2": {
+          "sign": "DƯỢC",
+          "arch": "Bé",
+          "text": "Mẹ bé xin kê thuốc hạ sốt và thuốc ho đủ dùng 45 ngày cho tiện, cho một đợt bệnh cấp thông thường. Bạn xử lý thế nào?",
+          "e": "Thông tư 26/2025/TT-BYT quy định tối đa 30 ngày cho mỗi thuốc; chỉ bệnh mạn tính mới có thể đến 90 ngày theo Phụ lục VII.",
+          "options": [
+            { "t": "Kê đủ 45 ngày vì mẹ yêu cầu", "ok": false, "fb": "Vượt quá thời hạn tối đa 30 ngày cho mỗi thuốc, đơn sai quy định.", "next": "n3" },
+            { "t": "Kê tối đa 30 ngày cho mỗi thuốc, giải thích cho mẹ", "ok": true, "fb": "Đơn đúng quy định; mẹ hiểu và tái khám khi cần.", "next": "n3" }
+          ]
+        },
+        "n3": {
+          "sign": "HỒ SƠ ĐIỆN TỬ",
+          "arch": "Bé",
+          "text": "Phòng khám dùng đơn thuốc điện tử trên HIS. Để đơn điện tử có giá trị như đơn giấy, phải đảm bảo điều gì?",
+          "e": "Đơn điện tử có giá trị như đơn giấy nếu được ký số, lưu trữ và chia sẻ đúng quy định.",
+          "options": [
+            { "t": "Ký số, lưu trữ và chia sẻ đúng quy định", "ok": true, "fb": "Đơn điện tử hợp lệ và có thể dùng thay đơn giấy.", "next": "n4" },
+            { "t": "Chỉ cần in ra và để bệnh nhân tự mang đi", "ok": false, "fb": "Chưa đủ điều kiện về ký số, lưu trữ và chia sẻ nên không bảo đảm giá trị pháp lý.", "next": "n4" }
+          ]
+        },
+        "n4": {
+          "sign": "DƯỢC",
+          "arch": "Bé",
+          "text": "Một điều dưỡng chưa có chứng chỉ hành nghề đề nghị ký thay đơn để bạn đỡ vất vả. Bạn trả lời thế nào?",
+          "e": "Chỉ bác sĩ hoặc y sĩ có chứng chỉ hành nghề mới được kê đơn, và người kê đơn chịu trách nhiệm về nội dung đơn.",
+          "options": [
+            { "t": "Đồng ý để tiết kiệm thời gian", "ok": false, "fb": "Người không đủ điều kiện kê đơn thì đơn không hợp lệ, bạn vi phạm quy định.", "next": null },
+            { "t": "Từ chối: chỉ người có chứng chỉ hành nghề được kê đơn và chịu trách nhiệm", "ok": true, "fb": "Đúng quy định, đơn thuốc luôn do người đủ điều kiện kê.", "next": null }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kham-suc-khoe",
+      "title": "Khám sức khỏe và dữ liệu y tế",
+      "law": "Thông tư 25/2026/TT-BYT và Nghị định 102/2025/NĐ-CP",
+      "steps": 3,
+      "summary": "Mẫu 04 là giấy khám sức khỏe tâm thần mới; người mất hoặc bị hạn chế năng lực hành vi dân sự cần giấy khám sức khỏe và văn bản đồng ý của thân nhân; khi dữ liệu y tế của mình có sai sót, cá nhân phải thông báo kịp thời cho cơ quan chủ quản cơ sở dữ liệu y tế.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "sign": "TƯ VẤN SÀNG LỌC",
+          "arch": "Thanh niên",
+          "text": "Một người lao động cần làm giấy khám sức khỏe tâm thần theo biểu mẫu mới. Bạn dùng mẫu nào?",
+          "e": "Theo Thông tư 25/2026/TT-BYT, hồ sơ khám sức khỏe lập theo Mẫu 01 đến 04 Phụ lục XXIV; Mẫu 04 là giấy khám sức khỏe tâm thần mới.",
+          "options": [
+            { "t": "Mẫu 01", "ok": false, "fb": "Mẫu 01 không phải mẫu dành cho khám sức khỏe tâm thần.", "next": "n2" },
+            { "t": "Mẫu 04", "ok": true, "fb": "Đúng: Mẫu 04 là giấy khám sức khỏe tâm thần mới.", "next": "n2" }
+          ]
+        },
+        "n2": {
+          "sign": "TƯ VẤN SÀNG LỌC",
+          "arch": "Cô gái khăn",
+          "text": "Một người nhà đưa người thân bị hạn chế năng lực hành vi dân sự đến khám sức khỏe. Cần chuẩn bị giấy tờ nào?",
+          "e": "Người mất hoặc bị hạn chế năng lực hành vi dân sự cần có giấy khám sức khỏe và văn bản đồng ý của thân nhân.",
+          "options": [
+            { "t": "Chỉ cần giấy khám sức khỏe", "ok": false, "fb": "Thiếu văn bản đồng ý của thân nhân nên chưa đủ điều kiện.", "next": "n3" },
+            { "t": "Giấy khám sức khỏe và văn bản đồng ý của thân nhân", "ok": true, "fb": "Hồ sơ đầy đủ theo quy định.", "next": "n3" }
+          ]
+        },
+        "n3": {
+          "sign": "HỒ SƠ ĐIỆN TỬ",
+          "arch": "Người hói",
+          "text": "Một người dân phát hiện thông tin trong sổ sức khỏe điện tử của mình bị sai. Họ nên làm gì theo Nghị định 102/2025/NĐ-CP?",
+          "e": "Điều 24 Nghị định 102/2025/NĐ-CP: cá nhân phải kịp thời thông báo cho cơ quan chủ quản cơ sở dữ liệu y tế khi dữ liệu về mình thay đổi, được bổ sung hoặc có sai sót.",
+          "options": [
+            { "t": "Bỏ qua vì dữ liệu không ảnh hưởng gì", "ok": false, "fb": "Dữ liệu sai có thể ảnh hưởng đến khám chữa bệnh sau này.", "next": null },
+            { "t": "Kịp thời thông báo cho cơ quan chủ quản cơ sở dữ liệu y tế", "ok": true, "fb": "Đúng quy định: dữ liệu được cập nhật chính xác.", "next": null }
+          ]
+        }
+      }
+    }
+  ]
+}

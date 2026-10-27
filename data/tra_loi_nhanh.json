@@ -1,0 +1,31 @@
+[
+  {
+    "id": "ksk-noi-dung-18",
+    "pattern": {
+      "topic": "kham suc khoe|giay kham suc khoe|giay khoe manh",
+      "ask": "hang muc|noi dung|kham gi|kham nhung|kham nhu the nao|can kham|phai kham|bao gom|gom nhung|gom gi|danh muc|mau 03|di lam|xin viec|di hoc|dinh ky"
+    },
+    "title": "Khám sức khỏe đi làm, đi học: phải khám những gì?",
+    "scope": "Áp dụng cho người từ đủ 18 tuổi trở lên. Cơ sở khám dùng Mẫu số 03 Phụ lục XXIV của Thông tư 32/2023/TT-BYT, mẫu này đã được Thông tư 25/2026/TT-BYT thay thế.",
+    "short": [
+      { "h": "Đo thể lực", "t": "chiều cao, cân nặng, BMI, mạch, huyết áp." },
+      { "h": "Bác sĩ khám các chuyên khoa", "t": "nội khoa, ngoại khoa, da liễu, mắt, tai - mũi - họng, răng - hàm - mặt. Lao động nữ khi khám định kỳ được khám thêm phụ sản." },
+      { "h": "Xét nghiệm và chụp", "t": "xét nghiệm máu, nước tiểu và chụp X-quang tim phổi thẳng (khi khám để đi học, đi làm)." },
+      { "h": "Kết luận", "t": "bác sĩ phân loại sức khỏe cho bạn." }
+    ],
+    "more": [
+      { "h": "Nội khoa gồm", "t": "tuần hoàn, hô hấp, tiêu hóa, thận - tiết niệu, nội tiết, cơ - xương - khớp, thần kinh, tâm thần." },
+      { "h": "Mắt và tai", "t": "mắt đo thị lực khi có kính và không kính; tai - mũi - họng có đo thính lực." },
+      { "h": "Xét nghiệm khi đi học, đi làm", "t": "máu (công thức máu, đường máu, urê, creatinin, men gan GOT và GPT), nước tiểu và X-quang tim phổi thẳng." },
+      { "h": "Khám sức khỏe định kỳ", "t": "xét nghiệm và chụp chỉ làm khi bác sĩ chỉ định. Lao động nữ được khám chuyên khoa phụ sản theo Phụ lục XXV." },
+      { "h": "Khám theo yêu cầu", "t": "chỉ khám và kết luận chuyên khoa bạn yêu cầu, không phân loại sức khỏe." },
+      { "h": "Ai khám", "t": "bác sĩ có chứng chỉ hành nghề hoặc giấy phép hành nghề. Khi cần, bác sĩ chuyển bạn khám chuyên khoa, hội chẩn hoặc làm thêm xét nghiệm." },
+      { "h": "Mù màu, điện tim, siêu âm", "t": "các nguồn đã đối chiếu không thấy nhìn màu, điện tim hay siêu âm trong phần bắt buộc của mẫu phổ thông. Một số nghề đặc thù có tiêu chuẩn sức khỏe riêng, ví dụ người điều khiển tàu hỏa theo Thông tư 42/2025/TT-BYT; khi đó khám thêm theo quy định của nghề đó." },
+      { "h": "Nhóm tuổi và trường hợp khác", "t": "dưới 6 tuổi theo hướng dẫn chuyên môn của Bộ Y tế; từ đủ 6 đến dưới 18 tuổi theo Mẫu số 02; khám sức khỏe tâm thần theo Mẫu số 04." },
+      { "h": "Hiệu lực", "t": "Thông tư 25/2026/TT-BYT có hiệu lực từ 15/8/2026, riêng Điều 2 và Điều 3 từ 01/7/2026. Hồ sơ đã nhận nhưng chưa khám trước ngày thông tư có hiệu lực thì khám theo Thông tư 25." }
+    ],
+    "note": "Danh sách hạng mục chi tiết trong Mẫu 03 lấy từ các bài tổng hợp, chưa đối chiếu trực tiếp phụ lục. Khi đi khám, hãy xem Mẫu số 03 Phụ lục XXIV do cơ sở khám cung cấp.",
+    "source": "Thông tư 25/2026/TT-BYT (khoản 3 Điều 2 sửa Điều 36 Thông tư 32/2023/TT-BYT; Điều 5, Điều 6)",
+    "lawId": "tt25_2026"
+  }
+]

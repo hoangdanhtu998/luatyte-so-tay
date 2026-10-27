@@ -1,0 +1,613 @@
+[
+  {
+    "t": "lythuyet",
+    "id": "lt-01",
+    "q": "Ba cấp chuyên môn kỹ thuật trong khám chữa bệnh gồm những cấp nào?",
+    "o": [
+      "Công lập, tư thục, liên doanh",
+      "Trung ương, tỉnh, huyện",
+      "Ban đầu, cơ bản, chuyên sâu",
+      "Cấp một, cấp hai, cấp ba"
+    ],
+    "a": 2,
+    "e": "Tổ chức 3 cấp chuyên môn kỹ thuật: cấp ban đầu, cấp cơ bản, cấp chuyên sâu. Căn cứ: Luật Khám bệnh, chữa bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-02",
+    "q": "Điều gì bị nghiêm cấm đối với người bệnh cần cấp cứu?",
+    "o": [
+      "Từ chối hoặc cố ý chậm cấp cứu",
+      "Thu tiền trước khi cấp cứu",
+      "Chuyển người bệnh lên tuyến trên",
+      "Ghi hồ sơ bằng tiếng nước ngoài"
+    ],
+    "a": 0,
+    "e": "Nghiêm cấm từ chối hoặc cố ý chậm cấp cứu người bệnh. Căn cứ: Luật Khám bệnh, chữa bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-03",
+    "q": "Người bệnh có quyền gì đối với thông tin sức khỏe của mình?",
+    "o": [
+      "Công khai cho báo chí",
+      "Được giữ bí mật thông tin",
+      "Bán cho công ty bảo hiểm",
+      "Phải tự công bố trên mạng"
+    ],
+    "a": 1,
+    "e": "Người bệnh có quyền được giữ bí mật thông tin sức khỏe. Căn cứ: Luật Khám bệnh, chữa bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-04",
+    "q": "Người hành nghề nước ngoài khi khám chữa bệnh tại Việt Nam cần đáp ứng điều kiện ngôn ngữ nào?",
+    "o": [
+      "Chỉ cần có bằng cấp",
+      "Chỉ khám qua mạng",
+      "Dùng thành thạo tiếng Việt hoặc có người phiên dịch",
+      "Bắt buộc dùng tiếng Anh"
+    ],
+    "a": 2,
+    "e": "Ngôn ngữ khám chữa bệnh là tiếng Việt; người hành nghề nước ngoài phải dùng thành thạo tiếng Việt hoặc có người phiên dịch. Căn cứ: Luật Khám bệnh, chữa bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-05",
+    "q": "Mức hưởng phổ biến của BHYT đối với chi phí trong phạm vi là bao nhiêu?",
+    "o": [
+      "95%",
+      "100%",
+      "80%",
+      "70%"
+    ],
+    "a": 2,
+    "e": "Mức hưởng phổ biến 80% chi phí trong phạm vi. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-06",
+    "q": "Người hưởng lương hưu được BHYT chi trả bao nhiêu chi phí trong phạm vi?",
+    "o": [
+      "100%",
+      "80%",
+      "60%",
+      "95%"
+    ],
+    "a": 3,
+    "e": "Người hưởng lương hưu 95%. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-07",
+    "q": "Trẻ em dưới 6 tuổi được BHYT chi trả bao nhiêu chi phí trong phạm vi?",
+    "o": [
+      "100%",
+      "80%",
+      "95%",
+      "60%"
+    ],
+    "a": 0,
+    "e": "Mức 100% với trẻ em dưới 6 tuổi, người có công, hộ nghèo và một số nhóm khác. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-08",
+    "q": "Người thuộc hộ nghèo được BHYT chi trả mức nào?",
+    "o": [
+      "95%",
+      "40%",
+      "80%",
+      "100%"
+    ],
+    "a": 3,
+    "e": "Mức 100% với người có công, hộ nghèo và một số nhóm khác. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-09",
+    "q": "Cấp cứu ở cơ sở khám chữa bệnh nào thì được hưởng 100%?",
+    "o": [
+      "Chỉ tại bệnh viện tuyến tỉnh",
+      "Chỉ khi đúng tuyến đăng ký",
+      "Chỉ tại trạm y tế xã",
+      "Bất kỳ cơ sở nào"
+    ],
+    "a": 3,
+    "e": "Cấp cứu ở bất kỳ cơ sở nào vẫn được hưởng 100%. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-10",
+    "q": "Nội trú tại tuyến chuyên sâu khi khám trái tuyến (không cấp cứu) thường được hưởng bao nhiêu?",
+    "o": [
+      "80%",
+      "95%",
+      "40%",
+      "100%"
+    ],
+    "a": 2,
+    "e": "Nội trú tuyến chuyên sâu thường hưởng 40%, các trường hợp đặc biệt được quy định riêng. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-11",
+    "q": "Khám ngoại trú tại cơ sở cấp ban đầu ở tỉnh khác thì được hưởng thế nào?",
+    "o": [
+      "Được hưởng như đúng tuyến",
+      "Không được hưởng",
+      "Phải chuyển về tỉnh đăng ký",
+      "Chỉ được hưởng 40%"
+    ],
+    "a": 0,
+    "e": "Khám ngoại trú tại cơ sở cấp ban đầu ở bất kỳ tỉnh nào được hưởng như đúng tuyến. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-12",
+    "q": "Thẻ BHYT điện tử so với thẻ giấy có giá trị pháp lý thế nào?",
+    "o": [
+      "Có giá trị như nhau",
+      "Không có giá trị",
+      "Chỉ dùng cho người dưới 18 tuổi",
+      "Chỉ dùng ở tuyến xã"
+    ],
+    "a": 0,
+    "e": "Thẻ BHYT điện tử và thẻ giấy có giá trị pháp lý như nhau. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-13",
+    "q": "Người tham gia BHYT được đổi nơi đăng ký khám chữa bệnh ban đầu vào thời gian nào?",
+    "o": [
+      "Chỉ một lần trong đời",
+      "Cuối năm",
+      "Bất kỳ lúc nào trong năm",
+      "15 ngày đầu mỗi quý"
+    ],
+    "a": 3,
+    "e": "Đăng ký KCB ban đầu tại một cơ sở và được đổi nơi đăng ký trong 15 ngày đầu mỗi quý. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-14",
+    "q": "Người dưới 18 tuổi được BHYT chi trả điều trị nào về mắt?",
+    "o": [
+      "Không có điều trị nào",
+      "Lác, tật khúc xạ",
+      "Mọi phẫu thuật mắt",
+      "Đục thủy tinh thể ở người lớn"
+    ],
+    "a": 1,
+    "e": "Người dưới 18 tuổi được chi trả điều trị lác, tật khúc xạ mắt. Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-15",
+    "q": "Khi đóng BHYT theo hộ gia đình, người thứ hai đóng bằng bao nhiêu % mức người thứ nhất?",
+    "o": [
+      "100%",
+      "50%",
+      "70%",
+      "40%"
+    ],
+    "a": 2,
+    "e": "Người thứ 2, 3, 4 lần lượt bằng 70%, 60%, 50% (Điều 13). Căn cứ: Luật Bảo hiểm y tế (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-16",
+    "q": "Nhà nước bảo đảm người dân được khám sức khỏe định kỳ hoặc sàng lọc miễn phí với tần suất nào?",
+    "o": [
+      "Chỉ khi ốm",
+      "Mỗi năm một lần cho người trên 60 tuổi",
+      "Ít nhất mỗi năm một lần",
+      "Mỗi năm mười lần"
+    ],
+    "a": 2,
+    "e": "Nhà nước bảo đảm người dân được khám sức khỏe định kỳ hoặc sàng lọc miễn phí ít nhất mỗi năm một lần. Căn cứ: Luật Phòng bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-17",
+    "q": "Hành vi nào sau đây bị cấm trong phòng bệnh?",
+    "o": [
+      "Nuôi con bằng sữa mẹ",
+      "Che giấu ca bệnh truyền nhiễm",
+      "Khám sức khỏe định kỳ",
+      "Tiêm chủng đúng lịch"
+    ],
+    "a": 1,
+    "e": "Cấm che giấu ca bệnh truyền nhiễm, khai báo thông tin giả, kỳ thị người bệnh. Căn cứ: Luật Phòng bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-18",
+    "q": "Khuyến khích nuôi con hoàn toàn bằng sữa mẹ đến bao nhiêu tháng tuổi?",
+    "o": [
+      "12 tháng",
+      "6 tháng",
+      "3 tháng",
+      "1 tháng"
+    ],
+    "a": 1,
+    "e": "Khuyến khích nuôi con hoàn toàn bằng sữa mẹ đến 6 tháng tuổi và duy trì đến 24 tháng. Căn cứ: Luật Phòng bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-19",
+    "q": "Lao động nam được nghỉ bao nhiêu ngày làm việc khi vợ sinh con thứ hai (nếu đủ điều kiện)?",
+    "o": [
+      "7 ngày",
+      "10 ngày",
+      "5 ngày",
+      "30 ngày"
+    ],
+    "a": 1,
+    "e": "Lao động nam được nghỉ 10 ngày làm việc khi vợ sinh con thứ hai, nếu đủ điều kiện hưởng chế độ thai sản. Căn cứ: Luật Dân số."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-20",
+    "q": "Người có từ hai con đẻ trở lên được ưu tiên điều gì về nhà ở?",
+    "o": [
+      "Được miễn thuế đất",
+      "Được ưu tiên mua xe",
+      "Ưu tiên mua, thuê mua, thuê nhà ở xã hội",
+      "Được vay vốn không lãi"
+    ],
+    "a": 2,
+    "e": "Người có từ 2 con đẻ trở lên được ưu tiên mua, thuê mua, thuê nhà ở xã hội. Căn cứ: Luật Dân số."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-21",
+    "q": "Cấm bán thuốc lá cho đối tượng nào?",
+    "o": [
+      "Phụ nữ mang thai",
+      "Người dưới 18 tuổi",
+      "Người trên 60 tuổi",
+      "Người có thẻ BHYT"
+    ],
+    "a": 1,
+    "e": "Cấm bán thuốc lá cho người dưới 18 tuổi và cấm người dưới 18 tuổi bán thuốc lá. Căn cứ: Luật Phòng, chống tác hại của thuốc lá."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-22",
+    "q": "Cảnh báo sức khỏe bằng chữ và hình ảnh trên bao bì thuốc lá phải chiếm ít nhất bao nhiêu diện tích mỗi mặt chính?",
+    "o": [
+      "25%",
+      "50%",
+      "80%",
+      "10%"
+    ],
+    "a": 1,
+    "e": "Cảnh báo sức khỏe chiếm ít nhất 50% diện tích mỗi mặt chính của bao bì. Căn cứ: Luật Phòng, chống tác hại của thuốc lá."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-23",
+    "q": "Hành vi hút thuốc bị cấm hoàn toàn ở đâu?",
+    "o": [
+      "Ngoài đường phố",
+      "Quán cà phê ngoài trời",
+      "Trong nhà và khuôn viên cơ sở y tế",
+      "Bãi biển"
+    ],
+    "a": 2,
+    "e": "Cấm hút thuốc hoàn toàn trong nhà và khuôn viên cơ sở y tế, cơ sở giáo dục, nơi dành cho trẻ em. Căn cứ: Luật Phòng, chống tác hại của thuốc lá."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-24",
+    "q": "Khi nào thì bị cấm uống rượu, bia?",
+    "o": [
+      "Trước và trong giờ làm việc, giờ học, giờ nghỉ giữa giờ",
+      "Khi có khách đến nhà",
+      "Chỉ vào cuối tuần",
+      "Khi trời lạnh"
+    ],
+    "a": 0,
+    "e": "Cấm uống rượu, bia trước và trong giờ làm việc, giờ học và giờ nghỉ giữa giờ. Căn cứ: Luật Phòng, chống tác hại của rượu, bia."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-25",
+    "q": "Ai bị cấm điều khiển phương tiện giao thông khi trong máu hoặc hơi thở có nồng độ cồn?",
+    "o": [
+      "Chỉ người lái xe chuyên nghiệp",
+      "Chỉ người trên 60 tuổi",
+      "Mọi người điều khiển phương tiện",
+      "Chỉ người lái xe đường dài"
+    ],
+    "a": 2,
+    "e": "Cấm điều khiển phương tiện giao thông khi trong máu hoặc hơi thở có nồng độ cồn. Căn cứ: Luật Phòng, chống tác hại của rượu, bia."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-26",
+    "q": "Thông tin về người nhiễm HIV được xử lý thế nào?",
+    "o": [
+      "Được bảo mật, chỉ thông báo cho người được luật cho phép",
+      "Thông báo cho hàng xóm",
+      "Thông báo cho chủ nhà",
+      "Công khai trên mạng xã hội"
+    ],
+    "a": 0,
+    "e": "Thông tin về người nhiễm HIV được bảo mật; chỉ thông báo cho những người được luật cho phép. Căn cứ: Luật Phòng, chống HIV/AIDS."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-27",
+    "q": "Người nhiễm HIV được BHYT chi trả loại thuốc nào?",
+    "o": [
+      "Vitamin tổng hợp",
+      "Thuốc cảm thông thường",
+      "Mọi loại thuốc không giới hạn",
+      "Thuốc kháng HIV (ARV) theo quy định"
+    ],
+    "a": 3,
+    "e": "Người nhiễm HIV được BHYT chi trả thuốc kháng HIV theo quy định. Căn cứ: Luật Phòng, chống HIV/AIDS."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-28",
+    "q": "Người hiến mô, bộ phận cơ thể khi còn sống phải đáp ứng điều kiện nào?",
+    "o": [
+      "Đủ 21 tuổi, đã có gia đình",
+      "Đủ 16 tuổi",
+      "Không có điều kiện về tuổi",
+      "Đủ 18 tuổi, có năng lực hành vi dân sự đầy đủ"
+    ],
+    "a": 3,
+    "e": "Người hiến khi còn sống phải từ đủ 18 tuổi, có năng lực hành vi dân sự đầy đủ. Căn cứ: Luật Hiến, lấy, ghép mô, bộ phận cơ thể người và hiến, lấy xác."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-29",
+    "q": "Việc hiến mô, bộ phận cơ thể người được thực hiện theo nguyên tắc nào?",
+    "o": [
+      "Bắt buộc với người có họ hàng",
+      "Hoàn toàn tự nguyện, không vì mục đích thương mại",
+      "Người nhận phải trả tiền cho người hiến",
+      "Được mua bán khi cần"
+    ],
+    "a": 1,
+    "e": "Hiến hoàn toàn tự nguyện, không vì mục đích thương mại; cấm mua bán mô, bộ phận cơ thể người. Căn cứ: Luật Hiến, lấy, ghép mô, bộ phận cơ thể người và hiến, lấy xác."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-30",
+    "q": "Đối với thuốc kê đơn, doanh nghiệp phải công bố thông tin nào?",
+    "o": [
+      "Số lượng tồn kho",
+      "Nguồn gốc nguyên liệu thô",
+      "Giá bán buôn dự kiến",
+      "Tên bác sĩ kê đơn"
+    ],
+    "a": 2,
+    "e": "Thuốc kê đơn phải công bố giá bán buôn dự kiến; bán qua các tầng trung gian không được vượt giá đã công bố. Căn cứ: Luật Dược (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-31",
+    "q": "Luật Dược sửa đổi cho phép kinh doanh thuốc qua kênh nào?",
+    "o": [
+      "Bưu điện",
+      "Chợ đêm",
+      "Thương mại điện tử theo danh mục được phép",
+      "Đường dây nóng"
+    ],
+    "a": 2,
+    "e": "Cho phép kinh doanh thuốc, nguyên liệu làm thuốc qua thương mại điện tử theo danh mục được phép. Căn cứ: Luật Dược (sửa đổi 2024)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-32",
+    "q": "Ai được kê đơn thuốc ngoại trú?",
+    "o": [
+      "Người bán thuốc",
+      "Điều dưỡng viên",
+      "Dược sĩ bất kỳ",
+      "Bác sĩ hoặc y sĩ có chứng chỉ hành nghề"
+    ],
+    "a": 3,
+    "e": "Chỉ bác sĩ hoặc y sĩ có chứng chỉ hành nghề được kê đơn; người kê đơn chịu trách nhiệm về nội dung đơn. Căn cứ: Thông tư 26/2025/TT-BYT về đơn thuốc và kê đơn thuốc ngoại trú."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-33",
+    "q": "Thời gian cấp thuốc tối đa cho một thuốc theo đơn ngoại trú (không tính bệnh mạn tính) là bao nhiêu?",
+    "o": [
+      "60 ngày",
+      "Không giới hạn",
+      "30 ngày",
+      "7 ngày"
+    ],
+    "a": 2,
+    "e": "Tối đa 30 ngày cho mỗi thuốc; bệnh mạn tính có thể đến 90 ngày theo Phụ lục VII. Căn cứ: Thông tư 26/2025/TT-BYT về đơn thuốc và kê đơn thuốc ngoại trú."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-34",
+    "q": "Đơn điện tử có giá trị thế nào so với đơn giấy?",
+    "o": [
+      "Chỉ có giá trị khi có chữ ký tay",
+      "Chỉ dùng trong bệnh viện",
+      "Có giá trị như đơn giấy nếu được ký số, lưu trữ đúng quy định",
+      "Không có giá trị"
+    ],
+    "a": 2,
+    "e": "Đơn điện tử có giá trị như đơn giấy nếu được ký số, lưu trữ và chia sẻ đúng quy định. Căn cứ: Thông tư 26/2025/TT-BYT về đơn thuốc và kê đơn thuốc ngoại trú."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-35",
+    "q": "Đơn kê cho trẻ dưới 72 tháng tuổi cần ghi thêm thông tin gì?",
+    "o": [
+      "Tên bố mẹ",
+      "Tuổi theo tháng và cân nặng",
+      "Nhóm máu",
+      "Địa chỉ trường học"
+    ],
+    "a": 1,
+    "e": "Trẻ dưới 72 tháng ghi tuổi theo tháng và cân nặng. Căn cứ: Thông tư 26/2025/TT-BYT về đơn thuốc và kê đơn thuốc ngoại trú."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-36",
+    "q": "Giá thanh toán thuốc, thiết bị khi người bệnh tự mua không được vượt mức nào?",
+    "o": [
+      "Giá nhập khẩu",
+      "Giá bán lẻ cao nhất trên thị trường",
+      "Giá trúng thầu gần nhất tại cơ sở",
+      "Giá niêm yết ở chợ"
+    ],
+    "a": 2,
+    "e": "Giá thanh toán không vượt giá trúng thầu gần nhất tại cơ sở. Căn cứ: Thông tư 22/2024/TT-BYT thanh toán chi phí thuốc, thiết bị y tế cho người có thẻ BHYT tự mua."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-37",
+    "q": "Khi khám chuyên khoa từ lần thứ hai, giá được tính thế nào?",
+    "o": [
+      "30% giá một lần khám",
+      "Miễn phí",
+      "50% giá một lần khám",
+      "100% giá một lần khám"
+    ],
+    "a": 0,
+    "e": "Khám chuyên khoa từ lần thứ hai tính 30% giá một lần khám; tổng tiền khám tối đa bằng 2 lần giá khám. Căn cứ: Thông tư 22/2023/TT-BYT giá khám chữa bệnh BHYT thống nhất giữa bệnh viện cùng hạng."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-38",
+    "q": "Ai quyết định mức giá cụ thể trong khung giá dịch vụ khám chữa bệnh Nhà nước?",
+    "o": [
+      "HĐND cấp tỉnh",
+      "Bộ Y tế",
+      "Bệnh viện tự quyết",
+      "Thủ tướng Chính phủ"
+    ],
+    "a": 0,
+    "e": "HĐND cấp tỉnh quyết định mức giá cụ thể, không vượt khung giá. Căn cứ: Thông tư 21/2023/TT-BYT khung giá dịch vụ khám chữa bệnh trong cơ sở Nhà nước."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-39",
+    "q": "Trạm y tế xã áp giá kỹ thuật bằng bao nhiêu % Phụ lục III?",
+    "o": [
+      "30%",
+      "50%",
+      "70%",
+      "100%"
+    ],
+    "a": 2,
+    "e": "Trạm y tế xã áp giá kỹ thuật bằng 70% Phụ lục III. Căn cứ: Thông tư 21/2023/TT-BYT khung giá dịch vụ khám chữa bệnh trong cơ sở Nhà nước."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-40",
+    "q": "Người mất hoặc bị hạn chế năng lực hành vi dân sự khi khám sức khỏe cần có gì?",
+    "o": [
+      "Giấy khám sức khỏe và văn bản đồng ý của thân nhân",
+      "Giấy xác nhận của chính quyền",
+      "Không cần giấy tờ gì",
+      "Chỉ cần thẻ BHYT"
+    ],
+    "a": 0,
+    "e": "Người mất hoặc bị hạn chế năng lực hành vi dân sự cần có giấy khám sức khỏe và văn bản đồng ý của thân nhân. Căn cứ: Thông tư 25/2026/TT-BYT sửa đổi Thông tư 32/2023 (khám sức khỏe)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-41",
+    "q": "Sổ sức khỏe điện tử là gì?",
+    "o": [
+      "Ứng dụng hoặc phần mềm tóm lược quá trình chăm sóc sức khỏe của từng cá nhân",
+      "Sổ khám bệnh giấy của bệnh viện",
+      "Hồ sơ bệnh án lưu tại cơ sở",
+      "Phiếu thu viện phí điện tử"
+    ],
+    "a": 0,
+    "e": "Sổ sức khỏe điện tử là ứng dụng hoặc phần mềm CNTT để cập nhật, hiển thị, tra cứu, lưu trữ thông tin tóm lược quá trình phòng bệnh, thăm khám, điều trị của từng cá nhân. Căn cứ: Nghị định 102/2025/NĐ-CP quy định quản lý dữ liệu y tế."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-42",
+    "q": "Khi dữ liệu y tế về mình thay đổi hoặc có sai sót, cá nhân phải làm gì?",
+    "o": [
+      "Kịp thời thông báo cho cơ quan chủ quản cơ sở dữ liệu",
+      "Chỉ thông báo khi bị phạt",
+      "Không cần thông báo",
+      "Đăng lên mạng xã hội"
+    ],
+    "a": 0,
+    "e": "Mọi cơ quan, đơn vị, tổ chức, cá nhân phải kịp thời thông báo cho cơ quan chủ quản khi dữ liệu thay đổi, được bổ sung hoặc có sai sót. Căn cứ: Nghị định 102/2025/NĐ-CP quy định quản lý dữ liệu y tế."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-43",
+    "q": "Hồ sơ bệnh án có thể được lập dưới dạng nào?",
+    "o": [
+      "Chỉ ghi âm",
+      "Điện tử",
+      "Chỉ bản giấy",
+      "Chỉ trên mạng xã hội"
+    ],
+    "a": 1,
+    "e": "Hồ sơ bệnh án có thể lập dưới dạng điện tử. Căn cứ: Luật Khám bệnh, chữa bệnh."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-44",
+    "q": "Cơ quan cấp giấy chứng nhận lương y cấp giấy trong bao nhiêu ngày làm việc kể từ khi nhận hồ sơ hợp lệ?",
+    "o": [
+      "5 ngày làm việc",
+      "30 ngày làm việc",
+      "15 ngày làm việc",
+      "1 ngày làm việc"
+    ],
+    "a": 0,
+    "e": "Cấp giấy chứng nhận lương y trong 5 ngày làm việc kể từ khi nhận hồ sơ hợp lệ. Căn cứ: Thông tư 49/2025/TT-BYT sửa đổi cấp giấy chứng nhận lương y và bài thuốc gia truyền."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-45",
+    "q": "Trang thiết bị y tế được phân loại dựa trên tiêu chí nào?",
+    "o": [
+      "Giá bán",
+      "Kích thước",
+      "Nước sản xuất",
+      "Mức độ rủi ro, từ loại A đến loại D"
+    ],
+    "a": 3,
+    "e": "Trang thiết bị y tế được phân loại theo mức độ rủi ro từ loại A đến loại D. Căn cứ: Thông tư 44/2025/TT-BYT phân cấp và quản lý trang thiết bị y tế."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-46",
+    "q": "Cục Hạ tầng và Thiết bị y tế có nhiệm vụ gì trong quản lý trang thiết bị?",
+    "o": [
+      "Quản lý bệnh viện tư nhân",
+      "Cấp bằng hành nghề bác sĩ",
+      "In sổ khám bệnh",
+      "Cấp số lưu hành trang thiết bị loại C và D"
+    ],
+    "a": 3,
+    "e": "Giao Cục Hạ tầng và Thiết bị y tế thực hiện 11 nhiệm vụ, gồm cấp số lưu hành trang thiết bị loại C và D. Căn cứ: Thông tư 44/2025/TT-BYT phân cấp và quản lý trang thiết bị y tế."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-47",
+    "q": "Cơ sở thử nghiệm bị yêu cầu khắc phục có bao nhiêu ngày để khắc phục?",
+    "o": [
+      "90 ngày",
+      "7 ngày",
+      "45 ngày",
+      "15 ngày"
+    ],
+    "a": 2,
+    "e": "Cơ sở có 45 ngày để khắc phục và gửi bằng chứng; nếu vẫn chưa đạt, hồ sơ chuyển Cục Quản lý Dược. Căn cứ: Thông tư 36/2025/TT-BYT sửa đổi phân cấp Thực hành tốt phòng thí nghiệm (GLP)."
+  }
+]

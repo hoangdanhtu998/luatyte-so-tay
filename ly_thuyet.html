@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lý thuyết luật y tế · Học theo trình tự</title>
+<meta name="description" content="Học lý thuyết luật y tế theo trình tự chương: nội dung tóm tắt dễ nhớ và câu hỏi ôn tập ngay sau mỗi phần.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FCFCFA">
+<link rel="icon" href="icon.svg">
+<link rel="canonical" href="https://luatyte.online/ly_thuyet.html">
+<meta property="og:title" content="Lý thuyết luật y tế · Học theo trình tự">
+<meta property="og:description" content="Nội dung lý thuyết luật y tế tóm tắt theo chương, kèm câu hỏi ôn tập.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://luatyte.online/ly_thuyet.html">
+<meta property="og:locale" content="vi_VN">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="row">
+    <h1>Lý thuyết luật y tế</h1>
+    <a href="index.html">Về sổ tay</a>
+  </div>
+  <div class="bar"><i id="prog"></i></div>
+</header>
+<main class="page">
+  <div class="toc" id="toc"></div>
+  <div id="chap" class="chap"></div>
+  <section class="lq" id="lt-quiz">
+    <h3>Luyện câu hỏi lý thuyết</h3>
+    <p class="intro" style="margin:0">Bộ câu hỏi về số hiệu và mốc hiệu lực của các văn bản. Ngày ban hành không nằm trong bộ này.</p>
+    <div class="row" style="margin-top:var(--space-sm)"><button class="btn" id="lt-start" type="button">Bắt đầu 10 câu</button><span class="sc" id="lt-score"></span></div>
+    <div id="lt-body"></div>
+  </section>
+  <div class="nav">
+    <button id="prev">Chương trước</button>
+    <button id="next">Chương sau</button>
+  </div>
+  <p class="note" id="note"></p>
+</main>
+
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let data = null, cur = 0;
+
+function render(){
+  const c = data.chuong[cur];
+  document.getElementById("prog").style.width = ((cur + 1) / data.chuong.length * 100) + "%";
+  document.querySelectorAll("#toc button").forEach((b, i) => b.classList.toggle("on", i === cur));
+  document.getElementById("chap").innerHTML = `
+    <div class="chap">
+      <div class="label">Chương ${cur + 1} / ${data.chuong.length}</div>
+      <h2>${esc(c.ten)}</h2>
+      <div class="goal"><b>Mục tiêu:</b> ${esc(c.muc_tieu)}</div>
+      <div class="steps">${c.buoc.map((b, i) => `
+        <div class="step">
+          <h3>${i + 1}. ${esc(b.tieu_de)}</h3>
+          <p>${esc(b.giai_thich)}</p>
+          <div class="label">Ví dụ</div>
+          <div class="ex">${esc(b.vi_du)}</div>
+          <div class="label">Lỗi hay gặp</div>
+          <div class="mistake">${esc(b.hay_nham)}</div>
+          <div class="src">Nguồn: ${esc(b.nguon)}</div>
+          ${b.verify ? `<span class="verify">Chờ đối chiếu văn bản gốc</span>` : ""}
+        </div>`).join("")}</div>
+      <div class="quiz">
+        <h4>Ôn nhanh</h4>
+        ${c.on_nhanh.map(q => `<details><summary>${esc(q.hoi)}</summary><p>${esc(q.dap)}</p></details>`).join("")}
+      </div>
+    </div>`;
+  document.getElementById("prev").disabled = cur === 0;
+  document.getElementById("next").disabled = cur === data.chuong.length - 1;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+async function boot(){
+  try {
+    data = await fetch("data/ly_thuyet.json").then(r => { if (!r.ok) throw new Error(); return r.json(); });
+  } catch {
+    document.getElementById("chap").innerHTML = `<p>Không đọc được dữ liệu. Hãy mở trang qua máy chủ địa phương (ví dụ python -m http.server).</p>`;
+    return;
+  }
+  document.getElementById("toc").innerHTML = data.chuong.map((c, i) =>
+    `<button data-i="${i}">${i + 1}. ${esc(c.ten)}</button>`).join("");
+  document.getElementById("toc").onclick = e => {
+    const b = e.target.closest("button[data-i]");
+    if (!b) return;
+    cur = +b.dataset.i; render();
+  };
+  document.getElementById("prev").onclick = () => { if (cur > 0) { cur--; render(); } };
+  document.getElementById("next").onclick = () => { if (cur < data.chuong.length - 1) { cur++; render(); } };
+  document.getElementById("note").textContent = data.meta.nguyen_tac;
+  render();
+}
+
+/* Luyện câu hỏi lý thuyết riêng */
+(async function(){
+  const Q = await fetch("data/quiz_lythuyet.json").then(r => r.ok ? r.json() : []).catch(() => []);
+  let list = [], i = 0, right = 0;
+  const body = () => document.getElementById("lt-body");
+  const score = () => document.getElementById("lt-score");
+  function show(){
+    if (i >= list.length){
+      body().innerHTML = '<p class="fb">Kết thúc: đúng ' + right + '/' + list.length + '.</p>';
+      score().textContent = "";
+      return;
+    }
+    const q = list[i];
+    body().innerHTML = '<p class="fb"><b>Câu ' + (i + 1) + '/' + list.length + ':</b> ' + q.q + '</p>' +
+      q.o.map((o, j) => '<button class="opt" data-j="' + j + '">' + o + '</button>').join("") +
+      '<div class="fb" id="lt-fb"></div>';
+    body().querySelectorAll(".opt").forEach(b => b.onclick = () => answer(+b.dataset.j));
+  }
+  function answer(j){
+    const q = list[i];
+    const ok = j === q.a;
+    if (ok) right++;
+    body().querySelectorAll(".opt").forEach((b, k) => {
+      b.disabled = true;
+      if (k === q.a) b.classList.add("right");
+      else if (k === j) b.classList.add("wrong");
+    });
+    document.getElementById("lt-fb").innerHTML = (ok ? "Đúng. " : "Chưa đúng. ") + q.e +
+      '<br><button class="btn" id="lt-next" type="button" style="margin-top:var(--space-sm)">Câu tiếp theo</button>';
+    document.getElementById("lt-next").onclick = () => { i++; show(); };
+    score().textContent = "Đúng " + right + "/" + (i + 1);
+  }
+  document.getElementById("lt-start").onclick = () => {
+    list = [...Q].sort(() => Math.random() - 0.5).slice(0, 10);
+    i = 0; right = 0; show();
+  };
+})();
+boot();
+</script>
+</body>
+</html>

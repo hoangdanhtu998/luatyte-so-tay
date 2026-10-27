@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tin cập nhật luật y tế · Tình trạng và nguồn</title>
+<meta name="description" content="Tin luật y tế mới: văn bản đã ban hành, dự án và dự thảo đang bàn thảo, kèm tình trạng hiện tại và bài báo hoặc văn bản nguồn.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FCFCFA">
+<link rel="icon" href="icon.svg">
+<link rel="canonical" href="https://luatyte.online/tin_luat.html">
+<meta property="og:title" content="Tin cập nhật luật y tế · Tình trạng và nguồn">
+<meta property="og:description" content="Văn bản y tế đã ban hành và dự án, dự thảo đang bàn thảo, kèm nguồn.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://luatyte.online/tin_luat.html">
+<meta property="og:locale" content="vi_VN">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="row">
+    <h1>Tin cập nhật luật y tế</h1>
+    <a href="index.html">Về sổ tay</a> <a href="tham_chieu.html">Tham chiếu HIS</a>
+  </div>
+</header>
+<main class="page">
+  <p class="lead" id="lead"></p>
+  <p class="updated" id="updated"></p>
+  <ul class="guide" aria-label="Cách đọc tình trạng">
+    <li><span class="state ban_hanh">Đã ban hành</span> có văn bản chính thức</li>
+    <li><span class="state ban_thao">Đang bàn thảo</span> chưa có hiệu lực</li>
+    <li><span class="state xac_minh">Chưa xác minh</span> chưa tìm thấy nguồn</li>
+  </ul>
+  <div class="filters" id="filters" role="group" aria-label="Lọc theo tình trạng"></div>
+  <div id="list" class="feed" aria-live="polite"></div>
+  <section class="unv" id="unv" hidden></section>
+  <p class="note" id="note"></p>
+</main>
+
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
+let DATA = null, filter = "all";
+
+function badge(code){ return `<span class="state ${esc(code)}">${esc(DATA.tinh_trang[code] || code)}</span>`; }
+
+function card(m){
+  const pts = (m.diem || []).map(p => `<li>${esc(p)}</li>`).join("");
+  const src = (m.nguon || []).map(s => `<li><a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${esc(s.tieu_de)}</a> <span class="meta">· ${esc(s.trang)}${s.ngay ? " · " + esc(s.ngay) : ""}</span></li>`).join("");
+  return `<article class="news" data-s="${esc(m.tinh_trang)}" id="${esc(m.id)}">
+    ${badge(m.tinh_trang)}
+    ${m.moc ? `<p class="moc">${esc(m.moc)}</p>` : ""}
+    <h2>${esc(m.tieu_de)}</h2>
+    <p>${esc(m.tom_tat)}</p>
+    ${pts ? `<ul class="pts">${pts}</ul>` : ""}
+    ${m.luu_y ? `<div class="caution"><b>Lưu ý:</b> ${esc(m.luu_y)}</div>` : ""}
+    ${src ? `<div class="srcs"><h3>Nguồn</h3><ul>${src}</ul></div>` : ""}
+  </article>`;
+}
+
+function render(){
+  const items = DATA.muc.filter(m => filter === "all" || m.tinh_trang === filter);
+  const showUnv = filter === "all" || filter === "xac_minh";
+  const list = document.getElementById("list");
+  list.innerHTML = filter === "xac_minh" ? "" : (items.length ? items.map(card).join("") : `<div class="empty">Chưa có mục nào trong nhóm này.</div>`);
+  list.classList.toggle("feed", filter !== "xac_minh");
+  const unv = document.getElementById("unv");
+  unv.hidden = !showUnv || !(DATA.chua_xac_minh || []).length;
+  unv.innerHTML = `<h2>Chưa xác minh được</h2>
+    <p class="sub">Các mục này có trong danh sách tin nhưng chưa tìm thấy văn bản hay bài báo tương ứng khi kiểm tra. Đừng dựa vào chúng khi áp dụng.</p>
+    <ul>${DATA.chua_xac_minh.map(u => `<li><b>${esc(u.tieu_de)}</b>${esc(u.ly_do)}${u.url ? ` <a href="${esc(safeUrl(u.url))}" target="_blank" rel="noopener noreferrer">${esc(u.url_ten || "Nguồn liên quan")}</a>` : ""}</li>`).join("")}</ul>`;
+  document.querySelectorAll("#filters button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.f === filter)));
+}
+
+async function boot(){
+  const list = document.getElementById("list");
+  try {
+    DATA = await fetch("data/tin_luat.json").then(r => { if (!r.ok) throw new Error("http"); return r.json(); });
+  } catch (e) {
+    list.innerHTML = `<div class="err">Không đọc được dữ liệu tin. Hãy mở trang qua máy chủ địa phương hoặc thử tải lại.</div>`;
+    return;
+  }
+  document.getElementById("lead").textContent = DATA.meta.gioi_thieu;
+  document.getElementById("updated").textContent = "Cập nhật lần cuối: " + DATA.meta.cap_nhat;
+  document.getElementById("note").textContent = DATA.meta.nguon_uu_tien;
+  const n = c => DATA.muc.filter(m => m.tinh_trang === c).length;
+  const defs = [["all", "Tất cả", DATA.muc.length], ["ban_thao", "Đang bàn thảo", n("ban_thao")], ["ban_hanh", "Đã ban hành", n("ban_hanh")], ["xac_minh", "Chưa xác minh", (DATA.chua_xac_minh || []).length]];
+  const f = document.getElementById("filters");
+  f.innerHTML = defs.map(([k, t, c]) => `<button type="button" class="chip" data-f="${k}" aria-pressed="false">${esc(t)} (${c})</button>`).join("");
+  f.onclick = e => { const b = e.target.closest("button[data-f]"); if (!b) return; filter = b.dataset.f; render(); };
+  render();
+  const hash = location.hash.slice(1);
+  if (hash) { const el = document.getElementById(hash); if (el) el.scrollIntoView(); }
+}
+boot();
+</script>
+</body>
+</html>

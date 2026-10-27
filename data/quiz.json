@@ -1,0 +1,722 @@
+[
+  {
+    "t": "dulieu",
+    "q": "Sổ sức khỏe điện tử theo Nghị định 102/2025 là gì?",
+    "o": [
+      "Sổ khám bệnh giấy của bệnh viện",
+      "Ứng dụng hoặc phần mềm CNTT tóm lược quá trình chăm sóc sức khỏe của từng cá nhân",
+      "Hồ sơ bệnh án lưu tại cơ sở",
+      "Phiếu thu viện phí điện tử"
+    ],
+    "a": 1,
+    "e": "Khoản 3 Điều 3 Nghị định 102/2025/NĐ-CP định nghĩa sổ sức khỏe điện tử như vậy."
+  },
+  {
+    "t": "dulieu",
+    "q": "Khi thông tin trong cơ sở dữ liệu y tế của mình thay đổi hoặc có sai sót, tổ chức/cá nhân phải làm gì?",
+    "o": [
+      "Chờ cơ quan quản lý phát hiện",
+      "Kịp thời thông báo cho cơ quan chủ quản cơ sở dữ liệu",
+      "Chỉ sửa khi có yêu cầu bằng văn bản sau 1 năm",
+      "Không cần làm gì"
+    ],
+    "a": 1,
+    "e": "Điều 24 Nghị định 102/2025/NĐ-CP yêu cầu thông báo kịp thời."
+  },
+  {
+    "t": "kcb",
+    "q": "Cơ sở khám chữa bệnh được tổ chức theo mấy cấp chuyên môn kỹ thuật?",
+    "o": [
+      "2 cấp",
+      "3 cấp",
+      "4 cấp",
+      "5 cấp"
+    ],
+    "a": 1,
+    "e": "Ba cấp: ban đầu, cơ bản, chuyên sâu (thay cho 4 tuyến trung ương, tỉnh, huyện, xã)."
+  },
+  {
+    "t": "kcb",
+    "q": "Giấy phép hành nghề khám chữa bệnh theo Luật 2023 có thời hạn bao lâu?",
+    "o": [
+      "Vô thời hạn",
+      "3 năm",
+      "5 năm",
+      "10 năm"
+    ],
+    "a": 2,
+    "e": "Giấy phép có thời hạn 5 năm, hết hạn phải gia hạn."
+  },
+  {
+    "t": "kcb",
+    "q": "Luật KCB 2023 gọi giấy phép hành nghề thay cho tên gọi cũ nào?",
+    "o": [
+      "Chứng chỉ hành nghề",
+      "Giấy đăng ký kinh doanh",
+      "Thẻ bác sĩ",
+      "Chứng nhận đào tạo"
+    ],
+    "a": 0,
+    "e": "Trước đây là chứng chỉ hành nghề; Luật 2023 đổi thành giấy phép hành nghề."
+  },
+  {
+    "t": "kcb",
+    "q": "Ngôn ngữ sử dụng trong khám bệnh, chữa bệnh là gì?",
+    "o": [
+      "Tiếng Anh",
+      "Tiếng Việt",
+      "Tùy cơ sở",
+      "Ngôn ngữ người bệnh chọn"
+    ],
+    "a": 1,
+    "e": "Tiếng Việt; người nước ngoài hành nghề phải thành thạo tiếng Việt hoặc có phiên dịch."
+  },
+  {
+    "t": "kcb",
+    "q": "Hành vi nào bị nghiêm cấm trong khám chữa bệnh?",
+    "o": [
+      "Chuyển người bệnh lên cấp cao hơn",
+      "Từ chối hoặc cố ý chậm cấp cứu người bệnh",
+      "Từ chối kê đơn thuốc không cần thiết",
+      "Hội chẩn từ xa"
+    ],
+    "a": 1,
+    "e": "Từ chối hoặc cố ý chậm cấp cứu người bệnh là hành vi bị nghiêm cấm."
+  },
+  {
+    "t": "kcb",
+    "q": "Theo Điều 2 Luật KCB 2023, khám bệnh là gì?",
+    "o": [
+      "Việc người bệnh tự kiểm tra sức khỏe tại nhà",
+      "Việc người hành nghề dùng kiến thức, phương pháp, kỹ thuật chuyên môn để đánh giá tình trạng sức khỏe, nguy cơ và nhu cầu chăm sóc sức khỏe",
+      "Việc cấp giấy chứng nhận sức khỏe",
+      "Việc tư vấn dinh dưỡng"
+    ],
+    "a": 1,
+    "e": "Khoản 1 Điều 2 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Theo Luật KCB 2023, ai là người bệnh?",
+    "o": [
+      "Người có bệnh được kê đơn thuốc",
+      "Người sử dụng dịch vụ khám bệnh, chữa bệnh",
+      "Người nhà đăng ký chăm sóc",
+      "Người làm việc trong cơ sở y tế"
+    ],
+    "a": 1,
+    "e": "Khoản 3 Điều 2 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Người hành nghề khám bệnh, chữa bệnh là người như thế nào?",
+    "o": [
+      "Người học nghề tại bệnh viện",
+      "Người đã được cơ quan có thẩm quyền cấp giấy phép hành nghề",
+      "Người có bằng đại học bất kỳ",
+      "Người làm hành chính trong bệnh viện"
+    ],
+    "a": 1,
+    "e": "Khoản 4 Điều 2 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Giấy phép hành nghề khám bệnh, chữa bệnh là văn bản do ai cấp và cho ai?",
+    "o": [
+      "Cơ sở y tế cấp cho nhân viên",
+      "Cơ quan có thẩm quyền cấp cho người có đủ điều kiện hành nghề",
+      "Hội nghề nghiệp cấp cho hội viên",
+      "Bệnh viện cấp cho người bệnh"
+    ],
+    "a": 1,
+    "e": "Khoản 5 Điều 2 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Để cung cấp dịch vụ khám bệnh, chữa bệnh, cơ sở khám bệnh, chữa bệnh cần có văn bản nào?",
+    "o": [
+      "Giấy chứng nhận đăng ký doanh nghiệp",
+      "Giấy phép hoạt động khám bệnh, chữa bệnh",
+      "Chứng chỉ hành nghề của giám đốc",
+      "Giấy phép xây dựng"
+    ],
+    "a": 1,
+    "e": "Khoản 6 và 7 Điều 2 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Bài thuốc gia truyền được hiểu là bài thuốc như thế nào?",
+    "o": [
+      "Bài thuốc mua từ nước ngoài",
+      "Bài thuốc từ kinh nghiệm dòng họ, gia đình truyền lại, điều trị có hiệu quả và được cơ quan chuyên môn của UBND cấp tỉnh công nhận",
+      "Bài thuốc do bệnh viện tự nghiên cứu",
+      "Bài thuốc trong sách giáo khoa"
+    ],
+    "a": 1,
+    "e": "Khoản 8 Điều 2 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Luật KCB 2023 áp dụng cả trong trường hợp nào (Điều 1)?",
+    "o": [
+      "Chỉ khi bệnh viện hoạt động bình thường",
+      "Thiên tai, thảm họa, dịch bệnh truyền nhiễm nhóm A hoặc tình trạng khẩn cấp",
+      "Chỉ với người nước ngoài",
+      "Chỉ với bệnh mãn tính"
+    ],
+    "a": 1,
+    "e": "Điều 1 Luật 15/2023/QH15 nêu phạm vi này."
+  },
+  {
+    "t": "kcb",
+    "q": "Chữa bệnh nhằm mục đích nào?",
+    "o": [
+      "Chỉ để cấp thuốc",
+      "Điều trị bệnh, ngăn ngừa sự xuất hiện, tiến triển của bệnh, hoặc đáp ứng nhu cầu chăm sóc sức khỏe",
+      "Chỉ để phẫu thuật",
+      "Chỉ để xác nhận sức khỏe"
+    ],
+    "a": 1,
+    "e": "Khoản 2 Điều 2 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Điều 3 Luật KCB 2023 yêu cầu đối xử với người bệnh như thế nào?",
+    "o": [
+      "Ưu tiên người giàu",
+      "Tôn trọng, bảo vệ, đối xử bình đẳng, không kỳ thị, phân biệt đối xử",
+      "Chỉ tiếp nhận người có bảo hiểm",
+      "Phân loại theo thu nhập"
+    ],
+    "a": 1,
+    "e": "Khoản 1 Điều 3 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Điều 7 Luật KCB 2023 có nội dung gì?",
+    "o": [
+      "Quy định quyền của người bệnh",
+      "Liệt kê các hành vi bị nghiêm cấm trong khám chữa bệnh",
+      "Quy định giá dịch vụ",
+      "Quy định thời hạn giấy phép"
+    ],
+    "a": 1,
+    "e": "Điều 7 liệt kê hành vi bị nghiêm cấm, gồm từ chối cấp cứu và sửa hồ sơ bệnh án."
+  },
+  {
+    "t": "kcb",
+    "q": "Mỗi người bệnh có bao nhiêu người đại diện tại một thời điểm (Điều 8)?",
+    "o": [
+      "Không giới hạn",
+      "Hai người",
+      "Một người",
+      "Ba người"
+    ],
+    "a": 2,
+    "e": "Khoản 1 Điều 8 quy định chỉ một người đại diện tại một thời điểm."
+  },
+  {
+    "t": "kcb",
+    "q": "Người bệnh được cung cấp thông tin gì khi khám chữa bệnh (Điều 9)?",
+    "o": [
+      "Chỉ tên thuốc",
+      "Tình trạng sức khỏe, phương pháp, giá dịch vụ và hướng dẫn tự chăm sóc",
+      "Danh sách bác sĩ không được gặp",
+      "Thông tin về đối thủ cạnh tranh"
+    ],
+    "a": 1,
+    "e": "Khoản 1 Điều 9 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Quyền bảo mật thông tin của người bệnh được quy định ở điều nào (Điều 10)?",
+    "o": [
+      "Điều 7",
+      "Điều 10",
+      "Điều 15",
+      "Điều 20"
+    ],
+    "a": 1,
+    "e": "Điều 10 quy định quyền được tôn trọng danh dự, bảo vệ sức khỏe và bí mật riêng tư."
+  },
+  {
+    "t": "kcb",
+    "q": "Người bệnh có quyền chấp nhận hoặc từ chối tham gia nghiên cứu y sinh học không (Điều 11)?",
+    "o": [
+      "Không, bắt buộc tham gia",
+      "Có, được chấp nhận hoặc từ chối",
+      "Chỉ khi có bảo hiểm",
+      "Chỉ khi là người nước ngoài"
+    ],
+    "a": 1,
+    "e": "Khoản 2 Điều 11 Luật 15/2023/QH15."
+  },
+  {
+    "t": "kcb",
+    "q": "Người bệnh được đọc và sao chụp gì theo Điều 12?",
+    "o": [
+      "Hồ sơ nhân sự của bệnh viện",
+      "Hồ sơ bệnh án, và được nhận tóm tắt, giải thích chi phí",
+      "Sổ tài chính của cơ sở",
+      "Hợp đồng lao động của bác sĩ"
+    ],
+    "a": 1,
+    "e": "Điều 12 khoản 1 Luật Khám bệnh, chữa bệnh 2023: người bệnh được đọc, xem, sao chụp, ghi chép hồ sơ bệnh án và được cung cấp tóm tắt hồ sơ bệnh án (đã đối chiếu).",
+    "src": "Luật KCB 15/2023, Điều 12 khoản 1 (đã đối chiếu)",
+    "verify": false
+  },
+  {
+    "t": "bhyt",
+    "q": "Thiết bị y tế nào được thanh toán trực tiếp theo Thông tư 22/2024/TT-BYT?",
+    "o": [
+      "Thiết bị loại A và B",
+      "Thiết bị loại C và D, trừ chẩn đoán in vitro và thiết bị cá nhân hóa",
+      "Mọi thiết bị y tế",
+      "Chỉ thiết bị nhập khẩu"
+    ],
+    "a": 1,
+    "e": "Điều 2 Thông tư 22/2024/TT-BYT."
+  },
+  {
+    "t": "bhyt",
+    "q": "Giá thanh toán tối đa của thuốc tự mua theo Thông tư 22/2024/TT-BYT được tính theo gì?",
+    "o": [
+      "Giá niêm yết của nhà sản xuất",
+      "Giá trúng thầu gần nhất tại cơ sở",
+      "Giá trung bình thị trường",
+      "Giá do người bệnh thỏa thuận"
+    ],
+    "a": 1,
+    "e": "Điều 4: không vượt giá trúng thầu gần nhất tại cơ sở; nếu không có thì áp dụng các mức ưu tiên khác."
+  },
+  {
+    "t": "bhyt",
+    "q": "Theo Thông tư 22/2023/TT-BYT, khám chuyên khoa từ lần thứ hai được thanh toán bao nhiêu?",
+    "o": [
+      "100% giá một lần khám",
+      "50% giá một lần khám",
+      "30% giá một lần khám",
+      "Không được thanh toán"
+    ],
+    "a": 2,
+    "e": "Điều 5 Thông tư 22/2023/TT-BYT: khám thêm chuyên khoa từ lần thứ hai tính 30% giá một lần khám, tổng tối đa 2 lần giá khám."
+  },
+  {
+    "t": "bhyt",
+    "q": "Trạm y tế xã thực hiện dịch vụ kỹ thuật được áp dụng mức giá bằng bao nhiêu % giá quy định (theo Điều 4)?",
+    "o": [
+      "50%",
+      "70%",
+      "80%",
+      "100%"
+    ],
+    "a": 1,
+    "e": "Điều 4 Thông tư 22/2023/TT-BYT (ví dụ trạm y tế bằng 70% giá quy định)."
+  },
+  {
+    "t": "bhyt",
+    "q": "Ai quyết định mức giá cụ thể của dịch vụ khám chữa bệnh trong cơ sở Nhà nước theo Thông tư 21/2023/TT-BYT?",
+    "o": [
+      "Bộ trưởng Bộ Y tế",
+      "Hội đồng nhân dân cấp tỉnh (không vượt khung giá)",
+      "Giám đốc bệnh viện",
+      "Bảo hiểm xã hội Việt Nam"
+    ],
+    "a": 1,
+    "e": "Điều 4 Thông tư 21/2023/TT-BYT: HĐND cấp tỉnh quyết định mức giá cụ thể, không vượt khung giá."
+  },
+  {
+    "t": "bhyt",
+    "q": "Thông tư 21/2023/TT-BYT gồm bao nhiêu phụ lục khung giá?",
+    "o": [
+      "Hai phụ lục",
+      "Ba phụ lục",
+      "Bốn phụ lục",
+      "Năm phụ lục"
+    ],
+    "a": 2,
+    "e": "Điều 2 Thông tư 21/2023/TT-BYT có bốn phụ lục: khám bệnh, ngày giường, kỹ thuật và xét nghiệm, ghi chú tương đương."
+  },
+  {
+    "t": "bhyt",
+    "q": "Theo Thông tư 21/2023/TT-BYT, cơ sở chưa được phân hạng áp dụng giá của bệnh viện hạng nào?",
+    "o": [
+      "Hạng đặc biệt",
+      "Hạng I",
+      "Hạng III",
+      "Hạng IV"
+    ],
+    "a": 3,
+    "e": "Điều 4 khoản 2 điểm b Thông tư 21/2023/TT-BYT: cơ sở khám bệnh, chữa bệnh chưa được phân hạng áp dụng mức giá của bệnh viện hạng IV (đã đối chiếu).",
+    "src": "Thông tư 21/2023/TT-BYT, Điều 4 khoản 2 điểm b (đã đối chiếu)",
+    "verify": false
+  },
+  {
+    "t": "bhyt",
+    "q": "Theo Thông tư 21/2023/TT-BYT, giá kỹ thuật tại trạm y tế xã bằng bao nhiêu % Phụ lục III?",
+    "o": [
+      "50%",
+      "70%",
+      "80%",
+      "100%"
+    ],
+    "a": 1,
+    "e": "Điều 4 Thông tư 21/2023/TT-BYT."
+  },
+  {
+    "t": "bhyt",
+    "q": "Theo Thông tư 21/2023/TT-BYT, từ lượt khám thứ hai trong cùng một lần đến khám, được tính bao nhiêu % giá một lượt khám?",
+    "o": [
+      "10%",
+      "30%",
+      "50%",
+      "100%"
+    ],
+    "a": 1,
+    "e": "Điều 5 Thông tư 21/2023/TT-BYT: tổng tiền khám không quá 2 lần giá khám."
+  },
+  {
+    "t": "duoc",
+    "q": "Theo Thông tư 26/2025/TT-BYT, ai được kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú?",
+    "o": [
+      "Bất kỳ nhân viên y tế",
+      "Bác sĩ hoặc y sĩ có chứng chỉ hành nghề hoặc giấy phép hành nghề",
+      "Dược sĩ bệnh viện",
+      "Điều dưỡng viên"
+    ],
+    "a": 1,
+    "e": "Người hành nghề có chức danh bác sĩ hoặc y sĩ, có chứng chỉ hành nghề hoặc giấy phép hành nghề, có thẩm quyền kê đơn thuốc (Điều 2 Thông tư 26/2025).",
+    "verify": false,
+    "src": "Thông tư 26/2025/TT-BYT (đã đối chiếu văn bản gốc)"
+  },
+  {
+    "t": "duoc",
+    "q": "Theo Thông tư 26/2025/TT-BYT, đơn thuốc cho trẻ dưới 72 tháng tuổi phải ghi thêm gì?",
+    "o": [
+      "Tên cha mẹ",
+      "Tuổi tính theo tháng và cân nặng",
+      "Nhóm máu",
+      "Số thẻ BHYT"
+    ],
+    "a": 1,
+    "e": "Đơn thuốc cho trẻ dưới 72 tháng tuổi phải ghi số tháng tuổi và cân nặng của trẻ, cùng họ tên người đưa trẻ đến khám (Điều 6 khoản 4).",
+    "verify": false,
+    "src": "Thông tư 26/2025/TT-BYT (đã đối chiếu văn bản gốc), Điều 6 khoản 4"
+  },
+  {
+    "t": "duoc",
+    "q": "Thời gian cấp thuốc tối đa cho một thuốc theo đơn ngoại trú (Thông tư 26/2025/TT-BYT) là bao nhiêu ngày, trừ bệnh mạn tính?",
+    "o": [
+      "7 ngày",
+      "15 ngày",
+      "30 ngày",
+      "90 ngày"
+    ],
+    "a": 2,
+    "e": "Điều 6 khoản 8: kê đơn tối đa 30 ngày cho mỗi thuốc. Riêng bệnh trong Danh mục bệnh tại Phụ lục VII, số ngày tối đa là 90 ngày, và bác sĩ quyết định theo tình trạng lâm sàng và mức độ ổn định của người bệnh.",
+    "verify": false,
+    "src": "Thông tư 26/2025/TT-BYT (đã đối chiếu văn bản gốc), Điều 6 khoản 8"
+  },
+  {
+    "t": "duoc",
+    "q": "Đơn thuốc điện tử theo Thông tư 26/2025/TT-BYT có giá trị pháp lý thế nào?",
+    "o": [
+      "Không có giá trị thay thế đơn giấy",
+      "Có giá trị pháp lý như đơn giấy nếu ký số, lưu trữ và chia sẻ đúng quy định",
+      "Chỉ dùng trong bệnh viện",
+      "Chỉ có giá trị 7 ngày"
+    ],
+    "a": 1,
+    "e": "Đơn thuốc kê bằng hình thức điện tử được lập, hiển thị, ký số, chia sẻ, lưu trữ bằng phương thức điện tử, nếu đủ thông tin theo Thông tư, thì có giá trị pháp lý như đơn thuốc giấy (Điều 10).",
+    "verify": false,
+    "src": "Thông tư 26/2025/TT-BYT (đã đối chiếu văn bản gốc), Điều 10"
+  },
+  {
+    "t": "kcb",
+    "q": "Thông tư 25/2026/TT-BYT thay thế toàn bộ Điều nào của Thông tư 32/2023 về khám sức khỏe?",
+    "o": [
+      "Điều 10 và 11",
+      "Điều 34 và Điều 36",
+      "Điều 5 và 6",
+      "Điều 20 và 21"
+    ],
+    "a": 1,
+    "e": "Điều 2 Thông tư 25/2026/TT-BYT sửa đổi Điều 34 và Điều 36 của Thông tư 32/2023/TT-BYT bằng nội dung mới (đã đối chiếu).",
+    "src": "Thông tư 25/2026, Điều 2 khoản 2 và 3 (đã đối chiếu)"
+  },
+  {
+    "t": "kcb",
+    "q": "Theo Thông tư 49/2025/TT-BYT, cơ quan cấp lương y cấp giấy trong bao nhiêu ngày làm việc kể từ khi nhận hồ sơ hợp lệ?",
+    "o": [
+      "3 ngày",
+      "5 ngày",
+      "7 ngày",
+      "15 ngày"
+    ],
+    "a": 1,
+    "e": "Thông tư 49/2025/TT-BYT sửa đổi điểm b khoản 2 Điều 12 Thông tư 02/2024/TT-BYT: trong 05 ngày làm việc kể từ ngày nhận được hồ sơ hợp lệ, cơ quan có thẩm quyền cấp giấy chứng nhận lương y (đã đối chiếu).",
+    "src": "Thông tư 49/2025, Điều 1 khoản 2 (đã đối chiếu)"
+  },
+  {
+    "t": "tbyt",
+    "q": "Theo Thông tư 44/2025/TT-BYT, Cục Hạ tầng và Thiết bị y tế được giao quyền gì (Điều 2)?",
+    "o": [
+      "Cấp số lưu hành trang thiết bị y tế loại C và D, cấp giấy phép nhập khẩu",
+      "Chỉ quản lý kho thuốc",
+      "Chỉ thu học phí đào tạo",
+      "Chỉ xây dựng bệnh viện"
+    ],
+    "a": 0,
+    "e": "Điều 2 khoản 1 và khoản 7 Thông tư 44/2025/TT-BYT: Cục Hạ tầng và Thiết bị y tế được phân cấp cấp số lưu hành thiết bị y tế loại C, D và cấp giấy phép nhập khẩu thiết bị y tế (đã đối chiếu).",
+    "src": "Thông tư 44/2025, Điều 2 (đã đối chiếu)"
+  },
+  {
+    "t": "duoc",
+    "q": "Theo Thông tư 36/2025/TT-BYT, cơ sở bị yêu cầu khắc phục có bao nhiêu ngày để khắc phục?",
+    "o": [
+      "10 ngày",
+      "30 ngày",
+      "45 ngày",
+      "90 ngày"
+    ],
+    "a": 2,
+    "e": "Khoản 4 Điều 11 Thông tư 04/2018/TT-BYT, đã sửa bởi Thông tư 36/2025, điểm c: trong 45 ngày kể từ khi Sở Y tế có văn bản yêu cầu khắc phục, cơ sở phải hoàn thành và gửi báo cáo kèm bằng chứng (đã đối chiếu).",
+    "src": "Thông tư 36/2025, Điều 1 khoản 1 (đã đối chiếu)"
+  },
+  {
+    "t": "bhyt",
+    "q": "Mức hưởng BHYT phổ biến (đi đúng quy định) là bao nhiêu?",
+    "o": [
+      "60%",
+      "70%",
+      "80%",
+      "100%"
+    ],
+    "a": 2,
+    "e": "Đa số người tham gia hưởng 80%; một số nhóm ưu tiên hưởng 95% hoặc 100%."
+  },
+  {
+    "t": "bhyt",
+    "q": "Trẻ em dưới 6 tuổi được BHYT chi trả bao nhiêu % chi phí trong phạm vi?",
+    "o": [
+      "80%",
+      "90%",
+      "95%",
+      "100%"
+    ],
+    "a": 3,
+    "e": "Trẻ em dưới 6 tuổi hưởng 100%."
+  },
+  {
+    "t": "bhyt",
+    "q": "Theo Luật BHYT sửa đổi 2024, chi phí một lần khám dưới mức nào thì được hưởng 100%?",
+    "o": [
+      "Mức do Chính phủ quy định",
+      "15% lương cơ sở",
+      "20% lương cơ sở",
+      "Không có mức này"
+    ],
+    "a": 0,
+    "e": "Luật giao Chính phủ quy định mức chi phí một lần khám được hưởng 100% (Điều 22)."
+  },
+  {
+    "t": "bhyt",
+    "q": "Đóng BHYT hộ gia đình: người thứ hai đóng bằng bao nhiêu % mức người thứ nhất?",
+    "o": [
+      "50%",
+      "60%",
+      "70%",
+      "80%"
+    ],
+    "a": 2,
+    "e": "Người thứ 2: 70%; thứ 3: 60%; thứ 4: 50%; từ thứ 5: 40%."
+  },
+  {
+    "t": "bhyt",
+    "q": "Điểm mới năm 2024 dành cho người dưới 18 tuổi tham gia BHYT là gì?",
+    "o": [
+      "Miễn phí nha khoa thẩm mỹ",
+      "Chi trả điều trị lác, tật khúc xạ mắt",
+      "Chi trả kính áp tròng màu",
+      "Khám tại nước ngoài"
+    ],
+    "a": 1,
+    "e": "Luật 51/2024 bổ sung chi trả điều trị lác, tật khúc xạ cho người dưới 18 tuổi."
+  },
+  {
+    "t": "duoc",
+    "q": "Luật Dược sửa đổi 2024 công nhận mô hình kinh doanh mới nào?",
+    "o": [
+      "Chuỗi nhà thuốc",
+      "Nhà thuốc tư nhân không dược sĩ",
+      "Bán thuốc kê đơn tự do",
+      "Quầy thuốc lưu động"
+    ],
+    "a": 0,
+    "e": "Chuỗi nhà thuốc và kinh doanh thuốc qua thương mại điện tử."
+  },
+  {
+    "t": "duoc",
+    "q": "Luật Dược sửa đổi 2024 bỏ thủ tục nào?",
+    "o": [
+      "Đăng ký lưu hành thuốc",
+      "Xác nhận nội dung thông tin thuốc",
+      "Cấp chứng chỉ hành nghề dược",
+      "Kiểm nghiệm thuốc"
+    ],
+    "a": 1,
+    "e": "Bỏ thủ tục xác nhận nội dung thông tin thuốc."
+  },
+  {
+    "t": "duoc",
+    "q": "Với thuốc kê đơn, Luật Dược sửa đổi yêu cầu công bố loại giá nào?",
+    "o": [
+      "Giá bán lẻ tối đa",
+      "Giá bán buôn dự kiến",
+      "Giá nhập khẩu",
+      "Giá trúng thầu"
+    ],
+    "a": 1,
+    "e": "Công bố giá bán buôn dự kiến; bán qua các tầng trung gian không vượt giá đã công bố."
+  },
+  {
+    "t": "phongbenh",
+    "q": "Theo Luật Phòng bệnh, người dân được khám sức khỏe định kỳ hoặc sàng lọc miễn phí với tần suất tối thiểu nào?",
+    "o": [
+      "2 năm một lần",
+      "Mỗi năm một lần",
+      "6 tháng một lần",
+      "5 năm một lần"
+    ],
+    "a": 1,
+    "e": "Ít nhất mỗi năm một lần, theo nhóm đối tượng và lộ trình ưu tiên.",
+    "verify": false,
+    "src": "Luật Phòng bệnh 114/2025, Điều 27 khoản 1 (đã đối chiếu)"
+  },
+  {
+    "t": "phongbenh",
+    "q": "Luật Phòng bệnh khuyến khích nuôi con hoàn toàn bằng sữa mẹ đến bao nhiêu tháng tuổi?",
+    "o": [
+      "3 tháng",
+      "4 tháng",
+      "6 tháng",
+      "12 tháng"
+    ],
+    "a": 2,
+    "e": "Luật Phòng bệnh 114/2025 khuyến khích nuôi con bằng sữa mẹ hoàn toàn cho trẻ dưới 06 tháng tuổi và duy trì đến 24 tháng tuổi (Điều khoản 12, đã đối chiếu).",
+    "verify": false
+  },
+  {
+    "t": "phongbenh",
+    "q": "Luật Phòng bệnh chia tiêm chủng thành những hình thức nào?",
+    "o": [
+      "Bắt buộc và tự nguyện",
+      "Miễn phí và có phí",
+      "Trong nước và quốc tế",
+      "Định kỳ và khẩn cấp"
+    ],
+    "a": 0,
+    "e": "Tiêm chủng bắt buộc và tiêm chủng tự nguyện.",
+    "verify": false,
+    "src": " (đã đối chiếu Luật Phòng bệnh 114/2025)"
+  },
+  {
+    "t": "danso",
+    "q": "Theo Luật Dân số 2025, lao động nữ sinh con thứ hai được nghỉ thai sản bao lâu?",
+    "o": [
+      "6 tháng",
+      "7 tháng",
+      "8 tháng",
+      "12 tháng"
+    ],
+    "a": 1,
+    "e": "7 tháng (thay vì 6 tháng thông thường)."
+  },
+  {
+    "t": "danso",
+    "q": "Lao động nam được nghỉ bao lâu khi vợ sinh con thứ hai?",
+    "o": [
+      "5 ngày làm việc",
+      "7 ngày làm việc",
+      "10 ngày làm việc",
+      "14 ngày làm việc"
+    ],
+    "a": 2,
+    "e": "10 ngày làm việc, với điều kiện đủ điều kiện hưởng chế độ thai sản theo pháp luật bảo hiểm xã hội."
+  },
+  {
+    "t": "thuocla",
+    "q": "Cảnh báo sức khỏe trên bao bì thuốc lá phải chiếm ít nhất bao nhiêu diện tích mặt chính?",
+    "o": [
+      "30%",
+      "40%",
+      "50%",
+      "70%"
+    ],
+    "a": 2,
+    "e": "Ít nhất 50% diện tích mỗi mặt chính."
+  },
+  {
+    "t": "ruoubia",
+    "q": "Luật rượu, bia quy định gì về nồng độ cồn khi lái xe?",
+    "o": [
+      "Dưới 0,25 mg/l khí thở là được",
+      "Cấm khi có nồng độ cồn",
+      "Chỉ cấm với xe ô tô",
+      "Chỉ cấm ban đêm"
+    ],
+    "a": 1,
+    "e": "Cấm điều khiển phương tiện khi trong máu hoặc hơi thở có nồng độ cồn."
+  },
+  {
+    "t": "ghepmo",
+    "q": "Người hiến mô, bộ phận cơ thể khi còn sống phải từ đủ bao nhiêu tuổi?",
+    "o": [
+      "16 tuổi",
+      "18 tuổi",
+      "20 tuổi",
+      "21 tuổi"
+    ],
+    "a": 1,
+    "e": "Từ đủ 18 tuổi, có năng lực hành vi dân sự đầy đủ."
+  },
+  {
+    "t": "kcb",
+    "q": "Người mất năng lực hành vi dân sự đề nghị khám sức khỏe nhưng không thuộc các trường hợp khám theo mẫu của Thông tư 25/2026, cần giấy tờ gì ngoài giấy khám?",
+    "o": [
+      "Không cần giấy tờ thêm",
+      "Giấy khai sinh của người đó",
+      "Văn bản đồng ý của thân nhân theo Luật Khám bệnh, chữa bệnh",
+      "Xác nhận của công an xã"
+    ],
+    "a": 2,
+    "e": "Điều 34 khoản 5 điểm b (sửa bởi Thông tư 25/2026): cần văn bản đồng ý của thân nhân theo khoản 11 Điều 2 Luật Khám bệnh, chữa bệnh 2023 (đã đối chiếu).",
+    "src": "Thông tư 25/2026/TT-BYT, Điều 2 khoản 2 (đã đối chiếu)"
+  },
+  {
+    "t": "duoc",
+    "q": "Theo Thông tư 36/2025/TT-BYT, sau khi nhận báo cáo khắc phục kèm bằng chứng, Sở Y tế đánh giá trong bao nhiêu ngày?",
+    "o": [
+      "5 ngày",
+      "10 ngày",
+      "15 ngày",
+      "45 ngày"
+    ],
+    "a": 1,
+    "e": "Điểm d khoản 4 Điều 11 Thông tư 04/2018/TT-BYT (sửa bởi Thông tư 36/2025): trong 10 ngày kể từ khi nhận báo cáo khắc phục kèm bằng chứng (đã đối chiếu).",
+    "src": "Thông tư 36/2025/TT-BYT, Điều 1 khoản 1 (đã đối chiếu)"
+  },
+  {
+    "t": "kcb",
+    "q": "Theo Thông tư 49/2025/TT-BYT, nếu hồ sơ xin giấy chứng nhận lương y chưa hợp lệ, cơ quan tiếp nhận phải thông báo bổ sung trong bao nhiêu ngày làm việc?",
+    "o": [
+      "3 ngày làm việc",
+      "5 ngày làm việc",
+      "7 ngày làm việc",
+      "15 ngày làm việc"
+    ],
+    "a": 1,
+    "e": "Thông tư 49/2025 sửa khoản 2 Điều 11 Thông tư 02/2024: trong 05 ngày làm việc kể từ ngày ghi trên Phiếu tiếp nhận hồ sơ, cơ quan phải thông báo để người nộp bổ sung (đã đối chiếu).",
+    "src": "Thông tư 49/2025/TT-BYT, Điều 1 khoản 1 (đã đối chiếu)"
+  }
+]

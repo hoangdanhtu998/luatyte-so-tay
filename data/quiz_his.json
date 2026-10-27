@@ -1,0 +1,627 @@
+[
+  {
+    "q": "Hồ sơ bệnh án có thể lập bằng giấy hoặc bản điện tử. Hai hình thức này có giá trị pháp lý thế nào?",
+    "o": [
+      "Bản điện tử không có giá trị pháp lý",
+      "Chỉ bản giấy có giá trị pháp lý",
+      "Có giá trị pháp lý như nhau",
+      "Bản điện tử chỉ có giá trị khi in ra giấy"
+    ],
+    "a": 2,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 69 khoản 1",
+    "e": "Hồ sơ bệnh án được lập bằng giấy hoặc bản điện tử có giá trị pháp lý như nhau. Mẫu hồ sơ bệnh án do Bộ trưởng Bộ Y tế ban hành."
+  },
+  {
+    "q": "Người sửa hồ sơ bệnh án để làm sai lệch thông tin khám chữa bệnh thì vi phạm điều nào?",
+    "o": [
+      "Được phép nếu có ghi chú",
+      "Là hành vi bị nghiêm cấm",
+      "Chỉ bị nhắc nhở",
+      "Chỉ vi phạm khi gây thiệt hại tiền"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 7 khoản 10",
+    "e": "Cấm tẩy xóa, sửa chữa hồ sơ bệnh án nhằm làm sai lệch thông tin, hoặc lập hồ sơ bệnh án giả. Với HIS: mọi thay đổi phải có nhật ký (audit trail), không cho sửa âm thầm."
+  },
+  {
+    "q": "Đơn thuốc phải ghi tối thiểu những nội dung nào?",
+    "o": [
+      "Tên bác sĩ và số điện thoại",
+      "Tên thuốc, hàm lượng, liều dùng, cách dùng và thời gian dùng",
+      "Giá bán của từng thuốc",
+      "Mã BHYT của người bệnh"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 63 khoản 2",
+    "e": "Người hành nghề phải ghi đầy đủ, rõ ràng vào đơn thuốc hoặc hồ sơ bệnh án: tên thuốc, hàm lượng, liều dùng, cách dùng và thời gian dùng."
+  },
+  {
+    "q": "Có được kê thực phẩm chức năng trong đơn thuốc không?",
+    "o": [
+      "Có, nếu bác sĩ thấy cần",
+      "Có, nếu người bệnh đồng ý",
+      "Không",
+      "Chỉ với bệnh nhân nhi"
+    ],
+    "a": 2,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 63 khoản 2",
+    "e": "Điều 63 khoản 2 nêu rõ: không kê đơn thực phẩm chức năng trong đơn thuốc. Phần mềm kê đơn nên chặn lựa chọn này."
+  },
+  {
+    "q": "Giấy phép hoạt động khám bệnh, chữa bệnh của một cơ sở có thời hạn không?",
+    "o": [
+      "5 năm",
+      "3 năm",
+      "Không có thời hạn",
+      "1 năm"
+    ],
+    "a": 2,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 50 khoản 1",
+    "e": "Mỗi cơ sở có một giấy phép hoạt động và không có thời hạn. Cơ sở có thêm địa điểm khác thì mỗi địa điểm có một giấy phép riêng."
+  },
+  {
+    "q": "Giấy phép hành nghề khám bệnh, chữa bệnh có giá trị bao lâu?",
+    "o": [
+      "3 năm",
+      "5 năm",
+      "10 năm",
+      "Vĩnh viễn"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 27 khoản 2",
+    "e": "Giấy phép hành nghề có thời hạn 05 năm và có giá trị trong phạm vi toàn quốc (khoản 1)."
+  },
+  {
+    "q": "Trong giấy phép hành nghề, thông tin nhận dạng của người hành nghề Việt Nam là gì?",
+    "o": [
+      "Số hộ chiếu",
+      "Số định danh cá nhân",
+      "Số điện thoại",
+      "Số thẻ BHYT"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 27 khoản 3 điểm a",
+    "e": "Với người hành nghề Việt Nam là số định danh cá nhân; với người nước ngoài là số hộ chiếu và quốc tịch."
+  },
+  {
+    "q": "Cơ sở KCB cung cấp thông tin lên Hệ thống thông tin quản lý hoạt động KCB phải làm thế nào?",
+    "o": [
+      "Khi có yêu cầu thanh tra mới cung cấp",
+      "Đầy đủ, chính xác, kịp thời",
+      "Chỉ cung cấp số lượng người bệnh",
+      "Chỉ cung cấp khi có khiếu nại"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 112 khoản 3",
+    "e": "Cơ sở KCB có trách nhiệm cung cấp đầy đủ, chính xác, kịp thời các thông tin lên hệ thống."
+  },
+  {
+    "q": "Hệ thống thông tin quản lý KCB do cơ quan nào thống nhất quản lý?",
+    "o": [
+      "Bảo hiểm xã hội Việt Nam",
+      "Bộ Y tế",
+      "Sở Y tế từng tỉnh",
+      "Bộ Thông tin và Truyền thông"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 112 khoản 2",
+    "e": "Do Bộ Y tế thống nhất, tập trung quản lý; phải đáp ứng an toàn, bảo mật thông tin và liên thông với cơ sở dữ liệu quốc gia."
+  },
+  {
+    "q": "Cơ sở đã được cấp giấy phép hoạt động trước 01/01/2027 phải đáp ứng yêu cầu hạ tầng CNTT kết nối với hệ thống quản lý KCB chậm nhất khi nào?",
+    "o": [
+      "01/01/2027",
+      "01/07/2026",
+      "01/01/2029",
+      "31/12/2030"
+    ],
+    "a": 2,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 120 khoản 5 điểm b",
+    "e": "Hồ sơ nộp từ 01/01/2027 phải đáp ứng ngay; cơ sở đã được cấp trước 01/01/2027 phải đáp ứng chậm nhất từ 01/01/2029."
+  },
+  {
+    "q": "Cơ sở KCB làm được nhiệm vụ của cả ba cấp chuyên môn kỹ thuật được xếp vào cấp nào?",
+    "o": [
+      "Cấp ban đầu",
+      "Cấp cơ bản",
+      "Cấp chuyên sâu",
+      "Không được xếp cấp nào"
+    ],
+    "a": 2,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 104 khoản 2 điểm a",
+    "e": "Một cơ sở chỉ được xếp vào một cấp; nếu làm được nhiệm vụ của cả ba cấp thì xếp cấp chuyên sâu."
+  },
+  {
+    "q": "Người tham gia BHYT có quyền thay đổi cơ sở KCB ban đầu trong thời hạn nào?",
+    "o": [
+      "15 ngày đầu của mỗi quý",
+      "30 ngày đầu năm",
+      "Bất kỳ lúc nào",
+      "Chỉ một lần trong năm"
+    ],
+    "a": 0,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 26 khoản 1",
+    "e": "Có quyền đăng ký hoặc thay đổi cơ sở KCB ban đầu trong 15 ngày đầu của mỗi quý."
+  },
+  {
+    "q": "Sau khi nhận đủ hồ sơ, cơ quan BHXH phải cấp thẻ BHYT trong thời hạn bao lâu?",
+    "o": [
+      "03 ngày làm việc",
+      "05 ngày làm việc",
+      "10 ngày làm việc",
+      "30 ngày"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 17 khoản 2",
+    "e": "Trong thời hạn 05 ngày làm việc kể từ ngày nhận đủ hồ sơ, cơ quan BHXH cấp thẻ và giao thẻ hoặc thông báo cho cơ quan quản lý.",
+    "verify": false
+  },
+  {
+    "q": "Mỗi người tham gia BHYT được cấp bao nhiêu mã số BHYT?",
+    "o": [
+      "Một",
+      "Hai",
+      "Theo số lần đổi cơ quan",
+      "Không giới hạn"
+    ],
+    "a": 0,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 16 khoản 2",
+    "e": "Mỗi người chỉ được cấp một mã số BHYT. Thẻ có thể là bản điện tử hoặc bản giấy và có giá trị pháp lý như nhau.",
+    "verify": false
+  },
+  {
+    "q": "Người cấp cứu phải xuất trình thông tin thẻ BHYT khi nào?",
+    "o": [
+      "Trước khi vào phòng cấp cứu",
+      "Trước khi kết thúc đợt điều trị",
+      "Trong vòng 24 giờ sau xuất viện",
+      "Không cần xuất trình"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 28 khoản 1",
+    "e": "Trường hợp cấp cứu, người bệnh xuất trình thông tin thẻ và giấy tờ trước khi kết thúc đợt điều trị."
+  },
+  {
+    "q": "Sau bao nhiêu ngày kể từ khi hết hạn lập danh sách người tham gia BHYT mà vẫn không lập đủ thì bị coi là trốn đóng?",
+    "o": [
+      "30 ngày",
+      "60 ngày",
+      "90 ngày",
+      "180 ngày"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 48b khoản 1 điểm a",
+    "e": "Sau 60 ngày kể từ ngày hết thời hạn quy định tại Điều 17 khoản 1 điểm b mà chưa lập danh sách đầy đủ thì bị coi là trốn đóng.",
+    "verify": false
+  },
+  {
+    "q": "Mức tham chiếu dùng để tính đóng, hưởng BHYT do cơ quan nào quyết định?",
+    "o": [
+      "Quốc hội",
+      "Chính phủ",
+      "Bộ Y tế",
+      "Bảo hiểm xã hội Việt Nam"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 2 khoản 9",
+    "e": "Mức tham chiếu là mức tiền do Chính phủ quyết định, dùng để tính mức đóng, mức hưởng của một số trường hợp."
+  },
+  {
+    "q": "Mức tiền lương tháng tối đa để tính đóng BHYT bằng bao nhiêu lần mức tham chiếu?",
+    "o": [
+      "10 lần",
+      "15 lần",
+      "20 lần",
+      "30 lần"
+    ],
+    "a": 2,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 14 khoản 5",
+    "e": "Mức tiền lương tháng tối đa để tính số tiền đóng BHYT là 20 lần mức tham chiếu.",
+    "verify": false
+  },
+  {
+    "q": "Khám thai định kỳ và sinh con có thuộc phạm vi thanh toán của quỹ BHYT không?",
+    "o": [
+      "Không",
+      "Có",
+      "Chỉ khi sinh ở bệnh viện công",
+      "Chỉ khi có chuyển tuyến"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật BHYT (sửa bởi 51/2024)",
+    "src": "Điều 21 khoản 1 điểm a",
+    "e": "Phạm vi thanh toán gồm khám thai định kỳ và sinh con."
+  },
+  {
+    "q": "Người bệnh có quyền được giữ bí mật thông tin trong hồ sơ bệnh án không?",
+    "o": [
+      "Không",
+      "Có, trừ trường hợp người bệnh đồng ý chia sẻ theo pháp luật hoặc các trường hợp khoản 3, 4 Điều 69",
+      "Chỉ bác sĩ được giữ bí mật",
+      "Chỉ khi có BHYT"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 10 khoản 2",
+    "e": "Người bệnh được giữ bí mật thông tin trong hồ sơ bệnh án và thông tin đời tư đã cung cấp, trừ khi đồng ý chia sẻ hoặc theo quy định khác."
+  },
+  {
+    "q": "Người bệnh từ chối khám, chữa bệnh phải làm gì?",
+    "o": [
+      "Chỉ cần thông báo miệng",
+      "Cam kết tự chịu trách nhiệm bằng văn bản sau khi được người hành nghề tư vấn",
+      "Ký giấy tại quầy thu ngân",
+      "Không cần làm gì"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 13 khoản 1",
+    "e": "Được từ chối khám, chữa bệnh nhưng phải cam kết tự chịu trách nhiệm bằng văn bản, sau khi đã được tư vấn (trừ trường hợp bắt buộc chữa bệnh)."
+  },
+  {
+    "q": "Khi KCB từ xa, người hành nghề chịu trách nhiệm về điều gì?",
+    "o": [
+      "Chỉ kết quả của hệ thống phần mềm",
+      "Kết quả chẩn đoán, chỉ định phương pháp chữa bệnh và kê đơn của mình",
+      "Không chịu trách nhiệm vì không gặp người bệnh",
+      "Chỉ trách nhiệm của kỹ thuật viên"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 80 khoản 1 điểm b",
+    "e": "Người hành nghề phải chịu trách nhiệm về kết quả chẩn đoán, chỉ định phương pháp chữa bệnh và kê đơn thuốc của mình."
+  },
+  {
+    "q": "Người có kết quả HIV dương tính phải kịp thời thông báo cho ai?",
+    "o": [
+      "Đồng nghiệp làm chung cơ quan",
+      "Vợ, chồng, người dự định kết hôn, người chung sống như vợ chồng",
+      "Chủ doanh nghiệp",
+      "Hàng xóm"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật phòng, chống HIV/AIDS 64/2006, sửa đổi bởi Luật 71/2020",
+    "src": "Luật 71/2020, Điều 1 khoản 2 (đã đối chiếu)",
+    "e": "Thông báo kịp thời kết quả xét nghiệm HIV dương tính cho vợ, chồng, người dự định kết hôn và người chung sống như vợ chồng."
+  },
+  {
+    "q": "Từ đủ bao nhiêu tuổi người có năng lực hành vi dân sự được tự nguyện yêu cầu xét nghiệm HIV?",
+    "o": [
+      "13 tuổi",
+      "15 tuổi",
+      "16 tuổi",
+      "18 tuổi"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật phòng, chống HIV/AIDS 64/2006, sửa đổi bởi Luật 71/2020",
+    "src": "Luật 71/2020, Điều 1 khoản 8 (đã đối chiếu)",
+    "e": "Người từ đủ 15 tuổi trở lên và có năng lực hành vi dân sự được tự nguyện yêu cầu xét nghiệm HIV (Điều 27 khoản 2). Dưới 15 tuổi, người mất hoặc hạn chế năng lực hành vi dân sự chỉ được xét nghiệm khi cha, mẹ, người giám hộ hoặc người đại diện đồng ý bằng văn bản (khoản 3)."
+  },
+  {
+    "q": "Xét nghiệm khẳng định HIV dương tính được thực hiện ở đâu?",
+    "o": [
+      "Tại nhà người bệnh",
+      "Tại cơ sở xét nghiệm HIV đủ điều kiện khẳng định dương tính",
+      "Tại bất kỳ phòng khám tư",
+      "Tại nhà thuốc"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật phòng, chống HIV/AIDS 64/2006, sửa đổi bởi Luật 71/2020",
+    "src": "Luật 71/2020, Điều 1 khoản 9 (đã đối chiếu)",
+    "e": "Điều 29 khoản 2: chỉ thực hiện tại cơ sở xét nghiệm HIV đủ điều kiện khẳng định dương tính. Người muốn nhận kết quả phải cung cấp địa chỉ nơi cư trú và xuất trình giấy tờ có ảnh còn giá trị, như Căn cước công dân, Hộ chiếu."
+  },
+  {
+    "q": "Kết quả HIV dương tính chỉ được thông báo cho những đối tượng nào?",
+    "o": [
+      "Phòng nhân sự của công ty",
+      "Người được xét nghiệm và những người được luật cho phép (vợ, chồng, cha mẹ hoặc người giám hộ trong trường hợp quy định)",
+      "Toàn bộ đồng nghiệp trong khoa",
+      "Người đứng đầu công ty"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật phòng, chống HIV/AIDS 64/2006, sửa đổi bởi Luật 71/2020",
+    "src": "Luật 71/2020, Điều 1 khoản 10 (đã đối chiếu)",
+    "e": "Điều 30 khoản 2: chỉ thông báo cho người được xét nghiệm; vợ hoặc chồng của người đó; cha, mẹ hoặc người giám hộ nếu người đó dưới 18 tuổi hoặc không đủ năng lực hành vi; người trực tiếp tư vấn; và một số người đứng đầu, nhân viên y tế, cơ quan giám sát dịch tễ. Những người được tiếp cận có trách nhiệm giữ bí mật (khoản 6)."
+  },
+  {
+    "q": "Cơ sở y tế có được hút thuốc lá trong nhà và khuôn viên không?",
+    "o": [
+      "Có, ở khu vực riêng",
+      "Không, cấm hoàn toàn",
+      "Chỉ ngoài giờ khám",
+      "Có nếu có quạt thông gió"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật phòng chống tác hại thuốc lá 09/2012",
+    "src": "Luật phòng, chống tác hại của thuốc lá 09/2012, Điều 11 khoản 1 điểm a (đã đối chiếu)",
+    "e": "Cơ sở y tế thuộc địa điểm cấm hút thuốc lá hoàn toàn trong nhà và trong phạm vi khuôn viên.",
+    "verify": false
+  },
+  {
+    "q": "Thuốc kê đơn bán qua thương mại điện tử có được bán tự do không?",
+    "o": [
+      "Có, không cần đơn thuốc",
+      "Không, trừ trường hợp cách ly y tế khi có bệnh truyền nhiễm nhóm A đã được thông tin theo luật phòng bệnh",
+      "Có, nếu là thuốc không kê đơn",
+      "Có, nếu nhà thuốc có website"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Dược (sửa bởi 44/2024)",
+    "src": "Luật Dược 44/2024 (bổ sung Điều 6 khoản 17 Luật 105/2016), điểm a (đã đối chiếu)",
+    "e": "Cấm bán lẻ theo thương mại điện tử đối với thuốc kê đơn, thuốc phải kiểm soát đặc biệt và thuốc thuộc danh mục hạn chế bán lẻ (có ngoại lệ đã nêu).",
+    "verify": false
+  },
+  {
+    "q": "Cơ sở bán lẻ thuốc chỉ được bán thuốc kê đơn khi nào?",
+    "o": [
+      "Khi có đơn thuốc",
+      "Khi khách hàng yêu cầu",
+      "Khi có chấp thuận bằng văn bản",
+      "Không bao giờ được bán"
+    ],
+    "a": 0,
+    "t": "his",
+    "law": "Luật Dược (sửa bởi 44/2024)",
+    "src": "Điều 42 khoản 2 điểm p",
+    "e": "Chỉ được bán thuốc kê đơn tại cơ sở bán lẻ khi có đơn thuốc."
+  },
+  {
+    "q": "Ai quy định chi tiết về đơn thuốc, việc kê đơn và liên thông dữ liệu đơn thuốc với hệ thống quốc gia?",
+    "o": [
+      "Thủ tướng Chính phủ",
+      "Bộ trưởng Bộ Y tế",
+      "Giám đốc Sở Y tế",
+      "Bảo hiểm xã hội Việt Nam"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Dược (sửa bởi 44/2024)",
+    "src": "Điều 74 khoản 2",
+    "e": "Bộ trưởng Bộ Y tế quy định chi tiết về đơn thuốc, việc kê đơn, ứng dụng CNTT trong kê đơn và liên thông với CSDL quốc gia về y tế."
+  },
+  {
+    "q": "Bán thuốc đã hết hạn dùng có phải là hành vi bị cấm kinh doanh không?",
+    "o": [
+      "Không",
+      "Có, là hành vi bị cấm",
+      "Chỉ bị phạt tiền",
+      "Chỉ áp dụng với thuốc kê đơn"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Dược 105/2016",
+    "src": "Luật Dược 105/2016, Điều 6 khoản 14 (đã đối chiếu)",
+    "e": "Điều 6 khoản 14 Luật Dược 105/2016: cấm cấp phát, bán thuốc đã hết hạn dùng cho người sử dụng. Đã đối chiếu văn bản hợp nhất.",
+    "verify": false
+  },
+  {
+    "q": "Người kê đơn để trục lợi (kê dịch vụ kỹ thuật, thiết bị y tế hoặc gợi ý chuyển người bệnh để trục lợi) có bị cấm không?",
+    "o": [
+      "Có",
+      "Không",
+      "Chỉ khi thanh tra phát hiện",
+      "Chỉ với bệnh viện tư"
+    ],
+    "a": 0,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 7 khoản 9",
+    "e": "Kê đơn thuốc, chỉ định dịch vụ kỹ thuật, thiết bị y tế, gợi ý chuyển người bệnh hoặc có hành vi khác nhằm trục lợi là hành vi bị nghiêm cấm."
+  },
+  {
+    "q": "Thông tin giới tính thai nhi có được tiết lộ không?",
+    "o": [
+      "Được, nếu gia đình đồng ý",
+      "Không, trừ trường hợp Bộ trưởng Bộ Y tế quy định để chẩn đoán, điều trị bệnh liên quan đến giới tính",
+      "Được, nếu bác sĩ thấy an toàn",
+      "Chỉ được cho người chồng"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Dân số 113/2025",
+    "src": "Điều 6 khoản 3",
+    "e": "Cấm lựa chọn giới tính thai nhi dưới mọi hình thức; cấm thông báo, tiết lộ giới tính thai nhi, trừ trường hợp phục vụ chẩn đoán và điều trị bệnh liên quan đến giới tính."
+  },
+  {
+    "q": "Hành vi thông báo, tiết lộ giới tính thai nhi để phá thai có căn cứ đình chỉ hành nghề không?",
+    "o": [
+      "Không",
+      "Có, theo điểm d khoản 1 Điều 34 Luật KCB (bổ sung bởi Luật Dân số 2025)",
+      "Chỉ nhắc nhở",
+      "Chỉ phạt tiền 1 triệu đồng"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Dân số 113/2025",
+    "src": "Luật Dân số 113/2025, Điều 29 khoản 4 và Điều 15 khoản 2 (đã đối chiếu)",
+    "e": "Đình chỉ hành nghề khám bệnh, chữa bệnh đối với người có hành vi tiết lộ giới tính thai nhi để phá thai.",
+    "verify": false
+  },
+  {
+    "q": "Lao động nam được nghỉ bao nhiêu ngày làm việc khi vợ sinh con thứ hai?",
+    "o": [
+      "3 ngày",
+      "5 ngày",
+      "10 ngày",
+      "30 ngày"
+    ],
+    "a": 2,
+    "t": "his",
+    "law": "Luật Dân số 113/2025",
+    "src": "Điều 14 khoản 1 điểm a",
+    "e": "Trường hợp sinh con thứ hai, lao động nữ nghỉ thai sản 07 tháng; lao động nam nghỉ 10 ngày làm việc khi vợ sinh con. Việc hưởng chế độ còn phụ thuộc điều kiện BHXH (theo văn bản hướng dẫn)."
+  },
+  {
+    "q": "Người khuyết tật đặc biệt nặng là người như thế nào?",
+    "o": [
+      "Người khó đi lại nhưng vẫn tự sinh hoạt",
+      "Người do khuyết tật không thể tự thực hiện việc phục vụ nhu cầu sinh hoạt cá nhân hàng ngày",
+      "Người có chứng nhận khuyết tật nhưng chưa có việc làm",
+      "Người khiếm thị hoàn toàn"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Người khuyết tật 51/2010",
+    "src": "Điều 3 khoản 2 điểm a",
+    "e": "Người khuyết tật đặc biệt nặng là người không thể tự thực hiện việc phục vụ nhu cầu sinh hoạt cá nhân hàng ngày. Khác với 'nặng' (không tự thực hiện một số việc).",
+    "verify": false
+  },
+  {
+    "q": "Hành vi gian dối trong việc xác định mức độ khuyết tật, cấp giấy xác nhận khuyết tật có bị cấm không?",
+    "o": [
+      "Không",
+      "Có, là hành vi bị nghiêm cấm",
+      "Chỉ khi người khuyết tật đồng ý",
+      "Chỉ với cơ sở tư nhân"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Người khuyết tật 51/2010",
+    "src": "Điều 14 khoản 7",
+    "e": "Gian dối trong việc xác định mức độ khuyết tật và cấp giấy xác nhận khuyết tật là hành vi bị nghiêm cấm."
+  },
+  {
+    "q": "Thu thập và xử lý thông tin sức khỏe của người bệnh có cần sự đồng ý của người đó không?",
+    "o": [
+      "Không cần, vì là thông tin thường",
+      "Cần, trừ các trường hợp luật cho phép",
+      "Chỉ khi có mã BHYT",
+      "Chỉ khi có chữ ký số"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Bảo vệ dữ liệu cá nhân 91/2025",
+    "src": "Nghị định 356/2025, Điều 4 khoản 1 điểm d; Luật 91/2025, Điều 26 (đã đối chiếu)",
+    "e": "Luật Bảo vệ dữ liệu cá nhân 91/2025, Điều 26 khoản 1 điểm a: phải có sự đồng ý của người có dữ liệu khi thu thập và xử lý, trừ trường hợp tại Điều 19 khoản 1. Nghị định 356/2025 (có hiệu lực 01/01/2026), Điều 4 khoản 1 điểm d, xếp tình trạng sức khỏe vào dữ liệu cá nhân nhạy cảm."
+  },
+  {
+    "q": "Bệnh viện phải triển khai hồ sơ bệnh án điện tử chậm nhất khi nào theo Thông tư 13/2025/TT-BYT?",
+    "o": [
+      "30/09/2025",
+      "31/12/2025",
+      "31/12/2026",
+      "01/07/2026"
+    ],
+    "a": 0,
+    "t": "his",
+    "law": "Thông tư 13/2025/TT-BYT",
+    "src": "Điều 4 khoản 2 điểm a, b (đã đối chiếu)",
+    "e": "Điều 4 khoản 2: bệnh viện triển khai hồ sơ bệnh án điện tử chậm nhất 30/09/2025; cơ sở khác có điều trị nội trú, ban ngày, ngoại trú hoàn thành chậm nhất 31/12/2026. Thông tư này cũng hết hiệu lực Thông tư 46/2018/TT-BYT về hồ sơ bệnh án điện tử."
+  },
+  {
+    "q": "Chữ ký số trong hồ sơ bệnh án điện tử có giá trị tương đương chữ ký tay không?",
+    "o": [
+      "Không bao giờ",
+      "Có, theo Luật Giao dịch điện tử 20/2023 (Điều 23 khoản 2), nếu đáp ứng Điều 22 khoản 3",
+      "Chỉ khi in ra giấy",
+      "Chỉ với người hành nghề có giấy phép"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật Giao dịch điện tử 20/2023",
+    "src": "Điều 22 khoản 3, Điều 23 khoản 2 (đã đối chiếu văn bản gốc)",
+    "e": "Luật Giao dịch điện tử 20/2023, Điều 23 khoản 2: chữ ký số có giá trị pháp lý tương đương chữ ký của cá nhân trong văn bản giấy. Điều 22 khoản 3 nêu điều kiện: xác nhận người ký và sự chấp thuận, dữ liệu tạo chữ ký chỉ gắn với nội dung đã chấp thuận, và mọi thay đổi sau khi ký có thể bị phát hiện."
+  },
+  {
+    "q": "Hạn hoàn thành xây dựng và vận hành Hệ thống thông tin quản lý KCB theo Luật KCB 2023 là khi nào?",
+    "o": [
+      "31/12/2025",
+      "01/01/2027",
+      "01/07/2026",
+      "01/01/2029"
+    ],
+    "a": 1,
+    "t": "his",
+    "law": "Luật KCB 15/2023",
+    "src": "Điều 120 khoản 8",
+    "e": "Hoàn thành việc xây dựng và vận hành Hệ thống thông tin trước ngày 01/01/2027."
+  },
+  {
+    "t": "his",
+    "q": "Thông tư 13/2025/TT-BYT làm hết hiệu lực Thông tư nào về hồ sơ bệnh án điện tử?",
+    "o": [
+      "Thông tư 32/2023/TT-BYT",
+      "Thông tư 46/2018/TT-BYT",
+      "Thông tư 26/2025/TT-BYT",
+      "Thông tư 25/2026/TT-BYT"
+    ],
+    "a": 1,
+    "law": "Thông tư 13/2025/TT-BYT",
+    "src": "Điều 4 khoản 3 (đã đối chiếu)",
+    "e": "Thông tư 46/2018/TT-BYT về hồ sơ bệnh án điện tử hết hiệu lực kể từ ngày Thông tư 13/2025 được ban hành."
+  },
+  {
+    "t": "his",
+    "q": "Nhân viên y tế hoặc người bệnh ký điện tử trong hồ sơ bệnh án điện tử bằng cách nào?",
+    "o": [
+      "Chỉ ký tay rồi chụp ảnh",
+      "Gõ tên vào ô ghi chú là đủ",
+      "Chữ ký điện tử hợp pháp, sinh trắc học hoặc hình thức xác nhận điện tử khác theo Luật Giao dịch điện tử",
+      "Chỉ bằng chữ ký của trưởng khoa"
+    ],
+    "a": 2,
+    "law": "Thông tư 13/2025/TT-BYT",
+    "src": "Điều 3 (đã đối chiếu)",
+    "e": "Điều 3 Thông tư 13/2025 nêu ba cách: chữ ký điện tử hợp pháp, kỹ thuật sinh trắc học, và xác nhận bằng phương tiện điện tử khác theo khoản 4 Điều 22 Luật Giao dịch điện tử."
+  },
+  {
+    "t": "his",
+    "q": "Khi xin sự đồng ý xử lý dữ liệu sức khỏe, cơ sở phải nói gì với người được xin?",
+    "o": [
+      "Không cần nói gì thêm",
+      "Chỉ cần ghi tên người bệnh",
+      "Phải thông báo rằng dữ liệu cần xử lý là dữ liệu cá nhân nhạy cảm",
+      "Chỉ cần thông báo nếu có BHYT"
+    ],
+    "a": 2,
+    "law": "Nghị định 356/2025/NĐ-CP",
+    "src": "Điều 4 khoản 1 điểm d, Điều 6 khoản 4 (đã đối chiếu)",
+    "e": "Điều 6 khoản 4 Nghị định 356/2025: chủ thể dữ liệu phải được thông báo rằng dữ liệu cần xử lý là dữ liệu cá nhân nhạy cảm. Tình trạng sức khỏe thuộc nhóm này theo Điều 4 khoản 1 điểm d."
+  }
+]

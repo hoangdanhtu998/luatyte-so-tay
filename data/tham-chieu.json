@@ -1,0 +1,104 @@
+{
+  "_ghi_chu": "Tài liệu tham chiếu cho HIS và quản lý y tế. Không phải nội dung học, không có câu hỏi. Mỗi mục ghi trạng thái: 'xac-nhan' (có từ hai nguồn trở lên), 'mot-nguon' (chỉ một nguồn thứ cấp), 'chua-kiem' (chưa đối chiếu), 'bac-bo' (đã kiểm và sai), 'du-thao' (chưa có hiệu lực).",
+  "cap_nhat": "2026-10-27",
+  "quy_tac": [
+    "Không viết mã theo dự thảo. Dự án sửa 6 luật y tế đang trình Quốc hội khóa XVI, chưa có hiệu lực.",
+    "Chỉ đưa mốc ngày vào mã khi trạng thái là 'xac-nhan'.",
+    "Đề xuất kỹ thuật không phải điều khoản luật và phải ghi rõ như vậy."
+  ],
+  "ban_do_luat_his": [
+    {
+      "module": "Bệnh án điện tử (EMR)",
+      "van_ban": ["Luật KCB 15/2023/QH15 (khoản 17 Điều 2, Điều 69)", "TT 32/2023/TT-BYT (Chương X, Phụ lục XXVIII)", "TT 13/2025/TT-BYT"],
+      "moc": "TT 13 hiệu lực 21/7/2025. Bệnh viện chậm nhất 30/9/2025. Cơ sở khác có nội trú, ban ngày, ngoại trú chậm nhất 31/12/2026. TT 46/2018 hết hiệu lực.",
+      "trang_thai": "xac-nhan (mốc TT 13). chua-kiem (khoản 17 Điều 2, Chương X)."
+    },
+    {
+      "module": "Định danh người bệnh",
+      "van_ban": ["TT 13/2025/TT-BYT", "Pháp luật về căn cước và VNeID"],
+      "moc": "Mỗi hồ sơ gắn số định danh cá nhân; một mã đơn nhất để liên thông.",
+      "trang_thai": "chua-kiem (chi tiết kỹ thuật)."
+    },
+    {
+      "module": "Ký, lưu, audit",
+      "van_ban": ["Luật Giao dịch điện tử", "NĐ 137/2024/NĐ-CP", "TT 13/2025/TT-BYT (khoản 4 Điều 22 Luật GDĐT)"],
+      "moc": "Ký số, sinh trắc học, hoặc xác nhận điện tử khác theo Luật GDĐT.",
+      "trang_thai": "xac-nhan (TT 13 cho phép ký bằng chữ ký điện tử, sinh trắc học hoặc hình thức khác). chua-kiem (NĐ 137/2024)."
+    },
+    {
+      "module": "Viện phí và giám định BHYT",
+      "van_ban": ["Luật BHYT 51/2024/QH15", "NĐ 188/2025/NĐ-CP", "TT 12/2026/TT-BTC (giám định, biểu mẫu tổng hợp)", "Chuẩn XML: QĐ 130/QĐ-BYT, 4750/QĐ-BYT, 3176/QĐ-BYT"],
+      "moc": "Luật 51 hiệu lực 01/7/2025, một số khoản từ 01/01/2025. NĐ 188 khoản 9 Điều 69: xác thực điện tử chậm nhất 01/01/2026.",
+      "trang_thai": "xac-nhan (Luật 51, NĐ 188 và mốc 01/01/2026, TT 12/2026, QĐ 130/4750/3176). mot-nguon (QĐ 1931/QĐ-BYT, MUC_HUONG 4 ký tự từ 01/7/2026). chua-kiem (các mục biểu mẫu trong NĐ 188)."
+    },
+    {
+      "module": "Phạm vi, mức hưởng, trái tuyến",
+      "van_ban": ["Điều 21–22 Luật BHYT (sửa bởi Luật 51/2024)", "NĐ 02/2025/NĐ-CP", "NĐ 188/2025/NĐ-CP"],
+      "moc": "Bỏ tuyến hành chính, chuyển sang cấp chuyên môn kỹ thuật: ban đầu, cơ bản, chuyên sâu.",
+      "trang_thai": "xac-nhan (cấp chuyên môn kỹ thuật theo Luật 51). chua-kiem (NĐ 02/2025)."
+    },
+    {
+      "module": "Đơn thuốc, kho dược",
+      "van_ban": ["Luật Dược 105/2016/QH13, sửa đổi bởi Luật 44/2024/QH15"],
+      "moc": "Luật 44/2024 hiệu lực 01/7/2025, một số quy định từ 01/01/2025.",
+      "trang_thai": "xac-nhan (ngày hiệu lực). Trạng thái trên VBPL mâu thuẫn (còn hiệu lực một phần): kiểm từng điều."
+    },
+    {
+      "module": "Khám từ xa, khám tại nhà, y học gia đình",
+      "van_ban": ["Luật KCB 15/2023", "Luật 51/2024 (Điều 21 Luật BHYT)"],
+      "moc": "Thuộc phạm vi thanh toán theo lộ trình và danh mục của Bộ Y tế.",
+      "trang_thai": "chua-kiem (danh mục và lộ trình cụ thể)."
+    },
+    {
+      "module": "Phòng bệnh, khám sàng lọc",
+      "van_ban": ["Luật Phòng bệnh 114/2025/QH15", "TT 15/2026/TT-BYT"],
+      "moc": "Luật có hiệu lực 01/7/2026 (Điều 45). Điều 46 là quy định chuyển tiếp. Khám định kỳ hoặc sàng lọc ít nhất 1 lần/năm theo nhóm và lộ trình.",
+      "trang_thai": "xac-nhan (hiệu lực, 46 điều, Điều 45 và 46). chua-kiem (chi tiết nhóm đối tượng và lộ trình)."
+    },
+    {
+      "module": "Bảo vệ dữ liệu sức khỏe",
+      "van_ban": ["Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15", "NĐ 356/2025/NĐ-CP"],
+      "moc": "Cùng hiệu lực 01/01/2026. NĐ 356 thay thế NĐ 13/2023. Dữ liệu sức khỏe là dữ liệu nhạy cảm.",
+      "trang_thai": "xac-nhan."
+    },
+    {
+      "module": "Phân quyền y tế",
+      "van_ban": ["NĐ 148/2025/NĐ-CP"],
+      "moc": "Ban hành 12/6/2025, hiệu lực 01/7/2025. Hết hiệu lực 01/3/2027, trừ trường hợp được kéo dài hoặc thay thế.",
+      "trang_thai": "xac-nhan."
+    }
+  ],
+  "viec_khoa_truoc_khi_code": [
+    "Đề xuất kỹ thuật, không phải điều khoản luật: EMR đủ trường theo Chương X TT 32/2023 và mẫu Phụ lục XXVIII, ký số, số định danh, XML/JSON liên thông.",
+    "Đề xuất kỹ thuật: bộ XML theo QĐ 130 và các sửa đổi. MUC_HUONG mở rộng lên 4 ký tự từ 01/7/2026 (cần văn bản gốc).",
+    "Đề xuất kỹ thuật: ký số XML bắt buộc từ 01/01/2026 theo NĐ 188.",
+    "Đề xuất kỹ thuật: mức hưởng theo cấp chuyên môn kỹ thuật, không theo tuyến cũ.",
+    "Đề xuất kỹ thuật: khóa nghiệp vụ theo giấy phép hành nghề và phạm vi chuyên môn.",
+    "Đề xuất kỹ thuật: phân quyền và nhật ký truy cập cho dữ liệu sức khỏe theo Luật 91/2025."
+  ],
+  "nguon_da_kiem": [
+    {"van_ban": "Luật Phòng bệnh 114/2025 (46 điều, Điều 45 hiệu lực, Điều 46 chuyển tiếp)", "nguon": "https://luatvietnam.vn/y-te/luat-phong-benh-2025-so-114-2025-qh15-422004-d1.html", "loai": "thu cap"},
+    {"van_ban": "Luật Phòng bệnh 114/2025 (toàn văn)", "nguon": "https://thuvienphapluat.vn/van-ban/The-thao-Y-te/Luat-Phong-benh-2025-so-114-2025-QH15-658530.aspx", "loai": "không đọc được (HTTP 403)"},
+    {"van_ban": "NĐ 188/2025/NĐ-CP", "nguon": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-188-2025-nd-cp-45593/57770.htm", "loai": "công báo"},
+    {"van_ban": "NĐ 148/2025/NĐ-CP", "nguon": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-148-2025-nd-cp-45158/56916.htm", "loai": "công báo"},
+    {"van_ban": "TT 12/2026/TT-BTC", "nguon": "https://vanban.chinhphu.vn/?pageid=27160&docid=216997&classid=1&typegroupid=6", "loai": "cổng Chính phủ"},
+    {"van_ban": "TT 15/2026/TT-BYT", "nguon": "https://vanban.chinhphu.vn/?docid=218141&pageid=27160", "loai": "cổng Chính phủ"},
+    {"van_ban": "TT 13/2025/TT-BYT", "nguon": "https://caselaw.vn/van-ban-phap-luat/587211-thong-tu-so-13-2025-tt-byt-ngay-06-06-2025-cua-bo-truong-bo-y-te-huong-dan-trien-khai-ho-so-benh-an-dien-tu", "loai": "thư viện pháp luật"},
+    {"van_ban": "Luật BHYT 51/2024", "nguon": "https://thuvienphapluat.vn/van-ban/Bao-hiem/Luat-Bao-hiem-y-te-sua-doi-2024-505750.aspx", "loai": "thư viện pháp luật"},
+    {"van_ban": "Luật BVDLCN 91/2025 và NĐ 356/2025", "nguon": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Bao-ve-du-lieu-ca-nhan-2025-so-91-2025-QH15-625628.aspx", "loai": "thư viện pháp luật"},
+    {"van_ban": "Luật Dược 44/2024", "nguon": "https://congbao.chinhphu.vn/van-ban/luat-so-44-2024-qh15-43548.htm", "loai": "công báo"},
+    {"van_ban": "Dự án sửa 6 luật y tế (đang trình, chưa có hiệu lực)", "nguon": "https://xaydungchinhsach.chinhphu.vn/cho-y-kien-ve-du-an-luat-sua-doi-6-luat-lien-quan-den-linh-vuc-y-te-119261013112801196.htm", "loai": "cổng Chính phủ"}
+  ],
+  "chua_xac_nhan": [
+    {"noi_dung": "Mức đóng BHYT 6%", "trang_thai": "bac-bo", "ghi_chu": "Nhiều nguồn ghi mức đóng hiện hành 4,5% theo NĐ 188/2025."},
+    {"noi_dung": "QĐ 1931/QĐ-BYT (29/6/2026, áp dụng 01/7/2026)", "trang_thai": "mot-nguon", "ghi_chu": "Chỉ có báo chí và blog, chưa có văn bản gốc."},
+    {"noi_dung": "Chỉ thị Bộ trưởng tháng 4/2026 về bệnh án giấy", "trang_thai": "chua-kiem", "ghi_chu": "Chưa tra cứu."},
+    {"noi_dung": "Nghị quyết 72-NQ/TW và 57-NQ/TW", "trang_thai": "chua-kiem", "ghi_chu": "Chưa tra cứu. Đây là chủ trương chính trị, không phải điều khoản phần mềm."},
+    {"noi_dung": "Khoản 17 Điều 2 và Chương X TT 32/2023", "trang_thai": "chua-kiem", "ghi_chu": "Chưa đối chiếu với văn bản gốc."},
+    {"noi_dung": "NĐ 165/2026/NĐ-CP hướng dẫn Luật Phòng bệnh", "trang_thai": "mot-nguon", "ghi_chu": "Chỉ thấy trong một nguồn."},
+    {"noi_dung": "Mốc XML bắt buộc theo QĐ 4750 (01/4/2024 hoặc 01/7/2024)", "trang_thai": "chua-kiem", "ghi_chu": "Các nguồn không thống nhất."},
+    {"noi_dung": "NĐ 148/2025 được kéo dài sau 01/3/2027", "trang_thai": "chua-kiem", "ghi_chu": "Chỉ là khả năng theo điều kiện, chưa có quyết định."},
+    {"noi_dung": "Dự án sửa 6 luật y tế (kỳ họp thứ 2, khóa XVI)", "trang_thai": "du-thao", "ghi_chu": "Đang trình, chưa thông qua. Không đưa vào mã."},
+    {"noi_dung": "Ngày hiệu lực TT 12/2026 ghi 10/12/2026", "trang_thai": "bac-bo", "ghi_chu": "Lỗi đánh máy, nhiều nguồn ghi 10/02/2026."}
+  ]
+}

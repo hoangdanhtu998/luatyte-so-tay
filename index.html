@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Sổ tay Luật Y tế</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sổ tay Luật Y tế Việt Nam: thư viện luật kèm số hiệu và hiệu lực, trắc nghiệm, đúng/sai, ghép cặp, thẻ nhớ và trợ lý tra cứu — học và ôn nhanh trên mọi thiết bị.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FCFCFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#173F4A" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg">
+<link rel="canonical" href="https://luatyte.online/">
+<meta property="og:title" content="Sổ tay Luật Y tế">
+<meta property="og:description" content="Thư viện luật y tế, trắc nghiệm, thẻ nhớ và trợ lý tra cứu — học luật y tế qua trò chơi.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://luatyte.online/">
+<meta property="og:locale" content="vi_VN">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-top">
+      <div class="brand">
+        <img class="logo" src="icon.svg" alt="" width="48" height="48">
+        <div>
+          <h1>Sổ tay Luật Y tế</h1>
+          <p class="sub">Học luật qua trò chơi, cập nhật đến 10/2026</p>
+        </div>
+      </div>
+
+    <div class="acct"><a class="linkbtn" id="acct-link" href="dang-nhap.html">Đăng nhập</a></div>
+    </div>
+<div class="stats">
+      <div class="stat"><span>Chuỗi ôn mỗi ngày</span><b id="s-streak">0</b></div>
+      <div class="stat"><span>Luật đã thuộc</span><b id="s-laws">0</b></div>
+      <div class="stat"><span>Huy hiệu</span><b id="s-badges">0</b></div>
+</div>
+    <div class="today" id="today-card"></div>
+    <div class="remind" id="remind-row">
+      <span class="label">Nhắc ôn mỗi ngày</span>
+      <input type="time" id="remind-time" value="20:00" aria-label="Giờ nhắc ôn">
+      <button class="btn" id="remind-btn">Bật nhắc</button>
+      <small id="remind-note" style="color:var(--muted)"></small>
+    </div>
+    <div class="achv-row" id="badges"></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Các mục">
+    <span class="ind" id="ind" aria-hidden="true"></span>
+    <button role="tab" data-tab="thuvien" aria-selected="true">Thư viện luật</button>
+    <button role="tab" data-tab="troly">Trợ lý hỏi đáp</button>
+    <button role="tab" data-tab="tracnghiem">Trắc nghiệm</button>
+    <button role="tab" data-tab="thithu">Thi thử</button>
+    <button role="tab" data-tab="dungsai">Đúng hay Sai</button>
+    <button role="tab" data-tab="ghepcap">Ghép cặp</button>
+    <button role="tab" data-tab="thenho">Thẻ nhớ</button>
+    <button role="tab" data-tab="phantich">Phân tích</button>
+  </nav>
+
+  <!-- THƯ VIỆN -->
+  <section class="panel" id="p-thuvien">
+    <p class="intro">Các luật y tế chính, kèm số hiệu, ngày hiệu lực và điểm cần nhớ. Bấm vào từng luật để mở chi tiết.</p>
+    <div class="links-row">
+      <a class="linkbtn" href="ly_thuyet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5Z"/><path d="M4 5.5V21"/></svg>Học lý thuyết theo chương</a>
+      <a class="linkbtn" href="tin_luat.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2Z"/><path d="M18 9h2a1 1 0 0 1 1 1v8a2 2 0 0 1-2 2h-1"/><path d="M8 8h7M8 12h7M8 16h4"/></svg>Tin cập nhật luật y tế</a>
+    </div>
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input type="search" id="lawq" placeholder="Tìm: bảo hiểm, thuốc, tiêm chủng, 15/2023…" aria-label="Tìm luật">
+      </label>
+    </div>
+    <div class="cats" id="lawcats"></div>
+    <div class="laws" id="laws"></div>
+    <p class="note">Tóm tắt phục vụ học tập. Trước khi áp dụng vào việc cụ thể, hãy đối chiếu toàn văn và tình trạng hiệu lực tại <a href="https://vbpl.vn" target="_blank" rel="noopener">vbpl.vn</a> hoặc <a href="https://thuvienphapluat.vn" target="_blank" rel="noopener">thuvienphapluat.vn</a>.</p>
+  </section>
+
+  <!-- TRẮC NGHIỆM -->
+  <section class="panel" id="p-tracnghiem" hidden>
+    <p class="intro">10 câu ngẫu nhiên mỗi lượt. Câu bạn đã đúng 5 lần liên tiếp sẽ xuất hiện ít hơn, câu hay sai sẽ xuất hiện nhiều hơn.</p>
+    <div class="row">
+      <select id="qset" aria-label="Bộ câu hỏi"><option value="chung">Luật chung</option><option value="his">HIS: hệ thống thông tin bệnh viện</option></select>
+      <select id="qtopic" aria-label="Chủ đề"></select>
+      <button class="btn" id="qstart">Lượt mới</button>
+      <button class="btn ghost" id="qdaily">Thử thách hôm nay</button>
+      <a class="btn ghost" href="clinic.html">Chơi ca trực (mini game)</a>      <button class="btn ghost" id="qai" hidden>Nhờ AI ra 5 câu mới</button>
+    </div>
+    <div class="card" id="quiz"></div>
+  </section>
+
+  <!-- THI THỬ -->
+  <section class="panel" id="p-thithu" hidden>
+    <p class="intro">Thi thử như thi thật: làm câu nào hay câu đó, đáp án chỉ hiện sau khi nộp bài. Hết giờ tự động nộp. Kết quả được lưu lại để so sánh tiến bộ.</p>
+    <div class="card" id="ex-form">
+      <div class="toolbar">
+        <select id="ex-set" aria-label="Bộ đề"><option value="chung">Luật chung</option><option value="his">HIS</option><option value="both">Gộp cả hai</option><option value="blueprint">Chuẩn bản đồ đề (thang 10)</option></select>
+        <select id="ex-count" aria-label="Số câu"><option value="20">20 câu</option><option value="40">40 câu</option></select>
+        <select id="ex-mins" aria-label="Thời gian"><option value="20">20 phút</option><option value="40">40 phút</option></select>
+        <button class="btn" id="ex-start">Vào thi</button>
+      </div>
+    </div>
+    <div id="ex-stage"></div>
+    <div id="ex-history"></div>
+  </section>
+
+  <!-- ĐÚNG SAI -->
+  <section class="panel" id="p-dungsai" hidden>
+    <p class="intro">60 giây, càng nhiều câu đúng càng tốt. Sai một câu bị trừ 3 giây. Phím tắt: <kbd>←</kbd> Sai, <kbd>→</kbd> Đúng.</p>
+    <div class="card tf-stage" id="tf"></div>
+  </section>
+
+  <!-- GHÉP CẶP -->
+  <section class="panel" id="p-ghepcap" hidden>
+    <p class="intro">Chọn một ô bên trái rồi ô tương ứng bên phải. Ghép đủ 5 cặp với ít lỗi nhất.</p>
+    <div class="row">
+      <select id="mmode" aria-label="Kiểu ghép">
+        <option value="so">Tên luật ↔ Số hiệu</option>
+        <option value="hl">Tên luật ↔ Ngày hiệu lực</option>
+        <option value="fact">Quy định ↔ Con số</option>
+      </select>
+      <button class="btn" id="mstart">Ván mới</button>
+    </div>
+    <div class="card" id="match"></div>
+  </section>
+
+  <!-- THẺ NHỚ -->
+  <section class="panel" id="p-thenho" hidden>
+    <div class="toolbar" style="margin-bottom:10px">
+      <button class="btn ghost" id="cloze-start">Điền khuyết điều luật</button>
+      <span class="meta" id="cloze-note">Che số liệu trong điểm luật, gõ lại để nhớ sâu</span>
+    </div>
+    <div id="cloze-box"></div>
+    <div id="srs-box"></div>
+    <p class="intro">Bấm vào thẻ để lật xem đáp án. Chọn “Nhớ rồi” để thẻ biến mất, hoặc “Ôn lại sau” để thẻ quay lại sớm hơn.</p>
+    <div class="card" id="cards"></div>
+  </section>
+
+  <!-- PHÂN TÍCH LỖI SAI -->
+  <section class="panel" id="p-phantich" hidden>
+    <p class="intro">Thống kê được ghi lại trên máy này mỗi khi bạn trả lời câu trắc nghiệm. Xem câu hay sai và chủ đề cần ôn nhiều hơn.</p>
+    <div class="toolbar" id="backup-bar" style="margin-bottom:14px">
+      <button class="btn" id="weak-practice">Luyện 10 điểm yếu</button>
+      <button class="btn ghost" id="bk-export">Xuất tiến độ</button>
+      <label class="btn ghost" style="display:inline-flex;align-items:center;cursor:pointer">Nhập tiến độ<input type="file" id="bk-import" accept="application/json" hidden></label>
+      <span class="meta" id="bk-msg"></span>
+    </div>
+    <div id="analysis"></div>
+  </section>
+
+  <!-- TRỢ LÝ (ngăn nổi) -->
+  <div class="scrim" id="scrim" hidden></div>
+  <section class="drawer" id="p-troly" hidden aria-label="Trợ lý y tế">
+    <div class="drawer-head">
+      <div class="who">
+        <span class="av" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0F766E"/><rect x="26" y="13" width="12" height="38" rx="4" fill="#FFFFFF"/><rect x="13" y="26" width="38" height="12" rx="4" fill="#FFFFFF"/></svg>
+        </span>
+        <div><b>Trợ lý y tế</b><small>Hỏi về luật và sức khỏe</small></div>
+      </div>
+      <button class="x" type="button" aria-label="Đóng">×</button>
+    </div>
+    <div class="avatar" id="avatar" hidden aria-hidden="true"></div>
+    <div class="suggest" id="suggest"></div>
+    <div class="chat">
+      <div class="chat-log" id="log" aria-live="polite"></div>
+      <form class="chat-form" id="chatform">
+        <textarea id="ask" rows="1" placeholder="Hỏi về luật hoặc sức khỏe…" aria-label="Câu hỏi"></textarea>
+        <button class="btn" id="send" type="submit" aria-label="Gửi câu hỏi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg></button>
+        <button class="btn ghost" id="stop" type="button" hidden>Dừng</button>
+      </form>
+    </div>
+    <p class="mode" id="mode">Đang kết nối trợ lý…</p>
+  </section>
+
+  <button class="bot-fab" id="fab" type="button" aria-label="Mở trợ lý y tế">
+    <span class="ic">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="28" y="30" width="8" height="7" fill="#F3C79E"/>
+        <path d="M12 62 v-7 q0-8 8-9 l6-2 6 7 6-7 6 2 q8 1 8 9 v7 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M26 44 l6 7 6-7 v3 q-6 7 -12 0 Z" fill="#14B8A6"/>
+        <path d="M25 44 q-3 6 2 10" fill="none" stroke="#0F766E" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="28" cy="56" r="2.6" fill="#EAF1F5" stroke="#9FB0BC" stroke-width="1.6"/>
+        <rect x="40" y="50" width="8" height="10" rx="1.6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+        <rect x="43.4" y="52" width="1.8" height="4.6" fill="#14B8A6"/>
+        <rect x="42" y="53.4" width="4.6" height="1.8" fill="#14B8A6"/>
+        <ellipse cx="32" cy="22" rx="14" ry="15" fill="#F3C79E"/>
+        <circle cx="17.5" cy="24" r="2.6" fill="#F3C79E"/><circle cx="46.5" cy="24" r="2.6" fill="#F3C79E"/>
+        <path d="M18 20 Q17 6 32 5 Q47 6 46 20 Q45 12 38 10 Q42 6 30 7 Q22 8 19 15 Z" fill="#3B2F28"/>
+        <circle cx="26" cy="23" r="4.4" fill="rgba(255,255,255,.15)" stroke="#51606D" stroke-width="1.6"/>
+        <circle cx="38" cy="23" r="4.4" fill="rgba(255,255,255,.15)" stroke="#51606D" stroke-width="1.6"/>
+        <path d="M30.4 23 h3.2" stroke="#51606D" stroke-width="1.6"/>
+        <circle cx="26" cy="23" r="1.8" fill="#2A333F"/><circle cx="38" cy="23" r="1.8" fill="#2A333F"/>
+        <path d="M27 31 Q32 35 37 31" fill="none" stroke="#8A3B2E" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="tx">Hỏi trợ lý</span>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <footer>Nội dung tổng hợp từ văn bản của Quốc hội và cổng thông tin pháp luật, cập nhật 21/10/2026. Đây là công cụ học tập, không thay thế tư vấn pháp lý.</footer>
+</div>
+
+<script src="js/search.js"></script>
+<script>
+async function boot(){
+const [LAWS, QUIZ0, TF, FACTPAIRS] = await Promise.all(
+  ["laws", "quiz", "tf", "factpairs"].map(n => fetch("data/" + n + ".json").then(r => { if (!r.ok) throw new Error(n); return r.json(); }))
+);
+const HIS = await fetch("data/quiz_his.json").then(r => r.ok ? r.json() : []).catch(() => []);
+const NENTANG = await fetch("data/quiz_nentang.json").then(r => r.ok ? r.json() : []).catch(() => []);
+const QUIZ = [...QUIZ0, ...NENTANG];
+HIS.forEach(x => { x.t = x.law; });
+LYTSearch.build(LAWS, QUIZ, HIS);
+const TS = q => "https://thuvienphapluat.vn/page/tim-van-ban.aspx?keyword=" + encodeURIComponent(q);
+
+
+/* ================= TIỆN ÍCH ================= */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const shuffle = a => { a = a.slice(); for (let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]} return a; };
+const lawById = id => LAWS.find(l => l.id === id);
+const REDUCE = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+const store = {
+  get(k, d){ try { const v = localStorage.getItem("lyt_"+k); return v==null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v){ try { localStorage.setItem("lyt_"+k, JSON.stringify(v)); } catch {} }
+};
+
+const PALETTE = ["#0F766E","#C2410C","#A16207","#1D4ED8","#0E7490","#BE123C","#15803D","#44403C"];
+const CATCOLOR = {}; [...new Set(LAWS.map(l=>l.cat))].forEach((c,i)=>CATCOLOR[c]=PALETTE[i%PALETTE.length]);
+
+/* Thông báo nổi */
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(toast.t); toast.t = setTimeout(()=>t.classList.remove("show"), 2300);
+}
+/* Đếm số tăng dần */
+function countUp(el, to){
+  if (!el) return;
+  const from = Number(el.dataset.v || 0); el.dataset.v = to;
+  if (REDUCE()) { el.textContent = to; return; }
+  const t0 = performance.now(), d = 700;
+  const step = t => { const k = Math.min(1, (t-t0)/d); el.textContent = Math.round(from + (to-from)*(1-Math.pow(1-k,3))); if (k<1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+function pop(el){ if (!el || REDUCE()) return; el.classList.remove("combo-hot"); void el.offsetWidth; el.classList.add("combo-hot"); }
+/* Pháo giấy */
+function burst(x, y){
+  if (REDUCE()) return;
+  const cols = ["#0F766E","#F26B4F","#D9961A","#2DD4BF","#5EEAD4","#FB7185"];
+  const cx = x ?? innerWidth/2, cy = y ?? innerHeight*.4;
+  for (let i=0;i<44;i++){
+    const s = document.createElement("i");
+    s.className = "cf" + (i%3===0 ? " round" : "");
+    s.style.left = (cx + (Math.random()-.5)*60) + "px";
+    s.style.top = (cy + (Math.random()-.5)*30) + "px";
+    s.style.background = cols[i%cols.length];
+    s.style.setProperty("--dx", ((Math.random()-.5)*340) + "px");
+    s.style.setProperty("--dy", (-120 - Math.random()*240) + "px");
+    s.style.setProperty("--r", (Math.random()*900-450) + "deg");
+    s.style.animationDelay = (Math.random()*120) + "ms";
+    document.body.append(s); setTimeout(()=>s.remove(), 1600);
+  }
+}
+function shakeEl(el){ if (!el || REDUCE()) return; el.classList.remove("shake"); void el.offsetWidth; el.classList.add("shake"); }
+
+/* ================= TIẾN ĐỘ, HUY HIỆU, THỬ THÁCH NGÀY ================= */
+const MASTER_AT = 5; // đúng liên tiếp bao nhiêu lần thì coi là đã thuộc câu
+const qStats = () => store.get("qstat", {});
+const bmAll = () => store.get("bookmarks", []);
+const bmHas = id => bmAll().includes(id);
+let bmOnly = false;
+document.getElementById('laws').addEventListener('click', e => {
+  const b = e.target.closest('[data-bm]');
+  if (!b) return;
+  e.preventDefault(); e.stopPropagation();
+  const id = b.dataset.bm;
+  const all = bmAll();
+  const i = all.indexOf(id);
+  if (i < 0){ all.push(id); b.textContent = '★'; b.classList.add('on'); b.setAttribute('aria-pressed','true'); toast('Đã đánh dấu luật'); }
+  else { all.splice(i, 1); b.textContent = '☆'; b.classList.remove('on'); b.setAttribute('aria-pressed','false'); toast('Đã bỏ đánh dấu'); }
+  store.set('bookmarks', all);
+});
+const quizOf = id => QUIZ.filter(q => q.t === id);
+function lawMastery(id){
+  const pool = quizOf(id), st = qStats();
+  return { done: pool.filter(q => (st[q.q] || {}).s >= MASTER_AT).length, total: pool.length };
+}
+function masteredLaws(){ return LAWS.filter(l => { const m = lawMastery(l.id); return m.total > 0 && m.done === m.total; }); }
+function masteryLine(l){
+  const m = lawMastery(l.id); if (!m.total) return "";
+  const txt = m.done === m.total ? "Đã thuộc luật" : `Thành thạo ${m.done}/${m.total} câu`;
+  return `<div class="mastery"><div class="bar"><i style="width:${m.done/m.total*100}%"></i></div><span>${txt}</span></div>`;
+}
+
+const todayKey = (offset = 0) => {
+  const d = new Date(); d.setDate(d.getDate() + offset);
+  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+};
+const daily = () => store.get("daily", { day: "", last: "", streak: 0 });
+const dailyStreak = () => { const d = daily(); return (d.last === todayKey() || d.last === todayKey(-1)) ? d.streak : 0; };
+function dailyQuestions(n = 5){
+  let s = 0; for (const c of todayKey()) s = (s * 31 + c.charCodeAt(0)) >>> 0;
+  const rnd = () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
+  const arr = QUIZ.slice(), out = [];
+  while (out.length < n && arr.length) out.push(arr.splice(Math.floor(rnd() * arr.length), 1)[0]);
+  return out;
+}
+function finishDaily(score){
+  const d = daily(), today = todayKey();
+  if (d.day === today) return;
+  const pass = score >= 4;
+  const streak = pass ? (d.last === todayKey(-1) ? dailyStreak() + 1 : 1) : d.streak;
+  if (pass) avatar?.play("cheer", 2.5);
+  store.set("daily", { day: today, last: pass ? today : d.last, streak });
+  // Save progress to lyt_progress
+  const progress = store.get("lyt_progress", { score: 0, total: 0, streak: 0, lastPlayed: "", badges: [] });
+  progress.score = (progress.score || 0) + score;
+  progress.total = (progress.total || 0) + 1;
+  progress.streak = streak;
+  progress.lastPlayed = today;
+  // Merge badges
+  const got = store.get("badges", []);
+  const fresh = checkBadges();
+  progress.badges = [...new Set([...progress.badges, ...fresh.map(b => b.id)])];
+  store.set("lyt_progress", progress);
+}
+
+const BADGES = [
+  { id: "first",  name: "Câu đúng đầu tiên",      desc: "Trả lời đúng một câu hỏi", ok: () => Object.values(qStats()).some(x => x.s > 0) },
+  { id: "combo5", name: "Năm câu liên tiếp",      desc: "Đúng 5 câu liên tiếp trong một lượt", ok: () => store.get("bestcombo", 0) >= 5 },
+  { id: "law1",   name: "Thuộc một luật",         desc: "Thành thạo toàn bộ câu hỏi của một luật", ok: () => masteredLaws().length >= 1 },
+  { id: "law5",   name: "Thuộc năm luật",         desc: "Thành thạo toàn bộ câu hỏi của năm luật", ok: () => masteredLaws().length >= 5 },
+  { id: "lawall", name: "Thuộc cả thư viện",      desc: "Thành thạo mọi luật có câu hỏi", ok: () => masteredLaws().length === LAWS.filter(l => quizOf(l.id).length).length },
+  { id: "daily3", name: "Ba ngày liền",           desc: "Đạt thử thách hôm nay 3 ngày liên tiếp (từ 4/5 câu)", ok: () => dailyStreak() >= 3 },
+  { id: "tf20",   name: "Hai mươi điểm Đúng/Sai", desc: "Đúng 20 nhận định trong một lượt 60 giây", ok: () => store.get("tfbest", 0) >= 20 },
+  { id: "match",  name: "Ghép không lỗi",         desc: "Ghép đủ 5 cặp mà không sai lần nào", ok: () => store.get("matchPerfect", false) },
+  { id: "exam80", name: "Thi thử 80%",            desc: "Đạt 80% trở lên trong một lần thi thử", ok: () => store.get("exams", []).some(x => x.pct >= 80) },
+  { id: "review3",name: "Ôn đều ba ngày",         desc: "Ôn hết hàng đợi Ôn hôm nay 3 ngày liên tiếp", ok: () => reviewStreak() >= 3 }
+];
+function checkBadges(){
+  const got = store.get("badges", []);
+  const fresh = BADGES.filter(b => !got.includes(b.id) && b.ok());
+  if (fresh.length){
+    store.set("badges", got.concat(fresh.map(b => b.id)));
+    toast("Huy hiệu mới: " + fresh.map(b => b.name).join(", "));
+    avatar?.play("cheer", 2.8);
+    burst();
+  }
+  renderBadges(); renderStats();
+}
+function renderBadges(){
+  const got = store.get("badges", []);
+  $("#badges").innerHTML = BADGES.map(b => `<span class="achv ${got.includes(b.id) ? "on" : ""}" title="${esc(b.desc)}">${esc(b.name)}</span>`).join("");
+}
+function renderStats(){
+  countUp($("#s-streak"), dailyStreak());
+  renderToday();
+  $("#s-laws").textContent = masteredLaws().length + "/" + LAWS.length;
+  $("#s-badges").textContent = store.get("badges", []).length + "/" + BADGES.length;
+}
+renderStats(); checkBadges();
+
+/* ================= CHUYỂN TAB ================= */
+const TABS = ["thuvien","tracnghiem","thithu","dungsai","ghepcap","thenho","phantich"];
+function placeInd(){
+  const b = document.querySelector('nav.tabs button[aria-selected="true"]'); if (!b) return;
+  const ind = $("#ind"); ind.style.width = b.offsetWidth + "px"; ind.style.transform = `translateX(${b.offsetLeft}px)`;
+}
+function showTab(t){
+  if (t === "troly"){ setBot(true); return; }
+  if (!TABS.includes(t)) t = "thuvien";
+  setBot(false);
+  document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab===t));
+  TABS.forEach(x => { $("#p-"+x).hidden = x!==t; });
+  store.set("tab", t);
+  placeInd();
+  if (t==="dungsai" && !tfState.running) renderTFIntro();
+  if (t==="phantich") renderAnalysis();
+  if (t==="thenho") renderSrs();
+  if (t==="thithu") renderExamHistory();
+}
+document.querySelectorAll("nav.tabs button").forEach(b => b.onclick = () => showTab(b.dataset.tab));
+addEventListener("resize", placeInd);
+
+/* ================= THƯ VIỆN ================= */
+let lawCat = "Tất cả";
+const cats = ["Tất cả", ...new Set(LAWS.map(l => l.cat))];
+$("#lawcats").innerHTML = cats.map(c => `<button class="chip" aria-pressed="${c===lawCat}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+$("#lawcats").onclick = e => { const b = e.target.closest("button"); if(!b) return; lawCat = b.dataset.c;
+  document.querySelectorAll("#lawcats .chip").forEach(x => x.setAttribute("aria-pressed", x===b)); renderLaws(); };
+$("#lawq").oninput = renderLaws;
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/đ/g,"d");
+const STATUS = {on:["p-on","Đang hiệu lực"], amend:["p-amend","Có sửa đổi"], het:["p-het","Hết hiệu lực"]};
+function renderLaws(){
+  const q = norm($("#lawq").value.trim());
+  const list = LAWS.filter(l => (lawCat==="Tất cả"||l.cat===lawCat) && (!bmOnly || bmHas(l.id)) && (!q || norm([l.name,l.so,l.cat,l.replaces,...l.points].join(" ")).includes(q)));
+  if (!document.getElementById("bm-only")) $("#lawq").closest("label").insertAdjacentHTML("afterend", '<button id="bm-only" class="chip" aria-pressed="false" title="Chỉ hiện luật đã đánh dấu">★</button>');
+  const bmBtn = $("#bm-only");
+  bmBtn.setAttribute("aria-pressed", String(bmOnly));
+  bmBtn.onclick = () => { bmOnly = !bmOnly; renderLaws(); };
+  $("#laws").innerHTML = list.length ? list.map((l,i) => `
+    <details class="law" style="--c:${CATCOLOR[l.cat]}" ${i<1 && !q ? "open":""}>
+      <summary>
+        <span class="badge">${esc(l.so.split("/")[0])}<br>${esc(l.so.split("/")[1]||"")}</span>
+        <div>
+          <h3>${esc(l.name)}</h3>
+          <div class="meta"><span class="mono">${esc(l.so)}</span><span>Hiệu lực ${esc(l.eff)}</span><span class="pill ${STATUS[l.status][0]}">${STATUS[l.status][1]}</span></div>${masteryLine(l)}
+        </div>
+        <button class="bm ${bmHas(l.id) ? "on" : ""}" data-bm="${esc(l.id)}" title="Đánh dấu luật này" aria-label="Đánh dấu luật này" aria-pressed="${bmHas(l.id)}">${bmHas(l.id) ? "★" : "☆"}</button>
+        <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="body">
+        ${l.replaces?`<div class="meta">${esc(l.replaces)}</div>`:""}
+        <div class="pts">${l.points.map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+        ${l.guide?`<div class="meta">Văn bản hướng dẫn: ${esc(l.guide)}</div>`:""}
+        <div class="links">
+          <a class="linkbtn" href="${TS(l.so)}" target="_blank" rel="noopener">Mở toàn văn ↗</a>
+          <button class="linkbtn" type="button" data-askabout="${l.id}">Hỏi trợ lý về luật này</button>
+          <button class="linkbtn" type="button" data-quizabout="${l.id}">Luyện câu hỏi</button>
+        </div>
+      </div>
+    </details>`).join("") : `<p class="intro">Không tìm thấy luật phù hợp. Thử từ khóa khác như "thuốc" hoặc "BHYT".</p>`;
+}
+$("#laws").onclick = e => {
+  const b = e.target.closest("button[data-askabout],button[data-quizabout]"); if(!b) return;
+  if (b.dataset.askabout){ const l = lawById(b.dataset.askabout); setBot(true); $("#ask").value = `Tóm tắt những điểm quan trọng nhất của ${l.name} (${l.so}) mà tôi cần nhớ.`; }
+  else { $("#qtopic").value = b.dataset.quizabout; showTab("tracnghiem"); startQuiz(); }
+};
+renderLaws();
+
+/* ================= TRỢ LÝ ================= */
+const KB = LAWS.map(l => `### ${l.name} — ${l.so}\nThông qua: ${l.pass}; hiệu lực: ${l.eff}. ${l.replaces||""}\n${l.points.map(p=>"- "+p).join("\n")}${l.guide?"\nHướng dẫn: "+l.guide:""}`).join("\n\n");
+const RULES = `Bạn là "Trợ lý Y tế và Luật Y tế", giúp một người Việt Nam học về y tế, sức khỏe và pháp luật y tế Việt Nam. Hôm nay là 21/10/2026.
+Quy tắc:
+- Luôn trả lời bằng tiếng Việt. Câu đầu tiên trả lời thẳng câu hỏi; sau đó mới giải thích ngắn (tối đa khoảng 200 từ), dùng gạch đầu dòng khi liệt kê, bỏ các ý không liên quan đến câu hỏi.
+- Với câu hỏi về luật, chỉ dựa vào TÀI LIỆU LIÊN QUAN đi kèm câu hỏi. Quy định không có trong tài liệu thì nói rõ cần kiểm tra lại văn bản gốc.
+- Với câu hỏi về sức khỏe, bệnh tật, dinh dưỡng, phòng bệnh, thuốc, tiêm chủng, dùng kiến thức y khoa chung đáng tin cậy.
+- Dẫn chứng: mỗi ý lấy từ tài liệu phải ghi số [n]. Khi tài liệu có điều khoản, ghi cả tên luật, số hiệu và điều khoản (ví dụ: Luật 51/2024/QH15, Điều 22). Không thêm điều khoản nào không có trong tài liệu.
+- Không bịa số điều, con số hay văn bản. Nếu không chắc, nói thẳng là không chắc và gợi ý tra cứu vbpl.vn hoặc thuvienphapluat.vn.
+- Với câu hỏi về trường hợp cá nhân cụ thể, giải thích nguyên tắc chung và khuyên hỏi cơ quan BHXH, Sở Y tế hoặc luật sư.
+- Cuối mỗi câu trả lời, thêm một dòng "Ôn nhanh:" với 1 câu hỏi ngắn để người học tự kiểm tra.
+- Không chẩn đoán bệnh, không kê đơn, không thay thế bác sĩ. Khi có dấu hiệu nguy cấp (đau ngực, khó thở, chảy máu nhiều, co giật, ngộ độc...), khuyên gọi 115 ngay.
+- Chào hỏi, cảm ơn, hoặc hỏi cách dùng ứng dụng: trả lời thân thiện, ngắn gọn. Câu hỏi về app dựa vào tài liệu có tiêu đề "Ứng dụng:".
+- Tài liệu có "[độ khớp thấp]" hoặc "[chờ đối chiếu]": nói rõ mức chắc chắn, không khẳng định như quy định chính thức.
+- Từ chối nhẹ nhàng các câu hoàn toàn ngoài y tế, sức khỏe, pháp luật và ứng dụng (ví dụ thời tiết, giải toán), rồi gợi ý một câu hỏi phù hợp.
+
+TÀI LIỆU: Mỗi câu hỏi đi kèm mục "TÀI LIỆU LIÊN QUAN" do hệ thống tìm được. Khi dẫn quy định, ghi số [n] tương ứng. Tài liệu có ghi "chờ đối chiếu" thì nói rõ điều đó. Nếu tài liệu không đủ, nói thẳng là chưa đủ thông tin và gợi ý tra cứu vbpl.vn; không đoán.`;
+const SUGG = ["Đi khám trái tuyến BHYT được trả bao nhiêu?","Điều kiện cấp giấy phép hành nghề bác sĩ?","Luật Phòng bệnh 2025 có gì mới?","Nhà thuốc có được bán online không?","Sinh con thứ hai được hưởng chính sách gì?","Hút thuốc ở bệnh viện bị cấm ở đâu?","Luật An toàn thực phẩm quản lý theo chuỗi nào?","Sổ sức khỏe điện tử thay thế gì từ 01/7/2025?"];
+$("#suggest").innerHTML = SUGG.map(s=>`<button class="chip">${esc(s)}</button>`).join("");
+$("#suggest").onclick = e => { const b = e.target.closest("button"); if(!b) return; $("#ask").value = b.textContent; send(); };
+
+const turns = [];
+let sample = null, ctl = null;
+function md(s){
+  const lines = esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").split("\n");
+  let out = "", inList = false;
+  for (const ln of lines){
+    const m = ln.match(/^\s*[-*•]\s+(.*)/);
+    if (m){ if(!inList){out+="<ul>";inList=true} out += "<li>"+m[1]+"</li>"; continue; }
+    if (inList){ out+="</ul>"; inList=false; }
+    if (ln.trim()) out += "<p>"+ln.replace(/^#+\s*/,"")+"</p>";
+  }
+  return out + (inList?"</ul>":"");
+}
+function scrollLog(){ const l = $("#log"); l.scrollTop = l.scrollHeight; }
+function bubble(role, html){
+  const d = document.createElement("div"); d.className = "msg " + (role==="user"?"me":"bot");
+  d.dataset.tm = new Date().toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" });
+  d.innerHTML = html;
+  $("#log").append(d); scrollLog(); return d;
+}
+bubble("bot", md("Xin chào! Mình là **Trợ lý Luật Y tế** — bạn đồng hành ôn tập của bạn.\nMình có thể:\n- Trả lời câu hỏi về BHYT, thuốc, giấy phép hành nghề, phòng bệnh, dân số…\n- Mở giúp bạn một luật hoặc một mục: thử nói *\"mở thi thử\"*, *\"mở phân tích\"*, *\"mở luật dược\"*\n- Gợi ý câu hỏi ở dải chip phía trên\nHoặc chọn một câu gợi ý để bắt đầu ngay."));
+
+/* Tra cứu ngoại tuyến: dùng khi không có AI, và làm nguồn tài liệu cho AI */
+let lastQ = "";
+const CANNED = {
+  greet: "Chào bạn! Mình là trợ lý của Sổ tay Luật Y tế. Bạn có thể hỏi về BHYT, khám chữa bệnh, thuốc, dân số, HIV… hoặc hỏi cách dùng app, ví dụ: \"Thử thách hôm nay là gì?\"",
+  thanks: "Không có gì! Có câu nào khác bạn muốn hỏi thì cứ gửi nhé."
+};
+// Câu hỏi ngắn nối tiếp (ví dụ "còn người nước ngoài thì sao?") được ghép với câu trước để tìm đúng ngữ cảnh
+function ctxQuery(q){ return lastQ && q.split(/\s+/).length < 6 ? lastQ + " " + q : q; }
+function logUnanswered(q){
+  const list = store.get("unanswered", []);
+  if (!list.some(x => x.q === q)) list.push({ q, d: new Date().toISOString().slice(0, 10) });
+  store.set("unanswered", list.slice(-200));
+}
+function offlineAnswer(q, ctx = q){
+  let hits = LYTSearch.search(ctx, 4);
+  if (!hits.length) hits = LYTSearch.search(ctx, 5, true);
+  if (!hits.length){
+    logUnanswered(q);
+    return "Mình chưa tìm thấy nội dung khớp trong sổ tay. Thử hỏi bằng từ khóa như **BHYT**, **giấy phép hành nghề**, **thuốc**, **tiêm chủng**, **an toàn thực phẩm** — hoặc chọn một câu gợi ý bên trên. Câu hỏi này đã được ghi lại để bổ sung.";
+  }
+  const weak = hits.some(h => h.weak);
+  const body = hits.map((d, i) => d.kind === "law"
+    ? `${i+1}. ${d.answer}\n   Nguồn: **${d.title}**`
+    : `${i+1}. **${d.answer}**${d.note ? "\n   " + d.note : ""}${d.verify ? " (đang chờ đối chiếu văn bản gốc)" : ""}\n   Nguồn: ${d.law || d.title}${d.src ? ", " + d.src : ""}`
+  ).join("\n");
+  return (weak
+    ? "Mình chỉ tìm được nội dung **gần khớp** (độ tin cậy thấp — nên đối chiếu toàn văn trước khi dùng):\n"
+    : "Theo sổ tay, đây là nội dung liên quan nhất:\n") + body;
+}
+
+/* Thao tác trong app khi người dùng nhờ (câu ngắn): mở luật, mở tab */
+const TABS_ACT = [
+  { tab: "tracnghiem", name: "Trắc nghiệm", re: /trac nghiem/ },
+  { tab: "thithu", name: "Thi thử", re: /thi thu/ },
+  { tab: "phantich", name: "Phân tích lỗi sai", re: /phan tich/ },
+  { tab: "dungsai", name: "Đúng hay Sai", re: /dung sai/ },
+  { tab: "ghepcap", name: "Ghép cặp", re: /ghep cap/ },
+  { tab: "thenho", name: "Thẻ nhớ", re: /the nho/ },
+  { tab: "thuvien", name: "Thư viện luật", re: /thu vien/ }
+];
+const OPEN_VERB = /\b(mo|sang|chuyen|di toi|den|xem)\b/;
+const soKey = s => s.split("/").slice(0, 2).join("/");
+function detectAction(q){
+  const n = LYTSearch.fold(q);
+  if (!OPEN_VERB.test(n) || n.split(/\s+/).length > 8) return null;
+  if (/\bluat\b/.test(n)){
+    let best = LAWS.find(l => n.includes(soKey(l.so)));
+    if (!best){
+      let bestN = 0;
+      LAWS.forEach(l => {
+        const words = LYTSearch.fold(l.name).match(/[a-z0-9]{4,}/g) || [];
+        const k = words.filter(w => n.includes(w)).length;
+        if (k > bestN){ bestN = k; best = l; }
+      });
+      if (bestN < 2) best = null;
+    }
+    if (best) return { reply: `Mình đã mở **${best.name}** trong Thư viện luật.`, run(){ $("#lawq").value = best.name; renderLaws(); showTab("thuvien"); } };
+  }
+  const t = TABS_ACT.find(x => x.re.test(n));
+  if (t) return { reply: `Mình đã mở tab **${t.name}**.`, run(){ showTab(t.tab); } };
+  return null;
+}
+
+/* Khối liên kết và gợi ý hỏi thêm dưới mỗi câu trả lời */
+function addRelated(el, hits, q){
+  const seen = new Set();
+  const links = hits.filter(d => !d.weak && (d.lawId || d.ref)).filter(d => {
+    const k = d.lawId || d.title;
+    if (seen.has(k)) return false;
+    seen.add(k); return true;
+  }).slice(0, 3);
+  const top = hits[0];
+  let follow = hits.filter(d => !d.weak && (d.kind === "quiz" || d.kind === "his") && (!top || d.title !== top.title))
+    .slice(0, 3).map(d => d.title);
+  if (follow.length < 2 && top && top.lawId){
+    const more = LYTSearch.search(lawById(top.lawId).name, 6)
+      .filter(d => !d.weak && (d.kind === "quiz" || d.kind === "his") && d.title !== q && !follow.includes(d.title))
+      .map(d => d.title);
+    follow = follow.concat(more).slice(0, 3);
+  }
+  if (!links.length && !follow.length) return;
+  const box = document.createElement("div");
+  box.className = "related";
+  links.forEach(d => {
+    const b = document.createElement("button");
+    b.className = "linkbtn";
+    b.type = "button";
+    if (d.lawId){
+      const l = lawById(d.lawId);
+      b.textContent = "Mở luật: " + l.name;
+      b.onclick = () => { $("#lawq").value = l.name; renderLaws(); showTab("thuvien"); };
+    } else {
+      b.textContent = "Luyện câu này";
+      b.onclick = () => { qset = d.set; $("#qset").value = d.set; buildTopics(); showTab("tracnghiem"); startQuiz([d.ref]); };
+    }
+    box.append(b);
+  });
+  follow.forEach(t => {
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.type = "button";
+    b.textContent = t;
+    b.onclick = () => { $("#ask").value = t; send(); };
+    box.append(b);
+  });
+  el.append(box);
+}
+function setBusy(b){ $("#send").disabled = b; $("#stop").hidden = !b; }
+$("#stop").onclick = () => ctl?.abort();
+$("#chatform").onsubmit = e => { e.preventDefault(); send(); };
+$("#ask").addEventListener("keydown", e => { if (e.key==="Enter" && !e.shiftKey){ e.preventDefault(); send(); } });
+$("#ask").addEventListener("input", e => { e.target.style.height="auto"; e.target.style.height = Math.min(96, e.target.scrollHeight)+"px"; });
+
+/* Trả lời nhanh dạng thẻ: ngắn gọn dễ hiểu + nút "Chi tiết hơn" */
+let QAp = null;
+function getQA(){ return QAp || (QAp = fetch("data/tra_loi_nhanh.json").then(r => r.ok ? r.json() : []).catch(() => [])); }
+function matchQuick(q, list){
+  const n = LYTSearch.fold(q);
+  return (list || []).find(c => c.pattern && new RegExp(c.pattern.topic).test(n) && new RegExp(c.pattern.ask).test(n)) || null;
+}
+function renderQuick(c){
+  const li = x => `<li><b>${esc(x.h)}</b>: ${esc(x.t)}</li>`;
+  const el = bubble("bot",
+    `<p><b>${esc(c.title)}</b></p><p>${esc(c.scope)}</p><ol class="qa-list">${c.short.map(li).join("")}</ol>` +
+    `<button type="button" class="chip qa-more" aria-expanded="false">Chi tiết hơn ▾</button>` +
+    `<div class="qa-detail" hidden><ul class="qa-list">${c.more.map(li).join("")}</ul>${c.note ? `<p class="qa-note">${esc(c.note)}</p>` : ""}</div>` +
+    `<div class="src">Nguồn: ${esc(c.source)}</div>`);
+  const btn = el.querySelector(".qa-more"), det = el.querySelector(".qa-detail");
+  btn.onclick = () => {
+    const open = det.hidden;
+    det.hidden = !open;
+    btn.setAttribute("aria-expanded", String(open));
+    btn.textContent = open ? "Thu gọn ▴" : "Chi tiết hơn ▾";
+    if (open) btn.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
+  return el;
+}
+async function send(){
+  const q = $("#ask").value.trim(); if (!q || !$("#stop").hidden) return;
+  $("#ask").value = ""; $("#ask").style.height = "auto";
+  bubble("user", esc(q));
+  const it = LYTSearch.intent(q);
+  if (it){ avatar?.play(it === "greet" ? "wave" : "happy", 2.2); bubble("bot", md(CANNED[it])); return; }
+  const act = detectAction(q);
+  if (act){ avatar?.play("wave", 2.2); act.run(); bubble("bot", md(act.reply)); return; }
+  const qa = matchQuick(q, await getQA());
+  if (qa){
+    avatar?.play("talking", 2.5); lastQ = q;
+    const el = renderQuick(qa);
+    if (qa.lawId){ try { addRelated(el, [{ lawId: qa.lawId, kind: "law", title: qa.title, answer: "" }], q); } catch (e) {} }
+    el.scrollIntoView({ block: "start" });
+    return;
+  }
+  const ctx = ctxQuery(q); lastQ = q;
+  avatar?.play("thinking");
+  if (!sample){
+    const t = bubble("bot", `<span class="typing"><i></i><i></i><i></i></span>`);
+    await new Promise(r => setTimeout(r, 550 + Math.random() * 450));
+    const found = LYTSearch.search(ctx, 4);
+    avatar?.play(found.length ? "talking" : "shrug", 2.5);
+    t.innerHTML = md(offlineAnswer(q, ctx)) + `<div class="src">Chế độ tra cứu trong sổ tay</div>`;
+    addRelated(t, found, q);
+    return;
+  }
+  turns.push({role:"user", content:q});
+  while (turns.length > 12) turns.splice(0, 2);
+  const b = bubble("bot", `<span class="typing"><i></i><i></i><i></i></span>`);
+  ctl = new AbortController(); setBusy(true);
+  try {
+    const hits = LYTSearch.search(ctx, 6, true);
+    const docsText = hits.map((d, i) => `[${i+1}] ` + (d.kind === "law"
+      ? `${d.title}: ${d.answer}`
+      : `${d.title} → ${d.answer}${d.note ? ". " + d.note : ""}${d.law ? " (" + d.law + (d.src ? ", " + d.src : "") + ")" : ""}${d.verify ? " [chờ đối chiếu]" : ""}`
+    ) + (d.weak ? " [độ khớp thấp]" : "")).join("\n");
+    const payload = [{role:"user", content:RULES}, ...turns.slice(0, -1), {role:"user", content:
+      q + "\n\nTÀI LIỆU LIÊN QUAN:\n" + (docsText || "(không có tài liệu khớp; nếu là câu hỏi luật, nói rõ chưa đủ thông tin)")}];
+    const { text, truncated } = await sample(payload, {
+      cache:false, signal:ctl.signal, onText:({text}) => { b.innerHTML = md(text); scrollLog(); avatar?.play("talking"); }
+    });
+    turns.push({role:"assistant", content:text});
+    b.innerHTML = md(text) + (truncated?`<div class="src">Câu trả lời bị cắt ngắn, hãy hỏi hẹp hơn.</div>`:"");
+    addRelated(b, hits, q);
+    avatar?.play("idle");
+  } catch (e) {
+    turns.pop();
+    if (e.code === "cancelled"){ b.innerHTML = e.text ? md(e.text) : "<p>Đã dừng.</p>"; }
+    else if (["not_granted","sampling_disabled","not_declared","capability_disabled","capability_removed"].includes(e.code)){
+      sample = null; setMode();
+      b.innerHTML = md(offlineAnswer(q, ctx)) + `<div class="src">Trợ lý AI chưa được bật, đang dùng tra cứu trong sổ tay</div>`;
+    } else if (e.code === "rate_limited"){ b.innerHTML = "<p>Bạn hỏi hơi nhanh, đợi một lát rồi gửi lại nhé.</p>"; }
+    else if (e.code === "refused"){ b.innerHTML = "<p>Mình không trả lời được câu này. Thử hỏi theo cách khác về luật y tế nhé.</p>"; }
+    else { b.innerHTML = (e.text?md(e.text):"") + "<p>Kết nối bị gián đoạn. Bấm Gửi lại câu hỏi để thử lại.</p>"; }
+  } finally { setBusy(false); scrollLog(); }
+}
+function setMode(){
+  $("#mode").innerHTML = sample
+    ? "Chế độ <b>Trợ lý AI</b>: lần hỏi đầu tiên sẽ xin phép dùng Claude trên tài khoản của bạn. Có thể sai, hãy đối chiếu văn bản gốc."
+    : "Chế độ <b>Tra cứu trong sổ tay</b>: trợ lý AI chưa sẵn sàng ở trang này.";
+  $("#qai").hidden = !sample;
+}
+/* Nhân vật 3D: tải khi mở trợ lý lần đầu, tạm dừng khi đóng */
+let avatar = null, avatarP = null;
+function loadAvatar(){
+  if (avatarP) return;
+  avatarP = import("./js/avatar.js?v=7").then(m => {
+    avatar = m.mount($("#avatar"));
+    if (!avatar){ $("#avatar").hidden = true; return; }
+    $("#avatar").hidden = false;
+    if (!$("#p-troly").hidden) avatar.resume();
+  }).catch(() => { $("#avatar").hidden = true; });
+}
+function setBot(open){
+  $("#p-troly").hidden = !open;
+  $("#scrim").hidden = !open;
+  requestAnimationFrame(() => $("#scrim").classList.toggle("on", !!open));
+  if (open) loadAvatar();
+  if (avatar) open ? avatar.resume() : avatar.pause();
+  $("#fab").classList.toggle("open", !!open);
+  if (open) { setTimeout(()=>$("#ask").focus(), 80); scrollLog(); }
+  store.set("bot", !!open);
+}
+$("#scrim").onclick = () => setBot(false);
+document.addEventListener("keydown", e => { if (e.key==="Escape" && !$("#p-troly").hidden) setBot(false); });
+$("#fab").onclick = () => setBot($("#p-troly").hidden);
+document.querySelector(".drawer-head .x").onclick = () => setBot(false);
+
+/* ================= TRẮC NGHIỆM ================= */
+let qset = "chung";
+const activeQuiz = () => qset === "his" ? HIS : QUIZ;
+function buildTopics(){
+  const opts = qset === "his"
+    ? [...new Set(HIS.map(q => q.t))].map(t => `<option value="${esc(t)}">${esc(t)}</option>`)
+    : [...LAWS.filter(l => QUIZ.some(q=>q.t===l.id)).map(l=>`<option value="${l.id}">${esc(l.name)}</option>`), ...(NENTANG.length ? [`<option value="nentang">Nền tảng pháp luật (bài giảng)</option>`] : [])];
+  $("#qtopic").innerHTML = `<option value="all">Tất cả chủ đề</option>` + opts.join("");
+}
+buildTopics();
+$("#qset").onchange = () => { qset = $("#qset").value; buildTopics(); startQuiz(); };
+let qs = [], qi = 0, qscore = 0, qcombo = 0, qbest = 0, qAnswered = false;
+
+function masteredCount(pool){ const st = qStats(); return pool.filter(q => (st[q.q]||{}).s >= MASTER_AT).length; }
+// Câu đã đúng liên tiếp MASTER_AT lần (không sai lần nào trong chuỗi) xuất hiện ít hơn; câu từng sai thì xuất hiện nhiều hơn.
+function pickQ(pool, n){
+  const st = qStats();
+  let items = pool.map(q => { const x = st[q.q] || {s:0,w:0}; return {q, w: x.s>=MASTER_AT ? 0.1 : (x.w>0 ? 3 : 1)}; });
+  const out = [];
+  while (out.length < n && items.length){
+    const tot = items.reduce((a,x)=>a+x.w,0); let r = Math.random()*tot, k = 0;
+    for (; k < items.length-1; k++){ r -= items[k].w; if (r <= 0) break; }
+    out.push(items[k].q); items.splice(k,1);
+  }
+  return out;
+}
+function recordQ(q, ok){
+  const st = qStats(); const x = st[q.q] || {s:0,w:0,r:0,lw:0};
+  if (ok){ x.s++; x.r = (x.r||0) + 1; }
+  else { x.s = 0; x.w++; x.lw = Date.now(); }
+  st[q.q] = x; store.set("qstat", st);
+  srsTick(q.q, ok);
+}
+/* ================= SPACED REPETITION (FSRS-lite, migrate SM-2 tự động) ================= */
+function srsAll(){
+  const s = store.get("srs", {});
+  for (const k of Object.keys(s)){
+    if (!s[k].v){ /* thẻ SM-2 cũ {e, iv, due} -> FSRS {s, d} */
+      s[k] = { v: 2, s: Math.max(0.5, s[k].iv || 1), d: Math.min(10, Math.max(1, 11 - (s[k].e || 2.5) * 2)), due: s[k].due || 0, reps: 0, lapses: 0 };
+    }
+  }
+  return s;
+}
+function srsTick(text, ok){
+  const s = srsAll(); const x = s[text] || { v: 2, s: 1, d: 6, due: 0, reps: 0, lapses: 0 };
+  x.reps = (x.reps || 0) + 1;
+  if (ok){
+    x.d = Math.max(1, x.d - 0.4);
+    x.s = x.reps === 1 ? 2.5 : Math.min(365, x.s * (1 + (11 - x.d) / 9));
+  } else {
+    x.d = Math.min(10, x.d + 0.8);
+    x.s = Math.max(0.3, x.s * 0.25);
+    x.lapses = (x.lapses || 0) + 1;
+  }
+  x.due = Date.now() + Math.max(0.25, x.s) * 86400000;
+  s[text] = x; store.set("srs", s);
+  return x;
+}
+function srsStrength(text){ const x = srsAll()[text]; return x ? Math.min(100, Math.round(x.s / 30 * 100)) : 0; }
+function srsDueCount(){
+  const s = srsAll(), now = Date.now();
+  return Object.keys(s).filter(t => s[t].due <= now).length;
+}
+function revDaily(){ return store.get("revdays", { last: "", streak: 0 }); }
+function reviewStreak(){ const d = revDaily(); return (d.last === todayKey() || d.last === todayKey(-1)) ? d.streak : 0; }
+let REV = [], revI = 0, revRight = 0, revDone = 0, requeued = null;
+function startReview(){
+  const s = srsAll(), now = Date.now();
+  const due = Object.keys(s).filter(t => s[t].due <= now);
+  REV = due.map(t => QUIZ.find(x => x.q === t) || HIS.find(x => x.q === t)).filter(Boolean).slice(0, 10);
+  if (!REV.length){ toast("Chưa có câu nào đến hạn ôn."); return; }
+  shuffle(REV);
+  revI = 0; revRight = 0; revDone = 0; requeued = new Set();
+  renderSrs();
+}
+function endReview(){
+  const box = $("#srs-box");
+  if (revDone > 0 && srsDueCount() === 0){
+    const rd = revDaily(), today = todayKey();
+    if (rd.last !== today){
+      const streak = rd.last === todayKey(-1) ? reviewStreak() + 1 : 1;
+      store.set("revdays", { last: today, streak });
+    }
+  }
+  checkBadges();
+  box.innerHTML = `<div class="card"><span class="label">Ôn hôm nay</span>
+    <p class="intro" style="margin:6px 0 0">Đã ôn <b>${revDone}</b> lượt, đúng <b>${revRight}</b>. Câu sai sẽ quay lại trong hôm nay và cả các ngày sau theo lịch ghi nhớ.</p></div>`;
+  REV = [];
+  setTimeout(renderSrs, 1500);
+}
+/* ---- flashcard điền khuyết từ points ---- */
+let CL = [], cli = 0;
+function clozeTokenize(text){
+  const tokens = text.match(/\d+(?:[.,]\d+)?(?:\/\d{4})?\s*(?:%|tuổi|tháng|ngày|năm|tuần|cấp|con)?/g) || [];
+  return tokens.filter(t => t.trim().length >= 1).slice(0, 2);
+}
+function buildClozeDeck(){
+  CL = []; cli = 0;
+  const pool = LAWS.filter(l => l.points.some(p => clozeTokenize(p).length));
+  shuffle(pool).slice(0, 12).forEach(l => {
+    l.points.forEach((p, pi) => {
+      const toks = clozeTokenize(p);
+      if (!toks.length || CL.length >= 12) return;
+      let html = esc(p);
+      const ans = [];
+      toks.forEach(tok => {
+        const re = new RegExp(esc(tok).replace(/[.*+?^${}()|[\]\\]/g, "\\function renderSrs(){"));
+        if (!re.test(html)) return;
+        html = html.replace(re, '<input class="cloze" data-a="' + esc(tok) + '" size="' + Math.max(4, tok.length + 2) + '" autocomplete="off">');
+        ans.push(tok);
+      });
+      if (ans.length) CL.push({ key: "cloze:" + l.id + "#" + pi, name: l.name, html, ans });
+    });
+  });
+  renderCloze();
+}
+function renderCloze(){
+  const box = $("#cloze-box"); if (!box) return;
+  if (!CL.length){ box.innerHTML = ""; return; }
+  const c = CL[cli];
+  box.innerHTML = `<div class="card"><span class="label">Điền khuyết · ${cli+1}/${CL.length} · ${esc(c.name)}</span>
+    <p class="q" style="margin:8px 0;line-height:2.3">${c.html}</p>
+    <div class="toolbar"><button class="btn" id="cloze-check">Kiểm tra</button></div>
+    <div id="cloze-fb"></div></div>`;
+  $("#cloze-check").onclick = () => {
+    const inputs = [...box.querySelectorAll("input.cloze")];
+    let allOk = true;
+    inputs.forEach(inp => {
+      const okv = inp.dataset.a.replace(",", ".").toLowerCase() === inp.value.replace(",", ".").toLowerCase().trim();
+      inp.style.borderColor = okv ? "var(--ok)" : "var(--bad)";
+      if (!okv) allOk = false;
+    });
+    $("#cloze-fb").innerHTML = `<p class="intro" style="margin:6px 0"><b>${allOk ? "Chính xác!" : "Chưa đúng — đáp án đã điền vào chỗ trống"}</b></p>
+      <div class="toolbar"><button class="btn" id="cloze-good">Nhớ rồi</button><button class="btn ghost" id="cloze-again">Ôn lại sau</button></div>`;
+    if (!allOk) inputs.forEach(inp => { if (inp.style.borderColor !== "var(--ok)") inp.value = inp.dataset.a; });
+    const done = () => { srsTick(c.key, allOk); cli++; cli < CL.length ? renderCloze() : (box.innerHTML = `<div class="card"><span class="label">Xong flashcard điền khuyết</span><p class="intro" style="margin:6px 0 0">Đã ôn ${CL.length} điểm luật.</p></div>`); };
+    $("#cloze-good").onclick = () => { allOk = true; done(); };
+    $("#cloze-again").onclick = () => { allOk = false; done(); };
+  };
+}
+$("#cloze-start").onclick = buildClozeDeck;
+function renderSrs(){
+  const box = $("#srs-box"); if (!box) return;
+  if (REV.length){
+    const q = REV[revI];
+    box.innerHTML = `<div class="card">
+      <span class="label">Ôn hôm nay · câu ${revI+1}/${REV.length}${requeued && requeued.has(q.q) ? " · ôn lại" : ""}</span>
+      <p class="q" style="margin:8px 0">${esc(q.q)}</p>
+      <div class="opts">${q.o.map((o,i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]||""}</span><span class="tx">${esc(o)}</span></button>`).join("")}</div>
+      <div id="revfb"></div>
+      <div class="toolbar" style="margin-top:10px"><button class="btn ghost" id="rev-quit">Dừng ôn</button></div>
+    </div>`;
+    box.querySelectorAll(".opt").forEach(b => b.onclick = () => {
+      const i = +b.dataset.i, ok = i === q.a;
+      recordQ(q, ok);
+      revDone++;
+      if (ok){ revRight++; if (revDone % 5 === 0) toast("Chuỗi ôn tốt!"); }
+      else if (!requeued.has(q.q)){ REV.push(q); requeued.add(q.q); }
+      box.querySelectorAll(".opt").forEach((x,j) => { x.disabled = true; if (j === q.a) x.classList.add("right"); else if (j === i) x.classList.add("wrong"); });
+      $("#revfb").innerHTML = `<div class="feedback ${ok?"ok":"no"}"><div class="hd">${ok?"Chính xác!":"Chưa đúng"}</div><p>${esc(q.e||"")}</p>
+        <div class="row"><button class="btn" id="rev-next">${revI+1 < REV.length ? "Câu tiếp theo" : "Hoàn thành"}</button></div></div>`;
+      $("#rev-next").onclick = () => { revI++; if (revI >= REV.length) endReview(); else renderSrs(); };
+    });
+    $("#rev-quit").onclick = () => { REV = []; renderSrs(); };
+    return;
+  }
+  const due = srsDueCount();
+  box.innerHTML = due
+    ? `<div class="card"><span class="label">Ôn hôm nay</span><p class="intro" style="margin:6px 0 10px"><b>${due}</b> câu đến hạn ôn lại theo lịch ghi nhớ giãn cách — đúng thì cách xa dần, sai thì gặp lại sớm.</p><button class="btn" id="rev-start">Ôn ${Math.min(10,due)} câu</button></div>`
+    : `<div class="card"><p class="intro" style="margin:0">Chưa có câu nào đến hạn ôn. Làm vài lượt Trắc nghiệm hoặc Thi thử, lịch ôn sẽ tự hình thành từ hôm sau.</p></div>`;
+  const s = $("#rev-start"); if (s) s.onclick = startReview;
+}
+/* ================= HÔM NAY NÊN ÔN ================= */
+function weakestLawId(){
+  const st = qStats(), agg = new Map();
+  QUIZ.forEach(q => { const x = st[q.q]; if (!x || !(x.r + x.w)) return; const e = agg.get(q.t) || {r:0,n:0}; e.r += x.r; e.n += x.r + x.w; agg.set(q.t, e); });
+  let worst = null;
+  agg.forEach((e, id) => { if (e.n >= 3){ const p = e.r / e.n; if (!worst || p < worst.p) worst = { id, p }; } });
+  return worst;
+}
+function renderToday(){
+  const el = $("#today-card"); if (!el) return;
+  const due = srsDueCount();
+  const dailyDone = daily().day === todayKey();
+  let act, btn;
+  if (!dailyDone){ act = "Thử thách hôm nay còn ngỏ — 5 câu, giữ chuỗi ôn."; btn = ["Làm thử thách", "daily"]; }
+  else if (due > 0){ act = `<b>${due}</b> câu đến hạn ôn lại theo lịch ghi nhớ.`; btn = ["Ôn ngay", "review"]; }
+  else { act = `Gộp điểm yếu: câu sai 7 ngày + đến hạn SRS + luật chưa thuộc.`; btn = ["Luyện 10 điểm yếu", "weak"]; }
+  el.innerHTML = `<span class="label">Hôm nay nên ôn</span>
+    <div class="act"><span class="t">${act}</span><button class="btn" id="today-btn">${btn[0]}</button></div>`;
+  $("#today-btn").onclick = () => {
+    if (btn[1] === "daily"){ showTab("tracnghiem"); $("#qdaily").click(); }
+    else if (btn[1] === "review"){ showTab("thenho"); startReview(); }
+    else if (btn[1] === "weak"){ startWeakPractice(); }
+    else { showTab("tracnghiem"); startQuiz(); }
+  };
+}
+/* ================= NHẮC ÔN HẰNG NGÀY ================= */
+const remindState = () => store.get("remind", { on: false, time: "20:00", last: "" });
+function remindUI(){
+  const btn = $("#remind-btn"), note = $("#remind-note");
+  $("#remind-time").value = remindState().time;
+  const paint = () => {
+    const st = remindState();
+    btn.textContent = st.on ? "Tắt nhắc" : "Bật nhắc";
+    note.textContent = st.on ? "Đã bật - nhắc lúc " + st.time + " hằng ngày (khi app đang mở)" : "Chưa bật";
+  };
+  btn.onclick = async () => {
+    const st = remindState();
+    if (st.on){ store.set("remind", { ...st, on: false }); paint(); toast("Đã tắt nhắc ôn"); return; }
+    store.set("remind", { ...st, on: true, time: $("#remind-time").value || "20:00" });
+    if ("Notification" in window && Notification.permission === "default"){
+      try { Notification.requestPermission().then(() => {}); } catch (e) {}
+    }
+    paint();
+    const perm = ("Notification" in window) ? Notification.permission : "denied";
+    toast(perm === "granted" ? "Sẽ nhắc ôn mỗi ngày lúc " + remindState().time : "Đã lưu giờ - cấp quyền thông báo để thấy nhắc");
+    checkRemind(true);
+  };
+  $("#remind-time").onchange = () => {
+    const st = remindState();
+    store.set("remind", { ...st, time: $("#remind-time").value || "20:00" });
+    paint();
+  };
+  paint();
+}
+async function fireRemind(){
+  const due = srsDueCount();
+  const chain = dailyStreak();
+  const body = due > 0 ? "Bạn có " + due + " câu đến hạn ôn - chuỗi " + chain + " ngày đang chờ!" : "Giữ chuỗi " + chain + " ngày - làm một lượt 5 câu thôi!";
+  let shown = false;
+  try {
+    const reg = await navigator.serviceWorker.getRegistration();
+    if (reg){ await reg.showNotification("Sổ tay Luật Y tế", { body, tag: "lyt-remind", icon: "icon.svg" }); shown = true; }
+  } catch (e) {}
+  if (!shown && "Notification" in window && Notification.permission === "granted"){
+    try { new Notification("Sổ tay Luật Y tế", { body }); shown = true; } catch (e) {}
+  }
+  if (!shown) toast("Đến giờ ôn: " + body);
+}
+function checkRemind(force){
+  const st = remindState();
+  const today = todayKey();
+  if (st.last === today && !force) return;
+  const parts = (st.time || "20:00").split(":");
+  const now = new Date();
+  if (!force && (now.getHours() * 60 + now.getMinutes()) < (+parts[0]) * 60 + (+parts[1])) return;
+  store.set("remind", { ...st, last: today });
+  if (st.on || force) fireRemind();
+}
+remindUI();
+setInterval(() => { if (remindState().on) checkRemind(false); }, 60000);
+
+/* ================= PHÂN TÍCH LỖI SAI ================= */
+const lawNameOfQ = text => {
+  const q = QUIZ.find(x => x.q === text) || HIS.find(x => x.q === text);
+  if (!q) return "";
+  const l = lawById(q.t);
+  return l ? l.name : (q.law || "");
+};
+/* luyện điểm yếu: (sai trong 7 ngày) ∪ (đến hạn SRS) ∪ (luật chuỗi <3) */
+function weakPool(){
+  const st = qStats(), now = Date.now();
+  const set = new Set();
+  Object.entries(st).forEach(([text, x]) => { if (x.w > 0 && x.lw && now - x.lw <= 7 * 86400000) set.add(text); });
+  Object.keys(srsAll()).forEach(t => { if (srsAll()[t].due <= now) set.add(t); });
+  const weakLaws = LAWS.filter(l => (store.get("lawProg", {})[l.id] || 0) < 3 && quizOf(l.id).length).map(l => l.id);
+  QUIZ.forEach(q => { if (weakLaws.includes(q.t)) set.add(q.q); });
+  let pool = [...set].map(t => QUIZ.find(x => x.q === t) || HIS.find(x => x.q === t)).filter(Boolean);
+  if (pool.length < 10) QUIZ.forEach(q => { if (pool.length < 10 && !pool.includes(q)) pool.push(q); });
+  return shuffle(pool).slice(0, 10);
+}
+function startWeakPractice(){
+  const pool = weakPool();
+  if (!pool.length){ toast("Chưa có dữ liệu điểm yếu — làm một lượt trước nhé."); return; }
+  showTab("tracnghiem");
+  startQuiz(pool);
+  toast("Luyện " + pool.length + " câu điểm yếu của bạn");
+}
+function practiceQ(text){
+  const q = QUIZ.find(x => x.q === text) || HIS.find(x => x.q === text);
+  if (!q) return;
+  showTab("tracnghiem");
+  startQuiz([q]);
+}
+function renderAnalysis(){
+  const box = $("#analysis");
+  const st = qStats();
+  const rows = Object.entries(st).map(([text,x]) => ({text, s:x.s||0, w:x.w||0, r:x.r||0}));
+  const answered = rows.filter(x => x.r + x.w > 0);
+  const totalAns = answered.reduce((a,x) => a + x.r + x.w, 0);
+  if (!totalAns){
+    box.innerHTML = `<div class="card"><p class="intro" style="margin:0">Chưa có dữ liệu. Hãy trả lời vài câu ở tab <b>Trắc nghiệm</b>, quay lại đây bạn sẽ thấy câu hay sai nhất và chủ đề cần ôn.</p></div>`;
+    return;
+  }
+  const top = answered.filter(x => x.w > 0).sort((a,b) => b.w - a.w).slice(0,10);
+  const byLaw = new Map();
+  answered.forEach(x => { const n = lawNameOfQ(x.text) || "Khác"; const e = byLaw.get(n) || {r:0,w:0}; e.r += x.r; e.w += x.w; byLaw.set(n,e); });
+  const weak = [...byLaw.entries()].filter(([,e]) => e.r + e.w >= 3)
+    .sort((a,b) => (a[1].r/(a[1].r+a[1].w)) - (b[1].r/(b[1].r+b[1].w))).slice(0,8);
+  const pctAll = Math.round(answered.reduce((a,x) => a + x.r, 0) / totalAns * 100);
+  box.innerHTML = `
+    <div class="card"><span class="label">Tổng quan</span>
+      <p class="intro" style="margin:6px 0 0">Đã trả lời <b>${totalAns}</b> lượt trên máy này, tỉ lệ đúng <b>${pctAll}%</b>.</p></div>
+    <div class="card"><span class="label">Chủ đề yếu nhất</span>
+      ${weak.length ? weak.map(([n,e]) => { const p = Math.round(e.r/(e.r+e.w)*100);
+        return `<div class="meta" style="display:flex;justify-content:space-between;gap:12px;padding:3px 0"><span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(n)}</span><span style="flex:none">${e.r}/${e.r+e.w} đúng · <b>${p}%</b></span></div>`; }).join("")
+      : `<p class="intro" style="margin:6px 0 0">Làm thêm vài câu để thấy thống kê theo chủ đề (cần tối thiểu 3 lượt trả lời mỗi luật).</p>`}
+    </div>
+    <div class="card"><span class="label">Câu hay sai nhất</span>
+      ${top.length ? `<div style="display:grid;gap:12px;margin-top:8px">${top.map(x => `
+        <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);padding-bottom:10px">
+          <div style="min-width:0">
+            ${lawNameOfQ(x.text) ? `<div class="meta">${esc(lawNameOfQ(x.text))}</div>` : ""}
+            <p style="margin:4px 0;font-size:14px">${esc(x.text.length > 110 ? x.text.slice(0,110) + "…" : x.text)}</p>
+            <div class="meta">Sai <b>${x.w}</b> lần · đúng ${x.r} lần</div>
+          </div>
+          <button class="btn ghost" style="flex:none" data-pq="${esc(x.text)}">Luyện câu này</button>
+        </div>`).join("")}</div>`
+      : `<p class="intro" style="margin:6px 0 0">Chưa sai câu nào — giữ phong độ!</p>`}
+    </div>`;
+  box.querySelectorAll("[data-pq]").forEach(b => b.onclick = () => practiceQ(b.dataset.pq));
+}
+/* ================= SAO LƯU TIẾN ĐỘ ================= */
+function exportProgress(){
+  const out = { app: "luatyte", v: 1, exported: new Date().toISOString(), data: {} };
+  for (let i = 0; i < localStorage.length; i++){ const k = localStorage.key(i); if (k.startsWith("lyt_")) out.data[k] = localStorage.getItem(k); }
+  const blob = new Blob([JSON.stringify(out, null, 1)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "luatyte-tien-do-" + todayKey() + ".json";
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  toast("Đã xuất file tiến độ (" + Object.keys(out.data).length + " mục).");
+}
+function importProgress(file){
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const j = JSON.parse(r.result);
+      if (j.app !== "luatyte" || typeof j.data !== "object") throw new Error("không phải file tiến độ của app");
+      const n = Object.keys(j.data).length;
+      if (!confirm("Nhập " + n + " mục tiến độ (xuất lúc " + String(j.exported || "không rõ") + ")?\nDữ liệu hiện tại sẽ bị GHI ĐÈ.")) return;
+      Object.entries(j.data).forEach(([k, v]) => localStorage.setItem(k, v));
+      toast("Đã nhập tiến độ. Tải lại trang…");
+      setTimeout(() => location.reload(), 900);
+    } catch (e){ toast("Không đọc được file: " + e.message); }
+  };
+  r.readAsText(file);
+}
+$("#bk-export").onclick = exportProgress;
+$("#bk-import").onchange = e => { const f = e.target.files[0]; if (f) importProgress(f); e.target.value = ""; };
+let dailyMode = false;
+function startQuiz(pool, isDaily = false){
+  dailyMode = isDaily;
+  const t = $("#qtopic").value;
+  qs = pool || pickQ(activeQuiz().filter(q => t==="all" || q.t===t), 10);
+  qs = qs.map(q => { const idx = shuffle(q.o.map((_,i)=>i)); return {...q, o: idx.map(i=>q.o[i]), a: idx.indexOf(q.a)}; });
+  qi = 0; qscore = 0; qcombo = 0; qbest = 0; renderQ();
+}
+function renderQ(){
+  const box = $("#quiz");
+  if (qi >= qs.length){
+    const pct = Math.round(qscore/qs.length*100);
+    const msg = pct===100?"Xuất sắc! Bạn nắm chắc phần này.":pct>=70?"Tốt lắm, ôn thêm vài chỗ là chắc.":pct>=40?"Khá ổn, đọc lại Thư viện rồi thử lượt nữa.":"Mới bắt đầu thôi. Lật Thẻ nhớ vài vòng rồi quay lại nhé.";
+    box.innerHTML = `<div class="result"><span class="label">Kết quả</span><div class="big" id="finalscore">0</div><div class="stat-row"><span>Đúng <b>${qscore}/${qs.length}</b></span><span>Combo dài nhất <b>${qbest}</b></span></div><p class="intro">${msg}</p><button class="btn" id="again">Chơi lượt mới</button></div>`;
+    countUp($("#finalscore"), qscore);
+    $("#again").onclick = () => startQuiz();
+    if (pct>=70) setTimeout(()=>burst(), 300);
+    const best = store.get("quizbest",0); if (qscore>best) store.set("quizbest", qscore);
+    if (dailyMode){
+      finishDaily(qscore); dailyMode = false;
+      box.querySelector(".result").insertAdjacentHTML("beforeend", `<p class="intro">Thử thách hôm nay: <b>${qscore}/${qs.length}</b>. Chuỗi hiện tại: <b>${dailyStreak()}</b> ngày. Đạt từ 4/5 để giữ chuỗi.</p>`);
+    }
+    checkBadges();
+    return;
+  }
+  qAnswered = false;
+  const q = qs[qi], law = lawById(q.t);
+  box.innerHTML = `
+    <div class="gtop"><span class="tag">${esc(law?law.name:(q.law||"AI tạo"))}</span>
+      <div class="stat-row"><span>Câu <b>${qi+1}</b>/${qs.length}</span><span>Đúng <b>${qscore}</b></span>${qcombo>1?`<span class="combo" id="combo">Liên tiếp ×${qcombo}</span>`:""}</div></div>
+    <div class="segs">${qs.map((_,i)=>`<i class="${i<qi?"done":i===qi?"now":""}"></i>`).join("")}</div>
+    <p class="intro" style="margin:0 0 8px;font-size:13px">Đã thuộc ${masteredCount(activeQuiz().filter(x => $("#qtopic").value==="all" || x.t===$("#qtopic").value))}/${activeQuiz().filter(x => $("#qtopic").value==="all" || x.t===$("#qtopic").value).length} câu (đúng liên tiếp ${MASTER_AT} lần)</p>
+    ${q.verify ? `<p class="intro" style="margin:0 0 8px;font-size:12px">Câu này đang chờ đối chiếu văn bản gốc.</p>` : ""}
+    <p class="q">${esc(q.q)}</p>
+    <div class="opts">${q.o.map((o,i)=>`<button class="opt in" style="animation-delay:${i*70}ms" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span class="tx">${esc(o)}</span></button>`).join("")}</div>
+    <div id="qfb"></div>`;
+  box.querySelectorAll(".opt").forEach(b => b.onclick = () => answerQ(+b.dataset.i, b));
+}
+function answerQ(i, btn){
+  if (qAnswered) return; qAnswered = true;
+  const q = qs[qi], ok = i===q.a;
+  recordQ(q, ok);
+  const box = $("#quiz");
+  box.querySelectorAll(".opt").forEach((b,j) => { b.disabled = true; if (j===q.a) b.classList.add("right"); else if (j===i) b.classList.add("wrong"); });
+  if (ok){
+    qscore++; qcombo++; qbest = Math.max(qbest,qcombo);
+    avatar?.play("happy", 2);
+    store.set("bestcombo", Math.max(store.get("bestcombo",0), qbest));
+    const r = btn.getBoundingClientRect();
+    burst(r.left + r.width/2, r.top + r.height/2);
+
+    if (qcombo===3) toast("Combo x3! Bạn đang rất tốt");
+    if (qcombo===5) toast("Năm câu đúng liên tiếp!");
+  } else { qcombo = 0; shakeEl(box); avatar?.play("shrug", 1.8); }
+  $("#qfb").innerHTML = `<div class="feedback ${ok?"ok":"no"}"><div class="hd">${ok?"Chính xác!":"Chưa đúng"}</div><p>${esc(q.e||"")}</p>
+    <div class="row"><button class="btn" id="qnext">${qi+1<qs.length?"Câu tiếp theo":"Xem kết quả"}</button></div></div>`;
+  $("#qnext").onclick = () => { qi++; renderQ(); };
+  setTimeout(()=>$("#qnext")?.focus(), 50);
+  checkBadges();
+}
+$("#qstart").onclick = () => startQuiz();
+$("#qdaily").onclick = () => {
+  const done = daily().day === todayKey();
+  if (done) toast("Hôm nay đã làm rồi. Lượt này chỉ để luyện thêm, không tính vào chuỗi.");
+  startQuiz(dailyQuestions(), !done);
+};
+$("#qtopic").onchange = () => startQuiz();
+
+/* ================= THI THỬ GIẢ LẬP ================= */
+let EXQ = [], exi = 0, exAns = [], exTimer = null, exRemain = 0, exCfg = {};
+const EX_SETS = { chung: "Luật chung", his: "HIS", both: "Gộp cả hai", blueprint: "Bản đồ đề" };
+let BP_CACHE = null;
+function blueprint(){
+  if (BP_CACHE) return Promise.resolve(BP_CACHE);
+  return fetch("data/blueprint.json").then(r => r.ok ? r.json() : []).catch(() => []).then(j => { BP_CACHE = j; return j; });
+}
+function pickBlueprint(total){
+  return blueprint().then(bp => {
+    const rows = bp.map(b => ({ id: b.id, want: b.w * total / 100, pool: shuffle(QUIZ.filter(q => q.t === b.id)) })).filter(r => r.pool.length);
+    const picked = [];
+    let need = total;
+    for (const r of rows){ const take = Math.min(Math.round(r.want), r.pool.length, need); picked.push(...r.pool.slice(0, take)); need -= take; r.pool.splice(0, take); }
+    while (need > 0){
+      const donor = rows.filter(r => r.pool.length).sort((a, b) => b.pool.length - a.pool.length)[0];
+      if (!donor) break;
+      picked.push(donor.pool.shift()); need--;
+    }
+    return shuffle(picked.slice(0, total));
+  });
+}
+async function startExam(){
+  const set = $("#ex-set").value;
+  const pool = set === "his" ? HIS : set === "both" ? [...QUIZ, ...HIS] : QUIZ;
+  const n = Math.min(+$("#ex-count").value, pool.length);
+  exCfg = { set, mins: +$("#ex-mins").value };
+  EXQ = set === "blueprint" ? await pickBlueprint(n) : shuffle([...pool]).slice(0, n);
+  exi = 0; exAns = Array(EXQ.length).fill(null);
+  exRemain = exCfg.mins * 60;
+  $("#ex-form").hidden = true;
+  clearInterval(exTimer);
+  updateExTime();
+  exTimer = setInterval(() => { exRemain--; updateExTime(); if (exRemain <= 0){ clearInterval(exTimer); finishExam(true); } }, 1000);
+  renderExam();
+}
+function updateExTime(){
+  const el = $("#ex-time"); if (!el) return;
+  el.textContent = Math.floor(exRemain/60) + ":" + String(exRemain%60).padStart(2,"0");
+  el.classList.toggle("low", exRemain <= 60);
+}
+function renderExam(){
+  const box = $("#ex-stage");
+  if (!EXQ.length){ box.innerHTML = ""; return; }
+  const q = EXQ[exi];
+  box.innerHTML = `
+    <div class="ex-top">
+      <span class="meta">Câu <b>${exi+1}</b>/${EXQ.length} · đã trả lời <b>${exAns.filter(x => x != null).length}</b></span>
+      <span class="ex-time" id="ex-time"></span>
+    </div>
+    <div class="ex-nav">${EXQ.map((_,i) => `<button class="${i===exi?"now":""} ${exAns[i]!=null?"did":""}" data-i="${i}">${i+1}</button>`).join("")}</div>
+    <p class="q">${esc(q.q)}</p>
+    <div class="opts">${q.o.map((o,i) => `<button class="opt ${exAns[exi]===i?"sel":""}" data-i="${i}"><span class="k">${"ABCD"[i]||""}</span><span class="tx">${esc(o)}</span></button>`).join("")}</div>
+    <div class="toolbar" style="margin-top:12px">
+      <button class="btn ghost" id="ex-prev" ${exi===0?"disabled":""}>Câu trước</button>
+      <button class="btn ghost" id="ex-next" ${exi===EXQ.length-1?"disabled":""}>Câu sau</button>
+      <button class="btn ghost" id="ex-quit">Bỏ thi</button>
+      <button class="btn" id="ex-submit">Nộp bài</button>
+    </div>`;
+  updateExTime();
+  box.querySelectorAll(".opts .opt").forEach(b => b.onclick = () => { exAns[exi] = +b.dataset.i; renderExam(); });
+  box.querySelectorAll(".ex-nav button").forEach(b => b.onclick = () => { exi = +b.dataset.i; renderExam(); });
+  $("#ex-prev").onclick = () => { if (exi > 0){ exi--; renderExam(); } };
+  $("#ex-next").onclick = () => { if (exi < EXQ.length-1){ exi++; renderExam(); } };
+  $("#ex-quit").onclick = () => { clearInterval(exTimer); EXQ = []; exi = 0; $("#ex-form").hidden = false; renderExam(); };
+  $("#ex-submit").onclick = () => finishExam(false);
+}
+function finishExam(auto){
+  clearInterval(exTimer);
+  const used = exCfg.mins*60 - Math.max(0, exRemain);
+  let right = 0; const wrongRows = [];
+  EXQ.forEach((q,i) => { const a = exAns[i], ok = a === q.a; if (ok) right++; else wrongRows.push({q,a}); recordQ(q, ok); });
+  const pct = Math.round(right / EXQ.length * 100);
+  const d10 = Math.round(pct) / 10;
+  const sbd = "LY-" + String(Math.floor(100000 + Math.random() * 900000));
+  const sheetHtml = '<span class="label" style="display:block;margin-top:10px">Phiếu phách ' + sbd + '</span><div class="ex-nav">' + EXQ.map((q, i) => '<button class="' + (exAns[i] === q.a ? "ok" : "no") + '" title="Câu ' + (i + 1) + '">' + (i + 1) + "</button>").join("") + "</div>";
+  const byLaw = new Map();
+  EXQ.forEach((q, i) => { const nm = lawNameOfQ(q.q) || "Khác"; const e = byLaw.get(nm) || { r: 0, t: 0 }; e.t++; if (exAns[i] === q.a) e.r++; byLaw.set(nm, e); });
+  const byLawHtml = '<div class="card"><span class="label">Đúng/sai theo luật</span><div style="display:grid;gap:8px;margin-top:8px">' + [...byLaw.entries()].sort((a, b) => b[1].t - a[1].t).map(function(en){ return '<div><div class="meta" style="display:flex;justify-content:space-between"><span>' + esc(en[0]) + '</span><span>' + en[1].r + "/" + en[1].t + '</span></div><div class="bl-bar"><i style="width:' + Math.round(en[1].r / en[1].t * 100) + '%"></i></div></div>'; }).join("") + "</div></div>";
+  const hist = store.get("exams", []);
+  hist.unshift({ d: todayKey(), set: exCfg.set, n: EXQ.length, r: right, pct, used, sbd, d10 });
+  store.set("exams", hist.slice(0,10));
+  const total = EXQ.length;
+  EXQ = []; exi = 0; $("#ex-form").hidden = false; renderExam();
+  $("#ex-stage").innerHTML = `
+    <div class="result"><span class="label">Kết quả thi thử${auto?" (hết giờ)":""}</span><div class="big" id="exscore">0</div>
+      <div class="stat-row"><span>Đúng <b>${right}/${total}</b></span><span>Điểm <b>${d10.toFixed(1)}/10</b></span><span>SBD <b>${sbd}</b></span><span>Thời gian <b>${Math.floor(used/60)}:${String(used%60).padStart(2,"0")}</b></span></div>
+      ${sheetHtml}
+      <p class="intro">Điểm của bạn cũng được tính vào tab Phân tích.</p>
+      <button class="btn" id="ex-again">Thi lại</button></div>
+    ${byLawHtml}
+    ${wrongRows.length ? `<div class="card"><span class="label">Câu sai (${wrongRows.length})</span><div style="display:grid;gap:12px;margin-top:8px">${wrongRows.map(({q,a}) => `
+      <div style="border-bottom:1px solid var(--rule);padding-bottom:10px">
+        ${lawNameOfQ(q.q) ? `<div class="meta">${esc(lawNameOfQ(q.q))}</div>` : ""}
+        <p style="margin:4px 0;font-size:14px">${esc(q.q)}</p>
+        <div class="meta">Bạn chọn <b>${a != null ? esc(q.o[a]) : "bỏ trống"}</b> · Đáp án <b>${esc(q.o[q.a])}</b></div>
+        ${q.e ? `<p class="intro" style="margin:4px 0 0">${esc(q.e)}</p>` : ""}
+      </div>`).join("")}</div></div>` : `<div class="card"><p class="intro" style="margin:0">Không sai câu nào. Quá đỉnh!</p></div>`}`;
+  countUp($("#exscore"), pct);
+  $("#ex-again").onclick = startExam;
+  if (pct >= 80){ setTimeout(() => burst(), 300); avatar?.play("cheer", 2.8); toast("Thi thử xuất sắc!"); }
+  else if (pct >= 70){ setTimeout(() => burst(), 300); avatar?.play("happy", 2.5); }
+  else if (pct < 40){ avatar?.play("sad", 2.5); }
+  checkBadges();
+  renderExamHistory();
+}
+function renderExamHistory(){
+  const h = store.get("exams", []);
+  $("#ex-history").innerHTML = h.length ? `<div class="card"><span class="label">Lần thi gần đây</span>
+    ${h.map(x => `<div class="meta" style="display:flex;justify-content:space-between;gap:12px;padding:3px 0"><span>${x.d} · ${EX_SETS[x.set]||x.set} · ${x.n} câu</span><span><b>${x.r}/${x.n}</b> (${x.pct}%) · ${Math.round(x.used/60)} phút</span></div>`).join("")}</div>` : "";
+}
+$("#ex-start").onclick = startExam;
+$("#weak-practice").onclick = startWeakPractice;
+$("#qai").onclick = async () => {
+  if (!sample) return;
+  const t = $("#qtopic").value, law = lawById(t);
+  const scope = law ? `${law.name} (${law.so}):\n${law.points.join("\n")}` : KB;
+  $("#qai").disabled = true; $("#quiz").innerHTML = `<div class="result"><span class="tag">AI đang soạn</span><p class="intro">AI đang soạn 5 câu hỏi mới…</p></div>`;
+  try {
+    const arr = await sample.json(`Soạn 5 câu hỏi trắc nghiệm tiếng Việt, mới và khác nhau, CHỈ dựa vào nội dung dưới đây (không thêm con số ngoài nội dung). Mỗi câu 4 lựa chọn, 1 đáp án đúng.
+Trả lời CHỈ bằng một mảng JSON: [{"q": "câu hỏi", "o": ["A","B","C","D"], "a": chỉ_số_đáp_án_đúng_0_đến_3, "e": "giải thích ngắn"}]
+
+NỘI DUNG:
+${scope}`, {cache:false});
+    const pool = (Array.isArray(arr)?arr:[]).filter(x => x && x.q && Array.isArray(x.o) && x.o.length===4 && Number.isInteger(x.a) && x.a>=0 && x.a<4)
+      .map(x => ({t: law?law.id:"", q:String(x.q), o:x.o.map(String), a:x.a, e:String(x.e||"")+" (Câu do AI soạn, hãy đối chiếu Thư viện.)"}));
+    if (pool.length) startQuiz(pool); else { $("#quiz").innerHTML = `<p class="intro">AI chưa soạn được câu hợp lệ. Bấm lại để thử lần nữa.</p>`; }
+  } catch(e){
+    if (["not_granted","sampling_disabled"].includes(e.code)){ sample=null; setMode(); }
+    $("#quiz").innerHTML = `<p class="intro">Không tạo được câu hỏi lúc này. Bạn vẫn có thể chơi bộ câu có sẵn.</p>`;
+  } finally { $("#qai").disabled = false; }
+};
+startQuiz();
+
+/* ================= ĐÚNG HAY SAI ================= */
+const tfState = {running:false, left:60, list:[], i:0, ok:0};
+function renderTFIntro(){
+  const best = store.get("tfbest",0);
+  $("#tf").innerHTML = `<div class="result"><span class="label">Thử thách 60 giây</span><div class="big">${TF.length}</div><p class="intro">Có ${TF.length} nhận định. Kỷ lục của bạn: <b>${best}</b> câu đúng.</p><button class="btn" id="tfgo">Bắt đầu</button></div>`;
+  $("#tfgo").onclick = startTF;
+}
+function startTF(){
+  Object.assign(tfState,{running:true, list:shuffle(TF), i:0, ok:0, left:60});
+  clearInterval(tfState.tm);
+  tfState.tm = setInterval(()=>{ tfState.left--; updateTFTimer(); if (tfState.left<=0) endTF(); },1000);
+  renderTF();
+}
+function updateTFTimer(){
+  const bar = $("#tfbar"), t = $("#tftime"); if (!bar) return;
+  bar.style.width = (tfState.left/60*100) + "%";
+  bar.parentElement.classList.toggle("low", tfState.left<=10);
+  if (t) t.textContent = tfState.left + "s";
+}
+function renderTF(){
+  const s = tfState; if (s.i >= s.list.length){ s.list = s.list.concat(shuffle(TF)); }
+  const [st] = s.list[s.i];
+  $("#tf").innerHTML = `<div class="gtop"><span class="tf-time" id="tftime">${s.left}s</span><div class="stat-row"><span>Đúng <b>${s.ok}</b></span><span>Câu <b>${s.i+1}</b></span></div></div>
+    <div class="tf-timer"><i id="tfbar" style="width:${s.left/60*100}%"></i></div>
+    <p class="tf-stmt" id="tfstmt">${esc(st)}</p>
+    <div class="tf-btns"><button class="tf-no" id="tfn">Sai<kbd>←</kbd></button><button class="tf-yes" id="tfy">Đúng<kbd>→</kbd></button></div>
+    <div id="tffb" class="mode" style="min-height:22px;text-align:center;margin-top:12px"></div>`;
+  $("#tfy").onclick = () => answerTF(true); $("#tfn").onclick = () => answerTF(false);
+  updateTFTimer();
+}
+function answerTF(v){
+  const s = tfState; if (!s.running) return;
+  const [, truth, why] = s.list[s.i], ok = v===truth;
+  const st = $("#tfstmt");
+  if (ok){ s.ok++; } else s.left = Math.max(0, s.left-3);
+  const stage = $("#tf");
+  stage.classList.remove("flash-ok","flash-bad"); void stage.offsetWidth; stage.classList.add(ok?"flash-ok":"flash-bad");
+  if (ok && st) { const r = st.getBoundingClientRect(); burst(r.left + r.width/2, r.top); }
+  s.i++;
+  if (s.left<=0) { endTF(); return; }
+  renderTF();
+  $("#tffb").innerHTML = `<span style="color:${ok?"var(--ok)":"var(--bad)"};font-weight:700">${ok?"Đúng rồi.":"Chưa đúng."}</span> ${esc(why)}`;
+  $("#tffb").style.animation = "enter .4s var(--ease) both";
+}
+function endTF(){
+  const s = tfState; if (!s.running) return; s.running = false; clearInterval(s.tm);
+  const best = store.get("tfbest",0), rec = s.ok>best; if (rec) store.set("tfbest", s.ok);
+  checkBadges();
+  $("#tf").innerHTML = `<div class="result"><span class="label">Hết giờ</span><div class="big" id="tfscore">0</div><p class="intro">${rec?"Kỷ lục mới!":"Kỷ lục: "+best+" câu."} Bạn đã trả lời ${s.i} nhận định.</p><button class="btn" id="tfgo">Chơi lại</button></div>`;
+  countUp($("#tfscore"), s.ok);
+  if (rec) setTimeout(()=>burst(), 250);
+  $("#tfgo").onclick = startTF;
+}
+document.addEventListener("keydown", e => {
+  if ($("#p-dungsai").hidden || !tfState.running) return;
+  if (e.key==="ArrowRight") answerTF(true); if (e.key==="ArrowLeft") answerTF(false);
+});
+
+/* ================= GHÉP CẶP ================= */
+let mPairs = [], mSel = null, mDone = 0, mErr = 0, mStart = 0;
+function startMatch(){
+  const mode = $("#mmode").value;
+  let pool;
+  if (mode==="so") pool = LAWS.map(l => [l.name.replace(/ \(sửa đổi 2024\)/,""), l.so]);
+  else if (mode==="hl") pool = LAWS.filter(l=>["kcb","bhyt","duoc","phongbenh","ruoubia","attp","thuocla","hiv"].includes(l.id)).map(l => [l.name, l.eff]);
+  else pool = FACTPAIRS;
+  const seen = new Set(); pool = shuffle(pool).filter(p => !seen.has(p[1]) && seen.add(p[1]));
+  mPairs = pool.slice(0,5).map((p,i)=>({id:i, l:p[0], r:p[1]}));
+  mSel = null; mDone = 0; mErr = 0; mStart = Date.now(); renderMatch();
+}
+function renderMatch(){
+  const L = mPairs, R = shuffle(mPairs);
+  $("#match").innerHTML = `<div class="gtop"><span class="tag">Ghép 5 cặp</span><div class="stat-row"><span>Đã ghép <b id="mdone">0</b>/5</span><span>Lỗi <b id="merr">0</b></span></div></div>
+   <div class="match"><div class="col">${L.map((p,i)=>`<button class="tile" style="animation-delay:${i*60}ms" data-side="l" data-id="${p.id}">${esc(p.l)}</button>`).join("")}</div>
+   <div class="col">${R.map((p,i)=>`<button class="tile" style="animation-delay:${i*60+80}ms" data-side="r" data-id="${p.id}">${esc(p.r)}</button>`).join("")}</div></div><div id="mres"></div>`;
+  $("#match").querySelectorAll(".tile").forEach(t => t.onclick = () => pickTile(t));
+}
+function pickTile(t){
+  if (t.classList.contains("done")) return;
+  if (!mSel || mSel.dataset.side === t.dataset.side){ mSel?.classList.remove("sel"); mSel = t; t.classList.add("sel"); return; }
+  if (mSel.dataset.id === t.dataset.id){
+    const r = t.getBoundingClientRect(); burst(r.left + r.width/2, r.top + r.height/2);
+    [mSel,t].forEach(x=>{x.classList.remove("sel");x.classList.add("done");x.disabled=true}); mDone++;
+  } else {
+    mErr++; [mSel,t].forEach(x=>{x.classList.remove("sel","no"); void x.offsetWidth; x.classList.add("no")});
+  }
+  mSel = null; $("#mdone").textContent = mDone; $("#merr").textContent = mErr;
+  if (mDone===5){
+    const sec = Math.round((Date.now()-mStart)/1000);
+    $("#mres").innerHTML = `<div class="feedback ok" style="margin-top:18px"><div class="hd">Hoàn thành trong ${sec} giây, ${mErr} lỗi</div><p>${mErr===0?"Hoàn hảo! Không sai lần nào.":"Làm tốt lắm, thử lại để không có lỗi nào."}</p><div class="row"><button class="btn" id="magain">Ván mới</button></div></div>`;
+    if (mErr===0) store.set("matchPerfect", true);
+    checkBadges();
+    setTimeout(()=>burst(), 150);
+    $("#magain").onclick = startMatch;
+  }
+}
+$("#mstart").onclick = startMatch; $("#mmode").onchange = startMatch;
+startMatch();
+
+/* ================= THẺ NHỚ ================= */
+const CARDS = QUIZ.map(q => ({front:q.q, back:q.o[q.a], note:q.e, law:(lawById(q.t)||{name:q.law||"Luật"}).name}));
+let deck = shuffle(CARDS.map((_,i)=>i)), known = store.get("known", []);
+function renderCard(){
+  if (!deck.length){ deck = shuffle(CARDS.map((_,i)=>i)); }
+  const c = CARDS[deck[0]], k = Math.min(known.length, CARDS.length);
+  $("#cards").innerHTML = `<div class="gtop"><span class="tag">${esc(c.law)}</span><div class="stat-row"><span>Đã nhớ <b>${k}</b>/${CARDS.length}</span></div></div>
+    <div class="bar" style="margin-bottom:18px"><i style="width:${k/CARDS.length*100}%"></i></div>
+    <button class="flip" id="flip" aria-label="Lật thẻ"><div class="flip-in">
+      <div class="face front"><span class="label">Câu hỏi</span><div class="t">${esc(c.front)}</div><span class="hint">Bấm để xem đáp án</span></div>
+      <div class="face back"><span class="label">Đáp án</span><div class="t">${esc(c.back)}</div><span class="hint">${esc(c.note)}</span></div>
+    </div></button>
+    <div class="card-actions"><button class="btn ghost" id="again2">Ôn lại sau</button><button class="btn" id="gotit">Nhớ rồi</button></div>`;
+  $("#flip").onclick = () => $("#flip").classList.toggle("on");
+  $("#gotit").onclick = () => {
+    const id = deck.shift();
+    if (!known.includes(id)){ known.push(id); store.set("known",known); burst(); }
+    renderStats(); renderCard();
+  };
+  $("#again2").onclick = () => { const id = deck.shift(); deck.splice(Math.min(3,deck.length),0,id); known = known.filter(x=>x!==id); store.set("known",known); renderStats(); renderCard(); };
+}
+renderCard();
+
+/* ================= KHỞI ĐỘNG ================= */
+const startTab = (location.hash||"").slice(1) || store.get("tab","thuvien");
+showTab(startTab);
+setMode();
+if (store.get("bot", false)) setBot(true);
+(async () => {
+  try { sample = window.claude ? await window.claude.use("sample") : null; } catch { sample = null; }
+  setMode();
+})();
+requestAnimationFrame(placeInd);
+}
+boot().catch(e => {
+  console.error(e);
+  document.getElementById("laws").innerHTML = '<p class="intro">Không tải được dữ liệu luật (' + String(e && e.message || e) + '). Vui lòng tải lại trang.</p>';
+});
+</script>
+<script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+<script>
+/* Nút tài khoản: hiện email nếu đã đăng nhập. Khi không có máy chủ, giữ nhãn "Đăng nhập". */
+fetch("/api/me",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.user&&d.user.email){ const a=document.getElementById("acct-link"); a.textContent=d.user.email; a.title="Tài khoản đang đăng nhập"; } }).catch(()=>{});
+</script>
+</body>
+</html>

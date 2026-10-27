@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "cap_nhat": "26/10/2026",
+    "gioi_thieu": "Tổng hợp tin về luật và văn bản y tế mới, kèm tình trạng hiện tại và nguồn bài báo hoặc văn bản. Tin chỉ có giá trị tham khảo: dự án và dự thảo chưa có hiệu lực, nội dung có thể thay đổi. Hãy đối chiếu văn bản gốc trước khi áp dụng.",
+    "nguon_uu_tien": "Báo điện tử Chính phủ, Cổng Quốc hội, Bộ Y tế, các báo pháp luật và báo chí chính thống. Khi có nhiều nguồn ghi khác nhau, mục đó có ghi chú riêng."
+  },
+  "tinh_trang": {
+    "ban_thao": "Đang bàn thảo, chưa có hiệu lực",
+    "ban_hanh": "Đã ban hành",
+    "xac_minh": "Chưa xác minh được"
+  },
+  "muc": [
+    {
+      "id": "luat-sua-6-luat-y-te",
+      "tinh_trang": "ban_thao",
+      "tieu_de": "Dự án Luật sửa đổi, bổ sung một số luật lĩnh vực y tế (6 luật)",
+      "moc": "Ủy ban Thường vụ Quốc hội cho ý kiến ngày 12/10/2026",
+      "tom_tat": "Chính phủ đề xuất sửa đồng thời 6 luật: Trẻ em, Người khuyết tật, Khám bệnh chữa bệnh, Dược, Người cao tuổi và Bảo hiểm y tế. Dự án thuộc Kỳ họp thứ 2, Quốc hội khóa XVI và chưa được thông qua.",
+      "diem": [
+        "Luật Khám bệnh, chữa bệnh: sắp xếp lại hình thức tổ chức khám chữa bệnh, phân cấp mạnh việc cấp phép kỹ thuật đặc biệt và kỹ thuật mới, bỏ phê duyệt giá từng đơn vị để thay bằng giá chung theo cấp chuyên môn, bổ sung quản lý thiết bị y tế (Điều 113).",
+        "Luật Dược: công bố giá bán buôn dự kiến, áp dụng phương pháp định giá bán buôn chuẩn hóa, tăng kết nối dữ liệu để kiểm soát giá thuốc.",
+        "Luật Trẻ em: bỏ quy định tiền kiểm với dịch vụ bảo vệ trẻ em, giao Bộ Công an chủ trì bảo vệ trẻ em trên môi trường mạng.",
+        "Luật Người khuyết tật: giao Chính phủ quy định chi tiết Hội đồng xác định mức độ khuyết tật.",
+        "Luật Người cao tuổi và Luật Bảo hiểm y tế: chỉnh để khớp với mô hình chính quyền địa phương hai cấp và các văn bản mới."
+      ],
+      "luu_y": "Ủy ban Văn hóa và Xã hội yêu cầu bổ sung đánh giá tác động, làm rõ 4 nội dung mới trong Luật Khám bệnh, chữa bệnh và rà soát chồng chéo với Luật Giá, Luật Đấu thầu và pháp luật hải quan. Nội dung có thể thay đổi trước khi thông qua.",
+      "nguon": [
+        { "tieu_de": "Chính phủ đề xuất sửa 6 luật liên quan đến lĩnh vực y tế", "trang": "VOV", "ngay": "12/10/2026", "url": "https://vov.vn/chinh-tri/chinh-phu-de-xuat-sua-6-luat-lien-quan-den-linh-vuc-y-te-post1340603.vov" },
+        { "tieu_de": "Bộ Y tế trình Quốc hội 4 dự án luật cùng loạt chính sách y tế mới", "trang": "Báo Thanh tra", "ngay": "01/10/2026", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/bo-y-te-trinh-quoc-hoi-4-du-an-luat-cung-loat-chinh-sach-y-te-moi-980157b90.html" },
+        { "tieu_de": "Bộ Y tế chuẩn bị trình Quốc hội 4 dự án luật", "trang": "Báo Pháp luật Việt Nam", "ngay": "01/10/2026", "url": "https://baophapluat.vn/bo-y-te-chuan-bi-trinh-quoc-hoi-4-du-an-luat.html" }
+      ]
+    },
+    {
+      "id": "luat-an-toan-thuc-pham-sua-doi",
+      "tinh_trang": "ban_thao",
+      "tieu_de": "Dự án Luật An toàn thực phẩm (sửa đổi)",
+      "moc": "Bộ Y tế chuẩn bị trình Kỳ họp thứ 2, Quốc hội khóa XVI",
+      "tom_tat": "Dự án được xây dựng sau hơn 15 năm thi hành Luật năm 2010. Định hướng là quản lý theo chuỗi giá trị và theo mức nguy cơ.",
+      "diem": [
+        "Chuyển từ tiền kiểm sang hậu kiểm; phân loại thực phẩm theo nguy cơ.",
+        "Chỉ một số nhóm nguy cơ cao phải đăng ký bản công bố sản phẩm.",
+        "Công nhận chứng nhận HACCP và ISO 22000.",
+        "Bắt buộc truy xuất nguồn gốc với thực phẩm nguy cơ cao; tăng chế tài."
+      ],
+      "luu_y": "Các báo chưa nêu ngày hiệu lực. Đây mới là dự thảo nên nội dung có thể đổi.",
+      "nguon": [
+        { "tieu_de": "Bộ Y tế chuẩn bị trình Quốc hội 4 dự án luật", "trang": "Báo Pháp luật Việt Nam", "ngay": "01/10/2026", "url": "https://baophapluat.vn/bo-y-te-chuan-bi-trinh-quoc-hoi-4-du-an-luat.html" },
+        { "tieu_de": "Bộ Y tế trình Quốc hội 4 dự án luật cùng loạt chính sách y tế mới", "trang": "Báo Thanh tra", "ngay": "01/10/2026", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/bo-y-te-trinh-quoc-hoi-4-du-an-luat-cung-loat-chinh-sach-y-te-moi-980157b90.html" }
+      ]
+    },
+    {
+      "id": "luat-hien-ghep-mo-sua-doi",
+      "tinh_trang": "ban_thao",
+      "tieu_de": "Dự án Luật Hiến, lấy, ghép mô, bộ phận cơ thể người và hiến, lấy xác (sửa đổi)",
+      "moc": "Bộ Y tế chuẩn bị trình Kỳ họp thứ 2, Quốc hội khóa XVI",
+      "tom_tat": "Dự án mở rộng nguồn hiến, siết điều kiện hiến khi còn sống và chống \"du lịch ghép tạng\".",
+      "diem": [
+        "Bổ sung hình thức hiến sau chết tuần hoàn.",
+        "Người dưới 18 tuổi có thể hiến sau khi chết nếu đã đăng ký hoặc có nguyện vọng bằng văn bản và người đại diện đồng ý bằng văn bản.",
+        "Người hiến còn sống từ 18 đến dưới 25 tuổi bị hạn chế, chỉ hiến cho thành viên gia đình.",
+        "Cho đăng ký hiến trực tuyến; đề xuất lấy ngày 20/5 làm Ngày hiến mô, tạng Việt Nam."
+      ],
+      "luu_y": "Chưa có ngày hiệu lực. Đây mới là dự thảo nên nội dung có thể đổi.",
+      "nguon": [
+        { "tieu_de": "Bộ Y tế chuẩn bị trình Quốc hội 4 dự án luật", "trang": "Báo Pháp luật Việt Nam", "ngay": "01/10/2026", "url": "https://baophapluat.vn/bo-y-te-chuan-bi-trinh-quoc-hoi-4-du-an-luat.html" },
+        { "tieu_de": "Bộ Y tế trình Quốc hội 4 dự án luật cùng loạt chính sách y tế mới", "trang": "Báo Thanh tra", "ngay": "01/10/2026", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/bo-y-te-trinh-quoc-hoi-4-du-an-luat-cung-loat-chinh-sach-y-te-moi-980157b90.html" }
+      ]
+    },
+    {
+      "id": "luat-sua-doi-thuoc-la",
+      "tinh_trang": "ban_thao",
+      "tieu_de": "Dự án Luật sửa đổi, bổ sung một số điều của Luật Phòng, chống tác hại của thuốc lá",
+      "moc": "Dự kiến trình Kỳ họp thứ 2, Quốc hội khóa XVI",
+      "tom_tat": "Dự án luật hóa việc cấm thuốc lá điện tử và thuốc lá nung nóng.",
+      "diem": [
+        "Cấm toàn bộ chuỗi sản xuất, kinh doanh, vận chuyển, tàng trữ và sử dụng các sản phẩm này, kể cả túi ngậm nicotine và shisha.",
+        "Ngoại lệ phục vụ nghiên cứu khoa học, kiểm nghiệm, giám định khi có phép của cơ quan có thẩm quyền.",
+        "Cấm trưng bày thuốc lá tại điểm bán, có thời gian chuyển tiếp 6 tháng cho quy định này.",
+        "Dự kiến có hiệu lực từ 01/7/2027 nếu được thông qua."
+      ],
+      "luu_y": "Một số bài báo ghi mốc hiệu lực khác (01/01/2027). Cần đối chiếu khi Quốc hội thông qua.",
+      "nguon": [
+        { "tieu_de": "Bộ Y tế chuẩn bị trình Quốc hội 4 dự án luật", "trang": "Báo Pháp luật Việt Nam", "ngay": "01/10/2026", "url": "https://baophapluat.vn/bo-y-te-chuan-bi-trinh-quoc-hoi-4-du-an-luat.html" },
+        { "tieu_de": "Bộ Y tế trình Quốc hội 4 dự án luật cùng loạt chính sách y tế mới", "trang": "Báo Thanh tra", "ngay": "01/10/2026", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/bo-y-te-trinh-quoc-hoi-4-du-an-luat-cung-loat-chinh-sach-y-te-moi-980157b90.html" },
+        { "tieu_de": "Đề xuất luật hóa lệnh cấm thuốc lá điện tử", "trang": "LSVN", "ngay": "", "url": "https://lsvn.vn/de-xuat-luat-hoa-lenh-cam-thuoc-la-dien-tu-a178325.html" }
+      ]
+    },
+    {
+      "id": "nd-bhyt-tang-muc-huong",
+      "tinh_trang": "ban_thao",
+      "tieu_de": "Dự thảo Nghị định tăng mức hưởng và phạm vi hưởng bảo hiểm y tế theo lộ trình",
+      "moc": "Bộ Y tế lấy ý kiến, đăng ngày 08/09/2026",
+      "tom_tat": "Dự thảo đề xuất tăng dần mức hưởng cho nhóm ưu tiên, mở rộng phạm vi chi trả và điều chỉnh mức đóng.",
+      "diem": [
+        "Nhóm ưu tiên gồm người cao tuổi từ 75 tuổi, người khuyết tật nhẹ, người dưới 18 tuổi và hộ có mức sống trung bình: mức hưởng từ 80% lên 85% từ 01/7/2027, lên 90% từ 01/7/2029.",
+        "Mở rộng chi trả khám sàng lọc, chẩn đoán sớm 8 bệnh, trong đó có ung thư cổ tử cung, vú, phổi, đại trực tràng, dạ dày, gan và viêm gan B, C.",
+        "Khám sức khỏe định kỳ cho một số đối tượng, phần chưa được quỹ BHYT chi do ngân sách nhà nước bảo đảm.",
+        "Dự kiến có hiệu lực từ 01/4/2027."
+      ],
+      "luu_y": "Bản đăng chưa nêu hạn góp ý và có điểm chưa nhất quán về ngày hiệu lực của quy định khám định kỳ. Dự thảo có thể thay đổi nhiều trước khi ban hành.",
+      "nguon": [
+        { "tieu_de": "TOÀN VĂN: Dự thảo Nghị định quy định về tăng mức hưởng, phạm vi hưởng bảo hiểm y tế", "trang": "Báo điện tử Chính phủ", "ngay": "08/09/2026", "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-du-thao-nghi-dinh-quy-dinh-ve-tang-muc-huong-va-pham-vi-huong-bhyt-theo-lo-trinh-doi-tuong-uu-tien-phu-hop-voi-muc-dong-va-kha-nang-can-doi-quy-bhyt-119260907100914094.htm" }
+      ]
+    },
+    {
+      "id": "de-xuat-kham-suc-khoe-dinh-ky-mien-phi",
+      "tinh_trang": "ban_thao",
+      "tieu_de": "Đề xuất khám sức khỏe định kỳ, sàng lọc miễn phí",
+      "moc": "Dự thảo lấy ý kiến từ tháng 3/2026",
+      "tom_tat": "Bộ Y tế đề xuất lộ trình khám sức khỏe định kỳ và sàng lọc miễn phí, ưu tiên nhóm yếu thế trước rồi hướng tới toàn dân.",
+      "diem": [
+        "Nhóm ưu tiên gồm người cao tuổi, hộ nghèo, người mắc bệnh mạn tính và người ở vùng khó khăn.",
+        "Mục tiêu bao phủ toàn dân vào năm 2028 theo lộ trình đề xuất.",
+        "Kinh phí dự kiến từ ngân sách nhà nước, Quỹ BHYT và các nguồn hợp pháp khác.",
+        "Nội dung khám dự kiến do Bộ trưởng Bộ Y tế quy định."
+      ],
+      "luu_y": "Nguồn từ tháng 3/2026, chưa xác nhận đã ban hành. Dự thảo Nghị định về BHYT (tháng 9/2026) cũng nêu khám sức khỏe định kỳ cho một số đối tượng từ năm 2027.",
+      "nguon": [
+        { "tieu_de": "Bộ Y tế đề xuất người cao tuổi, người bệnh mạn tính được khám sức khỏe miễn phí từ 2026", "trang": "Tuổi Trẻ", "ngay": "23/03/2026", "url": "https://tuoitre.vn/bo-y-te-de-xuat-nguoi-cao-tuoi-nguoi-benh-man-tinh-duoc-kham-suc-khoe-mien-phi-tu-2026-20260323100217425.htm" },
+        { "tieu_de": "Đề xuất lộ trình ưu tiên khám sức khỏe định kỳ, khám sàng lọc miễn phí", "trang": "LSVN", "ngay": "", "url": "https://lsvn.vn/de-xuat-lo-trinh-uu-tien-kham-suc-khoe-dinh-ky-kham-sang-loc-mien-phi-a170594.html" },
+        { "tieu_de": "Dự thảo Nghị định quy định chi tiết Luật Phòng bệnh (bản 17/3/2026)", "trang": "Cổng thông tin Chính phủ", "ngay": "17/03/2026", "url": "https://datafiles.chinhphu.vn/cpp/files/duthaovbpl/2026/Thang3/2.1.-dt-nghi-dinh-qdct-luat-pb_17.3.2026_ht.pdf" }
+      ]
+    },
+    {
+      "id": "tt-huong-dan-ctmtqg-suc-khoe",
+      "tinh_trang": "ban_thao",
+      "tieu_de": "Dự thảo Thông tư hướng dẫn Chương trình mục tiêu quốc gia về chăm sóc sức khỏe, dân số và phát triển 2026-2035",
+      "moc": "Bộ Y tế xin ý kiến theo Công văn 5119/BYT-KHTC ngày 09/7/2026",
+      "tom_tat": "Dự thảo hướng dẫn một số nội dung thực hiện giai đoạn I (2026-2030) của chương trình mục tiêu quốc gia, thuộc phạm vi quản lý của Bộ Y tế.",
+      "diem": [
+        "Bộ Y tế đăng dự thảo và xin ý kiến góp ý của cơ quan, tổ chức.",
+        "Đối tượng áp dụng và định mức cụ thể xem trong toàn văn dự thảo."
+      ],
+      "luu_y": "Chưa xác nhận dự thảo đã được ban hành chính thức. Trang nguồn của Bộ Y tế có thể báo lỗi chứng chỉ bảo mật khi mở; nếu gặp, hãy tìm theo tên dự thảo trên cổng thông tin Bộ Y tế.",
+      "nguon": [
+        { "tieu_de": "Dự thảo Thông tư hướng dẫn một số nội dung thực hiện Chương trình mục tiêu quốc gia về chăm sóc sức khỏe, dân số và phát triển giai đoạn 2026-2035, giai đoạn I", "trang": "Cổng thông tin Cục Dân số (Bộ Y tế)", "ngay": "09/07/2026", "url": "https://vnpa.moh.gov.vn/du-thao-thong-tu-huong-dan-mot-so-noi-dung-thuc-hien-chuong-trinh-muc-tieu-quoc-gia-ve-cham-soc-suc-khoe-dan-so-va-phat-trien-giai-doan-2026-2035-giai-doan-i-tu-nam-2026-den-nam-2030-thuoc-pham-vi/" }
+      ]
+    },
+    {
+      "id": "qd-3138-tieu-chi-y-te-xa",
+      "tinh_trang": "ban_hanh",
+      "tieu_de": "Quyết định 3138/QĐ-BYT về Bộ tiêu chí quốc gia về y tế xã giai đoạn 2026-2035",
+      "moc": "Ban hành ngày 08/10/2026",
+      "tom_tat": "Bộ tiêu chí áp dụng cho các xã, phường và đặc khu, gồm 10 tiêu chí và 48 chỉ tiêu cụ thể.",
+      "diem": [
+        "Bao quát chỉ đạo điều hành, nhân lực, hạ tầng trạm y tế, khám chữa bệnh và phục hồi chức năng, chăm sóc bà mẹ trẻ em, dân số, truyền thông sức khỏe và ứng dụng công nghệ thông tin.",
+        "Từ năm 2027, xã có dưới 80% dân được khám sức khỏe định kỳ hoặc sàng lọc miễn phí ít nhất mỗi năm một lần sẽ không đạt bộ tiêu chí (chỉ tiêu 19, tiêu chí 5)."
+      ],
+      "luu_y": "Chưa tìm thấy toàn văn quyết định trên cổng văn bản chính thức; thông tin lấy từ bài báo. Cần đối chiếu văn bản gốc.",
+      "nguon": [
+        { "tieu_de": "Ban hành Bộ tiêu chí quốc gia về y tế xã giai đoạn 2026-2035", "trang": "LSVN", "ngay": "", "url": "https://lsvn.vn/ban-hanh-bo-tieu-chi-quoc-gia-ve-y-te-xa-giai-doan-2026-2035-a181192.html" },
+        { "tieu_de": "Từ năm 2027, xã có dưới 80% dân được khám định kỳ hoặc sàng lọc miễn phí sẽ không đạt tiêu chí y tế", "trang": "Báo Thanh tra", "ngay": "", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/tu-nam-2027-xa-co-duoi-80-dan-duoc-kham-dinh-ky-hoac-sang-loc-mien-phi-se-khong-dat-tieu-chi-y-te-3bb818be5.html" }
+      ]
+    },
+    {
+      "id": "nd-350-phu-cap-uu-dai-nghe",
+      "tinh_trang": "ban_hanh",
+      "tieu_de": "Nghị định 350/2026/NĐ-CP về phụ cấp ưu đãi nghề đối với nhân viên y tế",
+      "moc": "Ký ngày 09/9/2026",
+      "tom_tat": "Quy định đối tượng, nguyên tắc, cách tính, mức phụ cấp ưu đãi nghề, thời gian hưởng và nguồn kinh phí cho nhân viên y tế.",
+      "diem": [
+        "Mức phụ cấp từ 30% đến 80% mỗi tháng.",
+        "Mức 80% dành cho người thường xuyên trực tiếp làm hồi sức cấp cứu; nhân viên chuyên môn tại trạm y tế xã và cơ sở y tế dự phòng hưởng 70% hoặc 80% tùy địa bàn.",
+        "Người được giao nhiều nhiệm vụ có mức khác nhau chỉ hưởng mức cao nhất."
+      ],
+      "luu_y": "Các nguồn ghi mốc áp dụng khác nhau: họp báo Bộ Y tế nêu áp dụng từ 01/01/2026, một nguồn khác ghi hiệu lực từ 09/9/2026. Cần đối chiếu văn bản gốc.",
+      "nguon": [
+        { "tieu_de": "Bộ Y tế trình Quốc hội 4 dự án luật cùng loạt chính sách y tế mới", "trang": "Báo Thanh tra", "ngay": "01/10/2026", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/bo-y-te-trinh-quoc-hoi-4-du-an-luat-cung-loat-chinh-sach-y-te-moi-980157b90.html" },
+        { "tieu_de": "Nhân viên y tế được hưởng phụ cấp ưu đãi nghề tối đa 80%", "trang": "LSVN", "ngay": "", "url": "https://lsvn.vn/nhan-vien-y-te-duoc-huong-phu-cap-uu-dai-nghe-toi-da-80-a179135.html" }
+      ]
+    },
+    {
+      "id": "nd-192-phu-cap-dac-thu",
+      "tinh_trang": "ban_hanh",
+      "tieu_de": "Nghị định 192/2026/NĐ-CP về phụ cấp đặc thù trong lĩnh vực y tế",
+      "moc": "Có hiệu lực từ 15/7/2026",
+      "tom_tat": "Điều chỉnh chế độ phụ cấp trực, phẫu thuật, thủ thuật và chống dịch; có hỗ trợ hằng tháng cho nhân viên y tế thôn, tổ dân phố và cô đỡ thôn, bản.",
+      "diem": [
+        "Phụ cấp trực; phụ cấp phẫu thuật, thủ thuật; phụ cấp chống dịch.",
+        "Hỗ trợ hằng tháng cho nhân viên y tế thôn, tổ dân phố và cô đỡ thôn, bản."
+      ],
+      "luu_y": "Báo Thanh tra (họp báo 01/10/2026) không nêu ngày hiệu lực; mốc 15/7/2026 lấy từ báo Lào Cai.",
+      "nguon": [
+        { "tieu_de": "Từ 15/7/2026, lĩnh vực y tế được áp dụng chế độ phụ cấp đặc thù gì?", "trang": "Báo Lào Cai", "ngay": "", "url": "https://baolaocai.vn/tu-1572026-linh-vuc-y-te-duoc-ap-dung-che-do-phu-cap-dac-thu-gi-post900823.html" },
+        { "tieu_de": "Bộ Y tế trình Quốc hội 4 dự án luật cùng loạt chính sách y tế mới", "trang": "Báo Thanh tra", "ngay": "01/10/2026", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/bo-y-te-trinh-quoc-hoi-4-du-an-luat-cung-loat-chinh-sach-y-te-moi-980157b90.html" }
+      ]
+    },
+    {
+      "id": "nd-90-xu-phat-y-te",
+      "tinh_trang": "ban_hanh",
+      "tieu_de": "Nghị định 90/2026/NĐ-CP quy định xử phạt vi phạm hành chính trong lĩnh vực y tế",
+      "moc": "Ban hành 30/3/2026, có hiệu lực từ 15/5/2026",
+      "tom_tat": "Thay đổi mức xử phạt nhiều hành vi trong lĩnh vực y tế, trong đó có các hành vi vi phạm chính sách bảo hiểm y tế như cho mượn thẻ và trốn đóng.",
+      "diem": [
+        "Tăng mức xử phạt các hành vi vi phạm chính sách bảo hiểm y tế.",
+        "Có quy định xử phạt hành vi cho người khác mượn thẻ BHYT."
+      ],
+      "luu_y": "Mức phạt cụ thể từng hành vi cần đối chiếu toàn văn nghị định, vì các bài báo nêu số liệu khác nhau.",
+      "nguon": [
+        { "tieu_de": "Nghị định 90/2026/NĐ-CP quy định xử phạt vi phạm hành chính trong lĩnh vực y tế", "trang": "LuatVietnam", "ngay": "", "url": "https://luatvietnam.vn/y-te/nghi-dinh-90-2026-nd-cp-quy-dinh-xu-phat-vi-pham-hanh-chinh-trong-linh-vuc-y-te-430543-d1.html" },
+        { "tieu_de": "Tăng mức xử phạt hành vi vi phạm chính sách BHYT từ 15/5", "trang": "LSVN", "ngay": "", "url": "https://lsvn.vn/tang-muc-xu-phat-hanh-vi-vi-pham-chinh-sach-bhyt-tu-15-5-a172138.html" },
+        { "tieu_de": "Phạt đến 5 triệu đồng khi cho người khác mượn thẻ bảo hiểm y tế", "trang": "VnEconomy", "ngay": "", "url": "https://vneconomy.vn/phat-den-5-trieu-dong-khi-cho-nguoi-khac-muon-the-bao-hiem-y-te.htm" }
+      ]
+    },
+    {
+      "id": "tt-25-2026-kham-suc-khoe",
+      "tinh_trang": "ban_hanh",
+      "tieu_de": "Thông tư 25/2026/TT-BYT sửa đổi Thông tư 32/2023 về khám sức khỏe",
+      "moc": "Có hiệu lực từ 15/8/2026; Điều 2 và Điều 3 từ 01/7/2026",
+      "tom_tat": "Sửa Điều 34 (hồ sơ khám sức khỏe) và Điều 36 (nội dung khám sức khỏe) của Thông tư 32/2023, thay Mẫu 01, 02, 03 và bổ sung Mẫu 04 (khám sức khỏe tâm thần) tại Phụ lục XXIV.",
+      "diem": [
+        "Khám để đi học, đi làm (từ đủ 18 tuổi): làm cận lâm sàng theo mục 1 phần III Mẫu 03. Khám định kỳ: cận lâm sàng khi bác sĩ chỉ định.",
+        "Lao động nữ khi khám định kỳ được khám chuyên khoa phụ sản theo Phụ lục XXV; bãi bỏ Phụ lục XXVI.",
+        "Hồ sơ đã nhận nhưng chưa khám trước ngày thông tư có hiệu lực thì khám theo thông tư mới."
+      ],
+      "luu_y": "Hỏi trợ lý \"khi đi khám sức khỏe phải khám các hạng mục nào\" để xem bản tóm tắt dễ hiểu kèm nút Chi tiết hơn.",
+      "nguon": [
+        { "tieu_de": "Thông tư 25/2026/TT-BYT (văn bản trên cổng Chính phủ)", "trang": "Cổng thông tin Chính phủ", "ngay": "30/06/2026", "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/25-byt.signed.pdf" }
+      ]
+    },
+    {
+      "id": "qd-485-ke-hoach-van-ban-2026",
+      "tinh_trang": "ban_hanh",
+      "tieu_de": "Quyết định 485/QĐ-BYT về kế hoạch xây dựng văn bản quy phạm pháp luật y tế năm 2026",
+      "moc": "Nêu tại họp báo Bộ Y tế ngày 01/10/2026",
+      "tom_tat": "Kế hoạch gồm 60 nhiệm vụ: 4 dự án luật, 1 pháp lệnh, 17 nghị định, 2 quyết định của Thủ tướng và 36 thông tư.",
+      "diem": [
+        "Dùng để theo dõi các văn bản y tế sẽ ban hành trong năm 2026.",
+        "Danh mục chi tiết từng nhiệm vụ xem trên cổng thông tin của Bộ Y tế."
+      ],
+      "luu_y": "Chưa tìm thấy toàn văn quyết định; số liệu lấy từ bài báo về buổi họp báo.",
+      "nguon": [
+        { "tieu_de": "Bộ Y tế trình Quốc hội 4 dự án luật cùng loạt chính sách y tế mới", "trang": "Báo Thanh tra", "ngay": "01/10/2026", "url": "https://thanhtra.com.vn/y-te-8CCF74D5E/bo-y-te-trinh-quoc-hoi-4-du-an-luat-cung-loat-chinh-sach-y-te-moi-980157b90.html" }
+      ]
+    }
+  ],
+  "chua_xac_minh": [
+    {
+      "tieu_de": "Bộ Y tế bãi bỏ 5 thủ tục hành chính nội bộ lĩnh vực thi đua, khen thưởng (23/10)",
+      "ly_do": "Không tìm thấy quyết định tương ứng của Bộ Y tế. Chỉ thấy văn bản của các địa phương và một quyết định cũ năm 2024 liên quan thủ tục thi đua khen thưởng."
+    },
+    {
+      "tieu_de": "Dự thảo Thông tư danh mục thuốc, thiết bị y tế thiết yếu cho phòng y tế cơ sở giáo dục (21/10)",
+      "ly_do": "Không tìm thấy dự thảo này trên các nguồn đã kiểm tra."
+    },
+    {
+      "tieu_de": "Dự thảo Thông tư phụ cấp đặc thù y tế Quân đội (22/9) và dự thảo Thông tư khám sức khỏe định kỳ BHYT (18/9)",
+      "ly_do": "Không tìm thấy hai dự thảo thông tư riêng. Nội dung gần nhất đã có ở Nghị định 192/2026/NĐ-CP và phần đề xuất khám sức khỏe định kỳ miễn phí."
+    },
+    {
+      "tieu_de": "Kiến nghị về biên chế, phụ cấp trạm y tế cấp xã (19/10) và trả lời kiến nghị về quyền lợi BHYT trên 5 năm liên tục (21/10)",
+      "ly_do": "Không tìm thấy văn bản trả lời của Bộ Y tế. Quy định hiện hành: người tham gia BHYT đủ 5 năm liên tục được hưởng 100% khi số tiền cùng chi trả trong năm vượt 6 lần mức tham chiếu.",
+      "url": "https://baolaocai.vn/quyen-loi-duoc-huong-moi-nhat-khi-tham-gia-bhyt-5-nam-lien-tuc-post911975.html",
+      "url_ten": "Quyền lợi được hưởng mới nhất khi tham gia BHYT 5 năm liên tục (Báo Lào Cai)"
+    }
+  ]
+}

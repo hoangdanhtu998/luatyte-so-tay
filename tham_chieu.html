@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tham chiếu luật cho HIS · Trạng thái xác minh</title>
+<meta name="description" content="Bản đồ luật theo module HIS, mốc hiệu lực và trạng thái xác minh từng mục. Không phải nội dung học.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FCFCFA">
+<link rel="icon" href="icon.svg">
+<link rel="canonical" href="https://luatyte.online/tham_chieu.html">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="row">
+    <h1>Tham chiếu luật cho HIS</h1>
+    <a href="index.html">Về sổ tay</a>
+  </div>
+</header>
+<main class="page">
+  <p class="lead">Bản đồ luật theo từng module HIS, kèm mốc hiệu lực và trạng thái xác minh. Đây là tài liệu tham chiếu, không phải nội dung học và không có câu hỏi. Đối chiếu văn bản gốc trước khi áp dụng.</p>
+  <p class="updated" id="updated"></p>
+  <ul class="guide" aria-label="Trạng thái xác minh">
+    <li><span class="state ban_hanh">Đã xác nhận</span> từ hai nguồn trở lên</li>
+    <li><span class="state ban_thao">Một nguồn</span> chỉ có một nguồn thứ cấp</li>
+    <li><span class="state xac_minh">Chưa kiểm</span> chưa đối chiếu</li>
+    <li><span class="state bac_bo">Bác bỏ</span> đã kiểm và sai</li>
+  </ul>
+  <div id="content" aria-live="polite"></div>
+  <p class="note" id="note"></p>
+</main>
+
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => /^https:\/\//i.test(u || "") ? u : "#";
+// Trạng thái trong dữ liệu: xac-nhan, mot-nguon, chua-kiem, bac-bo, du-thao. Mỗi mục có thể ghi nhiều trạng thái trong một câu.
+const TAG = [["xac-nhan","ban_hanh","Đã xác nhận"],["mot-nguon","ban_thao","Một nguồn"],["chua-kiem","xac_minh","Chưa kiểm"],["bac-bo","bac_bo","Bác bỏ"],["du-thao","ban_thao","Dự thảo"]];
+const badgeFor = (text) => { const hit = TAG.find(t => text.includes(t[0])); return hit ? `<span class="state ${hit[1]}">${hit[2]}</span>` : ""; };
+const badgeCode = (code) => { const hit = TAG.find(t => t[0] === code); return hit ? `<span class="state ${hit[1]}">${hit[2]}</span>` : ""; };
+
+function moduleCard(m){
+  const vb = (m.van_ban || []).map(v => `<li>${esc(v)}</li>`).join("");
+  return `<article class="news">
+    ${badgeFor(m.trang_thai)}
+    <h2>${esc(m.module)}</h2>
+    <ul class="pts">${vb}</ul>
+    <p class="moc">${esc(m.moc)}</p>
+    <div class="caution"><b>Trạng thái:</b> ${esc(m.trang_thai)}</div>
+  </article>`;
+}
+
+async function boot(){
+  const el = document.getElementById("content");
+  let D;
+  try { D = await fetch("data/tham-chieu.json").then(r => { if (!r.ok) throw new Error("http"); return r.json(); }); }
+  catch (e) { el.innerHTML = `<div class="err">Không đọc được dữ liệu tham chiếu. Hãy mở trang qua máy chủ hoặc thử tải lại.</div>`; return; }
+
+  document.getElementById("updated").textContent = "Cập nhật: " + D.cap_nhat;
+  document.getElementById("note").textContent = D._ghi_chu || "";
+
+  el.innerHTML = `
+    <h2>Bản đồ luật → module HIS</h2>
+    ${D.ban_do_luat_his.map(moduleCard).join("")}
+    <h2>Việc cần khóa trước khi code</h2>
+    <p class="sub">Đây là đề xuất kỹ thuật, không phải điều khoản luật.</p>
+    <ul class="pts">${D.viec_khoa_truoc_khi_code.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    <h2>Quy tắc</h2>
+    <ul class="pts">${D.quy_tac.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    <h2>Nguồn đã kiểm</h2>
+    <ul class="pts">${D.nguon_da_kiem.map(s => `<li><a href="${esc(safeUrl(s.nguon))}" target="_blank" rel="noopener noreferrer">${esc(s.van_ban)}</a> <span class="meta">· ${esc(s.loai)}</span></li>`).join("")}</ul>
+    <h2>Chưa xác nhận hoặc đã bác bỏ</h2>
+    <ul class="unv-list">${D.chua_xac_nhan.map(c => `<li>${badgeCode(c.trang_thai)} <b>${esc(c.noi_dung)}</b>: ${esc(c.ghi_chu)}</li>`).join("")}</ul>`;
+}
+boot();
+</script>
+</body>
+</html>

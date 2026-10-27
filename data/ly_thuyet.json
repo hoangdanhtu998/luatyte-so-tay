@@ -1,0 +1,838 @@
+{
+  "meta": {
+    "ten": "Lý thuyết luật y tế theo trình tự học",
+    "nguyen_tac": "Mỗi chương đi từ khái niệm, sang quy định, rồi đến ví dụ và lỗi hay gặp. Chỉ dùng nội dung đã có trong dữ liệu của app. Chỗ nào chưa đối chiếu được văn bản gốc thì đánh dấu verify.",
+    "cach_doc": "Đọc theo thứ tự. Mỗi chương kết thúc bằng 2 câu ôn nhanh."
+  },
+  "chuong": [
+    {
+      "id": "c10",
+      "ten": "Kiến thức nền cho người mới",
+      "muc_tieu": "Hiểu một số khái niệm cơ bản về y tế và pháp luật trước khi học các quy định chi tiết.",
+      "buoc": [
+        {
+          "tieu_de": "Trách nhiệm pháp lý có ba loại",
+          "giai_thich": "Khi làm sai pháp luật, có thể chịu ba loại trách nhiệm. Trách nhiệm hành chính là bị xử phạt, thường là phạt tiền hoặc biện pháp khác theo quy định. Trách nhiệm dân sự là bồi thường thiệt hại cho người bị ảnh hưởng. Trách nhiệm hình sự chỉ đặt ra khi hành vi là tội phạm theo Bộ luật Hình sự.",
+          "vi_du": "Một cơ sở kê khai sai thông tin có thể bị phạt hành chính. Một cơ sở làm người bệnh bị thiệt hại có thể phải bồi thường dân sự.",
+          "hay_nham": "Nghĩ rằng mọi sai sót đều là tội hình sự. Phần lớn sai sót chỉ đến mức xử phạt hành chính hoặc bồi thường.",
+          "nguon": "Kiến thức chung, không phải điều luật cụ thể",
+          "verify": false
+        },
+        {
+          "tieu_de": "Đơn thuốc là gì",
+          "giai_thich": "Đơn thuốc là giấy bác sĩ hoặc người được phép kê đơn viết để người bệnh mua và dùng thuốc. Đơn cần ghi tên thuốc, hàm lượng, liều dùng, cách dùng và thời gian dùng. Theo Luật Khám bệnh, chữa bệnh, người hành nghề phải ghi đầy đủ các nội dung này.",
+          "vi_du": "Bác sĩ viết đơn ghi tên thuốc, liều mỗi lần uống, số lần trong ngày và số ngày dùng. Nhà thuốc chỉ bán thuốc kê đơn khi có đơn này.",
+          "hay_nham": "Nghĩ rằng chỉ cần nói tên thuốc là đủ. Đơn cần có đủ các thông tin trên.",
+          "nguon": "Luật Khám bệnh, chữa bệnh 15/2023, Điều 63 khoản 2 (theo dữ liệu app); phần giải thích là kiến thức chung",
+          "verify": false
+        },
+        {
+          "tieu_de": "Hồ sơ bệnh án là gì",
+          "giai_thich": "Hồ sơ bệnh án là tài liệu ghi lại quá trình khám và điều trị của một người bệnh: triệu chứng, kết quả khám, xét nghiệm, chẩn đoán, thuốc và các chăm sóc đã thực hiện. Hồ sơ có thể là bản giấy hoặc bản điện tử, và có giá trị pháp lý như nhau.",
+          "vi_du": "Mỗi lần người bệnh nhập viện, bác sĩ ghi diễn biến bệnh vào hồ sơ. Hồ sơ này được dùng để theo dõi điều trị và khi cần giải quyết tranh chấp.",
+          "hay_nham": "Nghĩ rằng hồ sơ bệnh án chỉ dành cho bác sĩ. Người bệnh có quyền xem và sao chụp hồ sơ của mình.",
+          "nguon": "Luật Khám bệnh, chữa bệnh 15/2023, Điều 69 khoản 1 (theo dữ liệu app); phần giải thích là kiến thức chung",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thẻ BHYT dùng để làm gì",
+          "giai_thich": "Thẻ bảo hiểm y tế là giấy tờ chứng nhận người đó đã tham gia bảo hiểm. Thẻ giúp quỹ bảo hiểm thanh toán một phần chi phí khám chữa bệnh theo phạm vi quyền lợi và mức hưởng của luật. Có thẻ không có nghĩa là mọi chi phí đều miễn phí.",
+          "vi_du": "Người có thẻ BHYT đi khám đúng nơi đăng ký, quỹ BHYT thanh toán phần đủ điều kiện. Phần còn lại người bệnh tự trả theo quy định.",
+          "hay_nham": "Nghĩ rằng có thẻ BHYT thì khám ở đâu cũng được thanh toán toàn bộ. Mức hưởng phụ thuộc vào đối tượng, nơi khám và điều kiện.",
+          "nguon": "Luật Bảo hiểm y tế sửa đổi 2024 (theo dữ liệu app, c4); phần giải thích là kiến thức chung",
+          "verify": false
+        },
+        {
+          "tieu_de": "Bệnh truyền nhiễm nhóm A là gì",
+          "giai_thich": "Luật Phòng bệnh 114/2025 chia bệnh truyền nhiễm thành ba nhóm: nhóm A là các bệnh đặc biệt nguy hiểm, nhóm B là bệnh nguy hiểm, nhóm C là bệnh ít nguy hiểm. Khi có bệnh nhóm A, cơ quan chức năng có thể áp dụng biện pháp cách ly y tế.",
+          "vi_du": "Khi một bệnh thuộc nhóm A xuất hiện, cơ quan y tế có thể thông báo và triển khai biện pháp cách ly theo quy định.",
+          "nguon": "Luật Phòng bệnh 114/2025, khoản định nghĩa nhóm bệnh truyền nhiễm (đã đối chiếu)",
+          "verify": false,
+          "hay_nham": "Nghĩ rằng mọi bệnh truyền nhiễm đều thuộc nhóm A. Nhóm A chỉ là nhóm nguy hiểm nhất."
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Đơn thuốc cần ghi những gì?",
+          "dap": "Tên thuốc, hàm lượng, liều dùng, cách dùng và thời gian dùng."
+        },
+        {
+          "hoi": "Có thẻ BHYT thì có miễn phí toàn bộ không?",
+          "dap": "Không. BHYT thanh toán một phần theo quy định, người bệnh có thể phải trả phần còn lại."
+        }
+      ]
+    },
+    {
+      "id": "c1",
+      "ten": "Đọc hiểu văn bản y tế",
+      "muc_tieu": "Biết văn bản nào có hiệu lực, văn bản nào đã thay thế, để không học nhầm quy định cũ.",
+      "buoc": [
+        {
+          "tieu_de": "Số hiệu nói gì",
+          "giai_thich": "Số hiệu như 15/2023/QH15 gồm ba phần: số thứ tự 15, năm ban hành 2023, và QH15 là Quốc hội khóa XV. Đuôi /TT-BYT là thông tư của Bộ Y tế, /NĐ-CP là nghị định của Chính phủ. Khi gặp số hiệu, hãy đọc được ngay loại văn bản và năm ban hành.",
+          "vi_du": "Luật Khám bệnh, chữa bệnh có số hiệu 15/2023/QH15 là một luật do Quốc hội ban hành năm 2023.",
+          "hay_nham": "Nhầm Luật 51/2024/QH15 (Bảo hiểm y tế) với Luật 44/2024/QH15 (Dược). Hai luật khác nhau dù cùng năm.",
+          "nguon": "Dữ liệu laws.json, số hiệu từng văn bản",
+          "verify": false
+        },
+        {
+          "tieu_de": "Hiệu lực và thay thế",
+          "giai_thich": "Một văn bản có ngày hiệu lực riêng. Khi văn bản mới có hiệu lực, văn bản cũ có thể bị thay thế hoặc sửa đổi. Quy tắc: nếu hai văn bản trùng nội dung mà đáp án khác nhau, áp dụng văn bản mới hơn theo ngày hiệu lực.",
+          "vi_du": "Luật Khám bệnh, chữa bệnh 15/2023 có hiệu lực từ 01/01/2024 và thay thế Luật 40/2009. Luật Dân số 113/2025 có hiệu lực từ 01/07/2026 và sẽ thay Pháp lệnh Dân số 06/2003 khi có hiệu lực.",
+          "hay_nham": "Học theo luật cũ đã bị thay. Ví dụ: Luật Phòng bệnh truyền nhiễm 03/2007 đã bị thay bởi Luật Phòng bệnh 114/2025, hiệu lực từ 01/07/2026.",
+          "nguon": "laws.json, trường replaces và eff",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thứ tự hiệu lực của các văn bản",
+          "giai_thich": "Hệ thống văn bản pháp luật có thứ bậc. Hiến pháp đứng đầu. Tiếp theo là luật, nghị quyết của Quốc hội; rồi pháp lệnh; lệnh và quyết định của Chủ tịch nước; nghị định của Chính phủ; quyết định của Thủ tướng; thông tư của bộ trưởng; và văn bản của chính quyền địa phương. Văn bản cấp dưới phải phù hợp với văn bản cấp trên.",
+          "vi_du": "Thông tư hướng dẫn một luật không được quy định trái với luật đó. Nếu trái, luật được áp dụng.",
+          "hay_nham": "Coi thông tư của Bộ Y tế có hiệu lực cao hơn luật vì ban hành gần đây hơn. Hiệu lực pháp lý theo thứ bậc, không theo thời điểm ban hành.",
+          "nguon": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 17–22",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật, nghị định, thông tư, án lệ khác nhau thế nào",
+          "giai_thich": "Luật do Quốc hội ban hành, có hiệu lực cao nhất dưới Hiến pháp, quy định các vấn đề cơ bản như y tế, kinh tế, giáo dục. Nghị định do Chính phủ ban hành để hướng dẫn luật, hoặc quy định việc chưa có luật điều chỉnh. Thông tư do bộ trưởng ban hành để hướng dẫn nghị định và luật trong một ngành. Án lệ là phán quyết của tòa án đã có hiệu lực, được Chánh án Tòa án nhân dân tối cao công bố để các tòa án áp dụng.",
+          "vi_du": "Luật Khám bệnh, chữa bệnh là luật. Nghị định hướng dẫn luật đó là nghị định của Chính phủ. Thông tư hướng dẫn chi tiết về giá dịch vụ là thông tư của Bộ Y tế.",
+          "hay_nham": "Nhầm vai trò: nghị định không hướng dẫn thông tư, mà thông tư hướng dẫn nghị định và luật.",
+          "nguon": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 24–26",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Luật 15/2023/QH15 do cơ quan nào ban hành và năm nào?",
+          "dap": "Quốc hội, năm 2023 (QH15 là Quốc hội khóa XV)."
+        },
+        {
+          "hoi": "Luật Khám bệnh, chữa bệnh 2023 thay thế luật nào?",
+          "dap": "Luật 40/2009/QH12."
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "ten": "Người, cơ sở và giấy phép khám chữa bệnh",
+      "muc_tieu": "Phân biệt rõ người hành nghề, cơ sở khám chữa bệnh, và hai loại giấy phép khác nhau.",
+      "buoc": [
+        {
+          "tieu_de": "Các khái niệm nền",
+          "giai_thich": "Khám bệnh là việc người hành nghề dùng kiến thức và kỹ thuật chuyên môn để đánh giá tình trạng sức khỏe, nguy cơ và nhu cầu chăm sóc. Người bệnh là người sử dụng dịch vụ khám bệnh, chữa bệnh. Người hành nghề là người đã được cơ quan có thẩm quyền cấp giấy phép hành nghề. Khi làm bài, hãy phân biệt người (người hành nghề) với cơ sở (nơi cung cấp dịch vụ).",
+          "vi_du": "Một bác sĩ có giấy phép hành nghề là người hành nghề. Bệnh viện có giấy phép hoạt động là cơ sở khám bệnh, chữa bệnh.",
+          "hay_nham": "Cho rằng giấy phép hành nghề và giấy phép hoạt động là một. Thực ra đây là hai giấy phép cho hai đối tượng khác nhau.",
+          "nguon": "Luật KCB 15/2023, Điều 2 khoản 1 đến 7; khi tra cứu hiện tại, đối chiếu thêm Văn bản hợp nhất 26/VBHN-VPQH ngày 26/02/2026 (đã xác nhận tồn tại, chưa đọc đủ nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Giấy phép hành nghề: 5 năm và phải gia hạn",
+          "giai_thich": "Giấy phép hành nghề có thời hạn 5 năm và phải được gia hạn khi hết hạn. Luật cũng quy định lộ trình kiểm tra và đánh giá năng lực trước khi cấp phép. Điều kiện thực hành trước khi cấp giấy phép được quy định chi tiết tại Nghị định 96/2023, chưa đối chiếu được số tháng cụ thể.",
+          "vi_du": "Giấy phép cấp năm 2019 đã quá 5 năm thì cần gia hạn trước khi tiếp tục ký đơn khám chữa bệnh.",
+          "hay_nham": "Tưởng giấy phép có giá trị vĩnh viễn như chứng chỉ hành nghề cũ. Luật 2023 đã đổi tên thành giấy phép hành nghề và đặt thời hạn 5 năm.",
+          "nguon": "Luật KCB 15/2023, Điều 27; laws.json, kcb",
+          "verify": false
+        },
+        {
+          "tieu_de": "Ba cấp chuyên môn kỹ thuật",
+          "giai_thich": "Cơ sở khám chữa bệnh được tổ chức theo ba cấp chuyên môn kỹ thuật: cấp ban đầu, cấp cơ bản, cấp chuyên sâu. Cách phân cấp này thay thế cách chia bốn tuyến trung ương, tỉnh, huyện, xã. Quy định áp dụng từ 01/01/2025.",
+          "vi_du": "Một cơ sở chỉ làm được nhiệm vụ của cấp ban đầu thì xếp vào cấp ban đầu. Một cơ sở làm được nhiệm vụ của cả ba cấp thì xếp cấp chuyên sâu.",
+          "hay_nham": "Vẫn dùng cách gọi tuyến trung ương, tuyến tỉnh khi nói về mức chuyên môn. Cần đổi sang cấp ban đầu, cơ bản, chuyên sâu, và chú ý mốc 01/01/2025.",
+          "nguon": "laws.json, kcb P0; quiz kcb về cấp chuyên môn kỹ thuật",
+          "verify": false
+        },
+        {
+          "tieu_de": "Quy tắc không bao giờ được vi phạm",
+          "giai_thich": "Luật nghiêm cấm từ chối hoặc cố ý chậm cấp cứu người bệnh. Hồ sơ bệnh án có thể lập điện tử và có giá trị như bản giấy. Người hành nghề nước ngoài phải dùng thành thạo tiếng Việt hoặc có người phiên dịch.",
+          "vi_du": "Người bệnh cấp cứu đến cơ sở trái tuyến. Cơ sở không được từ chối hay chậm xử trí chỉ vì trái tuyến.",
+          "hay_nham": "Nhầm việc trái tuyến với việc từ chối cấp cứu. Trái tuyến ảnh hưởng đến mức thanh toán BHYT, nhưng không được phép làm chậm cấp cứu.",
+          "nguon": "laws.json, kcb P3, P4, P5; quiz kcb về hành vi nghiêm cấm",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Giấy phép hành nghề có thời hạn bao lâu?",
+          "dap": "5 năm, hết hạn phải gia hạn."
+        },
+        {
+          "hoi": "Cơ sở khám chữa bệnh có mấy cấp chuyên môn kỹ thuật?",
+          "dap": "Ba cấp: ban đầu, cơ bản, chuyên sâu, áp dụng từ 01/01/2025."
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "ten": "Quyền của người bệnh",
+      "muc_tieu": "Biết người bệnh được biết gì, được quyết định gì, và được giữ bí mật gì.",
+      "buoc": [
+        {
+          "tieu_de": "Được cung cấp thông tin",
+          "giai_thich": "Người bệnh được cung cấp thông tin về tình trạng sức khỏe, phương pháp chữa bệnh, giá dịch vụ, và hướng dẫn tự chăm sóc. Đây là điều tạo nên sự đồng thuận khi điều trị. Người bệnh cũng được đọc và sao chụp hồ sơ bệnh án, và được nhận tóm tắt, giải thích về chi phí.",
+          "vi_du": "Người bệnh hỏi giá một dịch vụ trước khi làm. Cơ sở phải cung cấp thông tin giá, không được che giấu.",
+          "hay_nham": "Cho rằng người bệnh không có quyền xem hồ sơ của mình.",
+          "nguon": "Luật KCB 15/2023, Điều 9 và Điều 12; quiz kcb",
+          "verify": false
+        },
+        {
+          "tieu_de": "Quyền chấp nhận hoặc từ chối",
+          "giai_thich": "Người bệnh có quyền chấp nhận hoặc từ chối tham gia nghiên cứu y sinh học. Mỗi người bệnh có một người đại diện tại một thời điểm, nên việc đại diện không được chia cho nhiều người cùng lúc.",
+          "vi_du": "Một người bệnh được đề nghị tham gia nghiên cứu. Họ có thể đồng ý hoặc từ chối mà không bị ảnh hưởng đến việc điều trị.",
+          "hay_nham": "Nghĩ rằng người bệnh không thể từ chối tham gia nghiên cứu.",
+          "nguon": "Luật KCB 15/2023, Điều 8 và Điều 11",
+          "verify": false
+        },
+        {
+          "tieu_de": "Bí mật thông tin",
+          "giai_thich": "Người bệnh được giữ bí mật thông tin sức khỏe và đời tư. Đây là quyền gắn với nghĩa vụ của cơ sở và người hành nghề khi xử lý hồ sơ.",
+          "vi_du": "Nhân viên không được tiết lộ tình trạng bệnh của người bệnh cho người không liên quan.",
+          "hay_nham": "Coi thông tin sức khỏe là chuyện nội bộ, có thể chia sẻ tùy ý.",
+          "nguon": "Luật KCB 15/2023, Điều 10; laws.json, kcb P4",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Mỗi người bệnh có bao nhiêu người đại diện tại một thời điểm?",
+          "dap": "Một người."
+        },
+        {
+          "hoi": "Người bệnh có quyền từ chối nghiên cứu y sinh học không?",
+          "dap": "Có, được chấp nhận hoặc từ chối."
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "ten": "Bảo hiểm y tế: đọc đúng mức hưởng",
+      "muc_tieu": "Tính được mức hưởng BHYT trong từng tình huống, không nhầm giữa cấp cứu, trái tuyến và điều kiện 5 năm.",
+      "buoc": [
+        {
+          "tieu_de": "Bắt đầu từ mức phổ biến",
+          "giai_thich": "Mức hưởng phổ biến là 80% chi phí trong phạm vi quyền lợi. Một số đối tượng được cao hơn: trẻ em dưới 6 tuổi, người có công, hộ nghèo và một số nhóm khác hưởng 100%. Người hưởng lương hưu hưởng 95%. Hãy học mức 80% trước, rồi mới học các trường hợp ngoại lệ.",
+          "vi_du": "Người đi làm đúng quy định, không thuộc nhóm ưu tiên, được hưởng 80%. Trẻ dưới 6 tuổi trong phạm vi được hưởng 100%.",
+          "hay_nham": "Áp dụng 100% cho mọi người. Mức 100% chỉ áp dụng khi thuộc nhóm được quy định.",
+          "nguon": "laws.json, bhyt P0; Nghị định 188/2025/NĐ-CP hướng dẫn Luật BHYT (ký 01/07/2025, có hiệu lực 15/08/2025, Điều 70 khoản 1)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Cấp cứu và trái tuyến",
+          "giai_thich": "Cấp cứu ở bất kỳ cơ sở nào vẫn được hưởng 100%. Khám ngoại trú tại cơ sở cấp ban đầu ở bất kỳ tỉnh nào và điều trị nội trú tại cơ sở cấp cơ bản được hưởng như đúng tuyến. Điều trị nội trú tại cơ sở cấp chuyên sâu, nếu trái tuyến, thường được hưởng 40%. Khám không đúng tuyến hoặc không đúng quy định chuyển tuyến thì quỹ chỉ thanh toán theo một tỷ lệ của mức hưởng.",
+          "vi_du": "Một người bị tai nạn được đưa vào cơ sở chuyên sâu không đúng tuyến: hưởng 100% vì là cấp cứu. Cùng người đó tự đi khám ngoại trú ở cơ sở chuyên sâu, không cấp cứu: không được hưởng như đúng tuyến.",
+          "hay_nham": "Nhầm cấp cứu với trái tuyến. Cấp cứu luôn được 100%, còn trái tuyến là chuyện của ngoại trú và nội trú không cấp cứu.",
+          "nguon": "laws.json, bhyt P3, P6, P8 (Điều 22)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Điều kiện 5 năm và hộ gia đình",
+          "giai_thich": "Người tham gia liên tục từ 5 năm trở lên và có số tiền cùng chi trả trong năm vượt ngưỡng sẽ được hưởng 100%. Ngưỡng là 6 lần mức tham chiếu do Chính phủ quy định. Phần con số này chưa đối chiếu được nguyên văn. Khi đóng theo hộ gia đình: người thứ nhất tối đa 6% mức tham chiếu, người thứ hai bằng 70%, thứ ba 60%, thứ tư 50%, từ người thứ năm bằng 40% mức người thứ nhất.",
+          "vi_du": "Một hộ có 4 người đóng BHYT: người thứ hai đóng 70% mức của người thứ nhất, người thứ tư đóng 50%.",
+          "hay_nham": "Dùng con số 6 lần cho mọi trường hợp, hoặc quên điều kiện liên tục 5 năm.",
+          "nguon": "Luật BHYT sửa đổi 2024, Điều 22 khoản 1 điểm d: 5 năm liên tục và cùng chi trả trong năm lớn hơn 6 lần mức tham chiếu (đã đối chiếu). Nghị định 188/2025, Điều 18 khoản 2 hướng dẫn (đã đối chiếu).",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Cấp cứu trái tuyến được hưởng bao nhiêu?",
+          "dap": "100% ở mọi cơ sở."
+        },
+        {
+          "hoi": "Mức hưởng phổ biến là bao nhiêu?",
+          "dap": "80% trong phạm vi quyền lợi."
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "ten": "Giá dịch vụ và thanh toán thuốc tự mua",
+      "muc_tieu": "Hiểu ai quyết định giá, cách tính khi khám nhiều lượt, và khi nào thuốc tự mua được thanh toán.",
+      "buoc": [
+        {
+          "tieu_de": "Khung giá và mức giá cụ thể",
+          "giai_thich": "Thông tư 21/2023 có bốn phụ lục khung giá: khám bệnh, ngày giường, kỹ thuật và xét nghiệm, và ghi chú tương đương. Hội đồng nhân dân cấp tỉnh quyết định mức giá cụ thể trong cơ sở nhà nước, nhưng không vượt khung giá. Cơ sở chưa được phân hạng áp dụng giá bệnh viện hạng IV. Trạm y tế xã áp dụng 70% giá kỹ thuật quy định. Nguồn tra cứu có ghi thông tư này có thể đã được thay bởi Thông tư 21/2024, cần kiểm tra.",
+          "vi_du": "Một trạm y tế xã thực hiện dịch vụ kỹ thuật được tính 70% giá quy định.",
+          "hay_nham": "Cho rằng bệnh viện tự đặt giá. Giá cụ thể do HĐND tỉnh quyết trong khung.",
+          "nguon": "Thông tư 21/2023, Điều 2, 4; quiz bhyt về giá khám",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khám nhiều lượt trong một lần đến",
+          "giai_thich": "Trong cùng một lần đến khám, lượt khám chuyên khoa từ lần thứ hai được tính 30% giá một lượt khám. Tổng tiền khám không quá 2 lần giá khám.",
+          "vi_du": "Người bệnh khám chuyên khoa thứ hai trong cùng một lần đến: tính 30% giá một lượt khám.",
+          "hay_nham": "Tính đủ 100% cho mọi lượt khám. Quy định giới hạn ở tổng 2 lần giá khám.",
+          "nguon": "Thông tư 21/2023, Điều 5; Thông tư 22/2023, Điều 5",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thuốc tự mua được thanh toán khi nào",
+          "giai_thich": "Thông tư 22/2024 có hiệu lực từ 01/01/2025. Thuốc được thanh toán trực tiếp gồm thuốc trong Danh mục thuốc hiếm, và thiết bị y tế loại C, D, trừ chẩn đoán in vitro và thiết bị cá nhân hóa. Giá thanh toán tối đa không vượt giá trúng thầu gần nhất tại cơ sở. Nếu không có giá trúng thầu gần nhất thì áp dụng các mức ưu tiên khác.",
+          "vi_du": "Thuốc hiếm trong danh mục được thanh toán trực tiếp. Giá tối đa không được vượt giá trúng thầu gần nhất của cơ sở.",
+          "hay_nham": "Nhầm với thuốc thông thường. Chỉ thuốc trong danh mục và thiết bị loại C, D mới thuộc diện này.",
+          "nguon": "Thông tư 22/2024, Điều 2, 4, 8",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Trạm y tế xã áp dụng bao nhiêu % giá kỹ thuật quy định?",
+          "dap": "70%."
+        },
+        {
+          "hoi": "Lượt khám chuyên khoa từ lần thứ hai tính bao nhiêu?",
+          "dap": "30% giá một lượt khám."
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "ten": "Thuốc và đơn thuốc",
+      "muc_tieu": "Biết ai được kê đơn, kê bao nhiêu ngày, và khi nào được bán thuốc kê đơn.",
+      "buoc": [
+        {
+          "tieu_de": "Ai được kê đơn và đơn cần gì",
+          "giai_thich": "Theo Thông tư 26/2025 (đã đối chiếu), chỉ bác sĩ hoặc y sĩ có chứng chỉ hành nghề mới được kê thuốc hóa dược, sinh phẩm trong điều trị ngoại trú. Đơn thuốc cho trẻ dưới 72 tháng tuổi phải ghi tuổi tính theo tháng và cân nặng. Đơn thuốc điện tử có giá trị như đơn giấy khi được ký số, lưu trữ và chia sẻ đúng quy định. Thông tin này lấy từ tóm tắt, cần đối chiếu văn bản gốc.",
+          "vi_du": "Đơn cho bé 18 tháng tuổi phải ghi tuổi theo tháng và cân nặng của bé.",
+          "hay_nham": "Chỉ kiểm tra tên thuốc mà quên các trường bắt buộc, như tuổi theo tháng và cân nặng với trẻ nhỏ.",
+          "nguon": "Thông tư 26/2025/TT-BYT (đã đối chiếu văn bản gốc), Điều 2 và Điều 6 khoản 4",
+          "verify": false
+        },
+        {
+          "tieu_de": "Số ngày kê đơn ngoại trú",
+          "giai_thich": "Đơn ngoại trú tối đa 30 ngày cho mỗi thuốc. Bệnh mạn tính ổn định có thể kê đến 90 ngày theo Phụ lục VII. Điểm cần nhớ là 30 ngày là mặc định, 90 ngày chỉ áp dụng khi là bệnh mạn tính. Theo các nguồn đã kiểm tra, mức 90 ngày chỉ áp dụng cho các bệnh trong danh mục Phụ lục VII (252 bệnh mạn tính). Không phải bệnh mạn tính nào cũng tự động được kê 90 ngày: bác sĩ quyết định số ngày dựa trên tình trạng ổn định của từng người bệnh.",
+          "vi_du": "Đơn cho bệnh viêm họng cấp tính 45 ngày không hợp lệ, cần chỉnh về tối đa 30 ngày. Đơn cho bệnh mạn tính ổn định 60 ngày được chấp nhận.",
+          "hay_nham": "Áp 90 ngày cho bệnh cấp tính, hoặc áp 30 ngày cho bệnh mạn tính.",
+          "nguon": "Thông tư 26/2025/TT-BYT (đã đối chiếu văn bản gốc), Điều 6 khoản 8",
+          "verify": false
+        },
+        {
+          "tieu_de": "Bán thuốc kê đơn và kinh doanh online",
+          "giai_thich": "Nhà thuốc chỉ được bán thuốc kê đơn khi có đơn thuốc. Luật Dược sửa đổi 44/2024 cho phép kinh doanh thuốc qua thương mại điện tử theo danh mục được phép. Thuốc kê đơn không được bán lẻ qua thương mại điện tử theo điều khoản đã ghi trong bộ câu hỏi, cần đối chiếu. Luật cũng yêu cầu thuốc kê đơn công bố giá bán buôn dự kiến và không được bán qua tầng trung gian vượt mức giá đã công bố.",
+          "vi_du": "Khách gửi ảnh đơn thuốc và đặt mua thuốc kê đơn qua website. Nhà thuốc không được bán nếu thuốc thuộc nhóm kê đơn không được bán lẻ qua thương mại điện tử.",
+          "hay_nham": "Nghĩ rằng có đơn thuốc là đủ điều kiện bán online. Điều kiện bán online là thuốc thuộc danh mục được phép, và thuốc kê đơn nằm ngoài phạm vi này.",
+          "nguon": "Luật Dược sửa đổi 44/2024, bổ sung Điều 6 khoản 17 Luật 105/2016: không bán lẻ thuốc kê đơn qua thương mại điện tử, trừ trường hợp cách ly y tế nhóm A (đã đối chiếu)",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Đơn ngoại trú tối đa bao nhiêu ngày cho một thuốc?",
+          "dap": "30 ngày; bệnh mạn tính ổn định đến 90 ngày."
+        },
+        {
+          "hoi": "Nhà thuốc được bán thuốc kê đơn khi nào?",
+          "dap": "Khi có đơn thuốc."
+        }
+      ]
+    },
+    {
+      "id": "c7",
+      "ten": "Dữ liệu y tế và bảo mật",
+      "muc_tieu": "Hiểu hồ sơ điện tử, sổ sức khỏe điện tử, và các quy tắc bảo mật, nhất là với thông tin HIV.",
+      "buoc": [
+        {
+          "tieu_de": "Hồ sơ bệnh án và HIS",
+          "giai_thich": "Hồ sơ bệnh án có thể lập bằng giấy hoặc bản điện tử, và có giá trị pháp lý như nhau. Cơ sở khám chữa bệnh phải cung cấp thông tin lên Hệ thống thông tin quản lý khám chữa bệnh đầy đủ, chính xác và kịp thời. Hệ thống này do Bộ Y tế thống nhất quản lý.",
+          "vi_du": "Bệnh viện nhập dữ liệu khám muộn, sai hoặc thiếu lên hệ thống thì vi phạm yêu cầu đầy đủ, chính xác, kịp thời.",
+          "hay_nham": "Nghĩ rằng bản điện tử kém giá trị hơn bản giấy. Cả hai có giá trị như nhau.",
+          "nguon": "Luật KCB 15/2023, Điều 69 khoản 1 và Điều 112 khoản 2, 3 (quiz his)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Sửa hồ sơ và sổ sức khỏe điện tử",
+          "giai_thich": "Cấm tẩy xóa, sửa chữa hồ sơ bệnh án nhằm làm sai lệch thông tin, hoặc lập hồ sơ giả. Sổ sức khỏe điện tử là ứng dụng hoặc phần mềm tóm lược quá trình phòng bệnh, thăm khám, điều trị của từng cá nhân. Khi dữ liệu thay đổi hoặc có sai sót, phải kịp thời thông báo cho cơ quan chủ quản cơ sở dữ liệu.",
+          "vi_du": "Nhân viên sửa kết quả khám cũ mà không ghi nhận lại là vi phạm. Đúng cách là ghi nhận thay đổi và thông báo theo quy định.",
+          "hay_nham": "Sửa thẳng vào dữ liệu cũ khi phát hiện sai, mà không để lại dấu vết hay thông báo.",
+          "nguon": "Luật KCB 15/2023, Điều 7 khoản 10 (quiz his); Nghị định 102/2025, khoản 3 Điều 3 và Điều 24",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tin HIV được bảo mật",
+          "giai_thich": "Thông tin về người nhiễm HIV được bảo mật. Kết quả dương tính chỉ được thông báo cho những người luật cho phép, như vợ, chồng, người dự định kết hôn, người chung sống như vợ chồng. Người được tiếp cận có trách nhiệm giữ bí mật. Cấm kỳ thị, phân biệt đối xử với người nhiễm HIV.",
+          "vi_du": "Đồng nghiệp trong khoa hỏi kết quả HIV dương tính của bệnh nhân. Cơ sở từ chối và chỉ thông báo cho người được luật cho phép.",
+          "hay_nham": "Thông báo rộng cho cả khoa để phòng ngừa lây nhiễm. Cách làm này vi phạm bảo mật.",
+          "nguon": "Luật phòng, chống HIV/AIDS 64/2006, sửa đổi bởi Luật 71/2020, Điều 30 khoản 2 và 6 (đã đối chiếu); laws.json, hiv P0, P1",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Hồ sơ bệnh án điện tử có giá trị như bản giấy không?",
+          "dap": "Có, như nhau."
+        },
+        {
+          "hoi": "Kết quả HIV dương tính được thông báo cho ai?",
+          "dap": "Chỉ cho những người luật cho phép, như vợ, chồng, người dự định kết hôn."
+        }
+      ]
+    },
+    {
+      "id": "c8",
+      "ten": "Dân số và thai sản",
+      "muc_tieu": "Nắm được quyền nghỉ thai sản khi sinh con thứ hai và các quy định về giới tính thai nhi.",
+      "buoc": [
+        {
+          "tieu_de": "Nghỉ thai sản khi sinh con thứ hai",
+          "giai_thich": "Lao động nữ sinh con thứ hai được nghỉ thai sản 7 tháng. Lao động nam được nghỉ 10 ngày làm việc khi vợ sinh con thứ hai. Điều kiện là đủ điều kiện hưởng chế độ thai sản theo pháp luật bảo hiểm xã hội. Luật Dân số 113/2025 có hiệu lực từ 01/07/2026.",
+          "vi_du": "Người lao động nam có vợ sinh con thứ hai, đủ điều kiện BHXH: được nghỉ 10 ngày làm việc.",
+          "hay_nham": "Quên điều kiện đóng BHXH. Chế độ chỉ áp dụng khi đủ điều kiện.",
+          "nguon": "Luật Dân số 113/2025, Điều 14 khoản 1 (theo laws.json, danso P1)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Cấm lựa chọn giới tính thai nhi",
+          "giai_thich": "Cấm lựa chọn giới tính thai nhi dưới mọi hình thức. Cấm thông báo, tiết lộ giới tính thai nhi, trừ trường hợp phục vụ chẩn đoán và điều trị bệnh liên quan đến giới tính. Hành vi tiết lộ giới tính để phá thai là căn cứ đình chỉ hành nghề khám chữa bệnh.",
+          "vi_du": "Bác sĩ siêu âm và nói giới tính thai nhi cho gia đình để phá thai: vi phạm, có thể bị đình chỉ hành nghề.",
+          "hay_nham": "Nghĩ rằng chỉ cấm lựa chọn, còn tiết lộ thì không sao. Việc tiết lộ cũng bị cấm, trừ trường hợp điều trị.",
+          "nguon": "Luật Dân số 113/2025, Điều 6 khoản 3; Điều 15 khoản 2; Điều 29 khoản 4 (quiz his)",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Lao động nam được nghỉ bao nhiêu ngày khi vợ sinh con thứ hai?",
+          "dap": "10 ngày làm việc, nếu đủ điều kiện BHXH."
+        },
+        {
+          "hoi": "Có được tiết lộ giới tính thai nhi không?",
+          "dap": "Không, trừ trường hợp chẩn đoán và điều trị bệnh liên quan đến giới tính."
+        }
+      ]
+    },
+    {
+      "id": "c9",
+      "ten": "Hiến pháp và quyền sức khỏe",
+      "muc_tieu": "Biết các điều Hiến pháp liên quan đến sức khỏe: quyền được bảo hộ, nghĩa vụ, trách nhiệm của Nhà nước, và giới hạn khi hạn chế quyền con người.",
+      "buoc": [
+        {
+          "tieu_de": "Quyền được bảo hộ về sức khỏe (Điều 20)",
+          "giai_thich": "Hiến pháp khẳng định mọi người có quyền bất khả xâm phạm về thân thể, được pháp luật bảo hộ về sức khỏe, danh dự và nhân phẩm. Không ai bị tra tấn, bạo lực hay đối xử xâm phạm thân thể. Thử nghiệm y học, dược học, khoa học trên cơ thể người phải có sự đồng ý của người được thử nghiệm. Việc hiến mô, bộ phận cơ thể và hiến xác theo quy định của luật.",
+          "vi_du": "Một nghiên cứu thử thuốc trên người tham gia phải có sự đồng ý của chính người đó trước khi thực hiện.",
+          "hay_nham": "Cho rằng người nhà có thể thay người bệnh đồng ý thử nghiệm trong mọi trường hợp. Theo bài giảng, Hiến pháp yêu cầu sự đồng ý của người được thử nghiệm.",
+          "nguon": "Hiến pháp, Điều 20 khoản 1 và 3 (theo bài giảng)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Nghĩa vụ và quyền được chăm sóc y tế (Điều 38)",
+          "giai_thich": "Mọi người có quyền được bảo vệ, chăm sóc sức khỏe, bình đẳng trong sử dụng dịch vụ y tế. Đồng thời mọi người có nghĩa vụ thực hiện quy định về phòng bệnh, khám bệnh, chữa bệnh. Hiến pháp nghiêm cấm các hành vi đe dọa cuộc sống, sức khỏe của người khác và cộng đồng.",
+          "vi_du": "Một người biết mình mắc bệnh truyền nhiễm nhưng cố ý lây cho người khác là hành vi bị Hiến pháp nghiêm cấm.",
+          "hay_nham": "Chỉ nhìn thấy quyền mà quên nghĩa vụ phòng bệnh và tuân thủ quy định khám, chữa bệnh.",
+          "nguon": "Hiến pháp, Điều 38 khoản 1 và 2 (theo bài giảng)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Trách nhiệm của Nhà nước về bảo hiểm y tế và chăm sóc mẹ, trẻ em (Điều 58)",
+          "giai_thich": "Nhà nước và xã hội đầu tư phát triển sự nghiệp bảo vệ, chăm sóc sức khỏe. Nhà nước thực hiện bảo hiểm y tế toàn dân và ưu tiên chăm sóc sức khỏe cho đồng bào dân tộc thiểu số, miền núi, hải đảo và vùng khó khăn. Nhà nước, xã hội và gia đình có trách nhiệm bảo vệ, chăm sóc sức khỏe người mẹ, trẻ em và thực hiện kế hoạch hóa gia đình.",
+          "vi_du": "Chính sách ưu tiên chăm sóc sức khỏe cho vùng miền núi là thể hiện trực tiếp của Điều 58.",
+          "hay_nham": "Nghĩ rằng bảo hiểm y tế chỉ dành cho người có thu nhập. Theo Hiến pháp, mục tiêu là bảo hiểm y tế toàn dân.",
+          "nguon": "Hiến pháp, Điều 58 khoản 1 và 2 (theo bài giảng)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khi nào quyền con người bị hạn chế (Điều 14)",
+          "giai_thich": "Quyền con người, quyền công dân được công nhận và bảo đảm theo Hiến pháp và pháp luật. Chỉ khi cần thiết và theo quy định của luật thì quyền này mới bị hạn chế, vì quốc phòng, an ninh, trật tự, đạo đức xã hội hoặc sức khỏe của cộng đồng. Khi có vấn đề về sức khỏe cộng đồng, luật có thể quy định hạn chế một số quyền.",
+          "vi_du": "Khi có dịch bệnh nguy hiểm, luật có thể quy định cách ly hoặc hạn chế đi lại vì sức khỏe cộng đồng.",
+          "hay_nham": "Cho rằng mọi quyền đều có thể hạn chế tùy ý. Chỉ được hạn chế khi cần thiết và có quy định của luật.",
+          "nguon": "Hiến pháp, Điều 14 khoản 1 và 2 (theo bài giảng)",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Theo Hiến pháp, thử nghiệm y học trên cơ thể người cần điều kiện gì?",
+          "dap": "Phải có sự đồng ý của người được thử nghiệm (Điều 20 khoản 3)."
+        },
+        {
+          "hoi": "Nhà nước thực hiện chính sách gì về bảo hiểm y tế theo Điều 58?",
+          "dap": "Bảo hiểm y tế toàn dân."
+        }
+      ]
+    },
+    {
+      "id": "c11",
+      "ten": "Văn bản và mốc hiệu lực cần nhớ",
+      "muc_tieu": "Nhớ các văn bản chính và mốc hiệu lực. Ngày ban hành không cần nhớ; chỉ nhớ mốc có hiệu lực hoặc có hạn.",
+      "buoc": [
+        {
+          "tieu_de": "Thông tư 36/2025/TT-BYT sửa đổi phân cấp Thực hành tốt phòng thí nghiệm (GLP)",
+          "giai_thich": "Số hiệu: 36/2025/TT-BYT. Hiệu lực: 11/09/2025. Trạng thái: đang có hiệu lực. Sửa đổi một số điều về phân cấp của Thông tư 04/2018/TT-BYT.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 36/2025/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt36_2025)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 25/2026/TT-BYT sửa đổi Thông tư 32/2023 (khám sức khỏe)",
+          "giai_thich": "Số hiệu: 25/2026/TT-BYT. Hiệu lực: Điều 2, 3: 01/07/2026; phần còn lại: 15/08/2026. Trạng thái: đang có hiệu lực. Sửa đổi Thông tư 01/2013/TT-BYT và Thông tư 32/2023/TT-BYT.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 25/2026/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt25_2026)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 26/2025/TT-BYT về đơn thuốc và kê đơn thuốc ngoại trú",
+          "giai_thich": "Số hiệu: 26/2025/TT-BYT. Hiệu lực: 01/07/2025. Trạng thái: đang có hiệu lực. Đã đối chiếu văn bản gốc.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 26/2025/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt26_2025)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 22/2024/TT-BYT thanh toán chi phí thuốc, thiết bị y tế cho người có thẻ BHYT tự mua",
+          "giai_thich": "Số hiệu: 22/2024/TT-BYT. Hiệu lực: 01/01/2025. Trạng thái: đang có hiệu lực. Áp dụng cho người bệnh tại cơ sở hợp đồng khám chữa bệnh BHYT.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 22/2024/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt22_2024)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 22/2023/TT-BYT giá khám chữa bệnh BHYT thống nhất giữa bệnh viện cùng hạng",
+          "giai_thich": "Số hiệu: 22/2023/TT-BYT. Hiệu lực: 17/11/2023 (ngày ký). Trạng thái: có sửa đổi, bổ sung. Thay thế Thông tư 39/2018/TT-BYT và Thông tư 13/2019/TT-BYT (Điều 11).",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 22/2023/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt22_2023)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 21/2023/TT-BYT khung giá dịch vụ khám chữa bệnh trong cơ sở Nhà nước",
+          "giai_thich": "Số hiệu: 21/2023/TT-BYT. Hiệu lực: 17/11/2023 (ngày ký). Trạng thái: có sửa đổi, bổ sung. Thay thế Thông tư 37/2018 và 14/2019. Nguồn tra cứu ghi đã được thay bởi Thông tư 21/2024/TT-BYT — cần kiểm tra.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 21/2023/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt21_2023)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 49/2025/TT-BYT sửa đổi cấp giấy chứng nhận lương y và bài thuốc gia truyền",
+          "giai_thich": "Số hiệu: 49/2025/TT-BYT. Hiệu lực: 31/12/2025 (ngày ký). Trạng thái: có sửa đổi, bổ sung. Sửa đổi Thông tư 02/2024/TT-BYT. Hồ sơ đã nộp trước ngày hiệu lực được giải quyết theo quy định cũ.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 49/2025/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt49_2025)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 44/2025/TT-BYT phân cấp và quản lý trang thiết bị y tế",
+          "giai_thich": "Số hiệu: 44/2025/TT-BYT. Hiệu lực: 22/11/2025. Trạng thái: đang có hiệu lực. Thay thế Thông tư 19/2021/TT-BYT.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 44/2025/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tt44_2025)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Nghị định 102/2025/NĐ-CP quy định quản lý dữ liệu y tế",
+          "giai_thich": "Số hiệu: 102/2025/NĐ-CP. Hiệu lực: 01/07/2025. Trạng thái: đang có hiệu lực. Trạng thái hiệu lực cần đối chiếu Công báo trước khi dùng.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 102/2025/NĐ-CP để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (dulieu)",
+          "verify": true
+        },
+        {
+          "tieu_de": "Luật Khám bệnh, chữa bệnh",
+          "giai_thich": "Số hiệu: 15/2023/QH15. Hiệu lực: 01/01/2024. Trạng thái: đang có hiệu lực. Thay thế Luật Khám bệnh, chữa bệnh 40/2009/QH12 (đã sửa đổi bởi Luật 21/2017/QH14). Chứng chỉ hành nghề đổi thành giấy phép hành nghề.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 15/2023/QH15 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (kcb)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Bảo hiểm y tế (sửa đổi 2024)",
+          "giai_thich": "Số hiệu: 51/2024/QH15. Hiệu lực: 01/07/2025. Trạng thái: có sửa đổi, bổ sung. Sửa đổi Luật BHYT 25/2008/QH12 (đã sửa đổi bởi Luật 46/2014/QH13). Một số quy định có hiệu lực sớm từ 01/01/2025.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 51/2024/QH15 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (bhyt)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Dược (sửa đổi 2024)",
+          "giai_thich": "Số hiệu: 44/2024/QH15. Hiệu lực: 01/07/2025. Trạng thái: có sửa đổi, bổ sung. Sửa đổi 50 điều và bổ sung 3 điều của Luật Dược 105/2016/QH13 (hiệu lực từ 01/01/2017)",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 44/2024/QH15 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (duoc)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Phòng bệnh",
+          "giai_thich": "Số hiệu: 114/2025/QH15. Hiệu lực: 01/07/2026. Trạng thái: đang có hiệu lực. Thay thế Luật Phòng, chống bệnh truyền nhiễm 2007 (hết hiệu lực 01/07/2026). 6 chương, 46 điều; chuyển trọng tâm từ chữa bệnh sang chủ động phòng bệnh.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 114/2025/QH15 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (phongbenh)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Dân số",
+          "giai_thich": "Số hiệu: 113/2025/QH15. Hiệu lực: 01/07/2026. Trạng thái: đang có hiệu lực. Thay thế Pháp lệnh Dân số 06/2003 (hết hiệu lực khi Luật này có hiệu lực). Điều 14 điểm c, d có hiệu lực từ 01/01/2027.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 113/2025/QH15 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (danso)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Phòng, chống tác hại của thuốc lá",
+          "giai_thich": "Số hiệu: 09/2012/QH13. Hiệu lực: 01/05/2013. Trạng thái: đang có hiệu lực. Bổ sung: Nghị quyết 173/2024/QH15 cấm thuốc lá điện tử, thuốc lá nung nóng từ năm 2025",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 09/2012/QH13 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (thuocla)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Phòng, chống tác hại của rượu, bia",
+          "giai_thich": "Số hiệu: 44/2019/QH14. Hiệu lực: 01/01/2020. Trạng thái: đang có hiệu lực. ",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 44/2019/QH14 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (ruoubia)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật An toàn thực phẩm",
+          "giai_thich": "Số hiệu: 55/2010/QH12. Hiệu lực: 01/07/2011. Trạng thái: đang có hiệu lực. Hướng dẫn chính: Nghị định 15/2018/NĐ-CP",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 55/2010/QH12 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (attp)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Phòng, chống HIV/AIDS",
+          "giai_thich": "Số hiệu: 64/2006/QH11. Hiệu lực: 01/01/2007. Trạng thái: có sửa đổi, bổ sung. Sửa đổi bởi Luật 71/2020/QH14 (hiệu lực 01/07/2021)",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 64/2006/QH11 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (hiv)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Luật Hiến, lấy, ghép mô, bộ phận cơ thể người và hiến, lấy xác",
+          "giai_thich": "Số hiệu: 75/2006/QH11. Hiệu lực: 01/07/2007. Trạng thái: đang có hiệu lực. ",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 75/2006/QH11 để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (ghepmo)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tư 52/2017/TT-BYT về đơn thuốc và kê đơn thuốc (sửa đổi)",
+          "giai_thich": "Số hiệu: 52/2017/TT-BYT. Hiệu lực: 01/03/2018. Trạng thái: hết hiệu lực từ 01/07/2025, thay thế bởi Thông tư 26/2025/TT-BYT (Điều 13 khoản 2). Sửa đổi bởi Thông tư 18/2018/TT-BYT, Thông tư 04/2022/TT-BYT; Thông tư 27/2021/TT-BYT quy định kê đơn thuốc bằng hình thức điện tử.",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 52/2017/TT-BYT để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (donthuoc)",
+          "verify": true
+        },
+        {
+          "tieu_de": "Nghị định 98/2021/NĐ-CP quản lý trang thiết bị y tế (sửa đổi)",
+          "giai_thich": "Số hiệu: 98/2021/NĐ-CP. Hiệu lực: 01/01/2022. Trạng thái: có sửa đổi, bổ sung. Được sửa đổi bởi Nghị định 07/2023/NĐ-CP và Nghị định 04/2025/NĐ-CP (có hiệu lực từ 01/01/2025).",
+          "vi_du": "Khi cần tra cứu, dùng số hiệu 98/2021/NĐ-CP để tìm đúng văn bản.",
+          "hay_nham": "Nhớ nhầm số hiệu hoặc mốc hiệu lực với văn bản khác. Hãy kiểm tra lại số hiệu khi tra cứu.",
+          "nguon": "laws.json (tbyt)",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Luật Khám bệnh, chữa bệnh 15/2023 có số hiệu nào?",
+          "dap": "15/2023/QH15."
+        },
+        {
+          "hoi": "Luật Khám bệnh, chữa bệnh có hiệu lực từ khi nào?",
+          "dap": "01/01/2024."
+        }
+      ]
+    },
+    {
+      "id": "c12",
+      "ten": "Các khoa trong bệnh viện và quy định",
+      "muc_tieu": "Biết mỗi khoa làm gì, bệnh nhân đi qua những đâu, và quy định áp dụng cho khoa đó (có số điều).",
+      "buoc": [
+        {
+          "tieu_de": "Khoa khám bệnh (ngoại trú)",
+          "giai_thich": "Có nơi tiếp đón, phòng cấp cứu, phòng lưu, phòng khám, phòng thực hiện kỹ thuật và thủ thuật (nếu có). (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b) Người chịu trách nhiệm chuyên môn kỹ thuật phải là người hành nghề toàn thời gian, có phạm vi hành nghề phù hợp và thời gian hành nghề tối thiểu 36 tháng. (Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4b)",
+          "vi_du": "Bệnh nhân đến tiếp đón, đăng ký khám. Nếu cấp cứu thì được đưa thẳng vào phòng cấp cứu, không chờ thủ tục. Nếu khám thường, bệnh nhân vào phòng khám chuyên khoa phù hợp; cần làm xét nghiệm hoặc chụp chiếu thì chuyển sang khoa cận lâm sàng; sau đó có thể được điều trị ngoại trú, kê đơn, hoặc nhập viện.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khoa cấp cứu",
+          "giai_thich": "Bệnh viện và phòng khám đa khoa phải có phòng cấp cứu. Phòng cấp cứu của phòng khám đa khoa có diện tích tối thiểu 12 m². (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b; Điều 42 khoản 2a) Có hộp cấp cứu phản vệ và đủ thuốc cấp cứu chuyên khoa phù hợp. (Nghị định 96/2023/NĐ-CP, Điều 42 khoản 3; Điều 43 khoản 3) Bệnh viện phải tổ chức trực chuyên môn 24/24 giờ, mọi ngày. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 6)",
+          "vi_du": "Người cấp cứu được xử trí ngay, không chờ đủ giấy tờ. Theo luật, việc từ chối hoặc cố ý chậm cấp cứu bị nghiêm cấm (Luật Khám bệnh, chữa bệnh 15/2023, Điều 7).",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khoa nội và khoa ngoại",
+          "giai_thich": "Bệnh viện đa khoa phải có tối thiểu hai trong bốn khoa nội, ngoại, sản, nhi. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b) Phòng khám đa khoa phải có tối thiểu hai trong bốn chuyên khoa nội, ngoại, sản, nhi. (Nghị định 96/2023/NĐ-CP, Điều 42 khoản 1a) Trưởng khoa phải là người hành nghề toàn thời gian, có giấy phép hành nghề phù hợp với chuyên khoa và thời gian hành nghề về chuyên khoa đó tối thiểu 36 tháng. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 5b) Số người hành nghề toàn thời gian trong mỗi khoa phải đạt tối thiểu 70% tổng số người hành nghề trong khoa. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 5a)",
+          "vi_du": "Sau khi khám ở khoa khám bệnh, bệnh nhân cần điều trị nội trú hoặc phẫu thuật thì được chuyển vào khoa lâm sàng phù hợp. Khoa nội điều trị các bệnh nội khoa, khoa ngoại điều trị các trường hợp cần can thiệp phẫu thuật.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khoa sản và khoa nhi",
+          "giai_thich": "Thuộc nhóm khoa lâm sàng (nội, ngoại, sản, nhi) mà bệnh viện đa khoa và phòng khám đa khoa phải có tối thiểu hai. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b; Điều 42 khoản 1a) Nhà hộ sinh phải có bác sĩ với phạm vi hành nghề chuyên khoa phụ sản hoặc hộ sinh có trình độ cử nhân trở lên làm người chịu trách nhiệm chuyên môn kỹ thuật, và phải trực 24/24 giờ. (Nghị định 96/2023/NĐ-CP, Điều 51 khoản 3 và 4)",
+          "vi_du": "Người mang thai đi khám thai, sinh con; trẻ em đi khám nhi. Quy trình cụ thể theo từng cơ sở.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khoa dược",
+          "giai_thich": "Bệnh viện phải có khoa dược và các bộ phận phụ trợ. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b)",
+          "vi_du": "Sau khi có chỉ định dùng thuốc, người bệnh nhận thuốc tại khoa dược hoặc tại nhà thuốc theo quy định. Thuốc kê đơn chỉ được bán khi có đơn thuốc (xem chương 6).",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khoa xét nghiệm",
+          "giai_thich": "Bệnh viện phải có tối thiểu một phòng xét nghiệm. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b) Kỹ thuật y có trình độ đại học, phạm vi xét nghiệm y học, được đọc và ký kết quả xét nghiệm. Nếu cơ sở không có bác sĩ chuyên khoa xét nghiệm thì quy định khác được áp dụng. (Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4đ) Cơ sở xét nghiệm phải có nơi chờ lấy bệnh phẩm, nơi nhận bệnh phẩm, nơi vệ sinh dụng cụ, và diện tích phòng xét nghiệm tùy theo loại xét nghiệm. (Nghị định 96/2023/NĐ-CP, Điều 53 khoản 1a)",
+          "vi_du": "Bác sĩ chỉ định xét nghiệm, bệnh nhân lấy mẫu, mẫu được đưa vào phòng xét nghiệm. Kết quả do kỹ thuật y có phạm vi phù hợp đọc và ký trước khi trả cho bệnh nhân.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khoa chẩn đoán hình ảnh (X-quang, siêu âm, CT, MRI)",
+          "giai_thich": "Bệnh viện phải có tối thiểu một phòng chẩn đoán hình ảnh. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b) Kỹ thuật y có trình độ đại học, phạm vi hình ảnh y học, được đọc và mô tả hình ảnh chẩn đoán. Nếu cơ sở không có bác sĩ chuyên khoa kỹ thuật hình ảnh y học thì quy định khác được áp dụng. (Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4e)",
+          "vi_du": "Bác sĩ chỉ định chụp, bệnh nhân được chụp tại phòng chẩn đoán hình ảnh. Kết quả được đọc và mô tả bởi người có phạm vi phù hợp.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khoa dinh dưỡng và kiểm soát nhiễm khuẩn",
+          "giai_thich": "Bệnh viện từ 100 giường trở lên phải có khoa dinh dưỡng, cứ 100 giường có tối thiểu một người làm chuyên môn dinh dưỡng. Dưới 100 giường phải có bộ phận hoặc người phụ trách dinh dưỡng. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b) Bệnh viện từ 150 giường trở lên phải có khoa kiểm soát nhiễm khuẩn, cứ 150 giường có tối thiểu một nhân viên giám sát. Dưới 150 giường phải có bộ phận hoặc người phụ trách. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b)",
+          "vi_du": "Không trực tiếp tiếp nhận bệnh nhân; hỗ trợ khoa lâm sàng về chế độ ăn và phòng lây nhiễm trong bệnh viện.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Y học cổ truyền",
+          "giai_thich": "Phòng khám y học cổ truyền phải có phòng đón tiếp, phòng khám có diện tích tối thiểu 10 m²; nếu có châm cứu, xoa bóp thì phải có giường và dụng cụ tương ứng. (Nghị định 96/2023/NĐ-CP, Điều 46 khoản 1 và 2) Người chịu trách nhiệm chuyên môn kỹ thuật phải là bác sĩ với phạm vi hành nghề y học cổ truyền hoặc chuyên khoa y học cổ truyền. (Nghị định 96/2023/NĐ-CP, Điều 46 khoản 3) Phòng chẩn trị y học cổ truyền có thể do lương y, người có bài thuốc gia truyền, người có phương pháp chữa bệnh gia truyền làm người chịu trách nhiệm chuyên môn. (Nghị định 96/2023/NĐ-CP, Điều 52)",
+          "vi_du": "Bệnh nhân đến khám, bác sĩ hoặc lương y xem bệnh theo phương pháp y học cổ truyền. Nếu bốc thuốc, phải có tủ thuốc và cân thuốc đúng quy định.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Răng hàm mặt",
+          "giai_thich": "Phòng khám răng hàm mặt có tối thiểu một ghế răng, mỗi ghế có diện tích tối thiểu 5 m². (Nghị định 96/2023/NĐ-CP, Điều 47 khoản 1b) Nếu làm cấy ghép răng (implant) phải có phòng riêng diện tích tối thiểu 10 m². (Nghị định 96/2023/NĐ-CP, Điều 47 khoản 1c) Người chịu trách nhiệm chuyên môn kỹ thuật là bác sĩ với phạm vi hành nghề răng hàm mặt hoặc chuyên khoa răng hàm mặt. (Nghị định 96/2023/NĐ-CP, Điều 47 khoản 2)",
+          "vi_du": "Bệnh nhân đến khám răng, được bác sĩ răng hàm mặt khám, chụp phim nếu cần, và điều trị tại ghế răng.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Mắt",
+          "giai_thich": "Bệnh viện chuyên khoa mắt phải có tối thiểu 10 giường bệnh (các bệnh viện chuyên khoa khác là 20 giường). (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 1c) Khoa cận lâm sàng: nếu bệnh viện chuyên khoa mắt không có chẩn đoán hình ảnh thì phải có hợp đồng hỗ trợ chuyên môn với cơ sở có bộ phận này. (Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b) Phòng khám chuyên khoa mắt là phòng khám chuyên khoa, phải có tối thiểu một chuyên khoa và phòng khám bệnh tối thiểu 10 m². (Nghị định 96/2023/NĐ-CP, Điều 43 khoản 1a, 2a)",
+          "vi_du": "Bệnh nhân khám mắt, kiểm tra thị lực và khám chuyên khoa mắt. Nếu cần phẫu thuật thì vào bệnh viện chuyên khoa mắt hoặc khoa mắt của bệnh viện.",
+          "hay_nham": "Nhầm nhiệm vụ của khoa này với khoa khác. Mỗi khoa có phạm vi riêng.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Da liễu",
+          "giai_thich": "Văn bản không có quy định riêng cho khoa da liễu. Áp dụng quy định chung về phòng khám chuyên khoa (tối thiểu một chuyên khoa, phòng khám bệnh tối thiểu 10 m²). (Nghị định 96/2023/NĐ-CP, Điều 43) Lưu ý: văn bản không có quy định riêng cho khoa này.",
+          "vi_du": "Bệnh nhân khám da, bác sĩ da liễu khám và kê đơn hoặc chỉ định thủ thuật. Quy trình cụ thể theo cơ sở.",
+          "hay_nham": "Nghĩ rằng có luật riêng cho khoa này. Hiện chưa có trong văn bản đã đọc.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Tai mũi họng",
+          "giai_thich": "Văn bản không có quy định riêng cho khoa tai mũi họng. Áp dụng quy định chung về phòng khám chuyên khoa và điều kiện nhân sự chung. (Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4; Điều 43) Lưu ý: văn bản không có quy định riêng cho khoa này.",
+          "vi_du": "Bệnh nhân khám tai, mũi, họng, bác sĩ tai mũi họng khám và chỉ định xét nghiệm hoặc thủ thuật. Quy trình cụ thể theo cơ sở.",
+          "hay_nham": "Nghĩ rằng có luật riêng cho khoa này. Hiện chưa có trong văn bản đã đọc.",
+          "nguon": "Nghị định 96/2023/NĐ-CP (điều khoản ghi trong nội dung)",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Bệnh viện đa khoa cần ít nhất mấy khoa lâm sàng trong bốn khoa nội, ngoại, sản, nhi?",
+          "dap": "Tối thiểu hai (Điều 41 khoản 4b)."
+        },
+        {
+          "hoi": "Trưởng khoa phải có thời gian hành nghề chuyên khoa tối thiểu bao lâu?",
+          "dap": "36 tháng (Điều 41 khoản 5b)."
+        }
+      ]
+    },
+    {
+      "id": "c13",
+      "ten": "Thông tư mới: bệnh án điện tử, khám sức khỏe, lương y, thiết bị y tế",
+      "muc_tieu": "Biết các thông tư mới đã thay đổi gì, ai phải làm gì, và khi nào có hiệu lực.",
+      "buoc": [
+        {
+          "tieu_de": "Hồ sơ bệnh án điện tử là gì?",
+          "giai_thich": "Hồ sơ bệnh án điện tử là hồ sơ bệnh án được lập, cập nhật, hiển thị, ký, lưu trữ, quản lý và khai thác bằng phương tiện điện tử. Đây là hồ sơ bệnh án theo khoản 17 Điều 2 Luật Khám bệnh, chữa bệnh 2023.",
+          "vi_du": "Bác sĩ ghi diễn biến bệnh trên máy tính, ký điện tử, và dữ liệu được lưu trong hệ thống của bệnh viện.",
+          "hay_nham": "Nghĩ rằng bản điện tử không có giá trị. Đây chỉ là hình thức lập và lưu trữ; nội dung vẫn phải đầy đủ theo Thông tư 32/2023.",
+          "nguon": "Thông tư 13/2025/TT-BYT, Điều 1 khoản 1, 2 (đã đối chiếu)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khi nào bệnh viện phải có bệnh án điện tử?",
+          "giai_thich": "Bệnh viện được cấp giấy phép hoạt động phải triển khai hồ sơ bệnh án điện tử chậm nhất ngày 30/09/2025. Các cơ sở khám bệnh, chữa bệnh khác có điều trị nội trú, ban ngày hoặc ngoại trú phải hoàn thành chậm nhất ngày 31/12/2026.",
+          "vi_du": "Một phòng khám có điều trị ngoại trú nhưng không phải bệnh viện cần hoàn thành trước 31/12/2026.",
+          "hay_nham": "Nhầm mốc của bệnh viện với mốc của cơ sở khác.",
+          "nguon": "Thông tư 13/2025/TT-BYT, Điều 4 khoản 2 (đã đối chiếu)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Ký điện tử trong bệnh án điện tử",
+          "giai_thich": "Nhân viên y tế, người bệnh hoặc người đại diện có thể ký hoặc xác nhận điện tử bằng một trong ba cách: chữ ký điện tử hợp pháp; kỹ thuật sinh trắc học; hoặc hình thức xác nhận bằng phương tiện điện tử khác theo khoản 4 Điều 22 Luật Giao dịch điện tử.",
+          "vi_du": "Bác sĩ ký số trên phần mềm khi phê duyệt y lệnh.",
+          "hay_nham": "Nghĩ rằng chỉ cần gõ tên vào ô ghi chú là đủ.",
+          "nguon": "Thông tư 13/2025/TT-BYT, Điều 3 (đã đối chiếu)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thông tin sức khỏe là dữ liệu nhạy cảm",
+          "giai_thich": "Tình trạng sức khỏe thuộc danh mục dữ liệu cá nhân nhạy cảm (Nghị định 356/2025, Điều 4 khoản 1 điểm d). Khi xin đồng ý xử lý loại dữ liệu này, phải thông báo rõ đó là dữ liệu cá nhân nhạy cảm (Điều 6 khoản 4). Luật Bảo vệ dữ liệu cá nhân 91/2025 có hiệu lực từ 01/01/2026, và Điều 26 yêu cầu có sự đồng ý khi xử lý thông tin sức khỏe.",
+          "vi_du": "Phòng khám hỏi số điện thoại để nhắc lịch khám là dữ liệu cơ bản. Ghi nhận bệnh nền là dữ liệu nhạy cảm, phải xin đồng ý rõ ràng.",
+          "hay_nham": "Nghĩ rằng mọi thông tin khám bệnh đều có thể chia sẻ tự do.",
+          "nguon": "Nghị định 356/2025/NĐ-CP, Điều 4 khoản 1 điểm d, Điều 6 khoản 4; Luật 91/2025, Điều 26 (đã đối chiếu)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Khám sức khỏe: hồ sơ và người mất năng lực",
+          "giai_thich": "Thông tư 25/2026 sửa Điều 34 và Điều 36 của Thông tư 32/2023. Hồ sơ khám sức khỏe dùng mẫu theo nhóm tuổi: dưới 06 tuổi, từ 06 đến dưới 18 tuổi, từ 18 tuổi trở lên, và khám sức khỏe tâm thần. Người mất năng lực hoặc hạn chế năng lực hành vi dân sự đề nghị khám mà không thuộc các trường hợp trên thì cần văn bản đồng ý của thân nhân. Điều 2 và Điều 3 có hiệu lực từ 01/07/2026; phần còn lại từ 15/08/2026.",
+          "vi_du": "Người 70 tuổi khám sức khỏe định kỳ dùng mẫu hồ sơ dành cho người từ 18 tuổi trở lên.",
+          "hay_nham": "Nghĩ rằng Thông tư 25/2026 áp dụng ngay từ ngày ký.",
+          "nguon": "Thông tư 25/2026/TT-BYT, Điều 2 khoản 2, 3 và Điều 4 (đã đối chiếu)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thực hành tốt phòng thí nghiệm: các mốc xử lý",
+          "giai_thich": "Thông tư 36/2025 sửa khoản 4 Điều 11 của Thông tư 04/2018 về GLP. Khi Sở Y tế thông báo cần khắc phục, cơ sở thử nghiệm có 45 ngày để khắc phục và báo cáo kèm bằng chứng. Sau khi nhận báo cáo khắc phục, Sở Y tế đánh giá trong 10 ngày. Thông tư có hiệu lực từ 11/09/2025.",
+          "vi_du": "Cơ sở thử nghiệm nhận thông báo cần khắc phục thì có 45 ngày để hoàn thành và gửi báo cáo kèm bằng chứng.",
+          "hay_nham": "Nhầm 45 ngày với 10 ngày của bước đánh giá.",
+          "nguon": "Thông tư 36/2025/TT-BYT, Điều 1 khoản 1 điểm b, c, d (đã đối chiếu)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Giấy chứng nhận lương y: thời hạn xử lý",
+          "giai_thich": "Thông tư 49/2025 sửa Thông tư 02/2024. Hồ sơ chưa hợp lệ: cơ quan tiếp nhận thông báo bổ sung trong 05 ngày làm việc kể từ ngày ghi trên phiếu tiếp nhận. Hồ sơ hợp lệ: cơ quan có thẩm quyền cấp giấy chứng nhận trong 05 ngày làm việc. Thông tư có hiệu lực từ ngày ký (31/12/2025).",
+          "vi_du": "Một người nộp hồ sơ xin giấy lương y ngày 02 tháng 3 mà thiếu giấy tờ sẽ được thông báo bổ sung trong 05 ngày làm việc.",
+          "hay_nham": "Nhầm thời hạn bổ sung hồ sơ với thời hạn cấp giấy.",
+          "nguon": "Thông tư 49/2025/TT-BYT, Điều 1 khoản 1, 2 (đã đối chiếu)",
+          "verify": false
+        },
+        {
+          "tieu_de": "Thiết bị y tế: Cục Hạ tầng và Thiết bị y tế được giao việc gì?",
+          "giai_thich": "Thông tư 44/2025 giao cho Cục Hạ tầng và Thiết bị y tế 11 nhiệm vụ. Ví dụ: cấp mới số lưu hành thiết bị y tế loại C, D; cấp giấy phép nhập khẩu thiết bị y tế; thu hồi số lưu hành; kiểm tra chuyên ngành. Thông tư có hiệu lực từ 22/11/2025.",
+          "vi_du": "Một công ty muốn nhập khẩu thiết bị loại C nộp hồ sơ xin giấy phép tại Cục này.",
+          "hay_nham": "Nghĩ rằng việc này do Sở Y tế tỉnh làm.",
+          "nguon": "Thông tư 44/2025/TT-BYT, Điều 2 khoản 1, 7, 11; Điều 4 khoản 1 (đã đối chiếu)",
+          "verify": false
+        }
+      ],
+      "on_nhanh": [
+        {
+          "hoi": "Thông tư 13/2025 có làm hết hiệu lực Thông tư bệnh án điện tử cũ không?",
+          "dap": "Có. Thông tư 46/2018 hết hiệu lực kể từ ngày Thông tư 13/2025 được ban hành (Điều 4 khoản 3)."
+        },
+        {
+          "hoi": "Tình trạng sức khỏe là dữ liệu cá nhân nhạy cảm hay thông thường?",
+          "dap": "Nhạy cảm, theo Nghị định 356/2025, Điều 4 khoản 1 điểm d."
+        }
+      ]
+    }
+  ]
+}

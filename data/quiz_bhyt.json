@@ -1,0 +1,98 @@
+[
+  {
+    "t": "bhyt",
+    "id": "bhyt-01",
+    "q": "Bé 4 tuổi khám ngoại trú. Anh Hùng đưa con gái 4 tuổi đi khám sốt tại trạm y tế xã. Bé có thẻ BHYT còn hạn. Bé được hưởng mức chi trả BHYT bao nhiêu?",
+    "o": [
+      "80%",
+      "95%",
+      "100%"
+    ],
+    "a": 2,
+    "e": "Trẻ em dưới 6 tuổi được hưởng 100% chi phí. Căn cứ: Luật BHYT (sửa đổi 2024), mức hưởng 100% với trẻ em dưới 6 tuổi."
+  },
+  {
+    "t": "bhyt",
+    "id": "bhyt-02",
+    "q": "Ông Thắng nhận lương hưu. Ông Thắng nghỉ hưu, đang nhận lương hưu hằng tháng. Ông đã tham gia BHYT 30 năm và đi khám nội trú ở bệnh viện tuyến tỉnh đúng tuyến. Ông Thắng được hưởng mức chi trả bao nhiêu?",
+    "o": [
+      "80%",
+      "95%",
+      "100%"
+    ],
+    "a": 1,
+    "e": "Người hưởng lương hưu được hưởng 95% chi phí. Căn cứ: Luật BHYT (sửa đổi 2024), người hưởng lương hưu 95%."
+  },
+  {
+    "t": "bhyt",
+    "id": "bhyt-03",
+    "q": "Chị Mai khám ở tỉnh khác. Chị Mai đang làm việc ở tỉnh A nhưng có thẻ BHYT đăng ký ở tỉnh B. Chị đến trạm y tế tuyến ban đầu ở tỉnh A để khám ngoại trú. Chị đã tham gia BHYT được 3 năm. Chị Mai có được hưởng như khám đúng tuyến không, và mức chi trả là bao nhiêu?",
+    "o": [
+      "Không được hưởng",
+      "Được hưởng như đúng tuyến, mức 80%",
+      "Được hưởng 100%"
+    ],
+    "a": 1,
+    "e": "Khám ngoại trú tại cơ sở tuyến ban đầu ở bất kỳ tỉnh nào được hưởng như đúng tuyến. Chị chưa đủ 5 năm tham gia nên mức phổ biến là 80%. Căn cứ: Luật BHYT (sửa đổi 2024): khám ngoại trú tuyến ban đầu ở bất kỳ tỉnh nào hưởng như đúng tuyến; mức 80% phổ biến."
+  },
+  {
+    "t": "bhyt",
+    "id": "bhyt-06",
+    "q": "Cấp cứu ở bệnh viện xa. Ông Tuấn bị tai nạn lúc đi công tác. Ông được đưa vào bệnh viện chuyên sâu ở tỉnh khác, không đúng tuyến đăng ký. Đây là trường hợp cấp cứu. Ông Tuấn được hưởng mức chi trả bao nhiêu cho việc cấp cứu?",
+    "o": [
+      "40%",
+      "80%",
+      "100%"
+    ],
+    "a": 2,
+    "e": "Cấp cứu được hưởng 100% ở mọi cơ sở khám chữa bệnh, kể cả trái tuyến. Căn cứ: Luật BHYT (sửa đổi 2024), Điều 22: khám trái tuyến trong trường hợp cấp cứu hưởng 100% ở mọi cơ sở."
+  },
+  {
+    "t": "bhyt",
+    "id": "bhyt-07",
+    "q": "Nội trú trái tuyến không cấp cứu. Bà Lan đến bệnh viện chuyên sâu tuyến trung ương để điều trị nội trú theo lịch hẹn, không chuyển tuyến. Đây không phải trường hợp cấp cứu và không có quy định đặc biệt. Mức chi trả thường gặp trong trường hợp này là bao nhiêu?",
+    "o": [
+      "40%",
+      "80%",
+      "100%"
+    ],
+    "a": 0,
+    "e": "Nội trú tuyến chuyên sâu khi trái tuyến thường chỉ được hưởng 40%, trừ các trường hợp đặc biệt được quy định riêng. Căn cứ: Luật BHYT (sửa đổi 2024), Điều 22: nội trú tuyến chuyên sâu thường hưởng 40%, các trường hợp đặc biệt được quy định riêng."
+  },
+  {
+    "t": "bhyt",
+    "id": "bhyt-08",
+    "q": "Thẻ điện tử hay thẻ giấy. Anh Đức đưa thẻ BHYT điện tử trên điện thoại đến khám. Lễ tân hỏi thẻ điện tử có được dùng không. Thẻ BHYT điện tử có giá trị so với thẻ giấy thế nào?",
+    "o": [
+      "Thẻ điện tử không có giá trị",
+      "Thẻ điện tử có giá trị pháp lý như thẻ giấy",
+      "Thẻ điện tử chỉ dùng cho người dưới 18 tuổi"
+    ],
+    "a": 1,
+    "e": "Thẻ BHYT điện tử và thẻ giấy có giá trị pháp lý như nhau. Căn cứ: Luật BHYT (sửa đổi 2024): thẻ BHYT điện tử và thẻ giấy có giá trị pháp lý như nhau."
+  },
+  {
+    "t": "bhyt",
+    "id": "bhyt-09",
+    "q": "Hộ nghèo khám bệnh. Gia đình chị Thảo thuộc diện hộ nghèo và có thẻ BHYT còn hạn. Chị đi khám ngoại trú tại trạm y tế xã. Chị Thảo được hưởng mức chi trả bao nhiêu?",
+    "o": [
+      "80%",
+      "95%",
+      "100%"
+    ],
+    "a": 2,
+    "e": "Người thuộc hộ nghèo được hưởng 100% chi phí. Căn cứ: Luật BHYT (sửa đổi 2024), mức 100% với hộ nghèo và một số nhóm khác."
+  },
+  {
+    "t": "bhyt",
+    "id": "bhyt-10",
+    "q": "Chi phí một lần khám dưới mức quy định. Anh Sơn khám ngoại trú và tổng chi phí của một lần khám rất thấp, nằm dưới mức do Chính phủ quy định. Chi phí của lần khám này được hưởng mức chi trả bao nhiêu?",
+    "o": [
+      "80%",
+      "95%",
+      "100%"
+    ],
+    "a": 2,
+    "e": "Chi phí một lần khám chữa bệnh dưới mức do Chính phủ quy định được hưởng 100%. Căn cứ: Luật BHYT (sửa đổi 2024): chi phí một lần khám chữa bệnh dưới mức do Chính phủ quy định được hưởng 100%. Số mức cụ thể cần lấy từ văn bản hiện hành."
+  }
+]

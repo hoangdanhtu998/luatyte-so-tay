@@ -1,0 +1,212 @@
+[
+  {
+    "t": "nentang",
+    "q": "Theo Điều 38 Hiến pháp, mỗi người có nghĩa vụ gì trong lĩnh vực y tế?",
+    "o": [
+      "Tự chi trả toàn bộ chi phí khám bệnh",
+      "Thực hiện các quy định về phòng bệnh, khám bệnh, chữa bệnh",
+      "Chỉ được khám tại bệnh viện công",
+      "Tham gia nghiên cứu khoa học y học"
+    ],
+    "a": 1,
+    "e": "Điều 38 khoản 1: mọi người có quyền được bảo vệ, chăm sóc sức khỏe, bình đẳng trong sử dụng dịch vụ y tế, và có nghĩa vụ thực hiện quy định về phòng bệnh, khám bệnh, chữa bệnh.",
+    "src": "Hiến pháp, Điều 38 khoản 1 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Hành vi nào bị Hiến pháp nghiêm cấm liên quan đến sức khỏe?",
+    "o": [
+      "Khám bệnh vượt tuyến",
+      "Đe dọa cuộc sống, sức khỏe của người khác và cộng đồng",
+      "Tự ý dùng thuốc không kê đơn",
+      "Quảng cáo dược phẩm"
+    ],
+    "a": 1,
+    "e": "Điều 38 khoản 2 nghiêm cấm các hành vi đe dọa cuộc sống, sức khỏe của người khác và cộng đồng.",
+    "src": "Hiến pháp, Điều 38 khoản 2 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Điều 20 Hiến pháp bảo hộ điều gì của mỗi người?",
+    "o": [
+      "Quyền sở hữu tài sản không giới hạn",
+      "Sức khỏe, danh dự và nhân phẩm",
+      "Quyền tự do đi lại tuyệt đối",
+      "Quyền lựa chọn giới tính"
+    ],
+    "a": 1,
+    "e": "Mọi người có quyền bất khả xâm phạm về thân thể, được pháp luật bảo hộ về sức khỏe, danh dự và nhân phẩm; không bị tra tấn, bạo lực hay đối xử xâm phạm thân thể.",
+    "src": "Hiến pháp, Điều 20 khoản 1 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Theo Hiến pháp, thử nghiệm y học trên cơ thể người cần điều kiện gì?",
+    "o": [
+      "Có sự đồng ý của người được thử nghiệm",
+      "Có quyết định của Bộ trưởng là đủ",
+      "Chỉ cần sự đồng ý của gia đình",
+      "Không cần đồng ý nếu vì lợi ích cộng đồng"
+    ],
+    "a": 0,
+    "e": "Việc thử nghiệm y học, dược học, khoa học trên cơ thể người phải có sự đồng ý của người được thử nghiệm.",
+    "src": "Hiến pháp, Điều 20 khoản 3 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Việc hiến mô, bộ phận cơ thể người và hiến xác được thực hiện theo gì?",
+    "o": [
+      "Theo tập quán địa phương",
+      "Theo quy định của luật",
+      "Theo quyết định của gia đình",
+      "Theo thỏa thuận miệng"
+    ],
+    "a": 1,
+    "e": "Mọi người có quyền hiến mô, bộ phận cơ thể người và hiến xác theo quy định của luật. Văn bản cụ thể là Luật Hiến, lấy, ghép mô, bộ phận cơ thể người và hiến xác (75/2006/QH11).",
+    "src": "Hiến pháp, Điều 20 khoản 3 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Theo Điều 58 Hiến pháp, Nhà nước thực hiện chính sách gì về y tế?",
+    "o": [
+      "Bảo hiểm y tế tự nguyện cho người có thu nhập cao",
+      "Bảo hiểm y tế toàn dân",
+      "Chỉ miễn phí khám bệnh cho trẻ em",
+      "Thu phí khám bệnh toàn bộ"
+    ],
+    "a": 1,
+    "e": "Nhà nước, xã hội đầu tư phát triển sự nghiệp bảo vệ, chăm sóc sức khỏe nhân dân, thực hiện bảo hiểm y tế toàn dân, và ưu tiên chăm sóc sức khỏe cho đồng bào dân tộc thiểu số, miền núi, hải đảo, vùng khó khăn.",
+    "src": "Hiến pháp, Điều 58 khoản 1 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Theo Điều 58 Hiến pháp, ai có trách nhiệm bảo vệ, chăm sóc sức khỏe người mẹ và trẻ em?",
+    "o": [
+      "Chỉ nhà nước",
+      "Nhà nước, xã hội và gia đình",
+      "Chỉ gia đình",
+      "Không ai có trách nhiệm cụ thể"
+    ],
+    "a": 1,
+    "e": "Điều 58 khoản 2: nhà nước, xã hội và gia đình có trách nhiệm bảo vệ, chăm sóc sức khỏe người mẹ, trẻ em và thực hiện kế hoạch hóa gia đình.",
+    "src": "Hiến pháp, Điều 58 khoản 2 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Theo Điều 14 Hiến pháp, quyền con người có thể bị hạn chế bằng luật trong trường hợp nào liên quan y tế?",
+    "o": [
+      "Khi người dân không có việc làm",
+      "Khi cần thiết vì sức khỏe của cộng đồng",
+      "Khi người dân có thu nhập thấp",
+      "Khi bệnh nhân có nhiều bệnh nền"
+    ],
+    "a": 1,
+    "e": "Điều 14 khoản 2: quyền con người, quyền công dân chỉ có thể bị hạn chế theo luật trong trường hợp cần thiết vì quốc phòng, an ninh, trật tự, đạo đức xã hội, sức khỏe của cộng đồng.",
+    "src": "Hiến pháp, Điều 14 khoản 2 (theo bài giảng)",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Văn bản nào có hiệu lực pháp lý cao nhất trong hệ thống văn bản pháp luật Việt Nam?",
+    "o": [
+      "Thông tư của Bộ trưởng Bộ Y tế",
+      "Hiến pháp",
+      "Nghị định của Chính phủ",
+      "Quyết định của Thủ tướng"
+    ],
+    "a": 1,
+    "e": "Hiến pháp đứng đầu hệ thống. Tiếp theo là luật, nghị quyết của Quốc hội, rồi pháp lệnh, lệnh, nghị định, quyết định, thông tư và văn bản của chính quyền địa phương.",
+    "src": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 17–22",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Luật do cơ quan nào ban hành?",
+    "o": [
+      "Chính phủ",
+      "Quốc hội",
+      "Bộ Y tế",
+      "Ủy ban nhân dân cấp tỉnh"
+    ],
+    "a": 1,
+    "e": "Luật là văn bản quy phạm pháp luật do Quốc hội ban hành, có hiệu lực pháp lý cao nhất, chỉ dưới Hiến pháp.",
+    "src": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 24",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Nghị định do cơ quan nào ban hành và dùng để làm gì?",
+    "o": [
+      "Bộ Y tế, để hướng dẫn thông tư",
+      "Chính phủ, để hướng dẫn luật hoặc quy định việc chưa có luật điều chỉnh",
+      "Quốc hội, để sửa Hiến pháp",
+      "Thủ tướng, để bổ nhiệm cán bộ"
+    ],
+    "a": 1,
+    "e": "Nghị định do Chính phủ ban hành để hướng dẫn luật, hoặc quy định những việc phát sinh mà chưa có luật hoặc pháp lệnh nào điều chỉnh.",
+    "src": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 25",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Thông tư là văn bản do ai ban hành và có vai trò gì?",
+    "o": [
+      "Chủ tịch nước, để công bố án lệ",
+      "Bộ trưởng, để hướng dẫn nghị định và luật trong một ngành",
+      "Hội đồng nhân dân, để quy định địa phương",
+      "Chánh án tòa án, để xét xử"
+    ],
+    "a": 1,
+    "e": "Thông tư do Bộ trưởng ban hành, giải thích, hướng dẫn thực hiện văn bản của nhà nước trong phạm vi một ngành; thường dùng để hướng dẫn nghị định, luật.",
+    "src": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 26",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Án lệ được công bố bởi ai?",
+    "o": [
+      "Chánh án Tòa án nhân dân tối cao",
+      "Bộ trưởng Bộ Tư pháp",
+      "Chủ tịch Quốc hội",
+      "Viện trưởng Viện kiểm sát địa phương"
+    ],
+    "a": 0,
+    "e": "Án lệ là lập luận, phán quyết đã có hiệu lực của tòa án về vụ việc cụ thể, được Hội đồng thẩm phán Tòa án nhân dân tối cao lựa chọn và Chánh án Tòa án nhân dân tối cao công bố.",
+    "src": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 26",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Đặc trưng nào giúp phân biệt pháp luật với các quy phạm xã hội khác?",
+    "o": [
+      "Tính phổ biến về văn hóa",
+      "Tính quyền lực (tính cưỡng chế) do nhà nước đảm bảo thực hiện",
+      "Tính tự nguyện",
+      "Tính địa phương"
+    ],
+    "a": 1,
+    "e": "Tính quyền lực (cưỡng chế) là đặc điểm quan trọng để phân biệt pháp luật với các quy phạm xã hội khác. Pháp luật được nhà nước đảm bảo thực hiện bằng sức mạnh cưỡng chế.",
+    "src": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 12",
+    "law": "Nền tảng pháp luật"
+  },
+  {
+    "t": "nentang",
+    "q": "Tính xã hội của pháp luật thể hiện ở điều gì?",
+    "o": [
+      "Chỉ bảo vệ lợi ích của giai cấp cầm quyền",
+      "Là công cụ quản lý xã hội, thiết lập trật tự và bảo vệ lợi ích chung",
+      "Chỉ điều chỉnh quan hệ kinh tế",
+      "Không liên quan đến đời sống nhân dân"
+    ],
+    "a": 1,
+    "e": "Pháp luật là công cụ quản lý xã hội, thiết lập trật tự ổn định, bảo vệ lợi ích chung của xã hội; vừa là thước đo hành vi, vừa là chuẩn mực để con người điều chỉnh bản thân.",
+    "src": "Bài giảng Đại cương pháp luật y tế (tài liệu đính kèm), trang 9",
+    "law": "Nền tảng pháp luật"
+  }
+]

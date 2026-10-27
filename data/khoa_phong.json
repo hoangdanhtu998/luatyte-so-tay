@@ -1,0 +1,321 @@
+{
+  "ghi_chu": "Dữ liệu lấy từ văn bản Nghị định 96/2023/NĐ-CP (file Downloads/96_2023_ND-CP_583328.docx). Phần 'luồng' là kiến thức chung, không phải quy định pháp luật.",
+  "khoa": [
+    {
+      "ten": "Khoa khám bệnh (ngoại trú)",
+      "quy_dinh": [
+        {
+          "noi_dung": "Có nơi tiếp đón, phòng cấp cứu, phòng lưu, phòng khám, phòng thực hiện kỹ thuật và thủ thuật (nếu có).",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        },
+        {
+          "noi_dung": "Người chịu trách nhiệm chuyên môn kỹ thuật phải là người hành nghề toàn thời gian, có phạm vi hành nghề phù hợp và thời gian hành nghề tối thiểu 36 tháng.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4b"
+        }
+      ],
+      "luong": "Bệnh nhân đến tiếp đón, đăng ký khám. Nếu cấp cứu thì được đưa thẳng vào phòng cấp cứu, không chờ thủ tục. Nếu khám thường, bệnh nhân vào phòng khám chuyên khoa phù hợp; cần làm xét nghiệm hoặc chụp chiếu thì chuyển sang khoa cận lâm sàng; sau đó có thể được điều trị ngoại trú, kê đơn, hoặc nhập viện.",
+      "nhom_ky_thuat": []
+    },
+    {
+      "ten": "Khoa cấp cứu",
+      "quy_dinh": [
+        {
+          "noi_dung": "Bệnh viện và phòng khám đa khoa phải có phòng cấp cứu. Phòng cấp cứu của phòng khám đa khoa có diện tích tối thiểu 12 m².",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b; Điều 42 khoản 2a"
+        },
+        {
+          "noi_dung": "Có hộp cấp cứu phản vệ và đủ thuốc cấp cứu chuyên khoa phù hợp.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 42 khoản 3; Điều 43 khoản 3"
+        },
+        {
+          "noi_dung": "Bệnh viện phải tổ chức trực chuyên môn 24/24 giờ, mọi ngày.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 6"
+        }
+      ],
+      "luong": "Người cấp cứu được xử trí ngay, không chờ đủ giấy tờ. Theo luật, việc từ chối hoặc cố ý chậm cấp cứu bị nghiêm cấm (Luật Khám bệnh, chữa bệnh 15/2023, Điều 7).",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Gây mê (21)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Khoa nội và khoa ngoại",
+      "quy_dinh": [
+        {
+          "noi_dung": "Bệnh viện đa khoa phải có tối thiểu hai trong bốn khoa nội, ngoại, sản, nhi.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        },
+        {
+          "noi_dung": "Phòng khám đa khoa phải có tối thiểu hai trong bốn chuyên khoa nội, ngoại, sản, nhi.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 42 khoản 1a"
+        },
+        {
+          "noi_dung": "Trưởng khoa phải là người hành nghề toàn thời gian, có giấy phép hành nghề phù hợp với chuyên khoa và thời gian hành nghề về chuyên khoa đó tối thiểu 36 tháng.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 5b"
+        },
+        {
+          "noi_dung": "Số người hành nghề toàn thời gian trong mỗi khoa phải đạt tối thiểu 70% tổng số người hành nghề trong khoa.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 5a"
+        }
+      ],
+      "luong": "Sau khi khám ở khoa khám bệnh, bệnh nhân cần điều trị nội trú hoặc phẫu thuật thì được chuyển vào khoa lâm sàng phù hợp. Khoa nội điều trị các bệnh nội khoa, khoa ngoại điều trị các trường hợp cần can thiệp phẫu thuật.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Tuần hoàn (433)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Hô hấp (181)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Tiêu hóa (649)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Tiết niệu (234)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Nội tiết (111)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Tạo máu (143)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Thần kinh (234)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Cơ xương (740)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Tạo hình (613)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Khoa sản và khoa nhi",
+      "quy_dinh": [
+        {
+          "noi_dung": "Thuộc nhóm khoa lâm sàng (nội, ngoại, sản, nhi) mà bệnh viện đa khoa và phòng khám đa khoa phải có tối thiểu hai.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b; Điều 42 khoản 1a"
+        },
+        {
+          "noi_dung": "Nhà hộ sinh phải có bác sĩ với phạm vi hành nghề chuyên khoa phụ sản hoặc hộ sinh có trình độ cử nhân trở lên làm người chịu trách nhiệm chuyên môn kỹ thuật, và phải trực 24/24 giờ.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 51 khoản 3 và 4"
+        }
+      ],
+      "luong": "Người mang thai đi khám thai, sinh con; trẻ em đi khám nhi. Quy trình cụ thể theo từng cơ sở.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Sản khoa (138)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Sinh dục (173)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Khoa dược",
+      "quy_dinh": [
+        {
+          "noi_dung": "Bệnh viện phải có khoa dược và các bộ phận phụ trợ.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        }
+      ],
+      "luong": "Sau khi có chỉ định dùng thuốc, người bệnh nhận thuốc tại khoa dược hoặc tại nhà thuốc theo quy định. Thuốc kê đơn chỉ được bán khi có đơn thuốc (xem chương 6).",
+      "nhom_ky_thuat": []
+    },
+    {
+      "ten": "Khoa xét nghiệm",
+      "quy_dinh": [
+        {
+          "noi_dung": "Bệnh viện phải có tối thiểu một phòng xét nghiệm.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        },
+        {
+          "noi_dung": "Kỹ thuật y có trình độ đại học, phạm vi xét nghiệm y học, được đọc và ký kết quả xét nghiệm. Nếu cơ sở không có bác sĩ chuyên khoa xét nghiệm thì quy định khác được áp dụng.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4đ"
+        },
+        {
+          "noi_dung": "Cơ sở xét nghiệm phải có nơi chờ lấy bệnh phẩm, nơi nhận bệnh phẩm, nơi vệ sinh dụng cụ, và diện tích phòng xét nghiệm tùy theo loại xét nghiệm.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 53 khoản 1a"
+        }
+      ],
+      "luong": "Bác sĩ chỉ định xét nghiệm, bệnh nhân lấy mẫu, mẫu được đưa vào phòng xét nghiệm. Kết quả do kỹ thuật y có phạm vi phù hợp đọc và ký trước khi trả cho bệnh nhân.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Hóa sinh (375)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Vi sinh (543)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Di truyền (87)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Huyết học (4)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Khoa chẩn đoán hình ảnh (X-quang, siêu âm, CT, MRI)",
+      "quy_dinh": [
+        {
+          "noi_dung": "Bệnh viện phải có tối thiểu một phòng chẩn đoán hình ảnh.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        },
+        {
+          "noi_dung": "Kỹ thuật y có trình độ đại học, phạm vi hình ảnh y học, được đọc và mô tả hình ảnh chẩn đoán. Nếu cơ sở không có bác sĩ chuyên khoa kỹ thuật hình ảnh y học thì quy định khác được áp dụng.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4e"
+        }
+      ],
+      "luong": "Bác sĩ chỉ định chụp, bệnh nhân được chụp tại phòng chẩn đoán hình ảnh. Kết quả được đọc và mô tả bởi người có phạm vi phù hợp.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Điện quang (12)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Y học hạt nhân (~ theo Phụ lục 02)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Khoa dinh dưỡng và kiểm soát nhiễm khuẩn",
+      "quy_dinh": [
+        {
+          "noi_dung": "Bệnh viện từ 100 giường trở lên phải có khoa dinh dưỡng, cứ 100 giường có tối thiểu một người làm chuyên môn dinh dưỡng. Dưới 100 giường phải có bộ phận hoặc người phụ trách dinh dưỡng.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        },
+        {
+          "noi_dung": "Bệnh viện từ 150 giường trở lên phải có khoa kiểm soát nhiễm khuẩn, cứ 150 giường có tối thiểu một nhân viên giám sát. Dưới 150 giường phải có bộ phận hoặc người phụ trách.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        }
+      ],
+      "luong": "Không trực tiếp tiếp nhận bệnh nhân; hỗ trợ khoa lâm sàng về chế độ ăn và phòng lây nhiễm trong bệnh viện.",
+      "nhom_ky_thuat": []
+    },
+    {
+      "ten": "Y học cổ truyền",
+      "quy_dinh": [
+        {
+          "noi_dung": "Phòng khám y học cổ truyền phải có phòng đón tiếp, phòng khám có diện tích tối thiểu 10 m²; nếu có châm cứu, xoa bóp thì phải có giường và dụng cụ tương ứng.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 46 khoản 1 và 2"
+        },
+        {
+          "noi_dung": "Người chịu trách nhiệm chuyên môn kỹ thuật phải là bác sĩ với phạm vi hành nghề y học cổ truyền hoặc chuyên khoa y học cổ truyền.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 46 khoản 3"
+        },
+        {
+          "noi_dung": "Phòng chẩn trị y học cổ truyền có thể do lương y, người có bài thuốc gia truyền, người có phương pháp chữa bệnh gia truyền làm người chịu trách nhiệm chuyên môn.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 52"
+        }
+      ],
+      "luong": "Bệnh nhân đến khám, bác sĩ hoặc lương y xem bệnh theo phương pháp y học cổ truyền. Nếu bốc thuốc, phải có tủ thuốc và cân thuốc đúng quy định.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "YHCT (58)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Răng hàm mặt",
+      "quy_dinh": [
+        {
+          "noi_dung": "Phòng khám răng hàm mặt có tối thiểu một ghế răng, mỗi ghế có diện tích tối thiểu 5 m².",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 47 khoản 1b"
+        },
+        {
+          "noi_dung": "Nếu làm cấy ghép răng (implant) phải có phòng riêng diện tích tối thiểu 10 m².",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 47 khoản 1c"
+        },
+        {
+          "noi_dung": "Người chịu trách nhiệm chuyên môn kỹ thuật là bác sĩ với phạm vi hành nghề răng hàm mặt hoặc chuyên khoa răng hàm mặt.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 47 khoản 2"
+        }
+      ],
+      "luong": "Bệnh nhân đến khám răng, được bác sĩ răng hàm mặt khám, chụp phim nếu cần, và điều trị tại ghế răng.",
+      "nhom_ky_thuat": []
+    },
+    {
+      "ten": "Mắt",
+      "quy_dinh": [
+        {
+          "noi_dung": "Bệnh viện chuyên khoa mắt phải có tối thiểu 10 giường bệnh (các bệnh viện chuyên khoa khác là 20 giường).",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 1c"
+        },
+        {
+          "noi_dung": "Khoa cận lâm sàng: nếu bệnh viện chuyên khoa mắt không có chẩn đoán hình ảnh thì phải có hợp đồng hỗ trợ chuyên môn với cơ sở có bộ phận này.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 41 khoản 4b"
+        },
+        {
+          "noi_dung": "Phòng khám chuyên khoa mắt là phòng khám chuyên khoa, phải có tối thiểu một chuyên khoa và phòng khám bệnh tối thiểu 10 m².",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 43 khoản 1a, 2a"
+        }
+      ],
+      "luong": "Bệnh nhân khám mắt, kiểm tra thị lực và khám chuyên khoa mắt. Nếu cần phẫu thuật thì vào bệnh viện chuyên khoa mắt hoặc khoa mắt của bệnh viện.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Mắt (359)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Da liễu",
+      "quy_dinh": [
+        {
+          "noi_dung": "Văn bản không có quy định riêng cho khoa da liễu. Áp dụng quy định chung về phòng khám chuyên khoa (tối thiểu một chuyên khoa, phòng khám bệnh tối thiểu 10 m²).",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 43"
+        }
+      ],
+      "chua_co_quy_dinh_rieng": true,
+      "luong": "Bệnh nhân khám da, bác sĩ da liễu khám và kê đơn hoặc chỉ định thủ thuật. Quy trình cụ thể theo cơ sở.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Da và dị ứng (227)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    },
+    {
+      "ten": "Tai mũi họng",
+      "quy_dinh": [
+        {
+          "noi_dung": "Văn bản không có quy định riêng cho khoa tai mũi họng. Áp dụng quy định chung về phòng khám chuyên khoa và điều kiện nhân sự chung.",
+          "dieu": "Nghị định 96/2023/NĐ-CP, Điều 40 khoản 4; Điều 43"
+        }
+      ],
+      "chua_co_quy_dinh_rieng": true,
+      "luong": "Bệnh nhân khám tai, mũi, họng, bác sĩ tai mũi họng khám và chỉ định xét nghiệm hoặc thủ thuật. Quy trình cụ thể theo cơ sở.",
+      "nhom_ky_thuat": [
+        {
+          "nhom": "Tai (98)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        },
+        {
+          "nhom": "Mũi (6)",
+          "ghi_chu": "theo Phụ lục 02 (đang hiệu lực từ 01/07/2026); số đếm gần đúng"
+        }
+      ]
+    }
+  ],
+  "gen": "Luồng đi chung của bệnh nhân (kiến thức chung, cách làm cụ thể theo quy trình của từng cơ sở)",
+  "nguon_ky_thuat": "Thông tư 23/2024/TT-BYT ban hành ngày 18/10/2024 (file docx đã ký, Downloads/23_2024_TT-BYT_618548.docx). File này chỉ có phần thân, không có phụ lục. Các số đếm kỹ thuật lấy từ phụ lục của bản PDF nháp trước đó (Downloads/457_Thong_tu-23-2024-TT-BYT), nên cần kiểm tra lại với phụ lục của bản ký."
+}

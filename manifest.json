@@ -1,0 +1,16 @@
+{
+  "name": "Sổ tay Luật Y tế",
+  "short_name": "Luật Y tế",
+  "description": "Học luật y tế Việt Nam: thư viện luật, trắc nghiệm, thi thử, thẻ nhớ và mini game ca trực phòng khám.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#173F4A",
+  "theme_color": "#173F4A",
+  "lang": "vi",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
