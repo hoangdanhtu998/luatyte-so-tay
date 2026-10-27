@@ -17,14 +17,22 @@
 <meta property="og:locale" content="vi_VN">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="site.css">
+<style>.plan-badge{display:inline-block;margin-left:10px;padding:3px 10px;border-radius:999px;font:600 12px/1.4 system-ui,sans-serif;vertical-align:middle;border:1px solid transparent;white-space:nowrap}.plan-free{background:#ECFDF3;color:#067647;border-color:#ABEFC6}.plan-paid{background:#F0F9FF;color:#026AA2;border-color:#B9E6FE}.plan-admin{background:#F4F3FF;color:#5925DC;border-color:#D9D6FE}.plan-guest{background:#F1F5F9;color:#475569;border-color:#E2E8F0}</style>
 </head>
 <style>
   .beta-tag{display:inline-block;vertical-align:middle;margin-left:6px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#7C2D12;background:#FED7AA;border:1px solid #FDBA74}
 </style>
 <style>
-  .home-split{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;align-items:start;max-width:1240px;margin:0 auto}
+  .home-split{display:block;max-width:100%;margin:0 auto}
+  .split-scene{max-width:900px;margin:0 auto}
+  .split-scene #home-scene{max-width:900px !important}
+  .split-panel{display:none;margin-top:14px;text-align:left}
+  .split-panel.open{display:block}
+  .btn-upgrade{margin:14px auto 0;display:block}
+  .stats-panel{display:none;margin:6px 0 14px}
+  .stats-panel.open{display:block}
   .split-scene{min-width:0}
-  .split-panel{min-width:0;text-align:left;max-height:calc(100vh - 110px);overflow-y:auto;padding-right:4px}
+  .split-panel{min-width:0}
   .split-panel .shop{display:flex;flex-direction:column;gap:10px}
   .split-panel .it{flex-wrap:wrap;align-items:flex-start}
   .split-panel .it > div:first-child{flex:1 1 200px;min-width:0}
@@ -36,7 +44,7 @@
   .room-card dl.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;margin:0 0 8px;font-size:13px}
   .room-card dl.kv dt{color:var(--color-muted,#6b7b7b)}
   .room-card dl.kv dd{margin:0;font-variant-numeric:tabular-nums}
-  @media (max-width:900px){ .home-split{grid-template-columns:1fr} .split-panel{max-height:none;overflow:visible} }
+
 </style>
 <body class="clinic">
 <header class="hud">
@@ -64,11 +72,22 @@
 
 <main>
   <section id="v-start" class="card center">
+    <div class="row" style="justify-content:flex-start;margin-bottom:10px"><a class="btn" href="index.html">← Về sổ tay</a></div>
     <div class="home-split">
       <div class="split-scene">
         <div id="home-scene"><canvas id="pix2" aria-label="Phòng khám bốn phòng"></canvas></div>
       </div>
-      <aside class="split-panel">
+      <div class="toggle-row"><button type="button" class="btn ghost btn-upgrade" id="btn-stats" aria-expanded="false" aria-controls="stats-panel">Thành tựu và thống kê ▾</button>
+<button type="button" class="btn ghost btn-upgrade" id="btn-upgrade" aria-expanded="false" aria-controls="upgrade-panel">Nâng cấp và quản lý phòng khám ▾</button>
+      </div>
+      <div id="stats-panel" class="stats-panel">
+      <div class="section-title" style="text-align:left">Thành tựu</div>
+      <div class="ach" id="ach"></div>
+
+      <div class="section-title" style="text-align:left">Thống kê</div>
+      <div class="statgrid" id="statgrid"></div>
+      </div>
+      <aside class="split-panel" id="upgrade-panel">
         <div class="section-title" style="text-align:left">Quản lý phòng khám</div>
         <p class="hint">Nâng thiết bị để tăng thưởng mỗi ca và thu nhập thụ động. Đào tạo nhân viên để tăng thu nhập, đạt cấp 4 và cấp 7 có thêm phụ tá. Phòng mới cần đủ cấp chuyên môn.</p>
         <div class="shop" id="staff"></div>
@@ -77,14 +96,14 @@
     <h2 style="margin-top:4px">Phòng khám</h2>
     <div id="login-box" class="loginbox hidden"></div>
     <p style="color:var(--muted);line-height:1.6">Mỗi bệnh nhân là một tình huống từ bộ câu hỏi của app. Chọn cách xử lý đúng theo quy định. Dù đúng hay sai, bạn đều xem được giải thích và căn cứ pháp lý.</p>
+    <div class="section-title" style="text-align:left">Chọn chế độ</div>
     <div class="modes">
-      <button class="modecard" id="btn-start"><b>Ca trực</b><small>10 bệnh nhân, nhịp bình thường</small></button>
+      <button class="modecard" id="btn-start"><span class="modetag">Khuyên chơi</span><b>Ca trực</b><small>10 bệnh nhân, nhịp bình thường</small></button>
       <button class="modecard" id="btn-rush"><b>Cấp cứu 60 giây</b><small>Làm nhanh, càng đúng càng nhiều điểm</small></button>
       <button class="modecard" id="btn-audit"><b>Thanh tra BHYT</b><small>Cần mua Khoa BHYT &amp; Giám định</small></button>
       <button class="modecard" id="btn-daily"><b>Ca trực hằng ngày</b><small>3 tình huống cố định mỗi ngày</small></button>
       <button class="modecard" id="btn-cbl" disabled><b>Ca bệnh nhánh</b><small>Mỗi quyết định có hệ quả riêng</small></button>
     </div>
-    <div class="row"><a class="btn ghost" href="index.html">Về sổ tay</a></div>
     <p class="hint" id="audit-hint" style="text-align:center"></p>
     <p class="hint" id="daily-hint" style="text-align:center"></p>
     <p class="note" id="s-note"></p>
@@ -100,11 +119,6 @@
     <div class="section-title" style="text-align:left">Cửa hàng phòng khám</div>
     <div class="shop" id="shop"></div>
 
-    <div class="section-title" style="text-align:left">Thành tựu</div>
-    <div class="ach" id="ach"></div>
-
-    <div class="section-title" style="text-align:left">Thống kê</div>
-    <div class="statgrid" id="statgrid"></div>
 
     <div class="section-title" style="text-align:left">Dữ liệu game</div>
     <p class="hint">Game tự lưu trong trình duyệt này mỗi 10 giây và khi đóng trang, kèm một bản dự phòng. Dùng Export ở trên cùng để sao lưu sang máy khác.</p>
@@ -112,6 +126,7 @@
   </section>
 
   <section id="v-case" class="card hidden" id2="app-card">
+    <div class="layout-bar"><button type="button" class="btn ghost" id="btn-layout" aria-pressed="false">Xem câu hỏi bên dưới</button></div>
     <div class="case-grid">
       <div class="case-left">
         <div id="scene" aria-label="Khu khám chữa bệnh của bệnh viện"><canvas id="pix" width="1200" height="900"></canvas><button id="scene-max" title="Phóng to / thu nhỏ (Esc)" aria-label="Phóng to cảnh game">Phóng to</button></div>
@@ -124,6 +139,12 @@
             <div class="name" id="c-name"></div>
           </div>
           <div style="font-size:13px;color:var(--muted);white-space:nowrap" id="c-count"></div>
+        </div>
+        <div class="ai-help">
+          <div class="ai-title">Trợ lý tra cứu</div>
+          <p class="ai-note">Chỉ tra cứu trong bộ câu hỏi và điều luật có sẵn trên trang, không tạo nội dung mới.</p>
+          <div class="ai-log" id="ai-log" aria-live="polite"></div>
+          <form class="ai-form" id="ai-form"><input id="ai-q" type="text" maxlength="300" placeholder="Ví dụ: trẻ dưới 6 tuổi được hưởng bao nhiêu?" aria-label="Câu hỏi"><button type="submit" class="btn ghost">Hỏi</button></form>
         </div>
       </div>
       <div class="case-right">
@@ -142,6 +163,7 @@
     <p id="e-gold" style="color:var(--gold)"></p>
     <p id="e-rep" style="color:var(--muted)"></p>
     <p id="e-extra" style="color:var(--teal2)"></p>
+    <div id="e-board" style="text-align:left;margin-top:12px"></div>
     <div class="list" id="e-list"></div>
     <div class="row">
       <button class="btn" id="btn-again">Về phòng khám</button>
@@ -232,18 +254,45 @@ pxStyle.textContent = `
 #scene.maxi #dept-banner{font-size:clamp(16px,1.6vw,24px);top:12px;left:calc(50% - var(--cw)/2 + 14px)}
 #scene.maxi #px-bubble{font-size:clamp(20px,2.6vw,34px);top:2%;left:50%;transform:translateX(-50%);max-width:72%}
 #scene.maxi #combo{font-size:15px;top:12px;right:calc(50% - var(--cw)/2 + 10px)}
+/* Trợ lý tra cứu trong ca bệnh */
+.ai-typing{display:flex;gap:4px;padding:4px 0}
+.ai-typing span{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:ai-blink 1.1s infinite ease-in-out}
+.ai-typing span:nth-child(2){animation-delay:.15s}
+.ai-typing span:nth-child(3){animation-delay:.3s}
+@keyframes ai-blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+.ai-help{margin-top:12px;padding:10px 12px;border:1px solid var(--color-rule);border-radius:10px;font-size:14px;text-align:left}
+.ai-help .ai-title{font-weight:600;margin-bottom:4px}
+.ai-help .ai-note{font-size:12px;color:var(--muted);margin:0 0 6px}
+.ai-log{max-height:240px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.ai-log .ai-me{color:var(--muted)}
+.ai-log .ai-src{font-size:12px;color:var(--muted)}
+.ai-form{display:flex;gap:6px}
+.ai-form input{flex:1;min-width:0;padding:8px 10px;border-radius:8px;border:1px solid var(--color-rule);font:inherit}
+/* Chọn chế độ: hai cột đều nhau, thẻ lẻ cuối chiếm cả hàng, nhãn gợi ý cho người mới */
+.modes{grid-template-columns:repeat(2,minmax(0,1fr))}
+.modes .modecard:last-child:nth-child(odd){grid-column:1 / -1}
+.modetag{align-self:flex-start;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--color-ink);color:var(--color-paper)}
+@media (max-width:360px){ .modes{grid-template-columns:minmax(0,1fr)} .modes .modecard:last-child:nth-child(odd){grid-column:auto} }
+/* Hàng nút mở thống kê và nâng cấp: nằm sát nhau ngay dưới khung cảnh */
+.toggle-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 0}
+.toggle-row .btn-upgrade{margin:0;display:inline-flex}
+/* Nút đổi bố cục: góc phải, luôn hiện khi cuộn trang */
+.layout-bar{display:flex;justify-content:flex-end;position:sticky;top:8px;z-index:5;margin:0 0 8px;pointer-events:none}
+.layout-bar .btn{pointer-events:auto;background:var(--color-paper-2);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+/* Bố cục tùy chọn: câu hỏi nằm dưới cảnh (mặc định là bố cục cũ, hai cột) */
+body.stack-case .case-grid{grid-template-columns:minmax(0,1fr)}
 /* ===== IMMERSIVE: chiếm kin cả trình duyệt ===== */
 body.immersive{padding:0}
 body.immersive header.hud{position:fixed;top:0;left:0;right:0;z-index:50;margin:0;padding-inline:16px;width:100%;max-width:none}
 body.immersive main{width:100%;max-width:none;padding-top:70px;height:100vh;box-sizing:border-box;margin:0}
 body.immersive [id2="app-card"]{height:calc(100vh - 70px);border-radius:0;border-left:none;border-right:none;border-bottom:none;overflow:hidden;display:flex;flex-direction:column}
-body.immersive .case-grid{height:100%;grid-template-columns:minmax(0,1fr) minmax(340px,460px);align-items:stretch}
+body.immersive .case-grid{height:100%;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1.55fr) minmax(0,1fr);align-items:stretch}
 body.immersive #scene{height:100%;margin:0;display:flex;align-items:center;justify-content:center;background:var(--color-ink)}
 body.immersive #scene canvas{width:auto;height:100%;max-width:100%}
 body.immersive .case-left{display:flex;flex-direction:column;height:100%;min-height:0}
 body.immersive .case-left .bar{margin:8px 12px 6px}
 body.immersive .case-left .patient{margin:0 12px 8px}
-body.immersive .case-right{overflow-y:auto;height:100%;padding:14px 18px}
+body.immersive .case-right{overflow-y:auto;height:100%;min-height:0;padding:12px 18px 16px;border-top:1px solid var(--color-rule)}
 #scene #px-bubble,#scene.maxi #px-bubble,body.immersive #px-bubble{font-size:clamp(12px,1.25vw,19px);padding:6px 10px;transform:translateX(-50%)}
 #px-bubble.chat,#px-bubble2{position:absolute;transform:translate(-50%,-100%);white-space:normal;text-align:left;line-height:1.35;max-width:52%;z-index:6;pointer-events:none}
 #px-bubble.chat::after,#px-bubble2::after{left:50%;transform:translateX(-50%)}
@@ -1224,10 +1273,12 @@ const ROOM_NAME = ["Tiếp đón", "Khám và cấp cứu", "Xét nghiệm và d
 function upCost(kind, i){ const lv = stats[kind === "eq" ? "eqLv" : "stLv"][i]; return Math.round((kind === "eq" ? EQ_BASE : ST_BASE)[i] * Math.pow(1.7, lv - 1)); }
 function campCost(){ return Math.round(100 * Math.pow(2.2, stats.camp)); }
 function caseMult(i){ return 1 + 0.15 * (stats.eqLv[i] - 1) + 0.03 * (stats.stLv[i] - 1); }
+/* Tốc độ cộng vàng khi không trực: 0.5 = chậm một nửa */
+const IDLE_SLOW = 0.5;
 function incomePerSec(){
   let t = 0;
   for (let i = 0; i < nAct(); i++) t += ROOM_ECO[i] * (1 + 0.25 * (stats.eqLv[i] - 1)) * (1 + 0.35 * (stats.stLv[i] - 1));
-  return t * (1 + 0.2 * stats.camp) * (0.6 + 0.4 * rep / 100) * (evState && evState.end > Date.now() ? evState.mult : 1);
+  return IDLE_SLOW * t * (1 + 0.2 * stats.camp) * (0.6 + 0.4 * rep / 100) * (evState && evState.end > Date.now() ? evState.mult : 1);
 }
 function syncLevels(){ HOSP.setLevels(stats.eqLv, stats.stLv); updateTags(); }
 const ROOM_COL = ["#B9852A", "#2F6FB5", "#2E8F6B", "#C2527A", "#6D44C8", "#8A6A1E", "#C2581A", "#0E6F8A"];
@@ -1360,6 +1411,16 @@ const LAWS = [
   [/(hiến|ghép)/i, "Luật Hiến, lấy, ghép mô, bộ phận cơ thể người"],
   [/(hiến pháp|điều 38)/i, "Hiến pháp 2013 — Điều 38"]
 ];
+// Nội dung chi tiết của từng luật (data/laws.json), hiện trong phần giải thích sau mỗi câu trả lời
+const LAW_ID = {"Luật Khám bệnh, chữa bệnh 2023":"kcb","Luật Bảo hiểm y tế (sửa đổi 2024)":"bhyt","Luật Dược (sửa đổi 2024)":"duoc","Nghị định 102/2025/NĐ-CP":"dulieu","Luật Phòng, chống HIV/AIDS":"hiv","Luật Phòng, chống tác hại của thuốc lá":"thuocla","Luật Phòng, chống tác hại của rượu, bia":"ruoubia","Luật An toàn thực phẩm":"attp","Luật Dân số 113/2025":"danso","Luật Hiến, lấy, ghép mô, bộ phận cơ thể người":"ghepmo"};
+const LAW_PTS = {};
+fetch("data/laws.json").then(r => r.ok ? r.json() : []).then(list => {
+  for (const [name, id] of Object.entries(LAW_ID)) {
+    const e = list.find(x => x.id === id);
+    if (e && e.points) LAW_PTS[name] = e.points.filter(p => !p.startsWith("---") && !p.startsWith("Ghi chú nguồn"));
+  }
+}).catch(() => {});
+
 function lawOf(text){
   for (const [re, name] of LAWS) if (re.test(text)) return name;
   return "Kiến thức nền y tế";
@@ -1376,7 +1437,7 @@ async function loadCases(){
       for (const q of arr){
         if (!q || !q.q || !Array.isArray(q.o)) continue;
         const text = q.q + " " + q.e;
-        out.push({ q: q.q, o: q.o, a: q.a, e: q.e, law: lawOf(text), key: lawOf(text) });
+        out.push({ q: q.q, o: q.o, a: q.a, e: q.e, law: lawOf(text), key: lawOf(text), verify: !!q.verify });
       }
     } catch (e) {}
   }
@@ -1698,7 +1759,8 @@ function answer(i){
   if (!ok) html += `<div class="ex-row"><span>Lựa chọn của bạn:</span> ${esc(c.view.o[i])} — chưa khớp với quy định.</div>`;
   if (c.cbl && cblPick && cblPick.fb) html += `<div class="ex-row"><span>Hệ quả:</span> ${esc(cblPick.fb)}</div>`;
   html += `<div class="ex-row"><span>Vì sao:</span> ${esc(c.e)}</div>`;
-  if (c.pts && c.pts.length) html += `<div class="ex-row"><span>Điểm cần nhớ trong luật này:</span><ul>${c.pts.map(p => `<li>${esc(p)}</li>`).join("")}</ul></div>`;
+  const pts = (c.pts && c.pts.length) ? c.pts : (LAW_PTS[c.law] || []);
+  if (pts.length) html += `<details class="ex-more"><summary>Xem chi tiết điều luật (${pts.length} mục)</summary><ul>${pts.map(p => `<li>${esc(p)}</li>`).join("")}</ul></details>`;
   if (c.verify) html += `<div class="src">Căn cứ đang chờ đối chiếu văn bản gốc.</div>`;
   html += `<div class="src">Căn cứ: ${esc(c.law)}</div>`;
   fb.innerHTML = html;
@@ -1857,6 +1919,48 @@ function renderStart(){
   renderCodex();
 }
 
+// Lưu điểm ca vừa chơi theo tài khoản rồi hiện bảng xếp hạng theo tên đăng nhập
+function renderBoard(box, data, note){
+  box.textContent = "";
+  const h = document.createElement("h3"); h.textContent = "Bảng xếp hạng"; h.style.margin = "0 0 6px"; box.appendChild(h);
+  if (!data.top.length){ const p = document.createElement("p"); p.textContent = "Chưa có ai lên bảng."; box.appendChild(p); }
+  data.top.forEach((r, i) => {
+    const row = document.createElement("div");
+    const mine = data.me && data.me.rank === i + 1;
+    row.style.cssText = "display:flex;gap:10px;padding:4px 6px;border-radius:6px;" + (mine ? "background:var(--color-rule)" : "");
+    ["#" + (i + 1), r.name, r.best + " vàng", r.plays + " ca"].forEach((t, k) => {
+      const sp = document.createElement("span"); sp.textContent = t;
+      if (k === 1) { sp.style.fontWeight = "600"; sp.style.flex = "1"; }
+      row.appendChild(sp);
+    });
+    box.appendChild(row);
+  });
+  if (data.me && data.me.rank > 10){
+    const p = document.createElement("p"); p.textContent = "Bạn đang ở hạng " + data.me.rank + " với kỷ lục " + data.me.best + " vàng."; box.appendChild(p);
+  }
+  if (note){ const p = document.createElement("p"); p.className = "hint"; p.textContent = note; box.appendChild(p); }
+}
+async function saveAndShowBoard(){
+  const box = document.getElementById("e-board"); if (!box) return;
+  box.textContent = "Đang cập nhật bảng xếp hạng…";
+  let note = "";
+  try {
+    const me = await fetch("/api/me", { credentials: "same-origin" });
+    if (me.ok){
+      const j = await me.json();
+      const r = await fetch("/api/scores", { method: "POST", credentials: "same-origin",
+        headers: { "content-type": "application/json", "x-csrf-token": j.csrfToken },
+        body: JSON.stringify({ mode: mode, gold: sessGold, healed: correct }) });
+      if (!r.ok){ const e = await r.json().catch(() => ({})); note = (e.error && e.error.message) || "Chưa lưu được điểm ca này."; }
+    } else note = "Đăng nhập để tên bạn xuất hiện trên bảng xếp hạng.";
+  } catch (_) { note = "Chưa kết nối được máy chủ tài khoản."; }
+  try {
+    const r = await fetch("/api/scores/top", { credentials: "same-origin" });
+    if (!r.ok) throw new Error("top");
+    renderBoard(box, await r.json(), note);
+  } catch (_) { box.textContent = note || "Chưa tải được bảng xếp hạng."; }
+}
+
 function endSession(){
   clearInterval(timer);
   show("v-end");
@@ -1876,6 +1980,7 @@ function endSession(){
   $("#e-gold").textContent = "+" + sessGold + " vàng" + (rankBonus ? " (thưởng hạng " + rank + " +" + rankBonus + ")" : "");
   $("#e-rep").textContent = "Uy tín " + Math.round(rep) + "% · +" + xpSession + " XP · Cấp " + stats.level;
   $("#e-extra").textContent = stars + " Xếp hạng " + rank;
+  saveAndShowBoard();
   /* kỷ lục phiên */
   let best = 0;
   try { best = JSON.parse(localStorage.getItem("lyt_clinic_best") || "0"); } catch (e) {}
@@ -2197,5 +2302,107 @@ loop();
 </script>
 
   <div role="status" aria-live="polite" style="position:absolute; left:-9999px; top:-9999px"></div>
+<script src="js/plan-badge.js" defer></script>
+<script>
+  (function(){
+    var b = document.getElementById("btn-upgrade"), p = document.getElementById("upgrade-panel");
+    if (!b || !p) return;
+    var sb = document.getElementById("btn-stats"), sp = document.getElementById("stats-panel");
+    if (sb && sp) sb.addEventListener("click", function(){
+      var open = sp.classList.toggle("open");
+      sb.setAttribute("aria-expanded", String(open));
+      sb.textContent = open ? "Ẩn thành tựu và thống kê ▴" : "Thành tựu và thống kê ▾";
+    });
+    b.addEventListener("click", function(){
+      var open = p.classList.toggle("open");
+      b.setAttribute("aria-expanded", String(open));
+      b.textContent = open ? "Ẩn nâng cấp ▴" : "Nâng cấp và quản lý phòng khám ▾";
+    });
+  })();
+</script>
+<script>
+  (function(){
+    var b = document.getElementById("btn-layout");
+    if (!b) return;
+    b.addEventListener("click", function(){
+      var on = document.body.classList.toggle("stack-case");
+      b.setAttribute("aria-pressed", String(on));
+      b.textContent = on ? "Quay lại bố cục cũ" : "Xem câu hỏi bên dưới";
+    });
+  })();
+</script>
+<script>
+(function(){
+  var form = document.getElementById("ai-form"), inp = document.getElementById("ai-q"), log = document.getElementById("ai-log");
+  if (!form) return;
+  var STOP = new Set(["la","gi","the","nao","bao","nhieu","cua","va","co","khong","duoc","cho","voi","trong","mot","nhung","cac","nguoi","benh","ve","khi","thi","se","hay","bi","do","tai","theo","lam","sao","can","phai"]);
+  function words(s){
+    return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d")
+      .split(/[^a-z0-9]+/).filter(function(w){ return w.length > 1 && !STOP.has(w); });
+  }
+  function answer(q){
+    var qw = new Set(words(q));
+    if (!qw.size || !cases.length) return null;
+    var scored = [];
+    cases.forEach(function(c){
+      var hay = new Set(words([c.q || c.claim || "", c.e || "", c.law || ""].join(" ")));
+      var score = 0; qw.forEach(function(w){ if (hay.has(w)) score++; });
+      if (score >= 2) scored.push({ c: c, score: score });
+    });
+    scored.sort(function(a, b){ return b.score - a.score; });
+    if (!scored.length) return null;
+    var top = scored.slice(0, 2), pts = [];
+    top.forEach(function(x){
+      (LAW_PTS[x.c.law] || []).forEach(function(p){
+        var pw = words(p), hits = 0; pw.forEach(function(w){ if (qw.has(w)) hits++; });
+        if (hits >= 2 && pts.indexOf(p) < 0 && pts.length < 3) pts.push(p);
+      });
+    });
+    return { top: top.map(function(x){ return x.c; }), pts: pts };
+  }
+  function add(html, cls){
+    var d = document.createElement("div"); d.className = cls || ""; d.innerHTML = html; log.appendChild(d); d.scrollIntoView({ block: "nearest" });
+  }
+  var busy = false;
+  // Hiện câu trả lời dần dần: chấm chờ, rồi từng phần một, không hiện cùng lúc
+  function stream(html){
+    busy = true;
+    var box = document.createElement("div");
+    var tpl = document.createElement("template");
+    tpl.innerHTML = html;
+    var nodes = Array.prototype.slice.call(tpl.content.childNodes);
+    var dots = document.createElement("div"); dots.className = "ai-typing"; dots.innerHTML = "<span></span><span></span><span></span>";
+    box.appendChild(dots); log.appendChild(box);
+    var i = 0;
+    function step(){
+      if (i >= nodes.length){ dots.remove(); busy = false; return; }
+      var n = nodes[i++];
+      var text = (n.textContent || "").trim();
+      var wait = Math.min(1400, 350 + text.length * 14);
+      setTimeout(function(){
+        if (n.nodeType === 1) box.insertBefore(n, dots); else if (text) box.insertBefore(n, dots);
+        box.scrollIntoView({ block: "nearest" });
+        step();
+      }, i === 1 ? 1100 : wait);
+    }
+    step();
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var q = inp.value.trim(); if (!q || busy) return;
+    inp.value = "";
+    add("<b>Bạn hỏi:</b> " + esc(q), "ai-me");
+    if (!cases.length){ add("Trợ lý đang tải dữ liệu, thử lại sau vài giây."); return; }
+    var r = answer(q);
+    if (!r){ add("Mình chưa tìm thấy nội dung này trong bộ câu hỏi và điều luật có sẵn. Thử hỏi bằng từ khóa khác, ví dụ tên điều kiện hưởng hoặc tên đối tượng."); return; }
+    var html = r.top.map(function(c){
+      var ans = c.o ? "<b>Đáp án:</b> " + esc(c.o[c.a]) + "<br>" : "";
+      return (c.q ? "<div><b>" + esc(c.q) + "</b></div>" : "") + ans + "<div>" + esc(c.e || "") + "</div>";
+    }).join("<hr>");
+    if (r.pts.length) html += '<div style="margin-top:6px"><b>Điều luật liên quan:</b><ul>' + r.pts.map(function(p){ return "<li>" + esc(p) + "</li>"; }).join("") + "</ul></div>";
+    stream(html + '<div class="ai-src">Nguồn: bộ câu hỏi trong trang và điều luật đã lưu.</div>');
+  });
+})();
+</script>
 </body>
 </html>

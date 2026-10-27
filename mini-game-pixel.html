@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phân luồng bệnh nhân · Mini game pixel · Luật Y tế</title>
+<meta name="description" content="Mini game pixel: phân luồng bệnh nhân đúng cấp cứu, đúng tuyến hoặc trái tuyến theo quy định BHYT.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="site.css">
+<style>
+  .mg-wrap { max-width: 720px; margin: 0 auto; padding: var(--space-md) var(--space-sm) 48px; }
+  .mg-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: var(--space-md); }
+  .mg-top a { font-size: var(--text-sm); }
+  #game { width: 100%; aspect-ratio: 3 / 2; image-rendering: pixelated; border-radius: 14px; border: 1px solid var(--color-rule); background: #0d1b1f; display: block; touch-action: manipulation; }
+  .mg-hud { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 12px; font-size: 14px; }
+  .mg-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .mg-btns button { flex: 1 1 160px; }
+  .mg-btns button[data-k="cc"] { border-color: #DC2626; }
+  .mg-btns button[data-k="dt"] { border-color: #16A34A; }
+  .mg-btns button[data-k="tt"] { border-color: #D97706; }
+  .mg-rule { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--color-rule); border-radius: 12px; background: var(--color-paper-2); color: var(--color-muted); font-size: 14px; line-height: 1.5; }
+  .mg-rule b { color: var(--color-ink); }
+</style>
+</head>
+<body>
+<main class="mg-wrap">
+  <div class="mg-top">
+    <a href="index.html">← Về sổ tay</a>
+    <a href="moi-truong-pixel.html">Phòng khám pixel →</a>
+  </div>
+  <h1>Phân luồng bệnh nhân</h1>
+  <p class="hint">Bệnh nhân rơi xuống từ trên. Phân đúng luồng trước khi họ chạm đáy: <b>cấp cứu</b>, <b>đúng tuyến</b> hoặc <b>trái tuyến</b>. Bấm nút hoặc phím 1, 2, 3.</p>
+
+  <canvas id="game" width="240" height="160" aria-label="Mini game phân luồng bệnh nhân"></canvas>
+
+  <div class="mg-hud"><span>Điểm: <b id="score">0</b></span><span>Thời gian: <b id="time">60</b>s</span><span>Mạng: <b id="lives">3</b></span></div>
+
+  <div class="mg-btns">
+    <button type="button" class="btn ghost" data-k="cc" id="b-cc">1 · Cấp cứu</button>
+    <button type="button" class="btn ghost" data-k="dt" id="b-dt">2 · Đúng tuyến</button>
+    <button type="button" class="btn ghost" data-k="tt" id="b-tt">3 · Trái tuyến</button>
+  </div>
+  <div class="mg-btns"><button type="button" class="btn" id="start">Bắt đầu</button></div>
+
+  <div class="mg-rule">
+    <b>Quy tắc để chơi đúng:</b><br>
+    · Chữ thập đỏ là <b>cấp cứu</b>: người bệnh được hưởng 100% ở mọi cơ sở, kể cả trái tuyến.<br>
+    · Thẻ xanh là khám <b>đúng tuyến</b>: mức hưởng thường cao hơn.<br>
+    · Thẻ cam là khám <b>trái tuyến</b> không cấp cứu: mức hưởng thường thấp hơn.
+  </div>
+</main>
+<script>
+(function () {
+  var canvas = document.getElementById("game"), ctx = canvas.getContext("2d");
+  var W = canvas.width, H = canvas.height;
+  var LANES = { cc: 40, dt: 120, tt: 200 };
+  var KEYS = { "1": "cc", "2": "dt", "3": "tt" };
+  var TYPES = ["cc", "dt", "tt"];
+  var state = "idle", score = 0, lives = 3, timeLeft = 60, patients = [], spawnT = 0, lastT = 0, feedback = null, flash = 0;
+
+  function r(x, y, w, h, c) { ctx.fillStyle = c; ctx.fillRect(Math.round(x), Math.round(y), w, h); }
+
+  function speed() { return Math.min(38, 18 + (60 - timeLeft) * 0.35); }
+
+  function drawPatient(p) {
+    var x = LANES[p.t] - 8, y = Math.round(p.y);
+    // Người bệnh (khối pixel đơn giản)
+    r(x + 4, y, 8, 4, "#3b2a22"); r(x + 4, y + 4, 8, 5, "#f2c9a0"); r(x + 2, y + 9, 12, 8, "#ffffff"); r(x + 4, y + 17, 3, 4, "#2c5f9e"); r(x + 9, y + 17, 3, 4, "#2c5f9e");
+    // Biểu tượng luồng
+    if (p.t === "cc") { r(x + 2, y - 10, 12, 8, "#ffffff"); r(x + 6, y - 9, 4, 6, "#DC2626"); r(x + 4, y - 7, 8, 2, "#DC2626"); }
+    if (p.t === "dt") { r(x + 2, y - 10, 12, 8, "#16A34A"); r(x + 4, y - 8, 8, 1, "#ffffff"); r(x + 4, y - 6, 5, 1, "#ffffff"); }
+    if (p.t === "tt") { r(x + 2, y - 10, 12, 8, "#D97706"); r(x + 4, y - 8, 8, 1, "#ffffff"); r(x + 4, y - 6, 5, 1, "#ffffff"); }
+  }
+
+  function drawCounters() {
+    var names = { cc: "CẤP CỨU", dt: "ĐÚNG TUYẾN", tt: "TRÁI TUYẾN" }, colors = { cc: "#DC2626", dt: "#16A34A", tt: "#D97706" };
+    TYPES.forEach(function (t) {
+      r(LANES[t] - 20, H - 26, 40, 12, "#2a3b40");
+      r(LANES[t] - 20, H - 26, 40, 2, colors[t]);
+      ctx.font = "6px monospace"; ctx.fillStyle = "#d9ece9"; ctx.textAlign = "center";
+      ctx.fillText(names[t], LANES[t], H - 17);
+    });
+  }
+
+  function drawBackground() {
+    r(0, 0, W, H, "#0d1b1f");
+    for (var y = 0; y < H; y += 8) for (var x = 0; x < W; x += 8) if (((x + y) / 8) % 2 === 0) r(x, y, 8, 8, "#10242a");
+  }
+
+  // Bộ hoạt ảnh của bác sĩ (cắt từ bộ nhân vật): đi, đứng, chào, khám, ghi chép, mang đồ, tiêm, ngồi
+  var ACTS = {};
+  function loadAct(name) {
+    if (!ACTS[name]) { var im = new Image(); im.src = "img/pixel/actions/" + name + ".png"; ACTS[name] = im; }
+    return ACTS[name];
+  }
+  var SEQ = {
+    walk: ["walk-01","walk-02","walk-03","walk-04","walk-05","walk-06","walk-07","walk-08"],
+    idle: ["idle-01","idle-02","idle-03","idle-04","idle-05","idle-06"],
+    greet: ["greet-01","greet-02","greet-03","greet-04"],
+    examine: ["examine-01","examine-02"],
+    write: ["write-01","write-02","write-03","write-04","write-05"],
+    carry: ["carry-01","carry-02","carry-03","carry-04"],
+    inject: ["inject-01","inject-02","inject-03","inject-04"],
+    sit: ["sit-01","sit-02","sit-03","sit-04"]
+  };
+  var FPS = { walk: 9, idle: 2.5, greet: 3, examine: 1.6, write: 2.2, carry: 2.2, inject: 3, sit: 2 };
+  var STATION_ACT = ["greet", "examine", "carry", "write"]; // Tiếp đón, Khám bệnh, Nhà thuốc, Thanh toán
+  var actT = 0;
+  function frameOf(seq, time, fps) { return seq[Math.floor(time * fps) % seq.length]; }
+  function drawAct(cx, feetY, name, scale) {
+    var im = loadAct(name);
+    if (!im.complete || !im.naturalWidth) return;
+    var h = Math.round(im.naturalHeight * scale), w = Math.round(im.naturalWidth * scale);
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(im, Math.round(cx - w / 2), Math.round(feetY - h), w, h);
+  }
+  var mgT = 0;
+  function drawDoctorMini() {
+    mgT += 0.016;
+    var name;
+    if (flash > 0 && feedback === "ok") name = "jump";
+    else if (flash > 0 && feedback === "bad") name = "emote-angry";
+    else name = frameOf(SEQ.idle, mgT, FPS.idle);
+    drawAct(W / 2, H - 22, name, 0.3);
+  }
+  function drawDoctorOld() {
+    // Bác sĩ đứng giữa, có hiệu ứng khi đúng/sai
+    var x = W / 2 - 8, y = H - 36;
+    r(x + 2, y, 10, 3, "#3b2a22"); r(x + 2, y + 3, 10, 7, "#f2c9a0"); r(x + 1, y + 10, 12, 11, "#ffffff");
+    r(x + 3, y + 21, 3, 5, "#2c5f9e"); r(x + 8, y + 21, 3, 5, "#2c5f9e");
+    if (flash > 0) r(x - 4, y - 6, 20, 2, flash_color());
+  }
+  // Ảnh bác sĩ cắt từ bộ nhân vật (đứng yên và 8 khung đi bộ)
+  var FRONT = new Image(); FRONT.src = "img/pixel/doctor-front.png";
+  var WALK = []; for (var wi = 1; wi <= 8; wi++) { var wim = new Image(); wim.src = "img/pixel/doctor-walk-" + wi + ".png"; WALK.push(wim); }
+  function drawSpriteMini(cx, feetY, walking, scale) {
+    var im = walking ? WALK[Math.floor(performance.now() / 90) % 8] : FRONT;
+    if (!im.complete || !im.naturalWidth) return;
+    var h = Math.round(im.naturalHeight * scale), w = Math.round(im.naturalWidth * scale);
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(im, Math.round(cx - w / 2), Math.round(feetY - h), w, h);
+  }
+  function flash_color() { return feedback === "ok" ? "#16A34A" : "#DC2626"; }
+
+  function drawOverlay(title, lines) {
+    ctx.fillStyle = "rgba(13,27,31,0.82)"; ctx.fillRect(0, 0, W, H);
+    ctx.textAlign = "center"; ctx.fillStyle = "#ffffff"; ctx.font = "10px monospace";
+    ctx.fillText(title, W / 2, 28);
+    ctx.font = "7px monospace"; ctx.fillStyle = "#cfe7e3";
+    lines.forEach(function (l, i) { ctx.fillText(l, W / 2, 52 + i * 12); });
+  }
+
+  function render() {
+    drawBackground();
+    drawCounters();
+    patients.forEach(drawPatient);
+    drawDoctorMini();
+    if (feedback && flash > 0) {
+      ctx.font = "8px monospace"; ctx.textAlign = "center";
+      ctx.fillStyle = feedback === "ok" ? "#86efac" : "#fca5a5";
+      ctx.fillText(feedback === "ok" ? "Đúng luồng" : "Sai luồng", W / 2, 14);
+    }
+    if (state === "idle") drawOverlay("Phân luồng bệnh nhân", ["Bấm Bắt đầu để chơi", "Phím 1 · 2 · 3 để chọn luồng"]);
+    if (state === "over") drawOverlay("Hết giờ", ["Điểm: " + score, "Bấm Bắt đầu để chơi lại", "Cấp cứu luôn được 100% dù trái tuyến"]);
+  }
+
+  function update(dt) {
+    if (state !== "play") return;
+    timeLeft -= dt;
+    if (timeLeft <= 0) { timeLeft = 0; endGame(); return; }
+    spawnT -= dt;
+    if (spawnT <= 0) {
+      patients.push({ t: TYPES[Math.floor(Math.random() * 3)], y: -14 });
+      spawnT = Math.max(0.7, 1.9 - (60 - timeLeft) * 0.015);
+    }
+    var sp = speed();
+    for (var i = patients.length - 1; i >= 0; i--) {
+      patients[i].y += sp * dt;
+      if (patients[i].y > H - 36) {
+        patients.splice(i, 1);
+        loseLife("Bệnh nhân chưa được phân luồng kịp.");
+      }
+    }
+    if (flash > 0) flash -= dt;
+    updateHud();
+  }
+
+  function loseLife(msg) {
+    lives -= 1; feedback = "bad"; flash = 0.6; setNote(msg);
+    if (lives <= 0) endGame();
+  }
+
+  function choose(k) {
+    if (state !== "play") return;
+    // Chọn bệnh nhân rơi thấp nhất (gần đáy nhất)
+    var idx = -1, best = -1;
+    patients.forEach(function (p, i) { if (p.y > best) { best = p.y; idx = i; } });
+    if (idx < 0) return;
+    var p = patients[idx];
+    if (p.t === k) {
+      score += 10; patients.splice(idx, 1); feedback = "ok"; flash = 0.4; setNote("Đúng. " + noteFor(k));
+    } else {
+      patients.splice(idx, 1); score = Math.max(0, score - 5); loseLife("Sai luồng. " + noteFor(p.t));
+    }
+    updateHud();
+  }
+
+  function noteFor(t) {
+    if (t === "cc") return "Cấp cứu được 100% ở mọi cơ sở.";
+    if (t === "dt") return "Khám đúng tuyến thường được mức hưởng cao hơn.";
+    return "Khám trái tuyến không cấp cứu thường được mức hưởng thấp hơn.";
+  }
+
+  function setNote(msg) { var el = document.getElementById("note"); if (el) el.textContent = msg; }
+  function updateHud() {
+    document.getElementById("score").textContent = score;
+    document.getElementById("time").textContent = Math.ceil(timeLeft);
+    document.getElementById("lives").textContent = lives;
+  }
+
+  function startGame() {
+    state = "play"; score = 0; lives = 3; timeLeft = 60; patients = []; spawnT = 0.6; feedback = null; flash = 0;
+    setNote("Phân luồng đúng để ghi điểm.");
+    updateHud();
+  }
+  function endGame() { state = "over"; setNote("Điểm cuối: " + score + "."); }
+
+  ["cc", "dt", "tt"].forEach(function (k) {
+    document.getElementById("b-" + k).onclick = function () { choose(k); };
+  });
+  document.getElementById("start").onclick = startGame;
+  document.addEventListener("keydown", function (e) { if (KEYS[e.key]) choose(KEYS[e.key]); });
+
+  // Ghi chú ngắn dưới trò chơi
+  var note = document.createElement("p"); note.id = "note"; note.className = "hint"; note.style.marginTop = "10px";
+  canvas.parentNode.insertBefore(note, document.querySelector(".mg-hud"));
+
+  function loop(now) {
+    var dt = Math.min(0.05, (now - lastT) / 1000); lastT = now;
+    update(dt); render();
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

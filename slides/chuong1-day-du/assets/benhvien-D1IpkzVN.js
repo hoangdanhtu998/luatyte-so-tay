@@ -1,0 +1,1 @@
+var e=`/slides/chuong1-day-du/img/benhvien.png`;export{e as t};

@@ -20,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="site.css">
+<style>.plan-badge{display:inline-block;margin-left:10px;padding:3px 10px;border-radius:999px;font:600 12px/1.4 system-ui,sans-serif;vertical-align:middle;border:1px solid transparent;white-space:nowrap}.plan-free{background:#ECFDF3;color:#067647;border-color:#ABEFC6}.plan-paid{background:#F0F9FF;color:#026AA2;border-color:#B9E6FE}.plan-admin{background:#F4F3FF;color:#5925DC;border-color:#D9D6FE}.plan-guest{background:#F1F5F9;color:#475569;border-color:#E2E8F0}</style>
 </head>
 <body>
 <div class="wrap">
@@ -67,6 +68,7 @@
     <p class="intro">Các luật y tế chính, kèm số hiệu, ngày hiệu lực và điểm cần nhớ. Bấm vào từng luật để mở chi tiết.</p>
     <div class="links-row">
       <a class="linkbtn" href="ly_thuyet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5Z"/><path d="M4 5.5V21"/></svg>Học lý thuyết theo chương</a>
+      <a class="linkbtn" href="slides/">Bài giảng slide</a>
       <a class="linkbtn" href="tin_luat.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2Z"/><path d="M18 9h2a1 1 0 0 1 1 1v8a2 2 0 0 1-2 2h-1"/><path d="M8 8h7M8 12h7M8 16h4"/></svg>Tin cập nhật luật y tế</a>
     </div>
     <div class="toolbar">
@@ -1399,5 +1401,6 @@ boot().catch(e => {
 /* Nút tài khoản: hiện email nếu đã đăng nhập. Khi không có máy chủ, giữ nhãn "Đăng nhập". */
 fetch("/api/me",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.user&&d.user.email){ const a=document.getElementById("acct-link"); a.textContent=d.user.email; a.title="Tài khoản đang đăng nhập"; } }).catch(()=>{});
 </script>
+<script src="js/plan-badge.js" defer></script>
 </body>
 </html>

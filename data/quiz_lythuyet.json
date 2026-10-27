@@ -609,5 +609,18 @@
     ],
     "a": 2,
     "e": "Cơ sở có 45 ngày để khắc phục và gửi bằng chứng; nếu vẫn chưa đạt, hồ sơ chuyển Cục Quản lý Dược. Căn cứ: Thông tư 36/2025/TT-BYT sửa đổi phân cấp Thực hành tốt phòng thí nghiệm (GLP)."
+  },
+  {
+    "t": "lythuyet",
+    "id": "lt-48",
+    "q": "Quyền bảo mật thông tin của người bệnh được quy định ở điều nào (Điều 10)?",
+    "o": [
+      "Điều 7",
+      "Điều 10",
+      "Điều 15",
+      "Điều 20"
+    ],
+    "a": 1,
+    "e": "Điều 10 quy định quyền được tôn trọng danh dự, bảo vệ sức khỏe và bí mật riêng tư."
   }
 ]

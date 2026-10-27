@@ -1,0 +1,1 @@
+var e=`/slides/chuong1-day-du/img/bhyt.png`;export{e as t};

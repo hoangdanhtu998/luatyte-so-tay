@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phòng khám pixel · Luật Y tế</title>
+<meta name="description" content="Môi trường pixel riêng: bác sĩ đi qua các khu của phòng khám và mở bài luật tương ứng.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="site.css">
+<style>
+  .px-wrap { max-width: 760px; margin: 0 auto; padding: var(--space-md) var(--space-sm) 48px; }
+  .px-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: var(--space-md); }
+  .px-top a { font-size: var(--text-sm); }
+  #scene { width: 100%; aspect-ratio: 3 / 2; image-rendering: pixelated; border-radius: 14px; border: 1px solid var(--color-rule); background: #0d1b1f; display: block; }
+  .px-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .px-card { margin-top: 14px; padding: 14px 16px; border: 1px solid var(--color-rule); border-radius: 12px; background: var(--color-paper-2); min-height: 4.5em; }
+  .px-card b { display: block; margin-bottom: 4px; }
+  .px-card p { margin: 0; color: var(--color-muted); }
+  .px-card a { display: inline-block; margin-top: 8px; }
+</style>
+</head>
+<body>
+<main class="px-wrap">
+  <div class="px-top">
+    <a href="index.html">← Về sổ tay</a>
+    <a href="bai-giang.html">Bài giảng có giọng đọc →</a>
+  </div>
+  <h1>Phòng khám pixel</h1>
+  <p class="hint">Bác sĩ đi qua từng khu của phòng khám. Chọn một khu để bác sĩ đến và mở điều luật liên quan.</p>
+
+  <canvas id="scene" width="240" height="160" aria-label="Cảnh phòng khám pixel"></canvas>
+
+  <div class="px-btns" id="btns"></div>
+
+  <div class="px-card" id="card" aria-live="polite">
+    <b>Chọn một khu để bắt đầu</b>
+    <p>Mỗi khu gắn với một văn bản trong chương 1.</p>
+  </div>
+</main>
+<script>
+(function () {
+  var canvas = document.getElementById("scene"), ctx = canvas.getContext("2d");
+  var W = canvas.width, H = canvas.height;
+  var FLOOR_Y = 118;
+
+  // Các khu: vị trí, tên, văn bản liên quan
+  var STATIONS = [
+    { name: "Tiếp đón", x: 36, prop: "counter", law: "Luật Bảo hiểm y tế (sửa đổi 2024)", note: "Thẻ BHYT điện tử có giá trị pháp lý như thẻ giấy. Người bệnh nên kiểm tra thẻ còn hiệu lực trước khi khám." },
+    { name: "Khám bệnh", x: 92, prop: "bed", law: "Luật Khám bệnh, chữa bệnh", note: "Cấp chuyên môn kỹ thuật gồm cấp ban đầu, cấp cơ bản và cấp chuyên sâu. Cấp cứu không được từ chối hoặc chậm." },
+    { name: "Nhà thuốc", x: 146, prop: "shelf", law: "Thông tư 52/2017/TT-BYT (đơn thuốc)", note: "Đơn thuốc phải ghi rõ thông tin người bệnh, tên thuốc, hàm lượng và liều dùng." },
+    { name: "Thanh toán", x: 200, prop: "cash", law: "Thông tư 22/2023/TT-BYT", note: "Giá khám chữa bệnh BHYT thống nhất theo hạng bệnh viện. Cần đối chiếu văn bản để áp dụng." }
+  ];
+
+  var px = 36, targetIdx = -1, walking = false, t = 0, frameT = 0, step = 0, bubbleT = 0, activeIdx = -1;
+  var SPEED = 38; // pixel logic mỗi giây
+  // Bộ hoạt ảnh của bác sĩ (cắt từ bộ nhân vật): đi, đứng, chào, khám, ghi chép, mang đồ, tiêm, ngồi
+  var ACTS = {};
+  function loadAct(name) {
+    if (!ACTS[name]) { var im = new Image(); im.src = "img/pixel/actions/" + name + ".png"; ACTS[name] = im; }
+    return ACTS[name];
+  }
+  var SEQ = {
+    walk: ["walk-01","walk-02","walk-03","walk-04","walk-05","walk-06","walk-07","walk-08"],
+    idle: ["idle-01","idle-02","idle-03","idle-04","idle-05","idle-06"],
+    greet: ["greet-01","greet-02","greet-03","greet-04"],
+    examine: ["examine-01","examine-02"],
+    write: ["write-01","write-02","write-03","write-04","write-05"],
+    carry: ["carry-01","carry-02","carry-03","carry-04"],
+    inject: ["inject-01","inject-02","inject-03","inject-04"],
+    sit: ["sit-01","sit-02","sit-03","sit-04"]
+  };
+  var FPS = { walk: 9, idle: 2.5, greet: 3, examine: 1.6, write: 2.2, carry: 2.2, inject: 3, sit: 2 };
+  var STATION_ACT = ["greet", "examine", "carry", "write"]; // Tiếp đón, Khám bệnh, Nhà thuốc, Thanh toán
+  var actT = 0;
+  function frameOf(seq, time, fps) { return seq[Math.floor(time * fps) % seq.length]; }
+  function drawAct(cx, feetY, name, scale) {
+    var im = loadAct(name);
+    if (!im.complete || !im.naturalWidth) return;
+    var h = Math.round(im.naturalHeight * scale), w = Math.round(im.naturalWidth * scale);
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(im, Math.round(cx - w / 2), Math.round(feetY - h), w, h);
+  }
+
+  // Vẽ hình chữ nhật theo lưới pixel
+  function r(x, y, w, h, c) { ctx.fillStyle = c; ctx.fillRect(Math.round(x), Math.round(y), w, h); }
+
+  function drawBackground() {
+    // Tường
+    r(0, 0, W, FLOOR_Y, "#cfe5e2");
+    r(0, 0, W, 6, "#7fb9b2");
+    // Cửa sổ
+    for (var i = 0; i < 4; i++) { r(10 + i * 58, 18, 26, 22, "#a9d8e6"); r(10 + i * 58, 18, 26, 2, "#5a8d97"); r(22 + i * 58, 18, 2, 22, "#5a8d97"); }
+    // Sàn caro
+    for (var y = FLOOR_Y; y < H; y += 8) {
+      for (var x = 0; x < W; x += 8) {
+        r(x, y, 8, 8, ((x / 8 + y / 8) % 2) ? "#e6efe9" : "#d6e5df");
+      }
+    }
+    // Đường đi
+    r(0, FLOOR_Y + 22, W, 2, "#b9cfc9");
+  }
+
+  function drawProp(s) {
+    var x = s.x - 14, y = FLOOR_Y - 26;
+    if (s.prop === "counter") {
+      r(x, y + 12, 36, 12, "#8a5a3c"); r(x, y + 10, 36, 3, "#c28b5f");
+      r(x + 6, y + 2, 14, 8, "#2f6f7a"); r(x + 8, y + 4, 10, 4, "#bfe8e4");
+    } else if (s.prop === "bed") {
+      r(x - 2, y + 14, 40, 10, "#e8ecef"); r(x - 2, y + 12, 40, 3, "#9fb7c2"); r(x + 26, y + 20, 3, 6, "#6b7c85");
+      r(x + 4, y + 2, 6, 4, "#2f6f7a");
+    } else if (s.prop === "shelf") {
+      r(x, y, 36, 26, "#8a5a3c"); r(x + 2, y + 6, 32, 2, "#c28b5f"); r(x + 2, y + 16, 32, 2, "#c28b5f");
+      for (var i = 0; i < 4; i++) { r(x + 4 + i * 8, y + 2, 5, 4, "#7fb9b2"); r(x + 4 + i * 8, y + 12, 5, 4, "#e0b15c"); r(x + 4 + i * 8, y + 22, 5, 4, "#9bd1cb"); }
+    } else if (s.prop === "cash") {
+      r(x, y + 14, 38, 12, "#6f8794"); r(x, y + 12, 38, 3, "#b8c9d1"); r(x + 6, y + 2, 14, 10, "#27414c"); r(x + 8, y + 4, 10, 5, "#9fe3d5");
+    }
+  }
+
+  function drawLabel(s, i) {
+    ctx.font = "7px monospace";
+    ctx.fillStyle = (i === activeIdx) ? "#0F766E" : "#173F4A";
+    ctx.textAlign = "center";
+    ctx.fillText(s.name, s.x + 8, FLOOR_Y + 12);
+  }
+
+  // Ảnh bác sĩ cắt từ bộ nhân vật (đứng yên và 8 khung đi bộ)
+  var FRONT = new Image(); FRONT.src = "img/pixel/doctor-front.png";
+  var WALK = []; for (var wi = 1; wi <= 8; wi++) { var wim = new Image(); wim.src = "img/pixel/doctor-walk-" + wi + ".png"; WALK.push(wim); }
+  function drawSprite(cx, feetY, walking, scale) {
+    var im = walking ? WALK[Math.floor(performance.now() / 90) % 8] : FRONT;
+    if (!im.complete || !im.naturalWidth) return;
+    var h = Math.round(im.naturalHeight * scale), w = Math.round(im.naturalWidth * scale);
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(im, Math.round(cx - w / 2), Math.round(feetY - h), w, h);
+  }
+  // Bác sĩ: vẽ bằng các khối pixel (dự phòng khi ảnh chưa tải)
+  function drawDoctor(x, y, frame) {
+    var legA = frame === 1 ? 2 : 0, legB = frame === 2 ? 2 : 0;
+    // Tóc
+    r(x + 2, y, 8, 3, "#3b2a22");
+    // Đầu
+    r(x + 2, y + 3, 8, 7, "#f2c9a0");
+    r(x + 3, y + 6, 1, 1, "#2a1d17"); r(x + 7, y + 6, 1, 1, "#2a1d17");
+    // Áo blouse
+    r(x + 1, y + 10, 10, 11, "#ffffff"); r(x + 1, y + 10, 10, 1, "#d8e4e8");
+    // Cổ áo và ống nghe
+    r(x + 5, y + 10, 2, 2, "#2f6f7a"); r(x + 9, y + 14, 1, 4, "#6b7c85");
+    // Tay
+    r(x - 1, y + 11, 2, 7, "#ffffff"); r(x + 10, y + 11, 2, 7, "#ffffff");
+    r(x - 1, y + 17, 2, 2, "#f2c9a0"); r(x + 10, y + 17, 2, 2, "#f2c9a0");
+    // Quần và chân
+    r(x + 2 - legA, y + 21, 3, 6, "#2c5f9e"); r(x + 7 + legB, y + 21, 3, 6, "#2c5f9e");
+    r(x + 2 - legA, y + 27, 3, 2, "#1d2a36"); r(x + 7 + legB, y + 27, 3, 2, "#1d2a36");
+  }
+
+  function drawBubble(text) {
+    ctx.font = "8px monospace";
+    var w = Math.min(W - 10, ctx.measureText(text).width + 10);
+    var bx = Math.min(W - w - 4, Math.max(4, px - w / 2 + 8)), by = 6;
+    r(bx, by, w, 14, "#ffffff"); r(bx, by + 14, 4, 3, "#ffffff");
+    ctx.fillStyle = "#173F4A"; ctx.textAlign = "left"; ctx.fillText(text, bx + 5, by + 10);
+  }
+
+  function update(dt) {
+    t += dt; actT += dt;
+    if (walking && targetIdx >= 0) {
+      var tx = STATIONS[targetIdx].x - 2;
+      var dir = tx > px ? 1 : -1;
+      px += dir * SPEED * dt;
+      if ((dir > 0 && px >= tx) || (dir < 0 && px <= tx)) {
+        px = tx; walking = false; activeIdx = targetIdx; bubbleT = 4.5; showCard(targetIdx);
+      }
+      frameT += dt;
+      if (frameT > 0.14) { frameT = 0; step = (step + 1) % 2; }
+    } else {
+      step = 0;
+    }
+    if (bubbleT > 0) bubbleT -= dt;
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, W, H);
+    drawBackground();
+    STATIONS.forEach(function (s, i) { drawProp(s); drawLabel(s, i); });
+    var frame = walking ? (step === 0 ? 1 : 2) : 0;
+    var bob = walking ? 0 : Math.round(Math.sin(t * 3) * 0.6);
+    var seqName = walking ? "walk" : (activeIdx >= 0 ? STATION_ACT[activeIdx] : "idle");
+    drawAct(Math.round(px) + 6, FLOOR_Y + 1 + bob, frameOf(SEQ[seqName], actT, FPS[seqName]), 0.36);
+    if (bubbleT > 0 && activeIdx >= 0) drawBubble(STATIONS[activeIdx].name);
+  }
+
+  var last = performance.now();
+  function loop(now) {
+    var dt = Math.min(0.05, (now - last) / 1000); last = now;
+    update(dt); render();
+    requestAnimationFrame(loop);
+  }
+
+  function showCard(i) {
+    var s = STATIONS[i], card = document.getElementById("card");
+    card.innerHTML = "";
+    var b = document.createElement("b"); b.textContent = s.name + " · " + s.law;
+    var p = document.createElement("p"); p.textContent = s.note;
+    card.appendChild(b); card.appendChild(p);
+  }
+
+  function goTo(i) {
+    targetIdx = i; activeIdx = -1; walking = true; bubbleT = 0;
+    document.querySelectorAll("#btns button").forEach(function (btn, k) { btn.setAttribute("aria-pressed", String(k === i)); });
+  }
+
+  var btns = document.getElementById("btns");
+  STATIONS.forEach(function (s, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "btn ghost"; b.textContent = s.name;
+    b.setAttribute("aria-pressed", "false");
+    b.onclick = function () { goTo(i); };
+    btns.appendChild(b);
+  });
+
+  // Bấm trực tiếp lên cảnh cũng đưa bác sĩ đến khu gần nhất
+  canvas.addEventListener("click", function (e) {
+    var rect = canvas.getBoundingClientRect();
+    var x = (e.clientX - rect.left) * (W / rect.width);
+    var best = 0, bd = 1e9;
+    STATIONS.forEach(function (s, i) { var d = Math.abs(s.x - x); if (d < bd) { bd = d; best = i; } });
+    goTo(best);
+  });
+
+  // Vị trí khởi đầu: đứng ở khu đầu tiên
+  px = STATIONS[0].x - 2;
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

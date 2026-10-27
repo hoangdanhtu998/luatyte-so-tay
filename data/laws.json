@@ -166,6 +166,25 @@
     "status": "amend",
     "replaces": "Sửa đổi Luật BHYT 25/2008/QH12 (đã sửa đổi bởi Luật 46/2014/QH13). Một số quy định có hiệu lực sớm từ 01/01/2025.",
     "points": [
+      "ĐIỀU 22 – MỨC HƯỞNG (khoản 1, khám bệnh chữa bệnh đúng tuyến):",
+      "Điểm a: 100% chi phí với các nhóm đối tượng quy định tại khoản 3 Điều 12 (phần vượt phạm vi do nguồn kinh phí riêng của nhóm chi trả; ngân sách nhà nước bảo đảm nếu nguồn đó không đủ).",
+      "Điểm b: 100% chi phí cho một lần khám bệnh, chữa bệnh có mức chi thấp hơn mức do Chính phủ quy định.",
+      "Điểm c: 100% chi phí tại cơ sở khám bệnh, chữa bệnh cấp ban đầu (trạm y tế, y tế gia đình, phòng khám quân dân y…) và 100% chi phí khám ngoại trú tại phòng khám đa khoa khu vực.",
+      "Điểm d: 100% chi phí khi người bệnh đã tham gia BHYT liên tục từ 5 năm trở lên. Đây là điều kiện chính; số tiền cùng chi trả trong năm vượt 6 lần mức tham chiếu là điều kiện đi kèm (cần đối chiếu văn bản để xác định đúng cách áp dụng).",
+      "Điểm đ: 95% chi phí với các đối tượng quy định tại điểm a khoản 2 (người hưởng lương hưu) và các nhóm tại điểm k khoản 3, điểm a và điểm g khoản 4 Điều 12.",
+      "Điểm e: 80% chi phí với các đối tượng khác. Đây là mức phổ biến.",
+      "ĐIỀU 22 – KHÁM TRÁI TUYẾN (khoản 4): quỹ BHYT thanh toán theo tỷ lệ của mức hưởng khoản 1.",
+      "Điểm a: 100% khi chẩn đoán, điều trị một số bệnh hiếm, bệnh hiểm nghèo, bệnh cần phẫu thuật hoặc kỹ thuật cao do Bộ trưởng Bộ Y tế quy định.",
+      "Điểm c và d: 100% khi khám ngoại trú tại cơ sở cấp ban đầu hoặc khám nội trú tại cơ sở cấp cơ bản.",
+      "Điểm e: từ 50% đến 100% khi khám ngoại trú tại cơ sở cấp cơ bản, theo lộ trình Chính phủ quy định.",
+      "Điểm g: 40% khi khám nội trú tại cơ sở cấp chuyên sâu, trừ các trường hợp đặc biệt tại các điểm a, b, đ và h.",
+      "Điểm b, đ, h: có các mức 100% hoặc 50% cho các nhóm và trường hợp riêng.",
+      "ĐIỀU 22 – CẤP CỨU (khoản 5): được hưởng 100% mức hưởng khoản 1 khi cấp cứu, tại bất kỳ cơ sở khám chữa bệnh nào.",
+      "ĐIỀU 22 – KHOẢN 2 và 6: người thuộc nhiều đối tượng được hưởng theo đối tượng có quyền lợi cao nhất. Chính phủ quy định chi tiết các mức hưởng khác.",
+      "ĐIỀU 13 – MỨC ĐÓNG THEO HỘ GIA ĐÌNH (khoản 4): mức đóng hằng tháng của đối tượng tự đóng tối đa bằng 6% mức tham chiếu. Đối tượng tự đóng có thể đóng theo hộ gia đình hoặc đóng theo cá nhân.",
+      "ĐIỀU 13 – GIẢM TRỪ CHO THÀNH VIÊN HỘ GIA ĐÌNH (khoản 6, trong cùng năm tài chính): người thứ nhất đóng tối đa 6% mức tham chiếu; người thứ hai, thứ ba, thứ tư đóng lần lượt bằng 70%, 60%, 50% mức đóng của người thứ nhất; từ người thứ năm trở đi đóng bằng 40% mức đóng của người thứ nhất.",
+      "Ghi chú nguồn: nội dung trên trích từ bản văn Luật 51/2024/QH15 trên caselaw.vn. Cần đối chiếu với Cổng thông tin điện tử Chính phủ hoặc Công báo trước khi công bố chính thức.",
+      "--- Tóm tắt cũ (giữ để đối chiếu) ---",
       "Mức hưởng phổ biến 80% chi phí trong phạm vi; 100% với trẻ em dưới 6 tuổi, người có công, hộ nghèo và một số nhóm khác; người hưởng lương hưu 95%.",
       "Chi phí một lần khám chữa bệnh dưới mức do Chính phủ quy định được hưởng 100%.",
       "Hưởng 100% khi tham gia BHYT liên tục từ 5 năm trở lên và số tiền cùng chi trả trong năm lớn hơn 6 lần mức tham chiếu (Điều 22).",
@@ -177,7 +196,8 @@
       "Cấp cứu ở bất kỳ cơ sở nào vẫn được hưởng 100%; khám không đúng tuyến hoặc không đúng quy định chuyển tuyến thì quỹ BHYT chỉ thanh toán theo một tỷ lệ của mức hưởng.",
       "Người tham gia liên tục từ 5 năm trở lên được hưởng 100% khi số tiền cùng chi trả trong năm vượt giới hạn (6 lần mức tham chiếu do Chính phủ quy định; theo tóm tắt văn bản, cần đối chiếu nguyên văn)."
     ],
-    "guide": "Nghị định 188/2025/NĐ-CP hướng dẫn Luật BHYT"
+    "guide": "Nghị định 188/2025/NĐ-CP hướng dẫn Luật BHYT",
+    "detailSource": "caselaw.vn (Luật 51/2024/QH15), Điều 13 và Điều 22"
   },
   {
     "id": "duoc",

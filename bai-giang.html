@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bài giảng theo slide · Luật Y tế</title>
+<meta name="description" content="Bài giảng theo slide có giọng đọc tiếng Việt cho từng điều luật y tế.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="site.css">
+<style>
+  .lec-wrap{max-width:1040px;margin:0 auto;padding:var(--space-md) var(--space-sm) 48px}
+  .lec-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:var(--space-md)}
+  .lec-top a{font-size:var(--text-sm)}
+  .lec-hero h1{font-family:var(--font-display);font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 6px}
+  .lec-hero p{color:var(--color-muted);margin:0 0 var(--space-md);max-width:60ch}
+
+  /* Danh sách bài */
+  .lessons{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:var(--space-sm)}
+  .lesson-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid var(--color-rule);border-radius:var(--radius-card);background:var(--color-paper-2);transition:transform .2s var(--ease-out),border-color .2s}
+  .lesson-card:hover,.lesson-card:focus-visible{transform:translateY(-2px);border-color:var(--color-ink)}
+  .lesson-card .no{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted)}
+  .lesson-card b{font-family:var(--font-display);font-size:17px;line-height:1.3}
+  .lesson-card small{color:var(--color-muted);font-size:13px;line-height:1.5}
+  .lesson-card .meta{margin-top:auto;font-size:12px;color:var(--color-muted)}
+
+  /* Khung trình chiếu */
+  .stage{position:relative;aspect-ratio:16/9;min-height:320px;border-radius:18px;background:var(--color-paper-2);border:1px solid var(--color-rule);box-shadow:var(--shadow-card);overflow:hidden;display:flex;flex-direction:column}
+  .stage-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(22px,5vw,64px);gap:14px;min-height:0;overflow:auto}
+  .slide-kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent)}
+  .slide-title{font-family:var(--font-display);font-size:clamp(28px,4.6vw,52px);line-height:1.1;margin:0;max-width:20ch}
+  .slide-text{font-size:clamp(18px,2.4vw,24px);line-height:1.6;margin:0;max-width:44ch;color:var(--color-ink)}
+  .slide-cover .slide-text{color:var(--color-muted);font-size:clamp(16px,2vw,20px)}
+  .slide-rule{width:56px;height:4px;border-radius:2px;background:var(--color-accent)}
+  .stage-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;border-top:1px solid var(--color-rule);font-size:13px;color:var(--color-muted)}
+  .progress{height:4px;background:var(--color-rule);position:relative}
+  .progress i{position:absolute;inset:0 auto 0 0;width:0;background:var(--color-accent);transition:width .35s var(--ease-out)}
+  .slide-enter{animation:slide-in .45s var(--ease-out)}
+  @keyframes slide-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+  .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+  .controls .spacer{flex:1}
+  .controls label{font-size:13px;color:var(--color-muted);display:inline-flex;gap:6px;align-items:center}
+  .controls select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--color-rule);background:var(--color-paper-2);color:var(--color-ink)}
+  .dots{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+  .dots button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:var(--color-rule);cursor:pointer}
+  .dots button[aria-current="true"]{background:var(--color-accent);transform:scale(1.25)}
+  .hint{font-size:13px;color:var(--color-muted)}
+  .notice{padding:14px 16px;border:1px solid var(--color-rule);border-radius:12px;color:var(--color-muted)}
+  @media (max-width:560px){ .stage{aspect-ratio:auto;min-height:380px} .controls .spacer{display:none} }
+  @media (prefers-reduced-motion:reduce){ .slide-enter{animation:none} }
+</style>
+</head>
+<body>
+<main class="lec-wrap">
+  <div class="lec-top">
+    <a href="index.html">← Về sổ tay</a>
+    <a href="slides/">Bài giảng đầy đủ theo chương →</a>
+    <a href="clinic.html">Ca trực phòng khám →</a>
+  </div>
+
+  <section id="lesson-list">
+    <div class="lec-hero">
+      <h1>Bài giảng theo slide</h1>
+      <p>Chọn một điều luật. Mỗi ý chính là một slide, có giọng đọc tiếng Việt. Dùng phím mũi tên để chuyển slide, phím Space để phát hoặc dừng.</p>
+    </div>
+    <div id="lessons" class="lessons"><p class="notice">Đang tải bài giảng…</p></div>
+  </section>
+
+  <section id="player" hidden>
+    <div class="lec-top">
+      <button class="btn ghost" id="back" type="button">← Danh sách bài</button>
+      <span class="hint" id="lesson-no"></span>
+    </div>
+    <div class="stage" id="stage">
+      <div class="stage-body" id="stage-body"></div>
+      <div class="progress"><i id="bar"></i></div>
+      <div class="stage-foot">
+        <span id="lesson-name"></span>
+        <span id="counter"></span>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn ghost" id="prev" type="button">‹ Trước</button>
+      <button class="btn" id="play" type="button">Phát giọng đọc</button>
+      <button class="btn ghost" id="next" type="button">Sau ›</button>
+      <span class="spacer"></span>
+      <label><input type="checkbox" id="auto" checked> Tự chuyển slide</label>
+      <label>Tốc độ
+        <select id="speed">
+          <option value="0.8">0.8×</option>
+          <option value="1" selected>1×</option>
+          <option value="1.25">1.25×</option>
+        </select>
+      </label>
+    </div>
+    <div class="dots" id="dots" aria-label="Chọn slide"></div>
+    <audio id="audio" preload="none"></audio>
+  </section>
+</main>
+<script>
+(function(){
+  var lessonsEl = document.getElementById("lessons"), listSec = document.getElementById("lesson-list");
+  var player = document.getElementById("player"), body = document.getElementById("stage-body");
+  var audio = document.getElementById("audio"), bar = document.getElementById("bar");
+  var playBtn = document.getElementById("play"), dotsEl = document.getElementById("dots");
+  var cur = null, idx = 0;
+
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function render(){
+    var s = cur.slides[idx], n = cur.slides.length, isCover = idx === 0;
+    body.innerHTML = "";
+    body.className = "stage-body slide-enter";
+    void body.offsetWidth; // chạy lại hiệu ứng mỗi khi đổi slide
+    if (isCover){
+      body.classList.add("slide-cover");
+      body.appendChild(el("div", "slide-kicker", "Bài giảng"));
+      body.appendChild(el("h2", "slide-title", cur.title));
+      body.appendChild(el("div", "slide-rule"));
+      body.appendChild(el("p", "slide-text", "Gồm " + (n - 1) + " ý chính. Bấm Phát để nghe từng ý."));
+    } else {
+      body.appendChild(el("div", "slide-kicker", "Ý " + idx + " / " + (n - 1)));
+      body.appendChild(el("div", "slide-rule"));
+      body.appendChild(el("p", "slide-text", s.text));
+    }
+    document.getElementById("counter").textContent = (idx + 1) + " / " + n;
+    document.getElementById("lesson-name").textContent = cur.title;
+    document.getElementById("lesson-no").textContent = "Bài " + cur.no;
+    bar.style.width = ((idx + 1) / n * 100) + "%";
+    document.getElementById("prev").disabled = idx === 0;
+    document.getElementById("next").disabled = idx >= n - 1;
+    Array.prototype.forEach.call(dotsEl.children, function(d, i){ d.setAttribute("aria-current", i === idx ? "true" : "false"); });
+    audio.src = s.audio;
+    audio.playbackRate = +document.getElementById("speed").value;
+  }
+  function buildDots(){
+    dotsEl.innerHTML = "";
+    cur.slides.forEach(function(_, i){
+      var b = el("button", null, null); b.type = "button";
+      b.setAttribute("aria-label", "Slide " + (i + 1));
+      b.onclick = function(){ go(i, false); };
+      dotsEl.appendChild(b);
+    });
+  }
+  function go(n, keepPlaying){
+    if (!cur) return;
+    idx = Math.max(0, Math.min(cur.slides.length - 1, n));
+    render();
+    if (keepPlaying) audio.play().catch(function(){});
+  }
+  function open(lesson){
+    cur = lesson; idx = 0;
+    listSec.hidden = true; player.hidden = false;
+    buildDots(); render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  audio.addEventListener("play", function(){ playBtn.textContent = "Tạm dừng"; });
+  audio.addEventListener("pause", function(){ playBtn.textContent = "Phát giọng đọc"; });
+  audio.addEventListener("ended", function(){
+    if (document.getElementById("auto").checked && cur && idx < cur.slides.length - 1) go(idx + 1, true);
+    else playBtn.textContent = "Phát giọng đọc";
+  });
+  playBtn.onclick = function(){ if (audio.paused) audio.play().catch(function(){}); else audio.pause(); };
+  document.getElementById("prev").onclick = function(){ go(idx - 1, false); };
+  document.getElementById("next").onclick = function(){ go(idx + 1, false); };
+  document.getElementById("speed").onchange = function(e){ audio.playbackRate = +e.target.value; };
+  document.getElementById("back").onclick = function(){ audio.pause(); player.hidden = true; listSec.hidden = false; };
+
+  document.addEventListener("keydown", function(e){
+    if (player.hidden || e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+    if (e.key === "ArrowRight") { go(idx + 1, false); e.preventDefault(); }
+    else if (e.key === "ArrowLeft") { go(idx - 1, false); e.preventDefault(); }
+    else if (e.key === " ") { playBtn.click(); e.preventDefault(); }
+  });
+
+  fetch("data/bai-giang.json").then(function(r){ if (!r.ok) throw new Error("load"); return r.json(); })
+    .then(function(lessons){
+      lessonsEl.innerHTML = "";
+      lessons.forEach(function(l, i){
+        l.no = i + 1;
+        var c = el("button", "lesson-card", null); c.type = "button";
+        c.appendChild(el("span", "no", "Bài " + (i + 1)));
+        c.appendChild(el("b", null, l.title));
+        var first = l.slides[1] ? l.slides[1].text : "";
+        c.appendChild(el("small", null, first.length > 110 ? first.slice(0, 110) + "…" : first));
+        c.appendChild(el("span", "meta", (l.slides.length - 1) + " ý chính · có giọng đọc"));
+        c.onclick = function(){ open(l); };
+        lessonsEl.appendChild(c);
+      });
+    })
+    .catch(function(){
+      lessonsEl.innerHTML = "";
+      lessonsEl.appendChild(el("p", "notice", "Chưa có bài giảng. Cần chạy scripts/make-lecture-audio.mjs khi máy chủ đang bật."));
+    });
+})();
+</script>
+</body>
+</html>
